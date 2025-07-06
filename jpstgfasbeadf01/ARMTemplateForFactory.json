@@ -19,6 +19,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'ln_jpstgpmsadb01_ModelDB'"
 		},
+		"ln_JPSTGIPMSAPDB01_Test_DB_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'ln_JPSTGIPMSAPDB01_Test_DB'"
+		},
 		"ln_AzureBlobStorage1_properties_typeProperties_serviceEndpoint": {
 			"type": "string",
 			"defaultValue": "https://fasbedevdata01.blob.core.windows.net/"
@@ -56,6 +60,18 @@
 			"defaultValue": "ModelDB"
 		},
 		"ln_jpstgpmsadb01_ModelDB_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "jeraadmin"
+		},
+		"ln_JPSTGIPMSAPDB01_Test_DB_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "JPSTGIPMSAPDB01"
+		},
+		"ln_JPSTGIPMSAPDB01_Test_DB_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "Test_DB"
+		},
+		"ln_JPSTGIPMSAPDB01_Test_DB_properties_typeProperties_userName": {
 			"type": "string",
 			"defaultValue": "jeraadmin"
 		}
@@ -357,6 +373,28 @@
 					"password": {
 						"type": "SecureString",
 						"value": "[parameters('ln_jpstgpmsadb01_ModelDB_password')]"
+					}
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/ln_JPSTGIPMSAPDB01_Test_DB')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "SqlServer",
+				"typeProperties": {
+					"server": "[parameters('ln_JPSTGIPMSAPDB01_Test_DB_properties_typeProperties_server')]",
+					"database": "[parameters('ln_JPSTGIPMSAPDB01_Test_DB_properties_typeProperties_database')]",
+					"encrypt": "mandatory",
+					"trustServerCertificate": false,
+					"authenticationType": "SQL",
+					"userName": "[parameters('ln_JPSTGIPMSAPDB01_Test_DB_properties_typeProperties_userName')]",
+					"password": {
+						"type": "SecureString",
+						"value": "[parameters('ln_JPSTGIPMSAPDB01_Test_DB_password')]"
 					}
 				}
 			},

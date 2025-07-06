@@ -19,6 +19,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'ln_jpstgpmsadb01_ModelDB'"
 		},
+		"ln_JPSTGIPMSAPDB01_Test_DB_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'ln_JPSTGIPMSAPDB01_Test_DB'"
+		},
 		"ln_AzureBlobStorage1_properties_typeProperties_serviceEndpoint": {
 			"type": "string",
 			"defaultValue": "https://fasbedevdata01.blob.core.windows.net/"
@@ -59,6 +63,18 @@
 			"type": "string",
 			"defaultValue": "jeraadmin"
 		},
+		"ln_JPSTGIPMSAPDB01_Test_DB_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "JPSTGIPMSAPDB01"
+		},
+		"ln_JPSTGIPMSAPDB01_Test_DB_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "Test_DB"
+		},
+		"ln_JPSTGIPMSAPDB01_Test_DB_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "jeraadmin"
+		},
 		"containerUri": {
 			"type": "string",
 			"metadata": "URI to storage account containing linked ARM templates"
@@ -95,6 +111,9 @@
 					"ln_jpstgpmsadb01_ModelDB_password": {
 						"value": "[parameters('ln_jpstgpmsadb01_ModelDB_password')]"
 					},
+					"ln_JPSTGIPMSAPDB01_Test_DB_password": {
+						"value": "[parameters('ln_JPSTGIPMSAPDB01_Test_DB_password')]"
+					},
 					"ln_AzureBlobStorage1_properties_typeProperties_serviceEndpoint": {
 						"value": "[parameters('ln_AzureBlobStorage1_properties_typeProperties_serviceEndpoint')]"
 					},
@@ -124,6 +143,15 @@
 					},
 					"ln_jpstgpmsadb01_ModelDB_properties_typeProperties_userName": {
 						"value": "[parameters('ln_jpstgpmsadb01_ModelDB_properties_typeProperties_userName')]"
+					},
+					"ln_JPSTGIPMSAPDB01_Test_DB_properties_typeProperties_server": {
+						"value": "[parameters('ln_JPSTGIPMSAPDB01_Test_DB_properties_typeProperties_server')]"
+					},
+					"ln_JPSTGIPMSAPDB01_Test_DB_properties_typeProperties_database": {
+						"value": "[parameters('ln_JPSTGIPMSAPDB01_Test_DB_properties_typeProperties_database')]"
+					},
+					"ln_JPSTGIPMSAPDB01_Test_DB_properties_typeProperties_userName": {
+						"value": "[parameters('ln_JPSTGIPMSAPDB01_Test_DB_properties_typeProperties_userName')]"
 					}
 				}
 			},

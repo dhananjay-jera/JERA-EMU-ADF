@@ -14,6 +14,9 @@
 		"ln_jpstgpmsadb01_ModelDB_password": {
 			"value": ""
 		},
+		"ln_JPSTGIPMSAPDB01_Test_DB_password": {
+			"value": ""
+		},
 		"ln_AzureBlobStorage1_properties_typeProperties_serviceEndpoint": {
 			"value": "https://fasbedevdata01.blob.core.windows.net/"
 		},
@@ -42,6 +45,15 @@
 			"value": "ModelDB"
 		},
 		"ln_jpstgpmsadb01_ModelDB_properties_typeProperties_userName": {
+			"value": "jeraadmin"
+		},
+		"ln_JPSTGIPMSAPDB01_Test_DB_properties_typeProperties_server": {
+			"value": "JPSTGIPMSAPDB01"
+		},
+		"ln_JPSTGIPMSAPDB01_Test_DB_properties_typeProperties_database": {
+			"value": "Test_DB"
+		},
+		"ln_JPSTGIPMSAPDB01_Test_DB_properties_typeProperties_userName": {
 			"value": "jeraadmin"
 		},
 		"containerUri": {
