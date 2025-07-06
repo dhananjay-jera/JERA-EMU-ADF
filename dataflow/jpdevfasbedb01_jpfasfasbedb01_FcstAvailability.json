@@ -1,0 +1,33 @@
+{
+	"name": "jpdevfasbedb01_jpfasfasbedb01_FcstAvailability",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "ds_jpdevfasbedb01_FcstAvailability",
+						"type": "DatasetReference"
+					},
+					"name": "source1"
+				}
+			],
+			"sinks": [],
+			"transformations": [],
+			"scriptLines": [
+				"source(output(",
+				"          FiscalYear as integer,",
+				"          Date as date,",
+				"          UnitIdFW as integer,",
+				"          Availability as double,",
+				"          AsOfDate as date,",
+				"          HjksCheck as boolean",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     isolationLevel: 'READ_UNCOMMITTED',",
+				"     format: 'table') ~> source1"
+			]
+		}
+	}
+}
