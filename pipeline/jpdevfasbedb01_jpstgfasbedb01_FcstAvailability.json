@@ -1,13 +1,13 @@
 {
-	"name": "pl_jpdevfasbedb01_jpfasfasbedb01_FcstAvailability",
+	"name": "jpdevfasbedb01_jpstgfasbedb01_FcstAvailability",
 	"properties": {
 		"activities": [
 			{
-				"name": "jpdevfasbedb01_jpfasfasbedb01_FcstAvailability",
+				"name": "jpdevfasbedb01_jpstgfasbedb01_FcstAvailability",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
-					"timeout": "0.12:00:00",
+					"timeout": "0.1:00:00",
 					"retry": 0,
 					"retryIntervalInSeconds": 30,
 					"secureOutput": false,
@@ -20,11 +20,30 @@
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
-					"enableStaging": false
+					"sink": {
+						"type": "AzureSqlSink",
+						"writeBehavior": "insert",
+						"sqlWriterUseTableLock": false
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
 				},
 				"inputs": [
 					{
 						"referenceName": "ds_jpdevfasbedb01_FcstAvailability",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "ds_jpstgfasbedb01_FcstAvailability",
 						"type": "DatasetReference"
 					}
 				]
