@@ -23,7 +23,9 @@
 					"sink": {
 						"type": "AzureSqlSink",
 						"writeBehavior": "insert",
-						"sqlWriterUseTableLock": false
+						"sqlWriterUseTableLock": false,
+						"tableOption": "autoCreate",
+						"disableMetricsCollection": false
 					},
 					"enableStaging": false,
 					"translator": {
@@ -43,7 +45,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "ds_jpstgfasbedb01_FcstAvailability",
+						"referenceName": "ds_jpstgfasbedb01_FcstAvailability_new",
 						"type": "DatasetReference"
 					}
 				]
