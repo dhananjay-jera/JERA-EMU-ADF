@@ -2,7 +2,7 @@
 	"name": "jpdevfasbedb01_jpstgfasbedb01_FcstAvailability_new",
 	"properties": {
 		"annotations": [],
-		"runtimeState": "Stopped",
+		"runtimeState": "Started",
 		"pipelines": [],
 		"type": "ScheduleTrigger",
 		"typeProperties": {
