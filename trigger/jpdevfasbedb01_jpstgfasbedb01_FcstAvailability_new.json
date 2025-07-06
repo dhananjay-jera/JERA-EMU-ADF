@@ -2,14 +2,14 @@
 	"name": "jpdevfasbedb01_jpstgfasbedb01_FcstAvailability_new",
 	"properties": {
 		"annotations": [],
-		"runtimeState": "Started",
+		"runtimeState": "Stopped",
 		"pipelines": [],
 		"type": "ScheduleTrigger",
 		"typeProperties": {
 			"recurrence": {
 				"frequency": "Minute",
 				"interval": 5,
-				"startTime": "2025-07-06T09:19:00",
+				"startTime": "2025-07-06T09:36:00",
 				"timeZone": "Tokyo Standard Time"
 			}
 		}
