@@ -15,6 +15,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'ln_jpstgfasbedb01_ModelDBv3'"
 		},
+		"ln_jpstgpmsadb01_ModelDB_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'ln_jpstgpmsadb01_ModelDB'"
+		},
 		"ln_AzureBlobStorage1_properties_typeProperties_serviceEndpoint": {
 			"type": "string",
 			"defaultValue": "https://fasbedevdata01.blob.core.windows.net/"
@@ -40,6 +44,18 @@
 			"defaultValue": "ModelDBv3"
 		},
 		"ln_jpstgfasbedb01_ModelDBv3_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "jeraadmin"
+		},
+		"ln_jpstgpmsadb01_ModelDB_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "jpstgpmsadb01"
+		},
+		"ln_jpstgpmsadb01_ModelDB_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "ModelDB"
+		},
+		"ln_jpstgpmsadb01_ModelDB_properties_typeProperties_userName": {
 			"type": "string",
 			"defaultValue": "jeraadmin"
 		},
@@ -76,6 +92,9 @@
 					"ln_jpstgfasbedb01_ModelDBv3_password": {
 						"value": "[parameters('ln_jpstgfasbedb01_ModelDBv3_password')]"
 					},
+					"ln_jpstgpmsadb01_ModelDB_password": {
+						"value": "[parameters('ln_jpstgpmsadb01_ModelDB_password')]"
+					},
 					"ln_AzureBlobStorage1_properties_typeProperties_serviceEndpoint": {
 						"value": "[parameters('ln_AzureBlobStorage1_properties_typeProperties_serviceEndpoint')]"
 					},
@@ -96,6 +115,15 @@
 					},
 					"ln_jpstgfasbedb01_ModelDBv3_properties_typeProperties_userName": {
 						"value": "[parameters('ln_jpstgfasbedb01_ModelDBv3_properties_typeProperties_userName')]"
+					},
+					"ln_jpstgpmsadb01_ModelDB_properties_typeProperties_server": {
+						"value": "[parameters('ln_jpstgpmsadb01_ModelDB_properties_typeProperties_server')]"
+					},
+					"ln_jpstgpmsadb01_ModelDB_properties_typeProperties_database": {
+						"value": "[parameters('ln_jpstgpmsadb01_ModelDB_properties_typeProperties_database')]"
+					},
+					"ln_jpstgpmsadb01_ModelDB_properties_typeProperties_userName": {
+						"value": "[parameters('ln_jpstgpmsadb01_ModelDB_properties_typeProperties_userName')]"
 					}
 				}
 			},
