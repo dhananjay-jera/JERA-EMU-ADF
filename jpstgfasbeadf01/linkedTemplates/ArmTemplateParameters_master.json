@@ -1,0 +1,42 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "jpstgfasbeadf01"
+		},
+		"ln_jpdevfasbedb01_ModelDBv3_password": {
+			"value": ""
+		},
+		"ln_jpstgfasbedb01_ModelDBv3_password": {
+			"value": ""
+		},
+		"ln_AzureBlobStorage1_properties_typeProperties_serviceEndpoint": {
+			"value": "https://fasbedevdata01.blob.core.windows.net/"
+		},
+		"ln_jpdevfasbedb01_ModelDBv3_properties_typeProperties_server": {
+			"value": "jpdevfasbedb01.database.windows.net"
+		},
+		"ln_jpdevfasbedb01_ModelDBv3_properties_typeProperties_database": {
+			"value": "ModelDBv3"
+		},
+		"ln_jpdevfasbedb01_ModelDBv3_properties_typeProperties_userName": {
+			"value": "jeraadmin"
+		},
+		"ln_jpstgfasbedb01_ModelDBv3_properties_typeProperties_server": {
+			"value": "jpstgfasbedb01.database.windows.net"
+		},
+		"ln_jpstgfasbedb01_ModelDBv3_properties_typeProperties_database": {
+			"value": "ModelDBv3"
+		},
+		"ln_jpstgfasbedb01_ModelDBv3_properties_typeProperties_userName": {
+			"value": "jeraadmin"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
