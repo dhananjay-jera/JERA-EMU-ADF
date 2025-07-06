@@ -14,10 +14,10 @@
 				"timeZone": "Tokyo Standard Time",
 				"schedule": {
 					"minutes": [
-						0
+						15
 					],
 					"hours": [
-						11
+						17
 					]
 				}
 			}
