@@ -1,0 +1,36 @@
+{
+	"name": "pl_jpdevfasbedb01_jpfasfasbedb01_FcstAvailability",
+	"properties": {
+		"activities": [
+			{
+				"name": "jpdevfasbedb01_jpfasfasbedb01_FcstAvailability",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "AzureSqlSource",
+						"queryTimeout": "02:00:00",
+						"partitionOption": "None"
+					},
+					"enableStaging": false
+				},
+				"inputs": [
+					{
+						"referenceName": "ds_jpdevfasbedb01_FcstAvailability",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"concurrency": 1,
+		"annotations": []
+	}
+}
