@@ -23,6 +23,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'ln_jpstgpmsadb01_ModelDB'"
 		},
+		"JPSTGPMSAPDB01_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'JPSTGPMSAPDB01'"
+		},
 		"ln_AzureBlobStorage1_properties_typeProperties_serviceEndpoint": {
 			"type": "string",
 			"defaultValue": "https://fasbedevdata01.blob.core.windows.net/"
@@ -75,6 +79,18 @@
 			"type": "string",
 			"defaultValue": "jeraadmin"
 		},
+		"JPSTGPMSAPDB01_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "JPSTGPMSAPDB01"
+		},
+		"JPSTGPMSAPDB01_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "ModelDB"
+		},
+		"JPSTGPMSAPDB01_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "jeraadmin"
+		},
 		"containerUri": {
 			"type": "string",
 			"metadata": "URI to storage account containing linked ARM templates"
@@ -114,6 +130,9 @@
 					"ln_jpstgpmsadb01_ModelDB_password": {
 						"value": "[parameters('ln_jpstgpmsadb01_ModelDB_password')]"
 					},
+					"JPSTGPMSAPDB01_password": {
+						"value": "[parameters('JPSTGPMSAPDB01_password')]"
+					},
 					"ln_AzureBlobStorage1_properties_typeProperties_serviceEndpoint": {
 						"value": "[parameters('ln_AzureBlobStorage1_properties_typeProperties_serviceEndpoint')]"
 					},
@@ -152,6 +171,15 @@
 					},
 					"ln_jpstgpmsadb01_ModelDB_properties_typeProperties_userName": {
 						"value": "[parameters('ln_jpstgpmsadb01_ModelDB_properties_typeProperties_userName')]"
+					},
+					"JPSTGPMSAPDB01_properties_typeProperties_server": {
+						"value": "[parameters('JPSTGPMSAPDB01_properties_typeProperties_server')]"
+					},
+					"JPSTGPMSAPDB01_properties_typeProperties_database": {
+						"value": "[parameters('JPSTGPMSAPDB01_properties_typeProperties_database')]"
+					},
+					"JPSTGPMSAPDB01_properties_typeProperties_userName": {
+						"value": "[parameters('JPSTGPMSAPDB01_properties_typeProperties_userName')]"
 					}
 				}
 			},
