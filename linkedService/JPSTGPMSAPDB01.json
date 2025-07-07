@@ -1,0 +1,17 @@
+{
+	"name": "JPSTGPMSAPDB01",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"server": "JPSTGPMSAPDB01",
+			"database": "ModelDB",
+			"encrypt": "mandatory",
+			"trustServerCertificate": false,
+			"authenticationType": "SQL",
+			"userName": "jeraadmin",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDBDNkUxOEYwLUExQkEtNDE0Ri04QUJELThGODhDNkM0MkJDNl9kMmRmMzY0ZS02Mjc5LTQ2MzEtOTY4NS1kMTI5OWRmYTA0NzkiDQp9"
+		}
+	}
+}
