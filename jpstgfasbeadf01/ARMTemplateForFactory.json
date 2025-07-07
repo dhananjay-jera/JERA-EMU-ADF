@@ -130,7 +130,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "ds_FcstAvailability_jpdevfasbedb01_v0",
+								"referenceName": "ds_fcstAvailability_jpdevfasbedb01_v0",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -145,11 +145,11 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/ds_jpdevfasbedb01_FcstAvailability')]",
-				"[concat(variables('factoryId'), '/datasets/ds_FcstAvailability_jpdevfasbedb01_v0')]"
+				"[concat(variables('factoryId'), '/datasets/ds_fcstAvailability_jpdevfasbedb01_v0')]"
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/ds_FcstAvailability_jpdevfasbedb01_v0')]",
+			"name": "[concat(parameters('factoryName'), '/ds_fcstAvailability_jpdevfasbedb01_v0')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
