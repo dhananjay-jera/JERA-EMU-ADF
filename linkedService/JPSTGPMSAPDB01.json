@@ -5,13 +5,13 @@
 		"annotations": [],
 		"type": "SqlServer",
 		"typeProperties": {
-			"server": "JPSTGPMSAPDB01",
+			"server": "jpstgpmsapdb01",
 			"database": "ModelDB",
 			"encrypt": "mandatory",
-			"trustServerCertificate": false,
+			"trustServerCertificate": true,
 			"authenticationType": "SQL",
 			"userName": "jeraadmin",
-			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJkZTg4ZjA0Yy01Yjc4LTQ3NWUtYWM4Zi1hOWEyNmEyMmZlNDMiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJlN2E3NmI2Mi0yZmRmLTQ2OTAtYTk2OC1iMmEwOTM0YmI1YWEiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
 		},
 		"connectVia": {
 			"referenceName": "IR-jpstgpmsapdb01",
