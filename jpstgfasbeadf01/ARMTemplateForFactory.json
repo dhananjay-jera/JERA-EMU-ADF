@@ -361,8 +361,8 @@
 				"typeProperties": {
 					"server": "[parameters('JPSTGPMSAPDB01_properties_typeProperties_server')]",
 					"database": "[parameters('JPSTGPMSAPDB01_properties_typeProperties_database')]",
-					"encrypt": "mandatory",
-					"trustServerCertificate": true,
+					"encrypt": "optional",
+					"trustServerCertificate": false,
 					"authenticationType": "SQL",
 					"userName": "[parameters('JPSTGPMSAPDB01_properties_typeProperties_userName')]",
 					"password": {
