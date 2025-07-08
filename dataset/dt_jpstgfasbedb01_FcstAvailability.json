@@ -38,7 +38,7 @@
 		],
 		"typeProperties": {
 			"schema": "dbo.ModelDBv3",
-			"table": "FcstAvailability_FAS-STG"
+			"table": "FcstAvailability_FAS_STG"
 		}
 	},
 	"type": "Microsoft.DataFactory/factories/datasets"
