@@ -291,55 +291,6 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/dt_jpstgfasbedb01_FcstAvailability_fas_stg')]",
-			"type": "Microsoft.DataFactory/factories/datasets",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"linkedServiceName": {
-					"referenceName": "ln_jpstgfasbedb01_ModelDBv3",
-					"type": "LinkedServiceReference"
-				},
-				"annotations": [],
-				"type": "AzureSqlTable",
-				"schema": [
-					{
-						"name": "FiscalYear",
-						"type": "smallint",
-						"precision": 5
-					},
-					{
-						"name": "Date",
-						"type": "date"
-					},
-					{
-						"name": "UnitIdFW",
-						"type": "int",
-						"precision": 10
-					},
-					{
-						"name": "Availability",
-						"type": "float",
-						"precision": 15
-					},
-					{
-						"name": "AsOfDate",
-						"type": "date"
-					},
-					{
-						"name": "HjksCheck",
-						"type": "bit"
-					}
-				],
-				"typeProperties": {
-					"schema": "dbo.ModelDBv3",
-					"table": "FcstAvailability_FAS_STG"
-				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/ln_jpstgfasbedb01_ModelDBv3')]"
-			]
-		},
-		{
 			"name": "[concat(parameters('factoryName'), '/JPSTGPMSAPDB01')]",
 			"type": "Microsoft.DataFactory/factories/linkedServices",
 			"apiVersion": "2018-06-01",
@@ -365,6 +316,27 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/integrationRuntimes/IR-jpstgpmsapdb01')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/dt_jpstgfasbedb01_FcstAvailability_fas_stg')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "ln_jpstgfasbedb01_ModelDBv3",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "AzureSqlTable",
+				"schema": [],
+				"typeProperties": {
+					"schema": "dbo.ModelDBv3",
+					"table": "FcstAvailability_fas_stg"
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/ln_jpstgfasbedb01_ModelDBv3')]"
 			]
 		},
 		{
