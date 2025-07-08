@@ -1,0 +1,16 @@
+{
+	"name": "dt_jpstgfasbedb01_FcstAvailability_fas_stg",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ln_jpstgfasbedb01_ModelDBv3",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo.ModelDBv3",
+			"table": "FcstAvailability_fas_stg"
+		}
+	}
+}
