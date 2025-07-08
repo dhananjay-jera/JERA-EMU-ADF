@@ -1,5 +1,5 @@
 {
-	"name": "ds_fcstAvailability_jpdevfasbedb01_v0",
+	"name": "dt_fcstAvailability_jpdevfasbedb01_v0",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ln_jpstgfasbedb01_ModelDBv3",
