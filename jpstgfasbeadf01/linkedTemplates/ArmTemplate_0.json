@@ -166,8 +166,8 @@
 				"typeProperties": {
 					"server": "[parameters('ln_jpstgfasbedb01_ModelDBv3_properties_typeProperties_server')]",
 					"database": "[parameters('ln_jpstgfasbedb01_ModelDBv3_properties_typeProperties_database')]",
-					"encrypt": "mandatory",
-					"trustServerCertificate": true,
+					"encrypt": "optional",
+					"trustServerCertificate": false,
 					"authenticationType": "SQL",
 					"userName": "[parameters('ln_jpstgfasbedb01_ModelDBv3_properties_typeProperties_userName')]",
 					"password": {
