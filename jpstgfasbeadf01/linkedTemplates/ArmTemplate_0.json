@@ -417,7 +417,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "ds_fcstAvailability_jpdevfasbedb01_v0",
+								"referenceName": "dt_jpstgfasbedb01_FcstAvailability",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -432,7 +432,7 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/ds_jpdevfasbedb01_FcstAvailability')]",
-				"[concat(variables('factoryId'), '/datasets/ds_fcstAvailability_jpdevfasbedb01_v0')]"
+				"[concat(variables('factoryId'), '/datasets/dt_jpstgfasbedb01_FcstAvailability')]"
 			]
 		},
 		{
