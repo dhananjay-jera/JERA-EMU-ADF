@@ -235,55 +235,6 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/ds_jpstgfasbedb01_FcstAvailability')]",
-			"type": "Microsoft.DataFactory/factories/datasets",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"linkedServiceName": {
-					"referenceName": "ln_jpdevfasbedb01_ModelDBv3",
-					"type": "LinkedServiceReference"
-				},
-				"annotations": [],
-				"type": "AzureSqlTable",
-				"schema": [
-					{
-						"name": "FiscalYear",
-						"type": "smallint",
-						"precision": 5
-					},
-					{
-						"name": "Date",
-						"type": "date"
-					},
-					{
-						"name": "UnitIdFW",
-						"type": "int",
-						"precision": 10
-					},
-					{
-						"name": "Availability",
-						"type": "float",
-						"precision": 15
-					},
-					{
-						"name": "AsOfDate",
-						"type": "date"
-					},
-					{
-						"name": "HjksCheck",
-						"type": "bit"
-					}
-				],
-				"typeProperties": {
-					"schema": "dbo",
-					"table": "FcstAvailability"
-				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/ln_jpdevfasbedb01_ModelDBv3')]"
-			]
-		},
-		{
 			"name": "[concat(parameters('factoryName'), '/ds_jpstgpmsapdb01_FcstAvailability')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
@@ -330,6 +281,55 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/linkedServices/JPSTGPMSAPDB01')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/dt_jpstgfasbedb01_FcstAvailability')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "ln_jpdevfasbedb01_ModelDBv3",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "AzureSqlTable",
+				"schema": [
+					{
+						"name": "FiscalYear",
+						"type": "smallint",
+						"precision": 5
+					},
+					{
+						"name": "Date",
+						"type": "date"
+					},
+					{
+						"name": "UnitIdFW",
+						"type": "int",
+						"precision": 10
+					},
+					{
+						"name": "Availability",
+						"type": "float",
+						"precision": 15
+					},
+					{
+						"name": "AsOfDate",
+						"type": "date"
+					},
+					{
+						"name": "HjksCheck",
+						"type": "bit"
+					}
+				],
+				"typeProperties": {
+					"schema": "dbo",
+					"table": "FcstAvailability"
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/ln_jpdevfasbedb01_ModelDBv3')]"
 			]
 		},
 		{
