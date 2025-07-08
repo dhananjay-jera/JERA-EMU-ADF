@@ -165,6 +165,154 @@
 			]
 		},
 		{
+			"name": "[concat(parameters('factoryName'), '/pl_jpstgpmsapdb01_jpstgfasbedb01_FcstAvailability')]",
+			"type": "Microsoft.DataFactory/factories/pipelines",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"description": "pl_jpstgpmsapdb01_jpstgfasbedb01_FcstAvailability",
+				"activities": [
+					{
+						"name": "FcstAvailability_FcstAvailability_fas_stg",
+						"type": "Copy",
+						"dependsOn": [],
+						"policy": {
+							"timeout": "0.12:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"source": {
+								"type": "SqlServerSource",
+								"queryTimeout": "02:00:00",
+								"partitionOption": "None"
+							},
+							"sink": {
+								"type": "AzureSqlSink",
+								"writeBehavior": "insert",
+								"sqlWriterUseTableLock": false,
+								"tableOption": "autoCreate",
+								"disableMetricsCollection": false
+							},
+							"enableStaging": false,
+							"translator": {
+								"type": "TabularTranslator",
+								"mappings": [
+									{
+										"source": {
+											"name": "FiscalYear",
+											"type": "smallint",
+											"physicalType": "smallint",
+											"precision": 5
+										},
+										"sink": {
+											"name": "FiscalYear",
+											"type": "smallint",
+											"physicalType": "smallint",
+											"precision": 5
+										}
+									},
+									{
+										"source": {
+											"name": "UnitIdFW",
+											"type": "int",
+											"physicalType": "int",
+											"precision": 10
+										},
+										"sink": {
+											"name": "UnitIdFW",
+											"type": "int",
+											"physicalType": "int",
+											"precision": 10
+										}
+									},
+									{
+										"source": {
+											"name": "Date",
+											"type": "date",
+											"physicalType": "date"
+										},
+										"sink": {
+											"name": "Date",
+											"type": "date",
+											"physicalType": "date"
+										}
+									},
+									{
+										"source": {
+											"name": "Availability",
+											"type": "float",
+											"physicalType": "float",
+											"precision": 15
+										},
+										"sink": {
+											"name": "Availability",
+											"type": "float",
+											"physicalType": "float",
+											"precision": 15
+										}
+									},
+									{
+										"source": {
+											"name": "AsOfDate",
+											"type": "date",
+											"physicalType": "date"
+										},
+										"sink": {
+											"name": "AsOfDate",
+											"type": "date",
+											"physicalType": "date"
+										}
+									},
+									{
+										"source": {
+											"name": "HjksCheck",
+											"type": "bit",
+											"physicalType": "bit"
+										},
+										"sink": {
+											"name": "HjksCheck",
+											"type": "bit",
+											"physicalType": "bit"
+										}
+									}
+								],
+								"typeConversion": true,
+								"typeConversionSettings": {
+									"allowDataTruncation": true,
+									"treatBooleanAsNumber": false
+								}
+							}
+						},
+						"inputs": [
+							{
+								"referenceName": "ds_jpstgpmsapdb01_FcstAvailability",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						],
+						"outputs": [
+							{
+								"referenceName": "dt_jpstgfasbedb01_FcstAvailability_fas_stg",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						]
+					}
+				],
+				"policy": {
+					"elapsedTimeMetric": {}
+				},
+				"annotations": []
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/datasets/ds_jpstgpmsapdb01_FcstAvailability')]",
+				"[concat(variables('factoryId'), '/datasets/dt_jpstgfasbedb01_FcstAvailability_fas_stg')]"
+			]
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/ds_jpdevfasbedb01_FcstAvailability')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
@@ -483,74 +631,6 @@
 			"apiVersion": "2018-06-01",
 			"properties": {},
 			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/pl_jpstgpmsapdb01_jpstgfasbedb01_FcstAvailability')]",
-			"type": "Microsoft.DataFactory/factories/pipelines",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"description": "pl_jpstgpmsapdb01_jpstgfasbedb01_FcstAvailability",
-				"activities": [
-					{
-						"name": "FcstAvailability_FcstAvailability_fas_stg",
-						"type": "Copy",
-						"dependsOn": [],
-						"policy": {
-							"timeout": "0.12:00:00",
-							"retry": 0,
-							"retryIntervalInSeconds": 30,
-							"secureOutput": false,
-							"secureInput": false
-						},
-						"userProperties": [],
-						"typeProperties": {
-							"source": {
-								"type": "SqlServerSource",
-								"queryTimeout": "02:00:00",
-								"partitionOption": "None"
-							},
-							"sink": {
-								"type": "AzureSqlSink",
-								"writeBehavior": "insert",
-								"sqlWriterUseTableLock": false,
-								"tableOption": "autoCreate",
-								"disableMetricsCollection": false
-							},
-							"enableStaging": false,
-							"translator": {
-								"type": "TabularTranslator",
-								"typeConversion": true,
-								"typeConversionSettings": {
-									"allowDataTruncation": true,
-									"treatBooleanAsNumber": false
-								}
-							}
-						},
-						"inputs": [
-							{
-								"referenceName": "ds_jpstgpmsapdb01_FcstAvailability",
-								"type": "DatasetReference",
-								"parameters": {}
-							}
-						],
-						"outputs": [
-							{
-								"referenceName": "dt_jpstgfasbedb01_FcstAvailability_fas_stg",
-								"type": "DatasetReference",
-								"parameters": {}
-							}
-						]
-					}
-				],
-				"policy": {
-					"elapsedTimeMetric": {}
-				},
-				"annotations": []
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/datasets/ds_jpstgpmsapdb01_FcstAvailability')]",
-				"[concat(variables('factoryId'), '/datasets/dt_jpstgfasbedb01_FcstAvailability_fas_stg')]"
-			]
 		}
 	]
 }
