@@ -81,7 +81,7 @@
 		},
 		"JPSTGPMSAPDB01_properties_typeProperties_server": {
 			"type": "string",
-			"defaultValue": "JPSTGPMSAPDB01"
+			"defaultValue": "jpstgpmsapdb01"
 		},
 		"JPSTGPMSAPDB01_properties_typeProperties_database": {
 			"type": "string",
@@ -201,32 +201,23 @@
 			"dependsOn": []
 		},
 		{
+			"name": "[concat(parameters('factoryName'), '/IR-jpstgpmsapdb01')]",
+			"type": "Microsoft.DataFactory/factories/integrationRuntimes",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"type": "SelfHosted",
+				"description": "jpstgpmsapdb01",
+				"typeProperties": {
+					"selfContainedInteractiveAuthoringEnabled": true
+				}
+			},
+			"dependsOn": []
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/default')]",
 			"type": "Microsoft.DataFactory/factories/managedVirtualNetworks",
 			"apiVersion": "2018-06-01",
 			"properties": {},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/JPSTGPMSAPDB01')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "SqlServer",
-				"typeProperties": {
-					"server": "[parameters('JPSTGPMSAPDB01_properties_typeProperties_server')]",
-					"database": "[parameters('JPSTGPMSAPDB01_properties_typeProperties_database')]",
-					"encrypt": "mandatory",
-					"trustServerCertificate": false,
-					"authenticationType": "SQL",
-					"userName": "[parameters('JPSTGPMSAPDB01_properties_typeProperties_userName')]",
-					"password": {
-						"type": "SecureString",
-						"value": "[parameters('JPSTGPMSAPDB01_password')]"
-					}
-				}
-			},
 			"dependsOn": []
 		},
 		{
@@ -349,35 +340,31 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/integrationRuntime1')]",
-			"type": "Microsoft.DataFactory/factories/integrationRuntimes",
+			"name": "[concat(parameters('factoryName'), '/JPSTGPMSAPDB01')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
 			"apiVersion": "2018-06-01",
 			"properties": {
-				"type": "Managed",
+				"annotations": [],
+				"type": "SqlServer",
 				"typeProperties": {
-					"computeProperties": {
-						"location": "Japan East",
-						"dataFlowProperties": {
-							"computeType": "General",
-							"coreCount": 8,
-							"timeToLive": 10,
-							"cleanup": false,
-							"customProperties": []
-						},
-						"pipelineExternalComputeScaleProperties": {
-							"timeToLive": 30,
-							"numberOfPipelineNodes": 1,
-							"numberOfExternalNodes": 1
-						}
+					"server": "[parameters('JPSTGPMSAPDB01_properties_typeProperties_server')]",
+					"database": "[parameters('JPSTGPMSAPDB01_properties_typeProperties_database')]",
+					"encrypt": "mandatory",
+					"trustServerCertificate": true,
+					"authenticationType": "SQL",
+					"userName": "[parameters('JPSTGPMSAPDB01_properties_typeProperties_userName')]",
+					"password": {
+						"type": "SecureString",
+						"value": "[parameters('JPSTGPMSAPDB01_password')]"
 					}
 				},
-				"managedVirtualNetwork": {
-					"type": "ManagedVirtualNetworkReference",
-					"referenceName": "default"
+				"connectVia": {
+					"referenceName": "IR-jpstgpmsapdb01",
+					"type": "IntegrationRuntimeReference"
 				}
 			},
 			"dependsOn": [
-				"[concat(variables('factoryId'), '/managedVirtualNetworks/default')]"
+				"[concat(variables('factoryId'), '/integrationRuntimes/IR-jpstgpmsapdb01')]"
 			]
 		},
 		{
@@ -446,6 +433,55 @@
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/ds_jpdevfasbedb01_FcstAvailability')]",
 				"[concat(variables('factoryId'), '/datasets/ds_fcstAvailability_jpdevfasbedb01_v0')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/ds_jpstgpmsapdb01_FcstAvailability')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "JPSTGPMSAPDB01",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "SqlServerTable",
+				"schema": [
+					{
+						"name": "FiscalYear",
+						"type": "smallint",
+						"precision": 5
+					},
+					{
+						"name": "Date",
+						"type": "date"
+					},
+					{
+						"name": "UnitIdFW",
+						"type": "int",
+						"precision": 10
+					},
+					{
+						"name": "Availability",
+						"type": "float",
+						"precision": 15
+					},
+					{
+						"name": "AsOfDate",
+						"type": "date"
+					},
+					{
+						"name": "HjksCheck",
+						"type": "bit"
+					}
+				],
+				"typeProperties": {
+					"schema": "dbo",
+					"table": "FcstAvailability"
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/JPSTGPMSAPDB01')]"
 			]
 		}
 	]

@@ -7,6 +7,10 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "jpstgfasbeadf01"
 		},
+		"JPSTGPMSAPDB01_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'JPSTGPMSAPDB01'"
+		},
 		"ln_JPSTGIPMSAPDB01_Test_DB_password": {
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'ln_JPSTGIPMSAPDB01_Test_DB'"
@@ -23,9 +27,17 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'ln_jpstgpmsadb01_ModelDB'"
 		},
-		"JPSTGPMSAPDB01_password": {
-			"type": "secureString",
-			"metadata": "Secure string for 'password' of 'JPSTGPMSAPDB01'"
+		"JPSTGPMSAPDB01_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "jpstgpmsapdb01"
+		},
+		"JPSTGPMSAPDB01_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "ModelDB"
+		},
+		"JPSTGPMSAPDB01_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "jeraadmin"
 		},
 		"ln_AzureBlobStorage1_properties_typeProperties_serviceEndpoint": {
 			"type": "string",
@@ -76,18 +88,6 @@
 			"defaultValue": "ModelDB"
 		},
 		"ln_jpstgpmsadb01_ModelDB_properties_typeProperties_userName": {
-			"type": "string",
-			"defaultValue": "jeraadmin"
-		},
-		"JPSTGPMSAPDB01_properties_typeProperties_server": {
-			"type": "string",
-			"defaultValue": "JPSTGPMSAPDB01"
-		},
-		"JPSTGPMSAPDB01_properties_typeProperties_database": {
-			"type": "string",
-			"defaultValue": "ModelDB"
-		},
-		"JPSTGPMSAPDB01_properties_typeProperties_userName": {
 			"type": "string",
 			"defaultValue": "jeraadmin"
 		},
