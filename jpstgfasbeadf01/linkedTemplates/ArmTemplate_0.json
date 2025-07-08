@@ -291,12 +291,12 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/dt_jpstgfasbedb01_FcstAvailability')]",
+			"name": "[concat(parameters('factoryName'), '/dt_jpstgfasbedb01_FcstAvailability_FAS_STG')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
 				"linkedServiceName": {
-					"referenceName": "ln_jpdevfasbedb01_ModelDBv3",
+					"referenceName": "ln_jpstgfasbedb01_ModelDBv3",
 					"type": "LinkedServiceReference"
 				},
 				"annotations": [],
@@ -331,12 +331,12 @@
 					}
 				],
 				"typeProperties": {
-					"schema": "dbo",
-					"table": "FcstAvailability"
+					"schema": "dbo.ModelDBv3",
+					"table": "FcstAvailability_FAS_STG"
 				}
 			},
 			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/ln_jpdevfasbedb01_ModelDBv3')]"
+				"[concat(variables('factoryId'), '/linkedServices/ln_jpstgfasbedb01_ModelDBv3')]"
 			]
 		},
 		{
@@ -417,7 +417,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_jpstgfasbedb01_FcstAvailability",
+								"referenceName": "dt_jpstgfasbedb01_FcstAvailability_FAS_STG",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -432,7 +432,7 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/ds_jpdevfasbedb01_FcstAvailability')]",
-				"[concat(variables('factoryId'), '/datasets/dt_jpstgfasbedb01_FcstAvailability')]"
+				"[concat(variables('factoryId'), '/datasets/dt_jpstgfasbedb01_FcstAvailability_FAS_STG')]"
 			]
 		},
 		{
