@@ -1,0 +1,7 @@
+{
+	"name": "IR-jpstgpmsapdb01",
+	"properties": {
+		"type": "SelfHosted",
+		"description": "jpstgpmsapdb01"
+	}
+}
