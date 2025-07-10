@@ -620,67 +620,6 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/SqlServerTable1')]",
-			"type": "Microsoft.DataFactory/factories/datasets",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"linkedServiceName": {
-					"referenceName": "JPSTGPMSAPDB01",
-					"type": "LinkedServiceReference"
-				},
-				"annotations": [],
-				"type": "SqlServerTable",
-				"schema": [
-					{
-						"name": "AreaId",
-						"type": "tinyint",
-						"precision": 3
-					},
-					{
-						"name": "InstalledCapacityGen",
-						"type": "decimal",
-						"precision": 10,
-						"scale": 3
-					},
-					{
-						"name": "InstalledCapacityPum",
-						"type": "decimal",
-						"precision": 10,
-						"scale": 3
-					},
-					{
-						"name": "ReservoirCapacity",
-						"type": "decimal",
-						"precision": 10,
-						"scale": 3
-					},
-					{
-						"name": "TotalEfficiency",
-						"type": "decimal",
-						"precision": 10,
-						"scale": 3
-					},
-					{
-						"name": "MaximumReserveContributionGen",
-						"type": "float",
-						"precision": 15
-					},
-					{
-						"name": "MaximumReserveContributionPum",
-						"type": "float",
-						"precision": 15
-					}
-				],
-				"typeProperties": {
-					"schema": "dbo",
-					"table": "PumpedStorage"
-				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/JPSTGPMSAPDB01')]"
-			]
-		},
-		{
 			"name": "[concat(parameters('factoryName'), '/default/pl_adf_fasbestgdata01')]",
 			"type": "Microsoft.DataFactory/factories/managedVirtualNetworks/managedPrivateEndpoints",
 			"apiVersion": "2018-06-01",
@@ -693,7 +632,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/Test')]",
+			"name": "[concat(parameters('factoryName'), '/ds_fasbestgdata01_FcstAvailability')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
