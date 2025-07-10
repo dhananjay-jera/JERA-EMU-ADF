@@ -360,7 +360,7 @@
 				"description": "pl_jpstgpmsapdb01_jpstgfasbedb01_FcstAvailability",
 				"activities": [
 					{
-						"name": "FcstAvailability_FcstAvailability_fas_stg",
+						"name": "FcstAvailability_FcstAvailability_fas-be-dev",
 						"type": "Copy",
 						"dependsOn": [],
 						"policy": {
