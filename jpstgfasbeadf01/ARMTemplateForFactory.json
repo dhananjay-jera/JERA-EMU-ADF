@@ -58,6 +58,14 @@
 		"ln_jpstgfasbedb01_ModelDBv3_properties_typeProperties_userName": {
 			"type": "string",
 			"defaultValue": "jeraadmin"
+		},
+		"pl_adf_fasbestgdata01_properties_privateLinkResourceId": {
+			"type": "string",
+			"defaultValue": "/subscriptions/40d0025b-b057-42a4-9ed8-f038512f9cfc/resourceGroups/FAS-BE-Stg/providers/Microsoft.Storage/storageAccounts/fasbestgdata01"
+		},
+		"pl_adf_fasbestgdata01_properties_groupId": {
+			"type": "string",
+			"defaultValue": "blob"
 		}
 	},
 	"variables": {
@@ -664,6 +672,18 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/linkedServices/JPSTGPMSAPDB01')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/default/pl_adf_fasbestgdata01')]",
+			"type": "Microsoft.DataFactory/factories/managedVirtualNetworks/managedPrivateEndpoints",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"privateLinkResourceId": "[parameters('pl_adf_fasbestgdata01_properties_privateLinkResourceId')]",
+				"groupId": "[parameters('pl_adf_fasbestgdata01_properties_groupId')]"
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/managedVirtualNetworks/default')]"
 			]
 		}
 	]

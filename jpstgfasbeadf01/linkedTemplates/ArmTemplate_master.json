@@ -59,6 +59,14 @@
 			"type": "string",
 			"defaultValue": "jeraadmin"
 		},
+		"pl_adf_fasbestgdata01_properties_privateLinkResourceId": {
+			"type": "string",
+			"defaultValue": "/subscriptions/40d0025b-b057-42a4-9ed8-f038512f9cfc/resourceGroups/FAS-BE-Stg/providers/Microsoft.Storage/storageAccounts/fasbestgdata01"
+		},
+		"pl_adf_fasbestgdata01_properties_groupId": {
+			"type": "string",
+			"defaultValue": "blob"
+		},
 		"containerUri": {
 			"type": "string",
 			"metadata": "URI to storage account containing linked ARM templates"
@@ -124,6 +132,12 @@
 					},
 					"JPSTGPMSAPDB01_properties_typeProperties_userName": {
 						"value": "[parameters('JPSTGPMSAPDB01_properties_typeProperties_userName')]"
+					},
+					"pl_adf_fasbestgdata01_properties_privateLinkResourceId": {
+						"value": "[parameters('pl_adf_fasbestgdata01_properties_privateLinkResourceId')]"
+					},
+					"pl_adf_fasbestgdata01_properties_groupId": {
+						"value": "[parameters('pl_adf_fasbestgdata01_properties_groupId')]"
 					}
 				}
 			},

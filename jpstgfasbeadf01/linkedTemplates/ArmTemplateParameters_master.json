@@ -44,6 +44,12 @@
 		"ln_jpstgfasbedb01_ModelDBv3_properties_typeProperties_userName": {
 			"value": "jeraadmin"
 		},
+		"pl_adf_fasbestgdata01_properties_privateLinkResourceId": {
+			"value": "/subscriptions/40d0025b-b057-42a4-9ed8-f038512f9cfc/resourceGroups/FAS-BE-Stg/providers/Microsoft.Storage/storageAccounts/fasbestgdata01"
+		},
+		"pl_adf_fasbestgdata01_properties_groupId": {
+			"value": "blob"
+		},
 		"containerUri": {
 			"value": ""
 		},
