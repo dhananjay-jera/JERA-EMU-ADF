@@ -24,7 +24,7 @@
 			"value": "jeraadmin"
 		},
 		"ln_AzureBlobStorage1_properties_typeProperties_serviceEndpoint": {
-			"value": "https://fasbedevdata01.blob.core.windows.net/"
+			"value": "https://fasbestgdata01.blob.core.windows.net/"
 		},
 		"ln_jpdevfasbedb01_ModelDBv3_properties_typeProperties_server": {
 			"value": "jpdevfasbedb01.database.windows.net"

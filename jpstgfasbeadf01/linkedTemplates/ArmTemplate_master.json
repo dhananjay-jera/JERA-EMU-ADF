@@ -33,7 +33,7 @@
 		},
 		"ln_AzureBlobStorage1_properties_typeProperties_serviceEndpoint": {
 			"type": "string",
-			"defaultValue": "https://fasbedevdata01.blob.core.windows.net/"
+			"defaultValue": "https://fasbestgdata01.blob.core.windows.net/"
 		},
 		"ln_jpdevfasbedb01_ModelDBv3_properties_typeProperties_server": {
 			"type": "string",
@@ -103,9 +103,6 @@
 					"JPSTGPMSAPDB01_password": {
 						"value": "[parameters('JPSTGPMSAPDB01_password')]"
 					},
-					"ln_AzureBlobStorage1_properties_typeProperties_serviceEndpoint": {
-						"value": "[parameters('ln_AzureBlobStorage1_properties_typeProperties_serviceEndpoint')]"
-					},
 					"ln_jpdevfasbedb01_ModelDBv3_properties_typeProperties_server": {
 						"value": "[parameters('ln_jpdevfasbedb01_ModelDBv3_properties_typeProperties_server')]"
 					},
@@ -132,6 +129,9 @@
 					},
 					"JPSTGPMSAPDB01_properties_typeProperties_userName": {
 						"value": "[parameters('JPSTGPMSAPDB01_properties_typeProperties_userName')]"
+					},
+					"ln_AzureBlobStorage1_properties_typeProperties_serviceEndpoint": {
+						"value": "[parameters('ln_AzureBlobStorage1_properties_typeProperties_serviceEndpoint')]"
 					},
 					"pl_adf_fasbestgdata01_properties_privateLinkResourceId": {
 						"value": "[parameters('pl_adf_fasbestgdata01_properties_privateLinkResourceId')]"
