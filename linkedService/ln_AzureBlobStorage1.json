@@ -1,12 +1,16 @@
 {
 	"name": "ln_AzureBlobStorage1",
-	"type": "Microsoft.DataFactory/factories/linkedservices",
 	"properties": {
 		"annotations": [],
 		"type": "AzureBlobStorage",
 		"typeProperties": {
-			"serviceEndpoint": "https://fasbedevdata01.blob.core.windows.net/",
+			"serviceEndpoint": "https://fasbestgdata01.blob.core.windows.net/",
 			"accountKind": "StorageV2"
+		},
+		"connectVia": {
+			"referenceName": "IR-jpstgpmsapdb01",
+			"type": "IntegrationRuntimeReference"
 		}
-	}
+	},
+	"type": "Microsoft.DataFactory/factories/linkedservices"
 }
