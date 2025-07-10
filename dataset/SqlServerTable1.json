@@ -1,0 +1,56 @@
+{
+	"name": "SqlServerTable1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "JPSTGPMSAPDB01",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "AreaId",
+				"type": "tinyint",
+				"precision": 3
+			},
+			{
+				"name": "InstalledCapacityGen",
+				"type": "decimal",
+				"precision": 10,
+				"scale": 3
+			},
+			{
+				"name": "InstalledCapacityPum",
+				"type": "decimal",
+				"precision": 10,
+				"scale": 3
+			},
+			{
+				"name": "ReservoirCapacity",
+				"type": "decimal",
+				"precision": 10,
+				"scale": 3
+			},
+			{
+				"name": "TotalEfficiency",
+				"type": "decimal",
+				"precision": 10,
+				"scale": 3
+			},
+			{
+				"name": "MaximumReserveContributionGen",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "MaximumReserveContributionPum",
+				"type": "float",
+				"precision": 15
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "PumpedStorage"
+		}
+	}
+}
