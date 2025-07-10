@@ -1,0 +1,49 @@
+{
+	"name": "dt_fasbestgdata01_FcstAvailability_fas_stg",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ln_AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "FcstAvailability.csv",
+				"folderPath": "databases/sql_server/jpstgpmsapdb01/ModelDB",
+				"container": "rdz"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "2023",
+				"type": "String"
+			},
+			{
+				"name": "2023-12-011",
+				"type": "String"
+			},
+			{
+				"name": "300001",
+				"type": "String"
+			},
+			{
+				"name": "0.0",
+				"type": "String"
+			},
+			{
+				"name": "2023-12-014",
+				"type": "String"
+			},
+			{
+				"name": "0",
+				"type": "String"
+			}
+		]
+	}
+}
