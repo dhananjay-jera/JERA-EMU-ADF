@@ -1,5 +1,5 @@
 {
-	"name": "Test",
+	"name": "ds_fasbestgdata01_FcstAvailability",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ln_AzureBlobStorage1",
