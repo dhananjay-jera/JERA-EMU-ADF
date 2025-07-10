@@ -587,8 +587,8 @@
 				"typeProperties": {
 					"server": "[parameters('ln_jpstgfasbedb01_ModelDBv3_properties_typeProperties_server')]",
 					"database": "[parameters('ln_jpstgfasbedb01_ModelDBv3_properties_typeProperties_database')]",
-					"encrypt": "mandatory",
-					"trustServerCertificate": true,
+					"encrypt": "optional",
+					"trustServerCertificate": false,
 					"authenticationType": "SQL",
 					"userName": "[parameters('ln_jpstgfasbedb01_ModelDBv3_properties_typeProperties_userName')]",
 					"password": {
@@ -633,6 +633,60 @@
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/ds_fasbestgdata01_FcstAvailability')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "ln_AzureBlobStorage1",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "DelimitedText",
+				"typeProperties": {
+					"location": {
+						"type": "AzureBlobStorageLocation",
+						"fileName": "FcstAvailability.csv",
+						"folderPath": "databases/sql_server/jpstgpmsapdb01/ModelDB",
+						"container": "rdz"
+					},
+					"columnDelimiter": ",",
+					"escapeChar": "\\",
+					"firstRowAsHeader": true,
+					"quoteChar": "\""
+				},
+				"schema": [
+					{
+						"name": "2023",
+						"type": "String"
+					},
+					{
+						"name": "2023-12-011",
+						"type": "String"
+					},
+					{
+						"name": "300001",
+						"type": "String"
+					},
+					{
+						"name": "0.0",
+						"type": "String"
+					},
+					{
+						"name": "2023-12-014",
+						"type": "String"
+					},
+					{
+						"name": "0",
+						"type": "String"
+					}
+				]
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/ln_AzureBlobStorage1')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/dt_fasbestgdata01_FcstAvailability_fas_stg')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
