@@ -40,7 +40,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "ds_jpdevfasbedb01_FcstAvailability",
+						"referenceName": "ds_jpdevfasbedb01_FcstAvailability_sql",
 						"type": "DatasetReference"
 					}
 				],
