@@ -852,7 +852,7 @@
 						"userProperties": [],
 						"typeProperties": {
 							"source": {
-								"type": "AzureSqlSource",
+								"type": "SqlServerSource",
 								"queryTimeout": "02:00:00",
 								"partitionOption": "None"
 							},
@@ -875,7 +875,7 @@
 						},
 						"inputs": [
 							{
-								"referenceName": "dt_Fas_Be_Stg_DB_ActualSpotPrice_fas_stg",
+								"referenceName": "ds_Fas_Stg_DB_ActualSpotPrice",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -895,6 +895,7 @@
 				"annotations": []
 			},
 			"dependsOn": [
+				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ActualSpotPrice')]",
 				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Stg_DB_ActualSpotPrice_fas_stg')]"
 			]
 		}
