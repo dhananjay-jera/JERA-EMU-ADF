@@ -8,13 +8,13 @@
 		"JPSTGPMSAPDB01_password": {
 			"value": ""
 		},
+		"ln_JPSTGPMSAPDB01_password": {
+			"value": ""
+		},
 		"ln_jpdevfasbedb01_ModelDBv3_password": {
 			"value": ""
 		},
 		"ln_jpstgfasbedb01_ModelDBv3_password": {
-			"value": ""
-		},
-		"ln_JPSTGPMSAPDB01_password": {
 			"value": ""
 		},
 		"JPSTGPMSAPDB01_properties_typeProperties_server": {
@@ -28,6 +28,15 @@
 		},
 		"ln_AzureBlobStorage1_properties_typeProperties_serviceEndpoint": {
 			"value": "https://fasbestgdata01.blob.core.windows.net/"
+		},
+		"ln_JPSTGPMSAPDB01_properties_typeProperties_server": {
+			"value": "JPSTGPMSAPDB01"
+		},
+		"ln_JPSTGPMSAPDB01_properties_typeProperties_database": {
+			"value": "ModelDB"
+		},
+		"ln_JPSTGPMSAPDB01_properties_typeProperties_userName": {
+			"value": "jeraadmin"
 		},
 		"ln_jpdevfasbedb01_ModelDBv3_properties_typeProperties_server": {
 			"value": "jpdevfasbedb01.database.windows.net"
@@ -47,12 +56,6 @@
 		"ln_jpstgfasbedb01_ModelDBv3_properties_typeProperties_userName": {
 			"value": "jeraadmin"
 		},
-		"pl_adf_fasbestgdata01_properties_privateLinkResourceId": {
-			"value": "/subscriptions/40d0025b-b057-42a4-9ed8-f038512f9cfc/resourceGroups/FAS-BE-Stg/providers/Microsoft.Storage/storageAccounts/fasbestgdata01"
-		},
-		"pl_adf_fasbestgdata01_properties_groupId": {
-			"value": "blob"
-		},
 		"ep_jpstgpmsapdb01_properties_privateLinkResourceId": {
 			"value": "/subscriptions/40d0025b-b057-42a4-9ed8-f038512f9cfc/resourceGroups/FAS-Stg/providers/Microsoft.Network/privateLinkServices/jpstgfasilb01-pls"
 		},
@@ -64,14 +67,11 @@
 				"jpstgpmsapdb01.jera.co.jp"
 			]
 		},
-		"ln_JPSTGPMSAPDB01_properties_typeProperties_server": {
-			"value": "JPSTGPMSAPDB01"
+		"pl_adf_fasbestgdata01_properties_privateLinkResourceId": {
+			"value": "/subscriptions/40d0025b-b057-42a4-9ed8-f038512f9cfc/resourceGroups/FAS-BE-Stg/providers/Microsoft.Storage/storageAccounts/fasbestgdata01"
 		},
-		"ln_JPSTGPMSAPDB01_properties_typeProperties_database": {
-			"value": "ModelDB"
-		},
-		"ln_JPSTGPMSAPDB01_properties_typeProperties_userName": {
-			"value": "jeraadmin"
+		"pl_adf_fasbestgdata01_properties_groupId": {
+			"value": "blob"
 		}
 	}
 }

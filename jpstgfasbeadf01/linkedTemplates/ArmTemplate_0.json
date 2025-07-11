@@ -63,13 +63,17 @@
 			"type": "string",
 			"defaultValue": "https://fasbestgdata01.blob.core.windows.net/"
 		},
-		"pl_adf_fasbestgdata01_properties_privateLinkResourceId": {
+		"ln_JPSTGPMSAPDB01_properties_typeProperties_server": {
 			"type": "string",
-			"defaultValue": "/subscriptions/40d0025b-b057-42a4-9ed8-f038512f9cfc/resourceGroups/FAS-BE-Stg/providers/Microsoft.Storage/storageAccounts/fasbestgdata01"
+			"defaultValue": "JPSTGPMSAPDB01"
 		},
-		"pl_adf_fasbestgdata01_properties_groupId": {
+		"ln_JPSTGPMSAPDB01_properties_typeProperties_database": {
 			"type": "string",
-			"defaultValue": "blob"
+			"defaultValue": "ModelDB"
+		},
+		"ln_JPSTGPMSAPDB01_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "jeraadmin"
 		},
 		"ep_jpstgpmsapdb01_properties_privateLinkResourceId": {
 			"type": "string",
@@ -85,17 +89,13 @@
 				"jpstgpmsapdb01.jera.co.jp"
 			]
 		},
-		"ln_JPSTGPMSAPDB01_properties_typeProperties_server": {
+		"pl_adf_fasbestgdata01_properties_privateLinkResourceId": {
 			"type": "string",
-			"defaultValue": "JPSTGPMSAPDB01"
+			"defaultValue": "/subscriptions/40d0025b-b057-42a4-9ed8-f038512f9cfc/resourceGroups/FAS-BE-Stg/providers/Microsoft.Storage/storageAccounts/fasbestgdata01"
 		},
-		"ln_JPSTGPMSAPDB01_properties_typeProperties_database": {
+		"pl_adf_fasbestgdata01_properties_groupId": {
 			"type": "string",
-			"defaultValue": "ModelDB"
-		},
-		"ln_JPSTGPMSAPDB01_properties_typeProperties_userName": {
-			"type": "string",
-			"defaultValue": "jeraadmin"
+			"defaultValue": "blob"
 		}
 	},
 	"variables": {
@@ -329,31 +329,6 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/default/pl_adf_fasbestgdata01')]",
-			"type": "Microsoft.DataFactory/factories/managedVirtualNetworks/managedPrivateEndpoints",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"privateLinkResourceId": "[parameters('pl_adf_fasbestgdata01_properties_privateLinkResourceId')]",
-				"groupId": "[parameters('pl_adf_fasbestgdata01_properties_groupId')]"
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/managedVirtualNetworks/default')]"
-			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/default/ep_jpstgpmsapdb01')]",
-			"type": "Microsoft.DataFactory/factories/managedVirtualNetworks/managedPrivateEndpoints",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"privateLinkResourceId": "[parameters('ep_jpstgpmsapdb01_properties_privateLinkResourceId')]",
-				"groupId": "[parameters('ep_jpstgpmsapdb01_properties_groupId')]",
-				"fqdns": "[parameters('ep_jpstgpmsapdb01_properties_fqdns')]"
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/managedVirtualNetworks/default')]"
-			]
-		},
-		{
 			"name": "[concat(parameters('factoryName'), '/ln_JPSTGPMSAPDB01')]",
 			"type": "Microsoft.DataFactory/factories/linkedServices",
 			"apiVersion": "2018-06-01",
@@ -379,6 +354,31 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/integrationRuntimes/IR-jpstgpmsapdb01')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/default/ep_jpstgpmsapdb01')]",
+			"type": "Microsoft.DataFactory/factories/managedVirtualNetworks/managedPrivateEndpoints",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"privateLinkResourceId": "[parameters('ep_jpstgpmsapdb01_properties_privateLinkResourceId')]",
+				"groupId": "[parameters('ep_jpstgpmsapdb01_properties_groupId')]",
+				"fqdns": "[parameters('ep_jpstgpmsapdb01_properties_fqdns')]"
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/managedVirtualNetworks/default')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/default/pl_adf_fasbestgdata01')]",
+			"type": "Microsoft.DataFactory/factories/managedVirtualNetworks/managedPrivateEndpoints",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"privateLinkResourceId": "[parameters('pl_adf_fasbestgdata01_properties_privateLinkResourceId')]",
+				"groupId": "[parameters('pl_adf_fasbestgdata01_properties_groupId')]"
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/managedVirtualNetworks/default')]"
 			]
 		},
 		{
@@ -572,56 +572,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/ds_jpstgpmsapdb01_FcstAvailability')]",
-			"type": "Microsoft.DataFactory/factories/datasets",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"linkedServiceName": {
-					"referenceName": "ln_JPSTGPMSAPDB01",
-					"type": "LinkedServiceReference"
-				},
-				"annotations": [],
-				"type": "SqlServerTable",
-				"schema": [
-					{
-						"name": "FiscalYear",
-						"type": "smallint",
-						"precision": 5
-					},
-					{
-						"name": "Date",
-						"type": "date"
-					},
-					{
-						"name": "UnitIdFW",
-						"type": "int",
-						"precision": 10
-					},
-					{
-						"name": "Availability",
-						"type": "float",
-						"precision": 15
-					},
-					{
-						"name": "AsOfDate",
-						"type": "date"
-					},
-					{
-						"name": "HjksCheck",
-						"type": "bit"
-					}
-				],
-				"typeProperties": {
-					"schema": "dbo",
-					"table": "FcstAvailability"
-				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/ln_JPSTGPMSAPDB01')]"
-			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/dt_fasbestgdata01_FcstAvailability_fas_stg')]",
+			"name": "[concat(parameters('factoryName'), '/ds_fasbestgdata01_FcstAvailability_be_stg_blob')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -672,6 +623,55 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/linkedServices/ln_AzureBlobStorage1')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/ds_jpstgpmsapdb01_FcstAvailability')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "ln_JPSTGPMSAPDB01",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "SqlServerTable",
+				"schema": [
+					{
+						"name": "FiscalYear",
+						"type": "smallint",
+						"precision": 5
+					},
+					{
+						"name": "Date",
+						"type": "date"
+					},
+					{
+						"name": "UnitIdFW",
+						"type": "int",
+						"precision": 10
+					},
+					{
+						"name": "Availability",
+						"type": "float",
+						"precision": 15
+					},
+					{
+						"name": "AsOfDate",
+						"type": "date"
+					},
+					{
+						"name": "HjksCheck",
+						"type": "bit"
+					}
+				],
+				"typeProperties": {
+					"schema": "dbo",
+					"table": "FcstAvailability"
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/ln_JPSTGPMSAPDB01')]"
 			]
 		},
 		{

@@ -11,6 +11,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'JPSTGPMSAPDB01'"
 		},
+		"ln_JPSTGPMSAPDB01_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'ln_JPSTGPMSAPDB01'"
+		},
 		"ln_jpdevfasbedb01_ModelDBv3_password": {
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'ln_jpdevfasbedb01_ModelDBv3'"
@@ -18,10 +22,6 @@
 		"ln_jpstgfasbedb01_ModelDBv3_password": {
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'ln_jpstgfasbedb01_ModelDBv3'"
-		},
-		"ln_JPSTGPMSAPDB01_password": {
-			"type": "secureString",
-			"metadata": "Secure string for 'password' of 'ln_JPSTGPMSAPDB01'"
 		},
 		"JPSTGPMSAPDB01_properties_typeProperties_server": {
 			"type": "string",
@@ -38,6 +38,18 @@
 		"ln_AzureBlobStorage1_properties_typeProperties_serviceEndpoint": {
 			"type": "string",
 			"defaultValue": "https://fasbestgdata01.blob.core.windows.net/"
+		},
+		"ln_JPSTGPMSAPDB01_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "JPSTGPMSAPDB01"
+		},
+		"ln_JPSTGPMSAPDB01_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "ModelDB"
+		},
+		"ln_JPSTGPMSAPDB01_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "jeraadmin"
 		},
 		"ln_jpdevfasbedb01_ModelDBv3_properties_typeProperties_server": {
 			"type": "string",
@@ -63,14 +75,6 @@
 			"type": "string",
 			"defaultValue": "jeraadmin"
 		},
-		"pl_adf_fasbestgdata01_properties_privateLinkResourceId": {
-			"type": "string",
-			"defaultValue": "/subscriptions/40d0025b-b057-42a4-9ed8-f038512f9cfc/resourceGroups/FAS-BE-Stg/providers/Microsoft.Storage/storageAccounts/fasbestgdata01"
-		},
-		"pl_adf_fasbestgdata01_properties_groupId": {
-			"type": "string",
-			"defaultValue": "blob"
-		},
 		"ep_jpstgpmsapdb01_properties_privateLinkResourceId": {
 			"type": "string",
 			"defaultValue": "/subscriptions/40d0025b-b057-42a4-9ed8-f038512f9cfc/resourceGroups/FAS-Stg/providers/Microsoft.Network/privateLinkServices/jpstgfasilb01-pls"
@@ -85,17 +89,13 @@
 				"jpstgpmsapdb01.jera.co.jp"
 			]
 		},
-		"ln_JPSTGPMSAPDB01_properties_typeProperties_server": {
+		"pl_adf_fasbestgdata01_properties_privateLinkResourceId": {
 			"type": "string",
-			"defaultValue": "JPSTGPMSAPDB01"
+			"defaultValue": "/subscriptions/40d0025b-b057-42a4-9ed8-f038512f9cfc/resourceGroups/FAS-BE-Stg/providers/Microsoft.Storage/storageAccounts/fasbestgdata01"
 		},
-		"ln_JPSTGPMSAPDB01_properties_typeProperties_database": {
+		"pl_adf_fasbestgdata01_properties_groupId": {
 			"type": "string",
-			"defaultValue": "ModelDB"
-		},
-		"ln_JPSTGPMSAPDB01_properties_typeProperties_userName": {
-			"type": "string",
-			"defaultValue": "jeraadmin"
+			"defaultValue": "blob"
 		}
 	},
 	"variables": {
@@ -496,6 +496,60 @@
 			]
 		},
 		{
+			"name": "[concat(parameters('factoryName'), '/ds_fasbestgdata01_FcstAvailability_be_stg_blob')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "ln_AzureBlobStorage1",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "DelimitedText",
+				"typeProperties": {
+					"location": {
+						"type": "AzureBlobStorageLocation",
+						"fileName": "FcstAvailability.csv",
+						"folderPath": "databases/sql_server/jpstgpmsapdb01/ModelDB",
+						"container": "rdz"
+					},
+					"columnDelimiter": ",",
+					"escapeChar": "\\",
+					"firstRowAsHeader": true,
+					"quoteChar": "\""
+				},
+				"schema": [
+					{
+						"name": "FiscalYear",
+						"type": "String"
+					},
+					{
+						"name": "Date",
+						"type": "String"
+					},
+					{
+						"name": "UnitIdFW",
+						"type": "String"
+					},
+					{
+						"name": "Availability",
+						"type": "String"
+					},
+					{
+						"name": "AsOfDate",
+						"type": "String"
+					},
+					{
+						"name": "HjksCheck",
+						"type": "String"
+					}
+				]
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/ln_AzureBlobStorage1')]"
+			]
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/ds_jpdevfasbedb01_FcstAvailability')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
@@ -591,60 +645,6 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/linkedServices/ln_JPSTGPMSAPDB01')]"
-			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/dt_fasbestgdata01_FcstAvailability_fas_stg')]",
-			"type": "Microsoft.DataFactory/factories/datasets",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"linkedServiceName": {
-					"referenceName": "ln_AzureBlobStorage1",
-					"type": "LinkedServiceReference"
-				},
-				"annotations": [],
-				"type": "DelimitedText",
-				"typeProperties": {
-					"location": {
-						"type": "AzureBlobStorageLocation",
-						"fileName": "FcstAvailability.csv",
-						"folderPath": "databases/sql_server/jpstgpmsapdb01/ModelDB",
-						"container": "rdz"
-					},
-					"columnDelimiter": ",",
-					"escapeChar": "\\",
-					"firstRowAsHeader": true,
-					"quoteChar": "\""
-				},
-				"schema": [
-					{
-						"name": "FiscalYear",
-						"type": "String"
-					},
-					{
-						"name": "Date",
-						"type": "String"
-					},
-					{
-						"name": "UnitIdFW",
-						"type": "String"
-					},
-					{
-						"name": "Availability",
-						"type": "String"
-					},
-					{
-						"name": "AsOfDate",
-						"type": "String"
-					},
-					{
-						"name": "HjksCheck",
-						"type": "String"
-					}
-				]
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/ln_AzureBlobStorage1')]"
 			]
 		},
 		{
@@ -759,6 +759,34 @@
 			]
 		},
 		{
+			"name": "[concat(parameters('factoryName'), '/ln_JPSTGPMSAPDB01')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "SqlServer",
+				"typeProperties": {
+					"server": "[parameters('ln_JPSTGPMSAPDB01_properties_typeProperties_server')]",
+					"database": "[parameters('ln_JPSTGPMSAPDB01_properties_typeProperties_database')]",
+					"encrypt": "mandatory",
+					"trustServerCertificate": true,
+					"authenticationType": "SQL",
+					"userName": "[parameters('ln_JPSTGPMSAPDB01_properties_typeProperties_userName')]",
+					"password": {
+						"type": "SecureString",
+						"value": "[parameters('ln_JPSTGPMSAPDB01_password')]"
+					}
+				},
+				"connectVia": {
+					"referenceName": "IR-jpstgpmsapdb01",
+					"type": "IntegrationRuntimeReference"
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/integrationRuntimes/IR-jpstgpmsapdb01')]"
+			]
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/ln_jpdevfasbedb01_ModelDBv3')]",
 			"type": "Microsoft.DataFactory/factories/linkedServices",
 			"apiVersion": "2018-06-01",
@@ -825,18 +853,6 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/default/pl_adf_fasbestgdata01')]",
-			"type": "Microsoft.DataFactory/factories/managedVirtualNetworks/managedPrivateEndpoints",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"privateLinkResourceId": "[parameters('pl_adf_fasbestgdata01_properties_privateLinkResourceId')]",
-				"groupId": "[parameters('pl_adf_fasbestgdata01_properties_groupId')]"
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/managedVirtualNetworks/default')]"
-			]
-		},
-		{
 			"name": "[concat(parameters('factoryName'), '/default/ep_jpstgpmsapdb01')]",
 			"type": "Microsoft.DataFactory/factories/managedVirtualNetworks/managedPrivateEndpoints",
 			"apiVersion": "2018-06-01",
@@ -850,31 +866,15 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/ln_JPSTGPMSAPDB01')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"name": "[concat(parameters('factoryName'), '/default/pl_adf_fasbestgdata01')]",
+			"type": "Microsoft.DataFactory/factories/managedVirtualNetworks/managedPrivateEndpoints",
 			"apiVersion": "2018-06-01",
 			"properties": {
-				"annotations": [],
-				"type": "SqlServer",
-				"typeProperties": {
-					"server": "[parameters('ln_JPSTGPMSAPDB01_properties_typeProperties_server')]",
-					"database": "[parameters('ln_JPSTGPMSAPDB01_properties_typeProperties_database')]",
-					"encrypt": "mandatory",
-					"trustServerCertificate": true,
-					"authenticationType": "SQL",
-					"userName": "[parameters('ln_JPSTGPMSAPDB01_properties_typeProperties_userName')]",
-					"password": {
-						"type": "SecureString",
-						"value": "[parameters('ln_JPSTGPMSAPDB01_password')]"
-					}
-				},
-				"connectVia": {
-					"referenceName": "IR-jpstgpmsapdb01",
-					"type": "IntegrationRuntimeReference"
-				}
+				"privateLinkResourceId": "[parameters('pl_adf_fasbestgdata01_properties_privateLinkResourceId')]",
+				"groupId": "[parameters('pl_adf_fasbestgdata01_properties_groupId')]"
 			},
 			"dependsOn": [
-				"[concat(variables('factoryId'), '/integrationRuntimes/IR-jpstgpmsapdb01')]"
+				"[concat(variables('factoryId'), '/managedVirtualNetworks/default')]"
 			]
 		}
 	]
