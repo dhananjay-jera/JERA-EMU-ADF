@@ -190,9 +190,15 @@
 						"userProperties": [],
 						"typeProperties": {
 							"source": {
-								"type": "SqlServerSource",
-								"queryTimeout": "02:00:00",
-								"partitionOption": "None"
+								"type": "DelimitedTextSource",
+								"storeSettings": {
+									"type": "AzureBlobStorageReadSettings",
+									"recursive": true,
+									"enablePartitionDiscovery": false
+								},
+								"formatSettings": {
+									"type": "DelimitedTextReadSettings"
+								}
 							},
 							"sink": {
 								"type": "AzureSqlSink",
@@ -213,7 +219,7 @@
 						},
 						"inputs": [
 							{
-								"referenceName": "ds_jpstgpmsapdb01_FcstAvailability_sql",
+								"referenceName": "ds_fasbestgdata01_FcstAvailability_be_stg_blob",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -233,7 +239,7 @@
 				"annotations": []
 			},
 			"dependsOn": [
-				"[concat(variables('factoryId'), '/datasets/ds_jpstgpmsapdb01_FcstAvailability_sql')]",
+				"[concat(variables('factoryId'), '/datasets/ds_fasbestgdata01_FcstAvailability_be_stg_blob')]",
 				"[concat(variables('factoryId'), '/datasets/dt_jpstgfasbedb01_FcstAvailability_fas_stg_sql')]"
 			]
 		},
