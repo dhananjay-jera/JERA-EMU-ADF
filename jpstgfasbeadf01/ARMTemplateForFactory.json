@@ -145,7 +145,7 @@
 						},
 						"inputs": [
 							{
-								"referenceName": "ds_jpstgpmsapdb01_FcstAvailability",
+								"referenceName": "ds_jpstgpmsapdb01_FcstAvailability_sql",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -165,7 +165,7 @@
 				"annotations": []
 			},
 			"dependsOn": [
-				"[concat(variables('factoryId'), '/datasets/ds_jpstgpmsapdb01_FcstAvailability')]",
+				"[concat(variables('factoryId'), '/datasets/ds_jpstgpmsapdb01_FcstAvailability_sql')]",
 				"[concat(variables('factoryId'), '/datasets/dt_jpstgfasbedb01_FcstAvailability_fas_stg')]"
 			]
 		},
@@ -212,7 +212,7 @@
 						},
 						"inputs": [
 							{
-								"referenceName": "ds_jpdevfasbedb01_FcstAvailability",
+								"referenceName": "ds_jpdevfasbedb01_FcstAvailability_sql",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -233,7 +233,7 @@
 				"annotations": []
 			},
 			"dependsOn": [
-				"[concat(variables('factoryId'), '/datasets/ds_jpdevfasbedb01_FcstAvailability')]",
+				"[concat(variables('factoryId'), '/datasets/ds_jpdevfasbedb01_FcstAvailability_sql')]",
 				"[concat(variables('factoryId'), '/datasets/dt_jpstgfasbedb01_FcstAvailability_fas_be_dev')]"
 			]
 		},
@@ -281,7 +281,7 @@
 						},
 						"inputs": [
 							{
-								"referenceName": "ds_jpdevfasbedb01_FcstAvailability",
+								"referenceName": "ds_jpdevfasbedb01_FcstAvailability_sql",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -301,7 +301,7 @@
 				"annotations": []
 			},
 			"dependsOn": [
-				"[concat(variables('factoryId'), '/datasets/ds_jpdevfasbedb01_FcstAvailability')]",
+				"[concat(variables('factoryId'), '/datasets/ds_jpdevfasbedb01_FcstAvailability_sql')]",
 				"[concat(variables('factoryId'), '/datasets/dt_jpstgfasbedb01_FcstAvailability_fas_be_dev')]"
 			]
 		},
@@ -349,14 +349,14 @@
 						},
 						"inputs": [
 							{
-								"referenceName": "ds_jpstgpmsapdb01_FcstAvailability",
+								"referenceName": "ds_jpstgpmsapdb01_FcstAvailability_sql",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_jpdevfasbedb01_FcstAvailability_fas_stg",
+								"referenceName": "dt_jpdevfasbedb01_FcstAvailability_fas_stg_sql",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -369,8 +369,8 @@
 				"annotations": []
 			},
 			"dependsOn": [
-				"[concat(variables('factoryId'), '/datasets/ds_jpstgpmsapdb01_FcstAvailability')]",
-				"[concat(variables('factoryId'), '/datasets/dt_jpdevfasbedb01_FcstAvailability_fas_stg')]"
+				"[concat(variables('factoryId'), '/datasets/ds_jpstgpmsapdb01_FcstAvailability_sql')]",
+				"[concat(variables('factoryId'), '/datasets/dt_jpdevfasbedb01_FcstAvailability_fas_stg_sql')]"
 			]
 		},
 		{
@@ -417,7 +417,7 @@
 						},
 						"inputs": [
 							{
-								"referenceName": "ds_jpstgpmsapdb01_FcstAvailability",
+								"referenceName": "ds_jpstgpmsapdb01_FcstAvailability_sql",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -437,62 +437,8 @@
 				"annotations": []
 			},
 			"dependsOn": [
-				"[concat(variables('factoryId'), '/datasets/ds_jpstgpmsapdb01_FcstAvailability')]",
+				"[concat(variables('factoryId'), '/datasets/ds_jpstgpmsapdb01_FcstAvailability_sql')]",
 				"[concat(variables('factoryId'), '/datasets/dt_jpstgfasbedb01_FcstAvailability_fas_stg')]"
-			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/ds_fasbestgdata01_FcstAvailability')]",
-			"type": "Microsoft.DataFactory/factories/datasets",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"linkedServiceName": {
-					"referenceName": "ln_AzureBlobStorage1",
-					"type": "LinkedServiceReference"
-				},
-				"annotations": [],
-				"type": "DelimitedText",
-				"typeProperties": {
-					"location": {
-						"type": "AzureBlobStorageLocation",
-						"fileName": "FcstAvailability.csv",
-						"folderPath": "databases/sql_server/jpstgpmsapdb01/ModelDB",
-						"container": "rdz"
-					},
-					"columnDelimiter": ",",
-					"escapeChar": "\\",
-					"firstRowAsHeader": true,
-					"quoteChar": "\""
-				},
-				"schema": [
-					{
-						"name": "2023",
-						"type": "String"
-					},
-					{
-						"name": "2023-12-011",
-						"type": "String"
-					},
-					{
-						"name": "300001",
-						"type": "String"
-					},
-					{
-						"name": "0.0",
-						"type": "String"
-					},
-					{
-						"name": "2023-12-014",
-						"type": "String"
-					},
-					{
-						"name": "0",
-						"type": "String"
-					}
-				]
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/ln_AzureBlobStorage1')]"
 			]
 		},
 		{
@@ -550,7 +496,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/ds_jpdevfasbedb01_FcstAvailability')]",
+			"name": "[concat(parameters('factoryName'), '/ds_jpdevfasbedb01_FcstAvailability_sql')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -599,7 +545,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/ds_jpstgpmsapdb01_FcstAvailability')]",
+			"name": "[concat(parameters('factoryName'), '/ds_jpstgpmsapdb01_FcstAvailability_sql')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -648,7 +594,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/dt_jpdevfasbedb01_FcstAvailability_fas_stg')]",
+			"name": "[concat(parameters('factoryName'), '/dt_jpdevfasbedb01_FcstAvailability_fas_stg_sql')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
