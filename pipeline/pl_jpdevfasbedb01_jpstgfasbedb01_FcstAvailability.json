@@ -45,7 +45,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "dt_jpstgfasbedb01_FcstAvailability_fas_be_dev",
+						"referenceName": "dt_jpstgfasbedb01_FcstAvailability_fas_be_dev_sql",
 						"type": "DatasetReference"
 					}
 				]
