@@ -54,7 +54,7 @@
 				],
 				"typeProperties": {
 					"schema": "dbo",
-					"table": "ActualPrice"
+					"table": "FcstPV_new"
 				}
 			},
 			"dependsOn": []
@@ -101,7 +101,7 @@
 				],
 				"typeProperties": {
 					"schema": "dbo",
-					"table": "ActualPrice"
+					"table": "FcstPumpedWater"
 				}
 			},
 			"dependsOn": []
@@ -148,7 +148,7 @@
 				],
 				"typeProperties": {
 					"schema": "dbo",
-					"table": "ActualPrice"
+					"table": "FcstRenewable"
 				}
 			},
 			"dependsOn": []
@@ -195,7 +195,7 @@
 				],
 				"typeProperties": {
 					"schema": "dbo",
-					"table": "ActualPrice"
+					"table": "FcstWind"
 				}
 			},
 			"dependsOn": []
@@ -242,7 +242,7 @@
 				],
 				"typeProperties": {
 					"schema": "dbo",
-					"table": "ActualPrice"
+					"table": "ForwardForex"
 				}
 			},
 			"dependsOn": []
@@ -289,7 +289,7 @@
 				],
 				"typeProperties": {
 					"schema": "dbo",
-					"table": "ActualPrice"
+					"table": "ForwardPrice"
 				}
 			},
 			"dependsOn": []
@@ -336,7 +336,7 @@
 				],
 				"typeProperties": {
 					"schema": "dbo",
-					"table": "ActualPrice"
+					"table": "FuelPriceFormula"
 				}
 			},
 			"dependsOn": []
@@ -383,7 +383,7 @@
 				],
 				"typeProperties": {
 					"schema": "dbo",
-					"table": "ActualPrice"
+					"table": "FwFcstCommodity"
 				}
 			},
 			"dependsOn": []
@@ -430,7 +430,7 @@
 				],
 				"typeProperties": {
 					"schema": "dbo",
-					"table": "ActualPrice"
+					"table": "FwHistCommodity"
 				}
 			},
 			"dependsOn": []

@@ -524,7 +524,7 @@
 				],
 				"typeProperties": {
 					"schema": "dbo",
-					"table": "ActualPrice"
+					"table": "FcstBio"
 				}
 			},
 			"dependsOn": []
@@ -571,7 +571,7 @@
 				],
 				"typeProperties": {
 					"schema": "dbo",
-					"table": "ActualPrice"
+					"table": "FcstBio_new"
 				}
 			},
 			"dependsOn": []
@@ -618,7 +618,7 @@
 				],
 				"typeProperties": {
 					"schema": "dbo",
-					"table": "ActualPrice"
+					"table": "FcstDemand"
 				}
 			},
 			"dependsOn": []
@@ -665,7 +665,7 @@
 				],
 				"typeProperties": {
 					"schema": "dbo",
-					"table": "ActualPrice"
+					"table": "FcstDemandAdj"
 				}
 			},
 			"dependsOn": []
@@ -712,7 +712,7 @@
 				],
 				"typeProperties": {
 					"schema": "dbo",
-					"table": "ActualPrice"
+					"table": "FcstGeo"
 				}
 			},
 			"dependsOn": []
@@ -759,7 +759,7 @@
 				],
 				"typeProperties": {
 					"schema": "dbo",
-					"table": "ActualPrice"
+					"table": "FcstGeo_new"
 				}
 			},
 			"dependsOn": []
@@ -806,7 +806,7 @@
 				],
 				"typeProperties": {
 					"schema": "dbo",
-					"table": "ActualPrice"
+					"table": "FcstHydro"
 				}
 			},
 			"dependsOn": []
@@ -853,7 +853,7 @@
 				],
 				"typeProperties": {
 					"schema": "dbo",
-					"table": "ActualPrice"
+					"table": "FcstInterConnection"
 				}
 			},
 			"dependsOn": []
@@ -900,7 +900,7 @@
 				],
 				"typeProperties": {
 					"schema": "dbo",
-					"table": "ActualPrice"
+					"table": "FcstLoad"
 				}
 			},
 			"dependsOn": []
@@ -947,7 +947,7 @@
 				],
 				"typeProperties": {
 					"schema": "dbo",
-					"table": "ActualPrice"
+					"table": "FcstPV"
 				}
 			},
 			"dependsOn": []
