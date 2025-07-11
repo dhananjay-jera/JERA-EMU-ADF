@@ -574,6 +574,55 @@
 			]
 		},
 		{
+			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_ActualSpotPrice')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "ln_JPSTGPMSAPDB01",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "SqlServerTable",
+				"schema": [
+					{
+						"name": "FiscalYear",
+						"type": "smallint",
+						"precision": 5
+					},
+					{
+						"name": "Date",
+						"type": "date"
+					},
+					{
+						"name": "UnitIdFW",
+						"type": "int",
+						"precision": 10
+					},
+					{
+						"name": "Availability",
+						"type": "float",
+						"precision": 15
+					},
+					{
+						"name": "AsOfDate",
+						"type": "date"
+					},
+					{
+						"name": "HjksCheck",
+						"type": "bit"
+					}
+				],
+				"typeProperties": {
+					"schema": "dbo",
+					"table": "ActualPrice"
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/ln_JPSTGPMSAPDB01')]"
+			]
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/pl_Fas-Be-Stg_Fas-Be-Stg_Blob-DB')]",
 			"type": "Microsoft.DataFactory/factories/pipelines",
 			"apiVersion": "2018-06-01",
@@ -712,74 +761,6 @@
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_FcstAvailability')]",
 				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Dev_DB_FcstAvailability_fas_stg')]"
-			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/pl_Fas-Stg_Fas-Be-Stg_DB-DB')]",
-			"type": "Microsoft.DataFactory/factories/pipelines",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"description": "pl_jpstgpmsapdb01_jpstgfasbedb01_FcstAvailability",
-				"activities": [
-					{
-						"name": "FcstAvailability_FcstAvailability_fas_stg",
-						"type": "Copy",
-						"dependsOn": [],
-						"policy": {
-							"timeout": "0.00:12:00",
-							"retry": 3,
-							"retryIntervalInSeconds": 30,
-							"secureOutput": false,
-							"secureInput": false
-						},
-						"userProperties": [],
-						"typeProperties": {
-							"source": {
-								"type": "SqlServerSource",
-								"queryTimeout": "02:00:00",
-								"partitionOption": "None"
-							},
-							"sink": {
-								"type": "AzureSqlSink",
-								"writeBehavior": "insert",
-								"sqlWriterUseTableLock": false,
-								"tableOption": "autoCreate",
-								"disableMetricsCollection": false
-							},
-							"enableStaging": false,
-							"translator": {
-								"type": "TabularTranslator",
-								"typeConversion": true,
-								"typeConversionSettings": {
-									"allowDataTruncation": true,
-									"treatBooleanAsNumber": false
-								}
-							}
-						},
-						"inputs": [
-							{
-								"referenceName": "ds_Fas_Stg_DB_FcstAvailability",
-								"type": "DatasetReference",
-								"parameters": {}
-							}
-						],
-						"outputs": [
-							{
-								"referenceName": "dt_Fas_Be_Stg_DB_FcstAvailability_fas_stg",
-								"type": "DatasetReference",
-								"parameters": {}
-							}
-						]
-					}
-				],
-				"policy": {
-					"elapsedTimeMetric": {}
-				},
-				"annotations": []
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_FcstAvailability')]",
-				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Stg_DB_FcstAvailability_fas_stg')]"
 			]
 		}
 	]
