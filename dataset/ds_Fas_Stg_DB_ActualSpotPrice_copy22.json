@@ -1,0 +1,44 @@
+{
+	"name": "ds_Fas_Stg_DB_ActualSpotPrice_copy22",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ln_JPSTGPMSAPDB01",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "FiscalYear",
+				"type": "smallint",
+				"precision": 5
+			},
+			{
+				"name": "Date",
+				"type": "date"
+			},
+			{
+				"name": "UnitIdFW",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Availability",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "AsOfDate",
+				"type": "date"
+			},
+			{
+				"name": "HjksCheck",
+				"type": "bit"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "ActualPrice"
+		}
+	}
+}
