@@ -545,7 +545,7 @@
 				"schema": [],
 				"typeProperties": {
 					"schema": "dbo.ModelDBv3",
-					"table": "FcstAvailability_fas_be_stg"
+					"table": "FcstAvailability_fas_be_dev"
 				}
 			},
 			"dependsOn": [
