@@ -13,7 +13,7 @@
 	},
 	"resources": [
 		{
-			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_ActualSpotPrice_copy28')]",
+			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_FwHistCommodity')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -60,7 +60,7 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_ActualSpotPrice_copy29')]",
+			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_GenPlan')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -154,7 +154,7 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_ActualSpotPrice_copy30')]",
+			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_GroupConstraint')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -201,7 +201,7 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_ActualSpotPrice_copy31')]",
+			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_HistAvailability')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -248,7 +248,7 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_ActualSpotPrice_copy32')]",
+			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_HistAvailability_old')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -295,7 +295,7 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_ActualSpotPrice_copy33')]",
+			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_HistInterConnection')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -342,7 +342,7 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_ActualSpotPrice_copy34')]",
+			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_HistInterface')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -389,7 +389,7 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_ActualSpotPrice_copy35')]",
+			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_HistInterface_old')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -436,7 +436,7 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_ActualSpotPrice_copy36')]",
+			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_HistInterfacePlan')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -483,7 +483,7 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_ActualSpotPrice_copy37')]",
+			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_HistLoad')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -530,7 +530,7 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_ActualSpotPrice_copy38')]",
+			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_HistRenewable')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -577,7 +577,7 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_ActualSpotPrice_copy39')]",
+			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_HjksGenOutage')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -671,7 +671,7 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_ActualSpotPrice_copy40')]",
+			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_HjksMapping')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -718,7 +718,7 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_ActualSpotPrice_copy41')]",
+			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_JepxAreaPrice')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -765,7 +765,7 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_ActualSpotPrice_copy42')]",
+			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_JepxSummary')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
