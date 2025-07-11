@@ -45,7 +45,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "ds_fasbestgdata01_FcstAvailability_be_stg_blob",
+						"referenceName": "ds_Fas_Be_Blob_FcstAvailability",
 						"type": "DatasetReference"
 					}
 				],
