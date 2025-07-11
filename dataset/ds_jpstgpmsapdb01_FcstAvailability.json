@@ -2,7 +2,7 @@
 	"name": "ds_jpstgpmsapdb01_FcstAvailability",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "JPSTGPMSAPDB01",
+			"referenceName": "ln_JPSTGPMSAPDB01",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
@@ -35,6 +35,10 @@
 				"name": "HjksCheck",
 				"type": "bit"
 			}
-		]
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "FcstAvailability"
+		}
 	}
 }
