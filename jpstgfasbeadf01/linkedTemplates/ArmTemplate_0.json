@@ -744,7 +744,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Stg_DB_FcstAvailability_fas_dev",
+								"referenceName": "dt_Fas_Be_Stg_DB_FcstAvailability_fas_stg",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -758,7 +758,7 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_FcstAvailability')]",
-				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Stg_DB_FcstAvailability_fas_dev')]"
+				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Stg_DB_FcstAvailability_fas_stg')]"
 			]
 		}
 	]
