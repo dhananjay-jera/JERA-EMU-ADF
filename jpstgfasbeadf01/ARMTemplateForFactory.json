@@ -1710,7 +1710,7 @@
 				],
 				"typeProperties": {
 					"schema": "dbo",
-					"table": "ActualPrice"
+					"table": "ArcHjksGenOutage"
 				}
 			},
 			"dependsOn": [
