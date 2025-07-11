@@ -239,7 +239,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/dt_jpstgfasbedb01_FcstAvailability_fas_be_dev')]",
+			"name": "[concat(parameters('factoryName'), '/dt_jpstgfasbedb01_FcstAvailability_fas_be_dev_sql')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -260,7 +260,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/dt_jpstgfasbedb01_FcstAvailability_fas_stg')]",
+			"name": "[concat(parameters('factoryName'), '/dt_jpstgfasbedb01_FcstAvailability_fas_stg_sql')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -431,7 +431,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_jpstgfasbedb01_FcstAvailability_fas_be_dev",
+								"referenceName": "dt_jpstgfasbedb01_FcstAvailability_fas_be_dev_sql",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -446,7 +446,7 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/ds_jpdevfasbedb01_FcstAvailability_sql')]",
-				"[concat(variables('factoryId'), '/datasets/dt_jpstgfasbedb01_FcstAvailability_fas_be_dev')]"
+				"[concat(variables('factoryId'), '/datasets/dt_jpstgfasbedb01_FcstAvailability_fas_be_dev_sql')]"
 			]
 		},
 		{
@@ -500,7 +500,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_jpstgfasbedb01_FcstAvailability_fas_be_dev",
+								"referenceName": "dt_jpstgfasbedb01_FcstAvailability_fas_be_dev_sql",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -514,7 +514,7 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/ds_jpdevfasbedb01_FcstAvailability_sql')]",
-				"[concat(variables('factoryId'), '/datasets/dt_jpstgfasbedb01_FcstAvailability_fas_be_dev')]"
+				"[concat(variables('factoryId'), '/datasets/dt_jpstgfasbedb01_FcstAvailability_fas_be_dev_sql')]"
 			]
 		},
 		{
@@ -670,7 +670,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_jpstgfasbedb01_FcstAvailability_fas_stg",
+								"referenceName": "dt_jpstgfasbedb01_FcstAvailability_fas_stg_sql",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -684,7 +684,7 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/ds_jpstgpmsapdb01_FcstAvailability_sql')]",
-				"[concat(variables('factoryId'), '/datasets/dt_jpstgfasbedb01_FcstAvailability_fas_stg')]"
+				"[concat(variables('factoryId'), '/datasets/dt_jpstgfasbedb01_FcstAvailability_fas_stg_sql')]"
 			]
 		},
 		{
@@ -806,7 +806,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_jpstgfasbedb01_FcstAvailability_fas_stg",
+								"referenceName": "dt_jpstgfasbedb01_FcstAvailability_fas_stg_sql",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -820,7 +820,7 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/ds_jpstgpmsapdb01_FcstAvailability_sql')]",
-				"[concat(variables('factoryId'), '/datasets/dt_jpstgfasbedb01_FcstAvailability_fas_stg')]"
+				"[concat(variables('factoryId'), '/datasets/dt_jpstgfasbedb01_FcstAvailability_fas_stg_sql')]"
 			]
 		}
 	]
