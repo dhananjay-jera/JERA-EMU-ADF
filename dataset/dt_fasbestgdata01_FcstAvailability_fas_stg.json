@@ -21,27 +21,27 @@
 		},
 		"schema": [
 			{
-				"name": "2023",
+				"name": "FiscalYear",
 				"type": "String"
 			},
 			{
-				"name": "2023-12-011",
+				"name": "Date",
 				"type": "String"
 			},
 			{
-				"name": "300001",
+				"name": "UnitIdFW",
 				"type": "String"
 			},
 			{
-				"name": "0.0",
+				"name": "Availability",
 				"type": "String"
 			},
 			{
-				"name": "2023-12-014",
+				"name": "AsOfDate",
 				"type": "String"
 			},
 			{
-				"name": "0",
+				"name": "HjksCheck",
 				"type": "String"
 			}
 		]
