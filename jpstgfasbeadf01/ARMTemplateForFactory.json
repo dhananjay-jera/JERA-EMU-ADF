@@ -219,7 +219,7 @@
 						},
 						"inputs": [
 							{
-								"referenceName": "ds_fasbestgdata01_FcstAvailability_be_stg_blob",
+								"referenceName": "ds_Fas_Be_Blob_FcstAvailability",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -239,7 +239,7 @@
 				"annotations": []
 			},
 			"dependsOn": [
-				"[concat(variables('factoryId'), '/datasets/ds_fasbestgdata01_FcstAvailability_be_stg_blob')]",
+				"[concat(variables('factoryId'), '/datasets/ds_Fas_Be_Blob_FcstAvailability')]",
 				"[concat(variables('factoryId'), '/datasets/dt_jpstgfasbedb01_FcstAvailability_fas_stg_sql')]"
 			]
 		},
@@ -380,7 +380,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/ds_fasbestgdata01_FcstAvailability_be_stg_blob')]",
+			"name": "[concat(parameters('factoryName'), '/ds_Fas_Be_Blob_FcstAvailability')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
