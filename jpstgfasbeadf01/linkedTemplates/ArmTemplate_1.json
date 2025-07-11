@@ -13,7 +13,7 @@
 	},
 	"resources": [
 		{
-			"name": "[concat(parameters('factoryName'), '/pl_jpstgpmsapdb01_jpstgfasbedb01_FcstAvailability')]",
+			"name": "[concat(parameters('factoryName'), '/pl_Fas-Stg_Fas-Be-Stg_DB-DB')]",
 			"type": "Microsoft.DataFactory/factories/pipelines",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -56,14 +56,14 @@
 						},
 						"inputs": [
 							{
-								"referenceName": "ds_jpstgpmsapdb01_FcstAvailability",
+								"referenceName": "ds_Fas_Stg_DB_FcstAvailability",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_jpstgfasbedb01_FcstAvailability_fas_stg",
+								"referenceName": "dt_Fas_Be_Stg_DB_FcstAvailability_fas_stg",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
