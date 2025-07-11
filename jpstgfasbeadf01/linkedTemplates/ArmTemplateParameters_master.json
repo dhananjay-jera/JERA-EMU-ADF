@@ -14,6 +14,9 @@
 		"ln_jpstgfasbedb01_ModelDBv3_password": {
 			"value": ""
 		},
+		"ln_JPSTGPMSAPDB01_password": {
+			"value": ""
+		},
 		"JPSTGPMSAPDB01_properties_typeProperties_server": {
 			"value": "jpstgpmsapdb01"
 		},
@@ -49,6 +52,26 @@
 		},
 		"pl_adf_fasbestgdata01_properties_groupId": {
 			"value": "blob"
+		},
+		"ep_jpstgpmsapdb01_properties_privateLinkResourceId": {
+			"value": "/subscriptions/40d0025b-b057-42a4-9ed8-f038512f9cfc/resourceGroups/FAS-Stg/providers/Microsoft.Network/privateLinkServices/jpstgfasilb01-pls"
+		},
+		"ep_jpstgpmsapdb01_properties_groupId": {
+			"value": ""
+		},
+		"ep_jpstgpmsapdb01_properties_fqdns": {
+			"value": [
+				"jpstgpmsapdb01.jera.co.jp"
+			]
+		},
+		"ln_JPSTGPMSAPDB01_properties_typeProperties_server": {
+			"value": "JPSTGPMSAPDB01"
+		},
+		"ln_JPSTGPMSAPDB01_properties_typeProperties_database": {
+			"value": "ModelDB"
+		},
+		"ln_JPSTGPMSAPDB01_properties_typeProperties_userName": {
+			"value": "jeraadmin"
 		},
 		"containerUri": {
 			"value": ""

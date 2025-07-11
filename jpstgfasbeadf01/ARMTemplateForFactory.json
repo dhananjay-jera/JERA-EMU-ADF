@@ -19,6 +19,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'ln_jpstgfasbedb01_ModelDBv3'"
 		},
+		"ln_JPSTGPMSAPDB01_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'ln_JPSTGPMSAPDB01'"
+		},
 		"JPSTGPMSAPDB01_properties_typeProperties_server": {
 			"type": "string",
 			"defaultValue": "jpstgpmsapdb01"
@@ -66,12 +70,105 @@
 		"pl_adf_fasbestgdata01_properties_groupId": {
 			"type": "string",
 			"defaultValue": "blob"
+		},
+		"ep_jpstgpmsapdb01_properties_privateLinkResourceId": {
+			"type": "string",
+			"defaultValue": "/subscriptions/40d0025b-b057-42a4-9ed8-f038512f9cfc/resourceGroups/FAS-Stg/providers/Microsoft.Network/privateLinkServices/jpstgfasilb01-pls"
+		},
+		"ep_jpstgpmsapdb01_properties_groupId": {
+			"type": "string",
+			"defaultValue": ""
+		},
+		"ep_jpstgpmsapdb01_properties_fqdns": {
+			"type": "array",
+			"defaultValue": [
+				"jpstgpmsapdb01.jera.co.jp"
+			]
+		},
+		"ln_JPSTGPMSAPDB01_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "JPSTGPMSAPDB01"
+		},
+		"ln_JPSTGPMSAPDB01_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "ModelDB"
+		},
+		"ln_JPSTGPMSAPDB01_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "jeraadmin"
 		}
 	},
 	"variables": {
 		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
 	},
 	"resources": [
+		{
+			"name": "[concat(parameters('factoryName'), '/pl_fasbestgdata01_jpstgfasbedb01_FcstAvailability')]",
+			"type": "Microsoft.DataFactory/factories/pipelines",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"activities": [
+					{
+						"name": "FcstAvailability_FcstAvailability_fas_stg",
+						"type": "Copy",
+						"dependsOn": [],
+						"policy": {
+							"timeout": "0.12:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"source": {
+								"type": "SqlServerSource",
+								"queryTimeout": "02:00:00",
+								"partitionOption": "None"
+							},
+							"sink": {
+								"type": "AzureSqlSink",
+								"writeBehavior": "insert",
+								"sqlWriterUseTableLock": false,
+								"tableOption": "autoCreate",
+								"disableMetricsCollection": false
+							},
+							"enableStaging": false,
+							"translator": {
+								"type": "TabularTranslator",
+								"typeConversion": true,
+								"typeConversionSettings": {
+									"allowDataTruncation": true,
+									"treatBooleanAsNumber": false
+								}
+							}
+						},
+						"inputs": [
+							{
+								"referenceName": "ds_jpstgpmsapdb01_FcstAvailability",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						],
+						"outputs": [
+							{
+								"referenceName": "dt_jpstgfasbedb01_FcstAvailability_fas_stg",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						]
+					}
+				],
+				"policy": {
+					"elapsedTimeMetric": {}
+				},
+				"annotations": []
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/datasets/ds_jpstgpmsapdb01_FcstAvailability')]",
+				"[concat(variables('factoryId'), '/datasets/dt_jpstgfasbedb01_FcstAvailability_fas_stg')]"
+			]
+		},
 		{
 			"name": "[concat(parameters('factoryName'), '/pl_jpdevfasbedb01_jpstgfasbedb01_FcstAvailability')]",
 			"type": "Microsoft.DataFactory/factories/pipelines",
@@ -345,6 +442,60 @@
 			]
 		},
 		{
+			"name": "[concat(parameters('factoryName'), '/ds_fasbestgdata01_FcstAvailability')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "ln_AzureBlobStorage1",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "DelimitedText",
+				"typeProperties": {
+					"location": {
+						"type": "AzureBlobStorageLocation",
+						"fileName": "FcstAvailability.csv",
+						"folderPath": "databases/sql_server/jpstgpmsapdb01/ModelDB",
+						"container": "rdz"
+					},
+					"columnDelimiter": ",",
+					"escapeChar": "\\",
+					"firstRowAsHeader": true,
+					"quoteChar": "\""
+				},
+				"schema": [
+					{
+						"name": "2023",
+						"type": "String"
+					},
+					{
+						"name": "2023-12-011",
+						"type": "String"
+					},
+					{
+						"name": "300001",
+						"type": "String"
+					},
+					{
+						"name": "0.0",
+						"type": "String"
+					},
+					{
+						"name": "2023-12-014",
+						"type": "String"
+					},
+					{
+						"name": "0",
+						"type": "String"
+					}
+				]
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/ln_AzureBlobStorage1')]"
+			]
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/ds_jpdevfasbedb01_FcstAvailability')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
@@ -399,7 +550,7 @@
 			"apiVersion": "2018-06-01",
 			"properties": {
 				"linkedServiceName": {
-					"referenceName": "JPSTGPMSAPDB01",
+					"referenceName": "ln_JPSTGPMSAPDB01",
 					"type": "LinkedServiceReference"
 				},
 				"annotations": [],
@@ -439,7 +590,61 @@
 				}
 			},
 			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/JPSTGPMSAPDB01')]"
+				"[concat(variables('factoryId'), '/linkedServices/ln_JPSTGPMSAPDB01')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/dt_fasbestgdata01_FcstAvailability_fas_stg')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "ln_AzureBlobStorage1",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "DelimitedText",
+				"typeProperties": {
+					"location": {
+						"type": "AzureBlobStorageLocation",
+						"fileName": "FcstAvailability.csv",
+						"folderPath": "databases/sql_server/jpstgpmsapdb01/ModelDB",
+						"container": "rdz"
+					},
+					"columnDelimiter": ",",
+					"escapeChar": "\\",
+					"firstRowAsHeader": true,
+					"quoteChar": "\""
+				},
+				"schema": [
+					{
+						"name": "2023",
+						"type": "String"
+					},
+					{
+						"name": "2023-12-011",
+						"type": "String"
+					},
+					{
+						"name": "300001",
+						"type": "String"
+					},
+					{
+						"name": "0.0",
+						"type": "String"
+					},
+					{
+						"name": "2023-12-014",
+						"type": "String"
+					},
+					{
+						"name": "0",
+						"type": "String"
+					}
+				]
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/ln_AzureBlobStorage1')]"
 			]
 		},
 		{
@@ -632,111 +837,44 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/ds_fasbestgdata01_FcstAvailability')]",
-			"type": "Microsoft.DataFactory/factories/datasets",
+			"name": "[concat(parameters('factoryName'), '/default/ep_jpstgpmsapdb01')]",
+			"type": "Microsoft.DataFactory/factories/managedVirtualNetworks/managedPrivateEndpoints",
 			"apiVersion": "2018-06-01",
 			"properties": {
-				"linkedServiceName": {
-					"referenceName": "ln_AzureBlobStorage1",
-					"type": "LinkedServiceReference"
-				},
-				"annotations": [],
-				"type": "DelimitedText",
-				"typeProperties": {
-					"location": {
-						"type": "AzureBlobStorageLocation",
-						"fileName": "FcstAvailability.csv",
-						"folderPath": "databases/sql_server/jpstgpmsapdb01/ModelDB",
-						"container": "rdz"
-					},
-					"columnDelimiter": ",",
-					"escapeChar": "\\",
-					"firstRowAsHeader": true,
-					"quoteChar": "\""
-				},
-				"schema": [
-					{
-						"name": "2023",
-						"type": "String"
-					},
-					{
-						"name": "2023-12-011",
-						"type": "String"
-					},
-					{
-						"name": "300001",
-						"type": "String"
-					},
-					{
-						"name": "0.0",
-						"type": "String"
-					},
-					{
-						"name": "2023-12-014",
-						"type": "String"
-					},
-					{
-						"name": "0",
-						"type": "String"
-					}
-				]
+				"privateLinkResourceId": "[parameters('ep_jpstgpmsapdb01_properties_privateLinkResourceId')]",
+				"groupId": "[parameters('ep_jpstgpmsapdb01_properties_groupId')]",
+				"fqdns": "[parameters('ep_jpstgpmsapdb01_properties_fqdns')]"
 			},
 			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/ln_AzureBlobStorage1')]"
+				"[concat(variables('factoryId'), '/managedVirtualNetworks/default')]"
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/dt_fasbestgdata01_FcstAvailability_fas_stg')]",
-			"type": "Microsoft.DataFactory/factories/datasets",
+			"name": "[concat(parameters('factoryName'), '/ln_JPSTGPMSAPDB01')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
 			"apiVersion": "2018-06-01",
 			"properties": {
-				"linkedServiceName": {
-					"referenceName": "ln_AzureBlobStorage1",
-					"type": "LinkedServiceReference"
-				},
 				"annotations": [],
-				"type": "DelimitedText",
+				"type": "SqlServer",
 				"typeProperties": {
-					"location": {
-						"type": "AzureBlobStorageLocation",
-						"fileName": "FcstAvailability.csv",
-						"folderPath": "databases/sql_server/jpstgpmsapdb01/ModelDB",
-						"container": "rdz"
-					},
-					"columnDelimiter": ",",
-					"escapeChar": "\\",
-					"firstRowAsHeader": true,
-					"quoteChar": "\""
-				},
-				"schema": [
-					{
-						"name": "2023",
-						"type": "String"
-					},
-					{
-						"name": "2023-12-011",
-						"type": "String"
-					},
-					{
-						"name": "300001",
-						"type": "String"
-					},
-					{
-						"name": "0.0",
-						"type": "String"
-					},
-					{
-						"name": "2023-12-014",
-						"type": "String"
-					},
-					{
-						"name": "0",
-						"type": "String"
+					"server": "[parameters('ln_JPSTGPMSAPDB01_properties_typeProperties_server')]",
+					"database": "[parameters('ln_JPSTGPMSAPDB01_properties_typeProperties_database')]",
+					"encrypt": "mandatory",
+					"trustServerCertificate": true,
+					"authenticationType": "SQL",
+					"userName": "[parameters('ln_JPSTGPMSAPDB01_properties_typeProperties_userName')]",
+					"password": {
+						"type": "SecureString",
+						"value": "[parameters('ln_JPSTGPMSAPDB01_password')]"
 					}
-				]
+				},
+				"connectVia": {
+					"referenceName": "IR-jpstgpmsapdb01",
+					"type": "IntegrationRuntimeReference"
+				}
 			},
 			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/ln_AzureBlobStorage1')]"
+				"[concat(variables('factoryId'), '/integrationRuntimes/IR-jpstgpmsapdb01')]"
 			]
 		}
 	]

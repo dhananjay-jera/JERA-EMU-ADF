@@ -19,6 +19,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'ln_jpstgfasbedb01_ModelDBv3'"
 		},
+		"ln_JPSTGPMSAPDB01_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'ln_JPSTGPMSAPDB01'"
+		},
 		"JPSTGPMSAPDB01_properties_typeProperties_server": {
 			"type": "string",
 			"defaultValue": "jpstgpmsapdb01"
@@ -67,6 +71,32 @@
 			"type": "string",
 			"defaultValue": "blob"
 		},
+		"ep_jpstgpmsapdb01_properties_privateLinkResourceId": {
+			"type": "string",
+			"defaultValue": "/subscriptions/40d0025b-b057-42a4-9ed8-f038512f9cfc/resourceGroups/FAS-Stg/providers/Microsoft.Network/privateLinkServices/jpstgfasilb01-pls"
+		},
+		"ep_jpstgpmsapdb01_properties_groupId": {
+			"type": "string",
+			"defaultValue": ""
+		},
+		"ep_jpstgpmsapdb01_properties_fqdns": {
+			"type": "array",
+			"defaultValue": [
+				"jpstgpmsapdb01.jera.co.jp"
+			]
+		},
+		"ln_JPSTGPMSAPDB01_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "JPSTGPMSAPDB01"
+		},
+		"ln_JPSTGPMSAPDB01_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "ModelDB"
+		},
+		"ln_JPSTGPMSAPDB01_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "jeraadmin"
+		},
 		"containerUri": {
 			"type": "string",
 			"metadata": "URI to storage account containing linked ARM templates"
@@ -103,6 +133,9 @@
 					"JPSTGPMSAPDB01_password": {
 						"value": "[parameters('JPSTGPMSAPDB01_password')]"
 					},
+					"ln_JPSTGPMSAPDB01_password": {
+						"value": "[parameters('ln_JPSTGPMSAPDB01_password')]"
+					},
 					"ln_jpdevfasbedb01_ModelDBv3_properties_typeProperties_server": {
 						"value": "[parameters('ln_jpdevfasbedb01_ModelDBv3_properties_typeProperties_server')]"
 					},
@@ -138,10 +171,48 @@
 					},
 					"pl_adf_fasbestgdata01_properties_groupId": {
 						"value": "[parameters('pl_adf_fasbestgdata01_properties_groupId')]"
+					},
+					"ep_jpstgpmsapdb01_properties_privateLinkResourceId": {
+						"value": "[parameters('ep_jpstgpmsapdb01_properties_privateLinkResourceId')]"
+					},
+					"ep_jpstgpmsapdb01_properties_groupId": {
+						"value": "[parameters('ep_jpstgpmsapdb01_properties_groupId')]"
+					},
+					"ep_jpstgpmsapdb01_properties_fqdns": {
+						"value": "[parameters('ep_jpstgpmsapdb01_properties_fqdns')]"
+					},
+					"ln_JPSTGPMSAPDB01_properties_typeProperties_server": {
+						"value": "[parameters('ln_JPSTGPMSAPDB01_properties_typeProperties_server')]"
+					},
+					"ln_JPSTGPMSAPDB01_properties_typeProperties_database": {
+						"value": "[parameters('ln_JPSTGPMSAPDB01_properties_typeProperties_database')]"
+					},
+					"ln_JPSTGPMSAPDB01_properties_typeProperties_userName": {
+						"value": "[parameters('ln_JPSTGPMSAPDB01_properties_typeProperties_userName')]"
 					}
 				}
 			},
 			"dependsOn": []
+		},
+		{
+			"name": "jpstgfasbeadf01_ArmTemplate_1",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_1.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'jpstgfasbeadf01_ArmTemplate_0')]"
+			]
 		}
 	]
 }
