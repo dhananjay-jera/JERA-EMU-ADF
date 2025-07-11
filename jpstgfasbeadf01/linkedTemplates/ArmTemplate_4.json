@@ -13,7 +13,7 @@
 	},
 	"resources": [
 		{
-			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_ActualSpotPrice_copy1')]",
+			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_ActualValue')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -530,7 +530,7 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_ActualSpotPrice_copy2')]",
+			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_ActualValueHydroRefined')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -571,7 +571,7 @@
 				],
 				"typeProperties": {
 					"schema": "dbo",
-					"table": "ActualPrice"
+					"table": "ActualValueHydroRefined"
 				}
 			},
 			"dependsOn": []
