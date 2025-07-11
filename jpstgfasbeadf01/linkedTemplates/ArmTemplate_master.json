@@ -130,12 +130,6 @@
 					"ln_jpstgfasbedb01_ModelDBv3_password": {
 						"value": "[parameters('ln_jpstgfasbedb01_ModelDBv3_password')]"
 					},
-					"JPSTGPMSAPDB01_password": {
-						"value": "[parameters('JPSTGPMSAPDB01_password')]"
-					},
-					"ln_JPSTGPMSAPDB01_password": {
-						"value": "[parameters('ln_JPSTGPMSAPDB01_password')]"
-					},
 					"ln_jpdevfasbedb01_ModelDBv3_properties_typeProperties_server": {
 						"value": "[parameters('ln_jpdevfasbedb01_ModelDBv3_properties_typeProperties_server')]"
 					},
@@ -153,42 +147,6 @@
 					},
 					"ln_jpstgfasbedb01_ModelDBv3_properties_typeProperties_userName": {
 						"value": "[parameters('ln_jpstgfasbedb01_ModelDBv3_properties_typeProperties_userName')]"
-					},
-					"JPSTGPMSAPDB01_properties_typeProperties_server": {
-						"value": "[parameters('JPSTGPMSAPDB01_properties_typeProperties_server')]"
-					},
-					"JPSTGPMSAPDB01_properties_typeProperties_database": {
-						"value": "[parameters('JPSTGPMSAPDB01_properties_typeProperties_database')]"
-					},
-					"JPSTGPMSAPDB01_properties_typeProperties_userName": {
-						"value": "[parameters('JPSTGPMSAPDB01_properties_typeProperties_userName')]"
-					},
-					"ln_AzureBlobStorage1_properties_typeProperties_serviceEndpoint": {
-						"value": "[parameters('ln_AzureBlobStorage1_properties_typeProperties_serviceEndpoint')]"
-					},
-					"ln_JPSTGPMSAPDB01_properties_typeProperties_server": {
-						"value": "[parameters('ln_JPSTGPMSAPDB01_properties_typeProperties_server')]"
-					},
-					"ln_JPSTGPMSAPDB01_properties_typeProperties_database": {
-						"value": "[parameters('ln_JPSTGPMSAPDB01_properties_typeProperties_database')]"
-					},
-					"ln_JPSTGPMSAPDB01_properties_typeProperties_userName": {
-						"value": "[parameters('ln_JPSTGPMSAPDB01_properties_typeProperties_userName')]"
-					},
-					"ep_jpstgpmsapdb01_properties_privateLinkResourceId": {
-						"value": "[parameters('ep_jpstgpmsapdb01_properties_privateLinkResourceId')]"
-					},
-					"ep_jpstgpmsapdb01_properties_groupId": {
-						"value": "[parameters('ep_jpstgpmsapdb01_properties_groupId')]"
-					},
-					"ep_jpstgpmsapdb01_properties_fqdns": {
-						"value": "[parameters('ep_jpstgpmsapdb01_properties_fqdns')]"
-					},
-					"pl_adf_fasbestgdata01_properties_privateLinkResourceId": {
-						"value": "[parameters('pl_adf_fasbestgdata01_properties_privateLinkResourceId')]"
-					},
-					"pl_adf_fasbestgdata01_properties_groupId": {
-						"value": "[parameters('pl_adf_fasbestgdata01_properties_groupId')]"
 					}
 				}
 			},
@@ -247,6 +205,48 @@
 				"parameters": {
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
+					},
+					"JPSTGPMSAPDB01_password": {
+						"value": "[parameters('JPSTGPMSAPDB01_password')]"
+					},
+					"ln_JPSTGPMSAPDB01_password": {
+						"value": "[parameters('ln_JPSTGPMSAPDB01_password')]"
+					},
+					"JPSTGPMSAPDB01_properties_typeProperties_server": {
+						"value": "[parameters('JPSTGPMSAPDB01_properties_typeProperties_server')]"
+					},
+					"JPSTGPMSAPDB01_properties_typeProperties_database": {
+						"value": "[parameters('JPSTGPMSAPDB01_properties_typeProperties_database')]"
+					},
+					"JPSTGPMSAPDB01_properties_typeProperties_userName": {
+						"value": "[parameters('JPSTGPMSAPDB01_properties_typeProperties_userName')]"
+					},
+					"ln_AzureBlobStorage1_properties_typeProperties_serviceEndpoint": {
+						"value": "[parameters('ln_AzureBlobStorage1_properties_typeProperties_serviceEndpoint')]"
+					},
+					"ln_JPSTGPMSAPDB01_properties_typeProperties_server": {
+						"value": "[parameters('ln_JPSTGPMSAPDB01_properties_typeProperties_server')]"
+					},
+					"ln_JPSTGPMSAPDB01_properties_typeProperties_database": {
+						"value": "[parameters('ln_JPSTGPMSAPDB01_properties_typeProperties_database')]"
+					},
+					"ln_JPSTGPMSAPDB01_properties_typeProperties_userName": {
+						"value": "[parameters('ln_JPSTGPMSAPDB01_properties_typeProperties_userName')]"
+					},
+					"ep_jpstgpmsapdb01_properties_privateLinkResourceId": {
+						"value": "[parameters('ep_jpstgpmsapdb01_properties_privateLinkResourceId')]"
+					},
+					"ep_jpstgpmsapdb01_properties_groupId": {
+						"value": "[parameters('ep_jpstgpmsapdb01_properties_groupId')]"
+					},
+					"ep_jpstgpmsapdb01_properties_fqdns": {
+						"value": "[parameters('ep_jpstgpmsapdb01_properties_fqdns')]"
+					},
+					"pl_adf_fasbestgdata01_properties_privateLinkResourceId": {
+						"value": "[parameters('pl_adf_fasbestgdata01_properties_privateLinkResourceId')]"
+					},
+					"pl_adf_fasbestgdata01_properties_groupId": {
+						"value": "[parameters('pl_adf_fasbestgdata01_properties_groupId')]"
 					}
 				}
 			},
