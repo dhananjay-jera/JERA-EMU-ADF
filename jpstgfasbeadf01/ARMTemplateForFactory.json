@@ -2053,7 +2053,7 @@
 				],
 				"typeProperties": {
 					"schema": "dbo",
-					"table": "ActualPrice"
+					"table": "GenPlan"
 				}
 			},
 			"dependsOn": [
@@ -2102,7 +2102,7 @@
 				],
 				"typeProperties": {
 					"schema": "dbo",
-					"table": "ActualPrice"
+					"table": "GroupConstraint"
 				}
 			},
 			"dependsOn": [
@@ -2151,7 +2151,7 @@
 				],
 				"typeProperties": {
 					"schema": "dbo",
-					"table": "ActualPrice"
+					"table": "HistAvailability"
 				}
 			},
 			"dependsOn": [
@@ -2200,7 +2200,7 @@
 				],
 				"typeProperties": {
 					"schema": "dbo",
-					"table": "ActualPrice"
+					"table": "HistAvailability_old"
 				}
 			},
 			"dependsOn": [
@@ -2249,7 +2249,7 @@
 				],
 				"typeProperties": {
 					"schema": "dbo",
-					"table": "ActualPrice"
+					"table": "HistInterConnection"
 				}
 			},
 			"dependsOn": [
@@ -2298,7 +2298,7 @@
 				],
 				"typeProperties": {
 					"schema": "dbo",
-					"table": "ActualPrice"
+					"table": "HistInterface"
 				}
 			},
 			"dependsOn": [
@@ -2347,7 +2347,7 @@
 				],
 				"typeProperties": {
 					"schema": "dbo",
-					"table": "ActualPrice"
+					"table": "HistInterfacePlan"
 				}
 			},
 			"dependsOn": [
@@ -2396,7 +2396,7 @@
 				],
 				"typeProperties": {
 					"schema": "dbo",
-					"table": "ActualPrice"
+					"table": "HistInterface_old"
 				}
 			},
 			"dependsOn": [
@@ -2445,7 +2445,7 @@
 				],
 				"typeProperties": {
 					"schema": "dbo",
-					"table": "ActualPrice"
+					"table": "HistLoad"
 				}
 			},
 			"dependsOn": [
@@ -2494,7 +2494,7 @@
 				],
 				"typeProperties": {
 					"schema": "dbo",
-					"table": "ActualPrice"
+					"table": "HistRenewable"
 				}
 			},
 			"dependsOn": [
@@ -2543,7 +2543,7 @@
 				],
 				"typeProperties": {
 					"schema": "dbo",
-					"table": "ActualPrice"
+					"table": "ArcHjksGenOutage"
 				}
 			},
 			"dependsOn": [
@@ -2592,7 +2592,7 @@
 				],
 				"typeProperties": {
 					"schema": "dbo",
-					"table": "ActualPrice"
+					"table": "HjksMapping"
 				}
 			},
 			"dependsOn": [
@@ -2641,7 +2641,7 @@
 				],
 				"typeProperties": {
 					"schema": "dbo",
-					"table": "ActualPrice"
+					"table": "JepxAreaPrice"
 				}
 			},
 			"dependsOn": [
@@ -2690,7 +2690,7 @@
 				],
 				"typeProperties": {
 					"schema": "dbo",
-					"table": "ActualPrice"
+					"table": "JepxSummary"
 				}
 			},
 			"dependsOn": [
@@ -2739,7 +2739,7 @@
 				],
 				"typeProperties": {
 					"schema": "dbo",
-					"table": "ActualPrice"
+					"table": "JeraHistGeneration"
 				}
 			},
 			"dependsOn": [
@@ -2788,7 +2788,7 @@
 				],
 				"typeProperties": {
 					"schema": "dbo",
-					"table": "ActualPrice"
+					"table": "LTDCalendar"
 				}
 			},
 			"dependsOn": [
@@ -2837,7 +2837,7 @@
 				],
 				"typeProperties": {
 					"schema": "dbo",
-					"table": "ActualPrice"
+					"table": "MasterGenV3"
 				}
 			},
 			"dependsOn": [
@@ -2886,7 +2886,7 @@
 				],
 				"typeProperties": {
 					"schema": "dbo",
-					"table": "ActualPrice"
+					"table": "MasterGenV4"
 				}
 			},
 			"dependsOn": [
@@ -2935,7 +2935,7 @@
 				],
 				"typeProperties": {
 					"schema": "dbo",
-					"table": "ActualPrice"
+					"table": "ModelCurveForward"
 				}
 			},
 			"dependsOn": [
@@ -2984,7 +2984,7 @@
 				],
 				"typeProperties": {
 					"schema": "dbo",
-					"table": "ActualPrice"
+					"table": "ModelCurveSettlement"
 				}
 			},
 			"dependsOn": [
@@ -3033,7 +3033,7 @@
 				],
 				"typeProperties": {
 					"schema": "dbo",
-					"table": "ActualPrice"
+					"table": "OcctoMapping"
 				}
 			},
 			"dependsOn": [
@@ -3082,7 +3082,7 @@
 				],
 				"typeProperties": {
 					"schema": "dbo",
-					"table": "ActualPrice"
+					"table": "OcctoUnitGen"
 				}
 			},
 			"dependsOn": [
@@ -3131,7 +3131,7 @@
 				],
 				"typeProperties": {
 					"schema": "dbo",
-					"table": "ActualPrice"
+					"table": "OcctoUnitGenFw"
 				}
 			},
 			"dependsOn": [

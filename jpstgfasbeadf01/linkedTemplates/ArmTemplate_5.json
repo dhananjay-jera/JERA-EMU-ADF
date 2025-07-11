@@ -477,7 +477,7 @@
 				],
 				"typeProperties": {
 					"schema": "dbo",
-					"table": "ActualPrice"
+					"table": "GenPlan"
 				}
 			},
 			"dependsOn": []
@@ -524,7 +524,7 @@
 				],
 				"typeProperties": {
 					"schema": "dbo",
-					"table": "ActualPrice"
+					"table": "GroupConstraint"
 				}
 			},
 			"dependsOn": []
@@ -571,7 +571,7 @@
 				],
 				"typeProperties": {
 					"schema": "dbo",
-					"table": "ActualPrice"
+					"table": "HistAvailability"
 				}
 			},
 			"dependsOn": []
@@ -618,7 +618,7 @@
 				],
 				"typeProperties": {
 					"schema": "dbo",
-					"table": "ActualPrice"
+					"table": "HistAvailability_old"
 				}
 			},
 			"dependsOn": []
@@ -665,7 +665,7 @@
 				],
 				"typeProperties": {
 					"schema": "dbo",
-					"table": "ActualPrice"
+					"table": "HistInterConnection"
 				}
 			},
 			"dependsOn": []
@@ -712,7 +712,7 @@
 				],
 				"typeProperties": {
 					"schema": "dbo",
-					"table": "ActualPrice"
+					"table": "HistInterface"
 				}
 			},
 			"dependsOn": []
@@ -759,7 +759,7 @@
 				],
 				"typeProperties": {
 					"schema": "dbo",
-					"table": "ActualPrice"
+					"table": "HistInterfacePlan"
 				}
 			},
 			"dependsOn": []
@@ -806,7 +806,7 @@
 				],
 				"typeProperties": {
 					"schema": "dbo",
-					"table": "ActualPrice"
+					"table": "HistInterface_old"
 				}
 			},
 			"dependsOn": []
@@ -853,7 +853,7 @@
 				],
 				"typeProperties": {
 					"schema": "dbo",
-					"table": "ActualPrice"
+					"table": "HistLoad"
 				}
 			},
 			"dependsOn": []
@@ -900,7 +900,7 @@
 				],
 				"typeProperties": {
 					"schema": "dbo",
-					"table": "ActualPrice"
+					"table": "HistRenewable"
 				}
 			},
 			"dependsOn": []
@@ -947,7 +947,7 @@
 				],
 				"typeProperties": {
 					"schema": "dbo",
-					"table": "ActualPrice"
+					"table": "ArcHjksGenOutage"
 				}
 			},
 			"dependsOn": []
