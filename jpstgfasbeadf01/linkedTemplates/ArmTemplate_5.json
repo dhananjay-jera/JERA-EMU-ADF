@@ -107,7 +107,7 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_ActualSpotPrice_copy3')]",
+			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_ArcHjksGenOutage')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -624,7 +624,7 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_ActualSpotPrice_copy4')]",
+			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_BIOMASS')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
