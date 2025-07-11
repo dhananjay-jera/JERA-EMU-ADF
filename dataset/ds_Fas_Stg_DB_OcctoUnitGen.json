@@ -1,5 +1,5 @@
 {
-	"name": "ds_Fas_Stg_DB_ActualSpotPrice_copy50",
+	"name": "ds_Fas_Stg_DB_OcctoUnitGen",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ln_JPSTGPMSAPDB01",

@@ -1,5 +1,5 @@
 {
-	"name": "ds_Fas_Stg_DB_ActualSpotPrice_copy43",
+	"name": "ds_Fas_Stg_DB_JeraHistGeneration",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ln_JPSTGPMSAPDB01",
