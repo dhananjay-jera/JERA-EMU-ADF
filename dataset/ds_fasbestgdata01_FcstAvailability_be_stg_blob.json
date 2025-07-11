@@ -1,5 +1,5 @@
 {
-	"name": "dt_fasbestgdata01_FcstAvailability_fas_stg",
+	"name": "ds_fasbestgdata01_FcstAvailability_be_stg_blob",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ln_AzureBlobStorage1",
