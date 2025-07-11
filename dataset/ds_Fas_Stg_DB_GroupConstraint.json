@@ -1,5 +1,5 @@
 {
-	"name": "ds_Fas_Stg_DB_ActualSpotPrice_copy30",
+	"name": "ds_Fas_Stg_DB_GroupConstraint",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ln_JPSTGPMSAPDB01",

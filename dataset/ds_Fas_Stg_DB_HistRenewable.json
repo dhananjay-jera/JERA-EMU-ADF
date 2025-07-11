@@ -1,5 +1,5 @@
 {
-	"name": "ds_Fas_Stg_DB_ActualSpotPrice_copy38",
+	"name": "ds_Fas_Stg_DB_HistRenewable",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ln_JPSTGPMSAPDB01",
