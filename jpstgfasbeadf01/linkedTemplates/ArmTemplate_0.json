@@ -689,7 +689,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/Fas-Be-Stg_Fas-Be-Stg_Blob-DB')]",
+			"name": "[concat(parameters('factoryName'), '/pl_Fas-Be-Stg_Fas-Be-Stg_Blob-DB')]",
 			"type": "Microsoft.DataFactory/factories/pipelines",
 			"apiVersion": "2018-06-01",
 			"properties": {
