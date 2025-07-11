@@ -618,7 +618,7 @@
 				],
 				"typeProperties": {
 					"schema": "dbo",
-					"table": "ActualPrice"
+					"table": "PumpedStorage"
 				}
 			},
 			"dependsOn": []
@@ -665,7 +665,7 @@
 				],
 				"typeProperties": {
 					"schema": "dbo",
-					"table": "ActualPrice"
+					"table": "RefJpnArea"
 				}
 			},
 			"dependsOn": []
@@ -712,7 +712,7 @@
 				],
 				"typeProperties": {
 					"schema": "dbo",
-					"table": "ActualPrice"
+					"table": "RefJpnInterface"
 				}
 			},
 			"dependsOn": []
@@ -759,7 +759,7 @@
 				],
 				"typeProperties": {
 					"schema": "dbo",
-					"table": "ActualPrice"
+					"table": "RenewableCapacity"
 				}
 			},
 			"dependsOn": []
@@ -806,7 +806,7 @@
 				],
 				"typeProperties": {
 					"schema": "dbo",
-					"table": "ActualPrice"
+					"table": "UnitsInGroupConstraint"
 				}
 			},
 			"dependsOn": []
@@ -853,7 +853,7 @@
 				],
 				"typeProperties": {
 					"schema": "dbo",
-					"table": "ActualPrice"
+					"table": "sysdiagrams"
 				}
 			},
 			"dependsOn": []
@@ -900,7 +900,7 @@
 				],
 				"typeProperties": {
 					"schema": "dbo",
-					"table": "ActualPrice"
+					"table": "test_jay1"
 				}
 			},
 			"dependsOn": []
