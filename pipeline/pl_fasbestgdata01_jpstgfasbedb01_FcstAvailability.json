@@ -39,7 +39,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "ds_jpstgpmsapdb01_FcstAvailability",
+						"referenceName": "ds_jpstgpmsapdb01_FcstAvailability_sql",
 						"type": "DatasetReference"
 					}
 				],

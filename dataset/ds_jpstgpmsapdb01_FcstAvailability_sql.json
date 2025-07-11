@@ -1,5 +1,5 @@
 {
-	"name": "ds_jpstgpmsapdb01_FcstAvailability",
+	"name": "ds_jpstgpmsapdb01_FcstAvailability_sql",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ln_JPSTGPMSAPDB01",
