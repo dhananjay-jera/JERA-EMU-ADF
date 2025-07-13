@@ -1,5 +1,5 @@
 {
-	"name": "ds_Fas_Stg_DB_GroupConstraint",
+	"name": "ds_Fas_Stg_DB_ModelDB_GroupConstraint",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ln_JPSTGPMSAPDB01",

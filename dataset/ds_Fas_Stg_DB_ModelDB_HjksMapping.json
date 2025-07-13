@@ -1,5 +1,5 @@
 {
-	"name": "ds_Fas_Stg_DB_HjksMapping",
+	"name": "ds_Fas_Stg_DB_ModelDB_HjksMapping",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ln_JPSTGPMSAPDB01",

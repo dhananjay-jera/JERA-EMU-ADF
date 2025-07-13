@@ -1,5 +1,5 @@
 {
-	"name": "ds_Fas_Stg_DB_HistLoad",
+	"name": "ds_Fas_Stg_DB_ModelDB_HistLoad",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ln_JPSTGPMSAPDB01",

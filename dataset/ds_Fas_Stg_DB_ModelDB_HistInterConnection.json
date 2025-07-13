@@ -1,5 +1,5 @@
 {
-	"name": "ds_Fas_Stg_DB_HistInterConnection",
+	"name": "ds_Fas_Stg_DB_ModelDB_HistInterConnection",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ln_JPSTGPMSAPDB01",

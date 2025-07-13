@@ -1,5 +1,5 @@
 {
-	"name": "ds_Fas_Stg_DB_sysdiagrams",
+	"name": "ds_Fas_Stg_DB_ModelDB_sysdiagrams",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ln_JPSTGPMSAPDB01",

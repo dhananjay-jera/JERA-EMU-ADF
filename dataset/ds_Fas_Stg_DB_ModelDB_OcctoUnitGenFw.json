@@ -1,5 +1,5 @@
 {
-	"name": "ds_Fas_Stg_DB_OcctoUnitGenFw",
+	"name": "ds_Fas_Stg_DB_ModelDB_OcctoUnitGenFw",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ln_JPSTGPMSAPDB01",

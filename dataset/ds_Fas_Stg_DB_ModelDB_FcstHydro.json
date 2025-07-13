@@ -1,5 +1,5 @@
 {
-	"name": "ds_Fas_Stg_DB_FcstHydro",
+	"name": "ds_Fas_Stg_DB_ModelDB_FcstHydro",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ln_JPSTGPMSAPDB01",

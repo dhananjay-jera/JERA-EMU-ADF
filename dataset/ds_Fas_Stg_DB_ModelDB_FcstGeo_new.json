@@ -1,5 +1,5 @@
 {
-	"name": "ds_Fas_Stg_DB_FcstGeo_new",
+	"name": "ds_Fas_Stg_DB_ModelDB_FcstGeo_new",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ln_JPSTGPMSAPDB01",

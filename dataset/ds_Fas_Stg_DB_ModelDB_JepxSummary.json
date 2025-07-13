@@ -1,5 +1,5 @@
 {
-	"name": "ds_Fas_Stg_DB_JepxSummary",
+	"name": "ds_Fas_Stg_DB_ModelDB_JepxSummary",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ln_JPSTGPMSAPDB01",

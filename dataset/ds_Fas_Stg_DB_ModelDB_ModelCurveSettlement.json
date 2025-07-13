@@ -1,5 +1,5 @@
 {
-	"name": "ds_Fas_Stg_DB_ModelCurveSettlement",
+	"name": "ds_Fas_Stg_DB_ModelDB_ModelCurveSettlement",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ln_JPSTGPMSAPDB01",

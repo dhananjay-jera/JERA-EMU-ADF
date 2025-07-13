@@ -1,5 +1,5 @@
 {
-	"name": "ds_Fas_Stg_DB_ForwardForex",
+	"name": "ds_Fas_Stg_DB_ModelDB_ForwardForex",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ln_JPSTGPMSAPDB01",

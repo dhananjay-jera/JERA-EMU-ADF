@@ -1,5 +1,5 @@
 {
-	"name": "ds_Fas_Stg_DB_ForwardPrice",
+	"name": "ds_Fas_Stg_DB_ModelDB_ForwardPrice",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ln_JPSTGPMSAPDB01",

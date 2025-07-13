@@ -1,5 +1,5 @@
 {
-	"name": "ds_Fas_Stg_DB_FcstRenewable",
+	"name": "ds_Fas_Stg_DB_ModelDB_FcstRenewable",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ln_JPSTGPMSAPDB01",

@@ -1,5 +1,5 @@
 {
-	"name": "ds_Fas_Stg_DB_MasterGenV3",
+	"name": "ds_Fas_Stg_DB_ModelDB_MasterGenV3",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ln_JPSTGPMSAPDB01",

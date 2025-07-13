@@ -1,5 +1,5 @@
 {
-	"name": "ds_Fas_Stg_DB_ModelCurveForward",
+	"name": "ds_Fas_Stg_DB_ModelDB_ModelCurveForward",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ln_JPSTGPMSAPDB01",

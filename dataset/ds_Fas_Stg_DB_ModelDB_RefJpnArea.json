@@ -1,5 +1,5 @@
 {
-	"name": "ds_Fas_Stg_DB_RefJpnArea",
+	"name": "ds_Fas_Stg_DB_ModelDB_RefJpnArea",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ln_JPSTGPMSAPDB01",
