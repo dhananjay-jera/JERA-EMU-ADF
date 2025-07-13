@@ -10,7 +10,7 @@
 		"schema": [],
 		"typeProperties": {
 			"schema": "dbo.ModelDBv3",
-			"table": "ActualSpotPrice_fas_stg"
+			"table": "ActualValue_fas_stg"
 		}
 	}
 }
