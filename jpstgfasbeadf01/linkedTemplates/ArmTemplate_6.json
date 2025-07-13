@@ -932,7 +932,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Stg_DB_ModelDBv3_FcstAvailability_fas_stg",
+								"referenceName": "dt_Fas_Be_Stg_DB_ModelDBv3_FcstAvailability_fas_be_dev",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -1004,7 +1004,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Stg_DB_FcstAvailability_fas_stg",
+								"referenceName": "dt_Fas_Be_Stg_DB_ModelDBv3_FcstAvailability_fas_stg",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
