@@ -1,5 +1,5 @@
 {
-	"name": "ds_Fas_Stg_DB_ActualSpotPrice",
+	"name": "ds_Fas_Stg_DB_ModelDB_ActualSpotPrice",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ln_JPSTGPMSAPDB01",
