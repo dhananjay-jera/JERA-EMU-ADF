@@ -248,7 +248,7 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_Conversion')]",
+			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_ModelDB_Conversion')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -295,7 +295,7 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_CurveDef')]",
+			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_ModelDB_CurveDef')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -342,7 +342,7 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_CurveForwardPrices')]",
+			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_ModelDB_CurveForwardPrices')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -389,7 +389,7 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_CurveSettlementPrices')]",
+			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_ModelDB_CurveSettlementPrices')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -436,7 +436,7 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_FcstAvailability')]",
+			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_ModelDB_FcstAvailability')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -483,7 +483,7 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_FcstBio')]",
+			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_ModelDB_FcstBio')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -530,7 +530,7 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_FcstBio_new')]",
+			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_ModelDB_FcstBio_new')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -577,7 +577,7 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_FcstDemand')]",
+			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_ModelDB_FcstDemand')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -624,7 +624,7 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_FcstDemandAdj')]",
+			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_ModelDB_FcstDemandAdj')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -671,7 +671,7 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_FcstGeo')]",
+			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_ModelDB_FcstGeo')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
