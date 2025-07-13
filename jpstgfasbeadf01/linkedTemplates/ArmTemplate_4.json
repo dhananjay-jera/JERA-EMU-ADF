@@ -718,7 +718,7 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_FcstGeo_new')]",
+			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_ModelDB_FcstGeo_new')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -765,7 +765,7 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_FcstHydro')]",
+			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_ModelDB_FcstHydro')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -812,7 +812,7 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_FcstInterConnection')]",
+			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_ModelDB_FcstInterConnection')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -859,7 +859,7 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_FcstLoad')]",
+			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_ModelDB_FcstLoad')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -906,7 +906,7 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_FcstPV')]",
+			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_ModelDB_FcstPV')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
