@@ -294,7 +294,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Dev_DB_FcstAvailability_fas_stg",
+								"referenceName": "dt_Fas_Be_Stg_DB_ModelDBv3_FcstAvailability_fas_stg",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -308,7 +308,7 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_FcstAvailability')]",
-				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Dev_DB_FcstAvailability_fas_stg')]"
+				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Stg_DB_ModelDBv3_FcstAvailability_fas_stg')]"
 			]
 		},
 		{
@@ -591,7 +591,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_ActualValue')]",
+			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_ModelDB_ActualValue')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -640,7 +640,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_ActualValueHydroRefined')]",
+			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_ModelDB_ActualValueHydroRefined')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -689,7 +689,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_ArcHjksGenOutage')]",
+			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_ModelDB_ArcHjksGenOutage')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -738,7 +738,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_BIOMASS')]",
+			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_ModelDB_BIOMASS')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -787,7 +787,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_CommodityDef')]",
+			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_ModelDB_CommodityDef')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -3482,7 +3482,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Dev_DB_FcstAvailability_fas_stg')]",
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDBv3_FcstAvailability_fas_stg')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
