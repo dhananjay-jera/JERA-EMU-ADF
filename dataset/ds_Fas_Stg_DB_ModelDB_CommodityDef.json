@@ -1,5 +1,5 @@
 {
-	"name": "ds_Fas_Stg_DB_CommodityDef",
+	"name": "ds_Fas_Stg_DB_ModelDB_CommodityDef",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ln_JPSTGPMSAPDB01",

@@ -1,5 +1,5 @@
 {
-	"name": "ds_Fas_Stg_DB_ActualValue",
+	"name": "ds_Fas_Stg_DB_ModelDB_ActualValue",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ln_JPSTGPMSAPDB01",

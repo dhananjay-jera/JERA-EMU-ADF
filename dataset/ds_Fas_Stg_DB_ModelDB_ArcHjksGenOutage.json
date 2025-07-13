@@ -1,5 +1,5 @@
 {
-	"name": "ds_Fas_Stg_DB_ArcHjksGenOutage",
+	"name": "ds_Fas_Stg_DB_ModelDB_ArcHjksGenOutage",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ln_JPSTGPMSAPDB01",
