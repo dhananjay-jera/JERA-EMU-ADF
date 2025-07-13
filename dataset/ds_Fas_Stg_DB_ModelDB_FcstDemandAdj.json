@@ -1,5 +1,5 @@
 {
-	"name": "ds_Fas_Stg_DB_FcstDemandAdj",
+	"name": "ds_Fas_Stg_DB_ModelDB_FcstDemandAdj",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ln_JPSTGPMSAPDB01",

@@ -40,7 +40,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "ds_Fas_Stg_DB_FcstAvailability",
+						"referenceName": "ds_Fas_Stg_DB_ModelDB_FcstAvailability",
 						"type": "DatasetReference"
 					}
 				],

@@ -1,5 +1,5 @@
 {
-	"name": "ds_Fas_Stg_DB_CurveSettlementPrices",
+	"name": "ds_Fas_Stg_DB_ModelDB_CurveSettlementPrices",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ln_JPSTGPMSAPDB01",

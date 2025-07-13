@@ -1,5 +1,5 @@
 {
-	"name": "ds_Fas_Stg_DB_Conversion",
+	"name": "ds_Fas_Stg_DB_ModelDB_Conversion",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ln_JPSTGPMSAPDB01",
