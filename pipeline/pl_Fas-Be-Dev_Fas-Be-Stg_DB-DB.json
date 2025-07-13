@@ -45,7 +45,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "dt_Fas_Be_Stg_DB_FcstAvailability_fas_dev",
+						"referenceName": "dt_Fas_Be_Stg_DB_FcstAvailability_fas_be_dev",
 						"type": "DatasetReference"
 					}
 				]
