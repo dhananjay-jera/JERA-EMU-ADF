@@ -1318,10 +1318,11 @@
 								"partitionOption": "None"
 							},
 							"sink": {
-								"type": "SqlServerSink",
+								"type": "AzureSqlSink",
 								"writeBehavior": "insert",
 								"sqlWriterUseTableLock": false,
-								"tableOption": "autoCreate"
+								"tableOption": "autoCreate",
+								"disableMetricsCollection": false
 							},
 							"enableStaging": false,
 							"translator": {
@@ -1342,7 +1343,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "ds_Fas_Stg_DB_ModelDB_HistInterfacePlan",
+								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_HistInterface_fas_stg",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
