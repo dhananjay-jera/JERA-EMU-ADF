@@ -1108,7 +1108,7 @@
 						},
 						"inputs": [
 							{
-								"referenceName": "ds_Fas_Stg_DB_ModelDB_CurveForwardPrices",
+								"referenceName": "ds_Fas_Stg_DB_ModelDB_ForwardPrice",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -1279,7 +1279,7 @@
 						},
 						"inputs": [
 							{
-								"referenceName": "ds_Fas_Stg_DB_ModelDB_HistAvailability_old",
+								"referenceName": "ds_Fas_Stg_DB_ModelDB_HistAvailability",
 								"type": "DatasetReference",
 								"parameters": {}
 							}

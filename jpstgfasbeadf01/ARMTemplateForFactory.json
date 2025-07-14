@@ -787,7 +787,7 @@
 						},
 						"inputs": [
 							{
-								"referenceName": "ds_Fas_Stg_DB_ModelDB_CurveForwardPrices",
+								"referenceName": "ds_Fas_Stg_DB_ModelDB_ForwardPrice",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -958,7 +958,7 @@
 						},
 						"inputs": [
 							{
-								"referenceName": "ds_Fas_Stg_DB_ModelDB_HistAvailability_old",
+								"referenceName": "ds_Fas_Stg_DB_ModelDB_HistAvailability",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -1276,13 +1276,13 @@
 				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Stg_DB_ModelDB_FcstInterConnection_fas_stg')]",
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_ForwardForex')]",
 				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Stg_DB_ModelDB_ForwardForex_fas_stg')]",
-				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_CurveForwardPrices')]",
+				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_ForwardPrice')]",
 				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Stg_DB_ModelDB_ForwardPrice_fas_stg')]",
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_FwHistCommodity')]",
 				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Stg_DB_ModelDB_FwHistCommodity_fas_stg')]",
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_GenPlan')]",
 				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Stg_DB_ModelDB_GenPlan_fas_stg')]",
-				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_HistAvailability_old')]",
+				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_HistAvailability')]",
 				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Stg_DB_ModelDB_HistAvailability_fas_stg')]",
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_HistInterface')]",
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_HistInterfacePlan')]",
