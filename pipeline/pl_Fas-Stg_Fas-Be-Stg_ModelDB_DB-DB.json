@@ -61,7 +61,14 @@
 			{
 				"name": "ActualSpotPrice_ActualSpotPrice",
 				"type": "Copy",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "ActualValue_ActualValue",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"policy": {
 					"timeout": "0.12:00:00",
 					"retry": 0,
@@ -110,14 +117,7 @@
 			{
 				"name": "ActualValue_ActualValue",
 				"type": "Copy",
-				"dependsOn": [
-					{
-						"activity": "FcstAvailability_FcstAvailability",
-						"dependencyConditions": [
-							"Succeeded"
-						]
-					}
-				],
+				"dependsOn": [],
 				"policy": {
 					"timeout": "0.12:00:00",
 					"retry": 0,
@@ -157,7 +157,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "dt_Fas_Be_Stg_DB_ModelDBv3_ActualValue_fas_stg",
+						"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_ActualValue_fas_stg",
 						"type": "DatasetReference"
 					}
 				]
