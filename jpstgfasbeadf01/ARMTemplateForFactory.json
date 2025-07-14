@@ -49,7 +49,7 @@
 		},
 		"ln_JPSTGPMSAPDB01_properties_typeProperties_userName": {
 			"type": "string",
-			"defaultValue": "jeraadmin"
+			"defaultValue": "fasreadonly"
 		},
 		"ln_jpdevfasbedb01_ModelDBv3_properties_typeProperties_server": {
 			"type": "string",

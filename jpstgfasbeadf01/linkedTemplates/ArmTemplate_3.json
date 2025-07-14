@@ -41,7 +41,7 @@
 		},
 		"ln_JPSTGPMSAPDB01_properties_typeProperties_userName": {
 			"type": "string",
-			"defaultValue": "jeraadmin"
+			"defaultValue": "fasreadonly"
 		},
 		"ep_jpstgpmsapdb01_properties_privateLinkResourceId": {
 			"type": "string",

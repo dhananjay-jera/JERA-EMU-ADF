@@ -36,7 +36,7 @@
 			"value": "ModelDB"
 		},
 		"ln_JPSTGPMSAPDB01_properties_typeProperties_userName": {
-			"value": "jeraadmin"
+			"value": "fasreadonly"
 		},
 		"ln_jpdevfasbedb01_ModelDBv3_properties_typeProperties_server": {
 			"value": "jpdevfasbedb01.database.windows.net"
