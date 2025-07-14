@@ -71,7 +71,7 @@
 	},
 	"resources": [
 		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDBv3_ArcHjksGenOutage_fas_stg')]",
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDBv3_HistInterfacePlan_fas_stg')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -84,13 +84,13 @@
 				"schema": [],
 				"typeProperties": {
 					"schema": "dbo.ModelDBv3",
-					"table": "ArcHjksGenOutage_fas_stg"
+					"table": "HistInterfacePlan_fas_stg"
 				}
 			},
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDBv3_BIOMASS_fas_stg')]",
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDBv3_HistInterface_fas_stg')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -103,13 +103,13 @@
 				"schema": [],
 				"typeProperties": {
 					"schema": "dbo.ModelDBv3",
-					"table": "BIOMASS_fas_stg"
+					"table": "ActualSpotPrice_fas_stg"
 				}
 			},
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDBv3_CommodityDef_fas_stg')]",
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDBv3_HistInterface_old_fas_stg')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -122,13 +122,13 @@
 				"schema": [],
 				"typeProperties": {
 					"schema": "dbo.ModelDBv3",
-					"table": "CommodityDef_fas_stg"
+					"table": "HistInterface_old_fas_stg"
 				}
 			},
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDBv3_Conversion_fas_stg')]",
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDBv3_HistLoad_fas_stg')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -141,13 +141,13 @@
 				"schema": [],
 				"typeProperties": {
 					"schema": "dbo.ModelDBv3",
-					"table": "Conversion_fas_stg"
+					"table": "HistLoad_fas_stg"
 				}
 			},
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDBv3_CurveDef_fas_stg')]",
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDBv3_HistRenewable_fas_stg')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -160,13 +160,13 @@
 				"schema": [],
 				"typeProperties": {
 					"schema": "dbo.ModelDBv3",
-					"table": "CurveDef_fas_stg"
+					"table": "HistRenewable_fas_stg"
 				}
 			},
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDBv3_CurveForwardPrices_fas_stg')]",
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDBv3_HjksGenOutage_fas_stg')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -179,13 +179,13 @@
 				"schema": [],
 				"typeProperties": {
 					"schema": "dbo.ModelDBv3",
-					"table": "CurveForwardPrices_fas_stg"
+					"table": "HjksGenOutage_fas_stg"
 				}
 			},
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDBv3_CurveSettlementPrices_fas_stg')]",
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDBv3_HjksMapping_fas_stg')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -198,13 +198,13 @@
 				"schema": [],
 				"typeProperties": {
 					"schema": "dbo.ModelDBv3",
-					"table": "CurveSettlementPrices_fas_stg"
+					"table": "HjksMapping_fas_stg"
 				}
 			},
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDBv3_FcstAvailability_fas_be_dev')]",
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDBv3_JepxAreaPrice_fas_stg')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -217,13 +217,13 @@
 				"schema": [],
 				"typeProperties": {
 					"schema": "dbo.ModelDBv3",
-					"table": "FcstAvailability_fas_be_dev"
+					"table": "JepxAreaPrice_fas_stg"
 				}
 			},
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDBv3_FcstAvailability_fas_stg')]",
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDBv3_JepxSummary_fas_stg')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -236,7 +236,7 @@
 				"schema": [],
 				"typeProperties": {
 					"schema": "dbo.ModelDBv3",
-					"table": "FcstAvailability_fas_stg"
+					"table": "JepxSummary_fas_stg"
 				}
 			},
 			"dependsOn": []

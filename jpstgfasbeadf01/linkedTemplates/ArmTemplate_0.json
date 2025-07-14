@@ -160,7 +160,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDBv3_FcstBio_fas_stg')]",
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ActualSpotPrice_fas_stg_copy46')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -173,7 +173,7 @@
 				"schema": [],
 				"typeProperties": {
 					"schema": "dbo.ModelDBv3",
-					"table": "FcstBio_fas_stg"
+					"table": "ActualSpotPrice_fas_stg"
 				}
 			},
 			"dependsOn": [
@@ -181,7 +181,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDBv3_FcstBio_new_fas_stg')]",
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ActualSpotPrice_fas_stg_copy47')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -194,7 +194,7 @@
 				"schema": [],
 				"typeProperties": {
 					"schema": "dbo.ModelDBv3",
-					"table": "FcstBio_new_fas_stg"
+					"table": "ActualSpotPrice_fas_stg"
 				}
 			},
 			"dependsOn": [
@@ -202,7 +202,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDBv3_FcstDemand_fas_stg')]",
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ActualSpotPrice_fas_stg_copy48')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -215,7 +215,7 @@
 				"schema": [],
 				"typeProperties": {
 					"schema": "dbo.ModelDBv3",
-					"table": "FcstDemand_fas_stg"
+					"table": "ActualSpotPrice_fas_stg"
 				}
 			},
 			"dependsOn": [
@@ -223,7 +223,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDBv3_FcstDemandAdj_fas_stg')]",
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ActualSpotPrice_fas_stg_copy49')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -236,7 +236,7 @@
 				"schema": [],
 				"typeProperties": {
 					"schema": "dbo.ModelDBv3",
-					"table": "FcstDemandAdj_fas_stg"
+					"table": "ActualSpotPrice_fas_stg"
 				}
 			},
 			"dependsOn": [
@@ -244,7 +244,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDBv3_FcstGeo_fas_stg')]",
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ActualSpotPrice_fas_stg_copy50')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -257,7 +257,7 @@
 				"schema": [],
 				"typeProperties": {
 					"schema": "dbo.ModelDBv3",
-					"table": "FcstGeo_fas_stg"
+					"table": "ActualSpotPrice_fas_stg"
 				}
 			},
 			"dependsOn": [
@@ -265,7 +265,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDBv3_FcstGeo_new_fas_stg')]",
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ActualSpotPrice_fas_stg_copy51')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -278,7 +278,7 @@
 				"schema": [],
 				"typeProperties": {
 					"schema": "dbo.ModelDBv3",
-					"table": "FcstGeo_new_fas_stg"
+					"table": "ActualSpotPrice_fas_stg"
 				}
 			},
 			"dependsOn": [
@@ -286,7 +286,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDBv3_FcstHydro_fas_stg')]",
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ActualSpotPrice_fas_stg_copy52')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -299,7 +299,7 @@
 				"schema": [],
 				"typeProperties": {
 					"schema": "dbo.ModelDBv3",
-					"table": "FcstHydro_fas_stg"
+					"table": "ActualSpotPrice_fas_stg"
 				}
 			},
 			"dependsOn": [
@@ -307,7 +307,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDBv3_FcstInterConnection_fas_stg')]",
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ActualSpotPrice_fas_stg_copy53')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -320,7 +320,7 @@
 				"schema": [],
 				"typeProperties": {
 					"schema": "dbo.ModelDBv3",
-					"table": "FcstInterConnection_fas_stg"
+					"table": "ActualSpotPrice_fas_stg"
 				}
 			},
 			"dependsOn": [
@@ -328,7 +328,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDBv3_FcstLoad_fas_stg')]",
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ActualSpotPrice_fas_stg_copy54')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -341,7 +341,7 @@
 				"schema": [],
 				"typeProperties": {
 					"schema": "dbo.ModelDBv3",
-					"table": "FcstLoad_fas_stg"
+					"table": "ActualSpotPrice_fas_stg"
 				}
 			},
 			"dependsOn": [
@@ -349,7 +349,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDBv3_FcstPumpedWater_fas_stg')]",
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ActualSpotPrice_fas_stg_copy55')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -362,7 +362,7 @@
 				"schema": [],
 				"typeProperties": {
 					"schema": "dbo.ModelDBv3",
-					"table": "FcstPumpedWater_fas_stg"
+					"table": "ActualSpotPrice_fas_stg"
 				}
 			},
 			"dependsOn": [
@@ -370,7 +370,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDBv3_FcstPV_fas_stg')]",
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ActualSpotPrice_fas_stg_copy56')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -383,7 +383,7 @@
 				"schema": [],
 				"typeProperties": {
 					"schema": "dbo.ModelDBv3",
-					"table": "FcstPV_fas_stg"
+					"table": "ActualSpotPrice_fas_stg"
 				}
 			},
 			"dependsOn": [
@@ -391,7 +391,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDBv3_FcstPV_new_fas_stg')]",
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ActualSpotPrice_fas_stg_copy57')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -404,7 +404,7 @@
 				"schema": [],
 				"typeProperties": {
 					"schema": "dbo.ModelDBv3",
-					"table": "FcstPV_new_fas_stg"
+					"table": "ActualSpotPrice_fas_stg"
 				}
 			},
 			"dependsOn": [
@@ -412,7 +412,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDBv3_FcstRenewable_fas_stg')]",
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ActualSpotPrice_fas_stg_copy58')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -425,7 +425,7 @@
 				"schema": [],
 				"typeProperties": {
 					"schema": "dbo.ModelDBv3",
-					"table": "FcstRenewable_fas_stg"
+					"table": "ActualSpotPrice_fas_stg"
 				}
 			},
 			"dependsOn": [
@@ -433,7 +433,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDBv3_FcstWind_fas_stg')]",
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ActualSpotPrice_fas_stg_copy59')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -446,7 +446,7 @@
 				"schema": [],
 				"typeProperties": {
 					"schema": "dbo.ModelDBv3",
-					"table": "FcstWind_fas_stg"
+					"table": "ActualSpotPrice_fas_stg"
 				}
 			},
 			"dependsOn": [
@@ -454,7 +454,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDBv3_ForwardForex_fas_stg')]",
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ActualSpotPrice_fas_stg_copy60')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -467,7 +467,7 @@
 				"schema": [],
 				"typeProperties": {
 					"schema": "dbo.ModelDBv3",
-					"table": "ForwardForex_fas_stg"
+					"table": "ActualSpotPrice_fas_stg"
 				}
 			},
 			"dependsOn": [
