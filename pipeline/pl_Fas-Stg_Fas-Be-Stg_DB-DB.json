@@ -8,7 +8,7 @@
 				"type": "Copy",
 				"dependsOn": [
 					{
-						"activity": "dt_Fas_Be_Stg_DB_ActualSpotPrice_fas_stg",
+						"activity": "ActualSpotPrice_ActualSpotPrice",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -59,7 +59,7 @@
 				]
 			},
 			{
-				"name": "dt_Fas_Be_Stg_DB_ActualSpotPrice_fas_stg",
+				"name": "ActualSpotPrice_ActualSpotPrice",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
