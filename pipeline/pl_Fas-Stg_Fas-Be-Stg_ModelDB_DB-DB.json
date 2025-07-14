@@ -426,7 +426,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "ds_Fas_Stg_DB_ModelDB_CurveForwardPrices",
+						"referenceName": "ds_Fas_Stg_DB_ModelDB_ForwardPrice",
 						"type": "DatasetReference"
 					}
 				],
