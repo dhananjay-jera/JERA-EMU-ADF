@@ -261,18 +261,6 @@
 				"parameters": {
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
-					},
-					"JPSTGPMSAPDB01_password": {
-						"value": "[parameters('JPSTGPMSAPDB01_password')]"
-					},
-					"JPSTGPMSAPDB01_properties_typeProperties_server": {
-						"value": "[parameters('JPSTGPMSAPDB01_properties_typeProperties_server')]"
-					},
-					"JPSTGPMSAPDB01_properties_typeProperties_database": {
-						"value": "[parameters('JPSTGPMSAPDB01_properties_typeProperties_database')]"
-					},
-					"JPSTGPMSAPDB01_properties_typeProperties_userName": {
-						"value": "[parameters('JPSTGPMSAPDB01_properties_typeProperties_userName')]"
 					}
 				}
 			},
@@ -294,8 +282,20 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
+					"JPSTGPMSAPDB01_password": {
+						"value": "[parameters('JPSTGPMSAPDB01_password')]"
+					},
 					"ln_JPSTGPMSAPDB01_password": {
 						"value": "[parameters('ln_JPSTGPMSAPDB01_password')]"
+					},
+					"JPSTGPMSAPDB01_properties_typeProperties_server": {
+						"value": "[parameters('JPSTGPMSAPDB01_properties_typeProperties_server')]"
+					},
+					"JPSTGPMSAPDB01_properties_typeProperties_database": {
+						"value": "[parameters('JPSTGPMSAPDB01_properties_typeProperties_database')]"
+					},
+					"JPSTGPMSAPDB01_properties_typeProperties_userName": {
+						"value": "[parameters('JPSTGPMSAPDB01_properties_typeProperties_userName')]"
 					},
 					"ln_AzureBlobStorage1_properties_typeProperties_serviceEndpoint": {
 						"value": "[parameters('ln_AzureBlobStorage1_properties_typeProperties_serviceEndpoint')]"
