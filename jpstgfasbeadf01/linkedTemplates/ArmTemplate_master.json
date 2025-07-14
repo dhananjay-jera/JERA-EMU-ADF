@@ -23,6 +23,14 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'ln_jpstgfasbedb01_ModelDBv3'"
 		},
+		"ln_jpstgfasbedb01_ModelDB_ReadOnly_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'ln_jpstgfasbedb01_ModelDB_ReadOnly'"
+		},
+		"ln_jpstgfasbedb01_ModelDB_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'ln_jpstgfasbedb01_ModelDB'"
+		},
 		"JPSTGPMSAPDB01_properties_typeProperties_server": {
 			"type": "string",
 			"defaultValue": "jpstgpmsapdb01"
@@ -97,6 +105,30 @@
 			"type": "string",
 			"defaultValue": "blob"
 		},
+		"ln_jpstgfasbedb01_ModelDB_ReadOnly_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "jpstgfasbedb01.database.windows.net"
+		},
+		"ln_jpstgfasbedb01_ModelDB_ReadOnly_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "ModelDB"
+		},
+		"ln_jpstgfasbedb01_ModelDB_ReadOnly_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "fas_stg_be_readonly"
+		},
+		"ln_jpstgfasbedb01_ModelDB_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "jpstgfasbedb01.database.windows.net"
+		},
+		"ln_jpstgfasbedb01_ModelDB_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "ModelDB"
+		},
+		"ln_jpstgfasbedb01_ModelDB_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "jeraadmin"
+		},
 		"containerUri": {
 			"type": "string",
 			"metadata": "URI to storage account containing linked ARM templates"
@@ -130,6 +162,12 @@
 					"ln_jpstgfasbedb01_ModelDBv3_password": {
 						"value": "[parameters('ln_jpstgfasbedb01_ModelDBv3_password')]"
 					},
+					"ln_jpstgfasbedb01_ModelDB_ReadOnly_password": {
+						"value": "[parameters('ln_jpstgfasbedb01_ModelDB_ReadOnly_password')]"
+					},
+					"ln_jpstgfasbedb01_ModelDB_password": {
+						"value": "[parameters('ln_jpstgfasbedb01_ModelDB_password')]"
+					},
 					"ln_jpdevfasbedb01_ModelDBv3_properties_typeProperties_server": {
 						"value": "[parameters('ln_jpdevfasbedb01_ModelDBv3_properties_typeProperties_server')]"
 					},
@@ -147,6 +185,24 @@
 					},
 					"ln_jpstgfasbedb01_ModelDBv3_properties_typeProperties_userName": {
 						"value": "[parameters('ln_jpstgfasbedb01_ModelDBv3_properties_typeProperties_userName')]"
+					},
+					"ln_jpstgfasbedb01_ModelDB_ReadOnly_properties_typeProperties_server": {
+						"value": "[parameters('ln_jpstgfasbedb01_ModelDB_ReadOnly_properties_typeProperties_server')]"
+					},
+					"ln_jpstgfasbedb01_ModelDB_ReadOnly_properties_typeProperties_database": {
+						"value": "[parameters('ln_jpstgfasbedb01_ModelDB_ReadOnly_properties_typeProperties_database')]"
+					},
+					"ln_jpstgfasbedb01_ModelDB_ReadOnly_properties_typeProperties_userName": {
+						"value": "[parameters('ln_jpstgfasbedb01_ModelDB_ReadOnly_properties_typeProperties_userName')]"
+					},
+					"ln_jpstgfasbedb01_ModelDB_properties_typeProperties_server": {
+						"value": "[parameters('ln_jpstgfasbedb01_ModelDB_properties_typeProperties_server')]"
+					},
+					"ln_jpstgfasbedb01_ModelDB_properties_typeProperties_database": {
+						"value": "[parameters('ln_jpstgfasbedb01_ModelDB_properties_typeProperties_database')]"
+					},
+					"ln_jpstgfasbedb01_ModelDB_properties_typeProperties_userName": {
+						"value": "[parameters('ln_jpstgfasbedb01_ModelDB_properties_typeProperties_userName')]"
 					}
 				}
 			},

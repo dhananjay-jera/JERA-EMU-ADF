@@ -17,6 +17,12 @@
 		"ln_jpstgfasbedb01_ModelDBv3_password": {
 			"value": ""
 		},
+		"ln_jpstgfasbedb01_ModelDB_ReadOnly_password": {
+			"value": ""
+		},
+		"ln_jpstgfasbedb01_ModelDB_password": {
+			"value": ""
+		},
 		"JPSTGPMSAPDB01_properties_typeProperties_server": {
 			"value": "jpstgpmsapdb01"
 		},
@@ -72,6 +78,24 @@
 		},
 		"pl_adf_fasbestgdata01_properties_groupId": {
 			"value": "blob"
+		},
+		"ln_jpstgfasbedb01_ModelDB_ReadOnly_properties_typeProperties_server": {
+			"value": "jpstgfasbedb01.database.windows.net"
+		},
+		"ln_jpstgfasbedb01_ModelDB_ReadOnly_properties_typeProperties_database": {
+			"value": "ModelDB"
+		},
+		"ln_jpstgfasbedb01_ModelDB_ReadOnly_properties_typeProperties_userName": {
+			"value": "fas_stg_be_readonly"
+		},
+		"ln_jpstgfasbedb01_ModelDB_properties_typeProperties_server": {
+			"value": "jpstgfasbedb01.database.windows.net"
+		},
+		"ln_jpstgfasbedb01_ModelDB_properties_typeProperties_database": {
+			"value": "ModelDB"
+		},
+		"ln_jpstgfasbedb01_ModelDB_properties_typeProperties_userName": {
+			"value": "jeraadmin"
 		},
 		"containerUri": {
 			"value": ""
