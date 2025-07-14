@@ -109,7 +109,14 @@
 			{
 				"name": "ActualValue_ActualValue",
 				"type": "Copy",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "FcstAvailability_FcstAvailability",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"policy": {
 					"timeout": "0.12:00:00",
 					"retry": 0,
