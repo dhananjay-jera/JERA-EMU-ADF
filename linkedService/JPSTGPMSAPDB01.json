@@ -10,8 +10,8 @@
 			"encrypt": "optional",
 			"trustServerCertificate": false,
 			"authenticationType": "SQL",
-			"userName": "jeraadmin",
-			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJjZjhiY2UxYi00Y2Y0LTQ1N2MtYTk4YS0xY2FjM2EwODg4NzYiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+			"userName": "fasreadonly",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI5MjgzZGNlZS1hNWIwLTRlMzUtOWY4Ny1lNzc5MDZjNTQ5MDEiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
 		},
 		"connectVia": {
 			"referenceName": "IR-jpstgpmsapdb01",
