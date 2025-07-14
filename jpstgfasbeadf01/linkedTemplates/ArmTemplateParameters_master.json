@@ -24,7 +24,7 @@
 			"value": "ModelDB"
 		},
 		"JPSTGPMSAPDB01_properties_typeProperties_userName": {
-			"value": "jeraadmin"
+			"value": "fasreadonly"
 		},
 		"ln_AzureBlobStorage1_properties_typeProperties_serviceEndpoint": {
 			"value": "https://fasbestgdata01.blob.core.windows.net/"
