@@ -5065,6 +5065,27 @@
 				}
 			},
 			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDB_ActualSpotPrice_fas_stg')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "ln_jpstgfasbedb01_ModelDB",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "AzureSqlTable",
+				"schema": [],
+				"typeProperties": {
+					"schema": "dbo.ModelDB",
+					"table": "ActualSpotPrice"
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/ln_jpstgfasbedb01_ModelDB')]"
+			]
 		}
 	]
 }
