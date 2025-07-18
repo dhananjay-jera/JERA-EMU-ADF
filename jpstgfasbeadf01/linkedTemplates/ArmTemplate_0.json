@@ -23,6 +23,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'ln_jpstgfasbedb01_ModelDBv3'"
 		},
+		"ln_jpdevfasbedb01_ModelDB_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'ln_jpdevfasbedb01_ModelDB'"
+		},
 		"ln_jpdevfasbedb01_ModelDBv3_properties_typeProperties_server": {
 			"type": "string",
 			"defaultValue": "jpdevfasbedb01.database.windows.net"
@@ -68,6 +72,18 @@
 			"defaultValue": "ModelDBv3"
 		},
 		"ln_jpstgfasbedb01_ModelDBv3_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "jeraadmin"
+		},
+		"ln_jpdevfasbedb01_ModelDB_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "jpdevfasbedb01.database.windows.net"
+		},
+		"ln_jpdevfasbedb01_ModelDB_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "ModelDB"
+		},
+		"ln_jpdevfasbedb01_ModelDB_properties_typeProperties_userName": {
 			"type": "string",
 			"defaultValue": "jeraadmin"
 		}
@@ -185,6 +201,28 @@
 			"type": "Microsoft.DataFactory/factories/managedVirtualNetworks",
 			"apiVersion": "2018-06-01",
 			"properties": {},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/ln_jpdevfasbedb01_ModelDB')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "SqlServer",
+				"typeProperties": {
+					"server": "[parameters('ln_jpdevfasbedb01_ModelDB_properties_typeProperties_server')]",
+					"database": "[parameters('ln_jpdevfasbedb01_ModelDB_properties_typeProperties_database')]",
+					"encrypt": "mandatory",
+					"trustServerCertificate": true,
+					"authenticationType": "SQL",
+					"userName": "[parameters('ln_jpdevfasbedb01_ModelDB_properties_typeProperties_userName')]",
+					"password": {
+						"type": "SecureString",
+						"value": "[parameters('ln_jpdevfasbedb01_ModelDB_password')]"
+					}
+				}
+			},
 			"dependsOn": []
 		},
 		{
@@ -482,27 +520,6 @@
 				"typeProperties": {
 					"schema": "dbo.ModelDB",
 					"table": "HistAvailability"
-				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/ln_jpstgfasbedb01_ModelDB')]"
-			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDB_HistInterface_fas_stg')]",
-			"type": "Microsoft.DataFactory/factories/datasets",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"linkedServiceName": {
-					"referenceName": "ln_jpstgfasbedb01_ModelDB",
-					"type": "LinkedServiceReference"
-				},
-				"annotations": [],
-				"type": "AzureSqlTable",
-				"schema": [],
-				"typeProperties": {
-					"schema": "dbo.ModelDB",
-					"table": "HistInterface"
 				}
 			},
 			"dependsOn": [
