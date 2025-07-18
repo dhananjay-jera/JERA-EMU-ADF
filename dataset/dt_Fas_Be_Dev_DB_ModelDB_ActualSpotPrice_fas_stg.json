@@ -10,7 +10,7 @@
 		"schema": [],
 		"typeProperties": {
 			"schema": "dbo.ModelDB",
-			"table": "ActualValue"
+			"table": "ActualSpotPrice"
 		}
 	}
 }
