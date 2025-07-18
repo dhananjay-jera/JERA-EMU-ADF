@@ -23,9 +23,6 @@
 		"ln_jpstgfasbedb01_ModelDBv3_password": {
 			"value": ""
 		},
-		"ln_jpdevfasbedb01_ModelDB_password": {
-			"value": ""
-		},
 		"JPSTGPMSAPDB01_properties_typeProperties_server": {
 			"value": "jpstgpmsapdb01"
 		},
@@ -99,15 +96,6 @@
 		},
 		"pl_adf_fasbestgdata01_properties_groupId": {
 			"value": "blob"
-		},
-		"ln_jpdevfasbedb01_ModelDB_properties_typeProperties_server": {
-			"value": "jpdevfasbedb01.database.windows.net"
-		},
-		"ln_jpdevfasbedb01_ModelDB_properties_typeProperties_database": {
-			"value": "ModelDB"
-		},
-		"ln_jpdevfasbedb01_ModelDB_properties_typeProperties_userName": {
-			"value": "jeraadmin"
 		}
 	}
 }
