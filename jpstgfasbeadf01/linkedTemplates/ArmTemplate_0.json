@@ -7,6 +7,10 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "jpstgfasbeadf01"
 		},
+		"ln_jpdevfasbedb01_ModelDB_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'ln_jpdevfasbedb01_ModelDB'"
+		},
 		"ln_jpdevfasbedb01_ModelDBv3_password": {
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'ln_jpdevfasbedb01_ModelDBv3'"
@@ -23,9 +27,17 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'ln_jpstgfasbedb01_ModelDBv3'"
 		},
-		"ln_jpdevfasbedb01_ModelDB_password": {
-			"type": "secureString",
-			"metadata": "Secure string for 'password' of 'ln_jpdevfasbedb01_ModelDB'"
+		"ln_jpdevfasbedb01_ModelDB_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "jpdevfasbedb01.database.windows.net"
+		},
+		"ln_jpdevfasbedb01_ModelDB_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "ModelDB"
+		},
+		"ln_jpdevfasbedb01_ModelDB_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "jeraadmin"
 		},
 		"ln_jpdevfasbedb01_ModelDBv3_properties_typeProperties_server": {
 			"type": "string",
@@ -74,24 +86,34 @@
 		"ln_jpstgfasbedb01_ModelDBv3_properties_typeProperties_userName": {
 			"type": "string",
 			"defaultValue": "jeraadmin"
-		},
-		"ln_jpdevfasbedb01_ModelDB_properties_typeProperties_server": {
-			"type": "string",
-			"defaultValue": "jpdevfasbedb01.database.windows.net"
-		},
-		"ln_jpdevfasbedb01_ModelDB_properties_typeProperties_database": {
-			"type": "string",
-			"defaultValue": "ModelDB"
-		},
-		"ln_jpdevfasbedb01_ModelDB_properties_typeProperties_userName": {
-			"type": "string",
-			"defaultValue": "jeraadmin"
 		}
 	},
 	"variables": {
 		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
 	},
 	"resources": [
+		{
+			"name": "[concat(parameters('factoryName'), '/ln_jpdevfasbedb01_ModelDB')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureSqlDatabase",
+				"typeProperties": {
+					"server": "[parameters('ln_jpdevfasbedb01_ModelDB_properties_typeProperties_server')]",
+					"database": "[parameters('ln_jpdevfasbedb01_ModelDB_properties_typeProperties_database')]",
+					"encrypt": "mandatory",
+					"trustServerCertificate": true,
+					"authenticationType": "SQL",
+					"userName": "[parameters('ln_jpdevfasbedb01_ModelDB_properties_typeProperties_userName')]",
+					"password": {
+						"type": "SecureString",
+						"value": "[parameters('ln_jpdevfasbedb01_ModelDB_password')]"
+					}
+				}
+			},
+			"dependsOn": []
+		},
 		{
 			"name": "[concat(parameters('factoryName'), '/ln_jpdevfasbedb01_ModelDBv3')]",
 			"type": "Microsoft.DataFactory/factories/linkedServices",
@@ -204,104 +226,12 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/ln_jpdevfasbedb01_ModelDB')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "AzureSqlDatabase",
-				"typeProperties": {
-					"server": "[parameters('ln_jpdevfasbedb01_ModelDB_properties_typeProperties_server')]",
-					"database": "[parameters('ln_jpdevfasbedb01_ModelDB_properties_typeProperties_database')]",
-					"encrypt": "mandatory",
-					"trustServerCertificate": true,
-					"authenticationType": "SQL",
-					"userName": "[parameters('ln_jpdevfasbedb01_ModelDB_properties_typeProperties_userName')]",
-					"password": {
-						"type": "SecureString",
-						"value": "[parameters('ln_jpdevfasbedb01_ModelDB_password')]"
-					}
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/ds_Fas_Be_Dev_DB_FcstAvailability')]",
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Dev_DB_ModelDB_ActualSpotPrice_fas_stg')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
 				"linkedServiceName": {
-					"referenceName": "ln_jpdevfasbedb01_ModelDBv3",
-					"type": "LinkedServiceReference"
-				},
-				"annotations": [],
-				"type": "AzureSqlTable",
-				"schema": [
-					{
-						"name": "FiscalYear",
-						"type": "smallint",
-						"precision": 5
-					},
-					{
-						"name": "Date",
-						"type": "date"
-					},
-					{
-						"name": "UnitIdFW",
-						"type": "int",
-						"precision": 10
-					},
-					{
-						"name": "Availability",
-						"type": "float",
-						"precision": 15
-					},
-					{
-						"name": "AsOfDate",
-						"type": "date"
-					},
-					{
-						"name": "HjksCheck",
-						"type": "bit"
-					}
-				],
-				"typeProperties": {
-					"schema": "dbo",
-					"table": "FcstAvailability"
-				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/ln_jpdevfasbedb01_ModelDBv3')]"
-			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_FcstAvailability_fas_be_dev')]",
-			"type": "Microsoft.DataFactory/factories/datasets",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"linkedServiceName": {
-					"referenceName": "ln_jpstgfasbedb01_ModelDBv3",
-					"type": "LinkedServiceReference"
-				},
-				"annotations": [],
-				"type": "AzureSqlTable",
-				"schema": [],
-				"typeProperties": {
-					"schema": "dbo.ModelDBv3",
-					"table": "FcstAvailability_fas_be_dev"
-				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/ln_jpstgfasbedb01_ModelDBv3')]"
-			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDB_ActualSpotPrice_fas_stg')]",
-			"type": "Microsoft.DataFactory/factories/datasets",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"linkedServiceName": {
-					"referenceName": "ln_jpstgfasbedb01_ModelDB",
+					"referenceName": "ln_jpdevfasbedb01_ModelDB",
 					"type": "LinkedServiceReference"
 				},
 				"annotations": [],
@@ -313,16 +243,16 @@
 				}
 			},
 			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/ln_jpstgfasbedb01_ModelDB')]"
+				"[concat(variables('factoryId'), '/linkedServices/ln_jpdevfasbedb01_ModelDB')]"
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDB_ActualValueHydroRefined_fas_stg')]",
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Dev_DB_ModelDB_ActualValueHydroRefined_fas_stg')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
 				"linkedServiceName": {
-					"referenceName": "ln_jpstgfasbedb01_ModelDB",
+					"referenceName": "ln_jpdevfasbedb01_ModelDB",
 					"type": "LinkedServiceReference"
 				},
 				"annotations": [],
@@ -334,16 +264,16 @@
 				}
 			},
 			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/ln_jpstgfasbedb01_ModelDB')]"
+				"[concat(variables('factoryId'), '/linkedServices/ln_jpdevfasbedb01_ModelDB')]"
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDB_ActualValue_fas_stg')]",
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Dev_DB_ModelDB_ActualValue_fas_stg')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
 				"linkedServiceName": {
-					"referenceName": "ln_jpstgfasbedb01_ModelDB",
+					"referenceName": "ln_jpdevfasbedb01_ModelDB",
 					"type": "LinkedServiceReference"
 				},
 				"annotations": [],
@@ -355,16 +285,16 @@
 				}
 			},
 			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/ln_jpstgfasbedb01_ModelDB')]"
+				"[concat(variables('factoryId'), '/linkedServices/ln_jpdevfasbedb01_ModelDB')]"
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDB_FcstAvailability_fas_stg')]",
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Dev_DB_ModelDB_FcstAvailability_fas_stg')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
 				"linkedServiceName": {
-					"referenceName": "ln_jpstgfasbedb01_ModelDB",
+					"referenceName": "ln_jpdevfasbedb01_ModelDB",
 					"type": "LinkedServiceReference"
 				},
 				"annotations": [],
@@ -376,16 +306,16 @@
 				}
 			},
 			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/ln_jpstgfasbedb01_ModelDB')]"
+				"[concat(variables('factoryId'), '/linkedServices/ln_jpdevfasbedb01_ModelDB')]"
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDB_FcstDemand_fas_stg')]",
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Dev_DB_ModelDB_FcstDemand_fas_stg')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
 				"linkedServiceName": {
-					"referenceName": "ln_jpstgfasbedb01_ModelDB",
+					"referenceName": "ln_jpdevfasbedb01_ModelDB",
 					"type": "LinkedServiceReference"
 				},
 				"annotations": [],
@@ -397,16 +327,16 @@
 				}
 			},
 			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/ln_jpstgfasbedb01_ModelDB')]"
+				"[concat(variables('factoryId'), '/linkedServices/ln_jpdevfasbedb01_ModelDB')]"
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDB_FcstInterConnection_fas_stg')]",
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Dev_DB_ModelDB_FcstInterConnection_fas_stg')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
 				"linkedServiceName": {
-					"referenceName": "ln_jpstgfasbedb01_ModelDB",
+					"referenceName": "ln_jpdevfasbedb01_ModelDB",
 					"type": "LinkedServiceReference"
 				},
 				"annotations": [],
@@ -418,11 +348,11 @@
 				}
 			},
 			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/ln_jpstgfasbedb01_ModelDB')]"
+				"[concat(variables('factoryId'), '/linkedServices/ln_jpdevfasbedb01_ModelDB')]"
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDB_ForwardForex_fas_stg')]",
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Dev_DB_ModelDB_ForwardForex_fas_stg')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -443,7 +373,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDB_ForwardPrice_fas_stg')]",
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Dev_DB_ModelDB_ForwardPrice_fas_stg')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -464,7 +394,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDB_FwHistCommodity_fas_stg')]",
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Dev_DB_ModelDB_FwHistCommodity_fas_stg')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -485,7 +415,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDB_GenPlan_fas_stg')]",
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Dev_DB_ModelDB_GenPlan_fas_stg')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -506,7 +436,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDB_HistAvailability_fas_stg')]",
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Dev_DB_ModelDB_HistAvailability_fas_stg')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -520,6 +450,48 @@
 				"typeProperties": {
 					"schema": "dbo.ModelDB",
 					"table": "HistAvailability"
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/ln_jpstgfasbedb01_ModelDB')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Dev_DB_ModelDB_HistInterface_fas_stg')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "ln_jpstgfasbedb01_ModelDB",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "AzureSqlTable",
+				"schema": [],
+				"typeProperties": {
+					"schema": "dbo.ModelDB",
+					"table": "HistInterface"
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/ln_jpstgfasbedb01_ModelDB')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Dev_DB_ModelDB_JepxAreaPrice_fas_stg')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "ln_jpstgfasbedb01_ModelDB",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "AzureSqlTable",
+				"schema": [],
+				"typeProperties": {
+					"schema": "dbo.ModelDB",
+					"table": "JepxAreaPrice"
 				}
 			},
 			"dependsOn": [
