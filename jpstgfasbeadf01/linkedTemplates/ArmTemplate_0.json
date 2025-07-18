@@ -357,7 +357,7 @@
 			"apiVersion": "2018-06-01",
 			"properties": {
 				"linkedServiceName": {
-					"referenceName": "ln_jpstgfasbedb01_ModelDB",
+					"referenceName": "ln_jpdevfasbedb01_ModelDB",
 					"type": "LinkedServiceReference"
 				},
 				"annotations": [],
@@ -369,7 +369,7 @@
 				}
 			},
 			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/ln_jpstgfasbedb01_ModelDB')]"
+				"[concat(variables('factoryId'), '/linkedServices/ln_jpdevfasbedb01_ModelDB')]"
 			]
 		},
 		{
@@ -378,7 +378,7 @@
 			"apiVersion": "2018-06-01",
 			"properties": {
 				"linkedServiceName": {
-					"referenceName": "ln_jpstgfasbedb01_ModelDB",
+					"referenceName": "ln_jpdevfasbedb01_ModelDB",
 					"type": "LinkedServiceReference"
 				},
 				"annotations": [],
@@ -390,7 +390,7 @@
 				}
 			},
 			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/ln_jpstgfasbedb01_ModelDB')]"
+				"[concat(variables('factoryId'), '/linkedServices/ln_jpdevfasbedb01_ModelDB')]"
 			]
 		},
 		{
@@ -399,7 +399,7 @@
 			"apiVersion": "2018-06-01",
 			"properties": {
 				"linkedServiceName": {
-					"referenceName": "ln_jpstgfasbedb01_ModelDB",
+					"referenceName": "ln_jpdevfasbedb01_ModelDB",
 					"type": "LinkedServiceReference"
 				},
 				"annotations": [],
@@ -411,7 +411,7 @@
 				}
 			},
 			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/ln_jpstgfasbedb01_ModelDB')]"
+				"[concat(variables('factoryId'), '/linkedServices/ln_jpdevfasbedb01_ModelDB')]"
 			]
 		},
 		{
@@ -420,7 +420,7 @@
 			"apiVersion": "2018-06-01",
 			"properties": {
 				"linkedServiceName": {
-					"referenceName": "ln_jpstgfasbedb01_ModelDB",
+					"referenceName": "ln_jpdevfasbedb01_ModelDB",
 					"type": "LinkedServiceReference"
 				},
 				"annotations": [],
@@ -432,7 +432,7 @@
 				}
 			},
 			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/ln_jpstgfasbedb01_ModelDB')]"
+				"[concat(variables('factoryId'), '/linkedServices/ln_jpdevfasbedb01_ModelDB')]"
 			]
 		},
 		{
@@ -441,7 +441,7 @@
 			"apiVersion": "2018-06-01",
 			"properties": {
 				"linkedServiceName": {
-					"referenceName": "ln_jpstgfasbedb01_ModelDB",
+					"referenceName": "ln_jpdevfasbedb01_ModelDB",
 					"type": "LinkedServiceReference"
 				},
 				"annotations": [],
@@ -453,7 +453,7 @@
 				}
 			},
 			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/ln_jpstgfasbedb01_ModelDB')]"
+				"[concat(variables('factoryId'), '/linkedServices/ln_jpdevfasbedb01_ModelDB')]"
 			]
 		},
 		{
@@ -462,7 +462,7 @@
 			"apiVersion": "2018-06-01",
 			"properties": {
 				"linkedServiceName": {
-					"referenceName": "ln_jpstgfasbedb01_ModelDB",
+					"referenceName": "ln_jpdevfasbedb01_ModelDB",
 					"type": "LinkedServiceReference"
 				},
 				"annotations": [],
@@ -474,7 +474,7 @@
 				}
 			},
 			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/ln_jpstgfasbedb01_ModelDB')]"
+				"[concat(variables('factoryId'), '/linkedServices/ln_jpdevfasbedb01_ModelDB')]"
 			]
 		},
 		{
@@ -483,7 +483,7 @@
 			"apiVersion": "2018-06-01",
 			"properties": {
 				"linkedServiceName": {
-					"referenceName": "ln_jpstgfasbedb01_ModelDB",
+					"referenceName": "ln_jpdevfasbedb01_ModelDB",
 					"type": "LinkedServiceReference"
 				},
 				"annotations": [],
@@ -495,7 +495,7 @@
 				}
 			},
 			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/ln_jpstgfasbedb01_ModelDB')]"
+				"[concat(variables('factoryId'), '/linkedServices/ln_jpdevfasbedb01_ModelDB')]"
 			]
 		}
 	]
