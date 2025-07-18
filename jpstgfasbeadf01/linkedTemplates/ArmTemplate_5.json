@@ -13,6 +13,53 @@
 	},
 	"resources": [
 		{
+			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_ModelDB_CurveForwardPrices')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "ln_JPSTGPMSAPDB01",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "SqlServerTable",
+				"schema": [
+					{
+						"name": "FiscalYear",
+						"type": "smallint",
+						"precision": 5
+					},
+					{
+						"name": "Date",
+						"type": "date"
+					},
+					{
+						"name": "UnitIdFW",
+						"type": "int",
+						"precision": 10
+					},
+					{
+						"name": "Availability",
+						"type": "float",
+						"precision": 15
+					},
+					{
+						"name": "AsOfDate",
+						"type": "date"
+					},
+					{
+						"name": "HjksCheck",
+						"type": "bit"
+					}
+				],
+				"typeProperties": {
+					"schema": "dbo",
+					"table": "CurveForwardPrices"
+				}
+			},
+			"dependsOn": []
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_ModelDB_CurveSettlementPrices')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
@@ -901,53 +948,6 @@
 				"typeProperties": {
 					"schema": "dbo",
 					"table": "FuelPriceFormula"
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_ModelDB_FwFcstCommodity')]",
-			"type": "Microsoft.DataFactory/factories/datasets",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"linkedServiceName": {
-					"referenceName": "ln_JPSTGPMSAPDB01",
-					"type": "LinkedServiceReference"
-				},
-				"annotations": [],
-				"type": "SqlServerTable",
-				"schema": [
-					{
-						"name": "FiscalYear",
-						"type": "smallint",
-						"precision": 5
-					},
-					{
-						"name": "Date",
-						"type": "date"
-					},
-					{
-						"name": "UnitIdFW",
-						"type": "int",
-						"precision": 10
-					},
-					{
-						"name": "Availability",
-						"type": "float",
-						"precision": 15
-					},
-					{
-						"name": "AsOfDate",
-						"type": "date"
-					},
-					{
-						"name": "HjksCheck",
-						"type": "bit"
-					}
-				],
-				"typeProperties": {
-					"schema": "dbo",
-					"table": "FwFcstCommodity"
 				}
 			},
 			"dependsOn": []

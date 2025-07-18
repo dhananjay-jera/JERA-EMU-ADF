@@ -31,6 +31,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'ln_jpstgfasbedb01_ModelDBv3'"
 		},
+		"ln_jpdevfasbedb01_ModelDB_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'ln_jpdevfasbedb01_ModelDB'"
+		},
 		"JPSTGPMSAPDB01_properties_typeProperties_server": {
 			"type": "string",
 			"defaultValue": "jpstgpmsapdb01"
@@ -128,6 +132,18 @@
 		"pl_adf_fasbestgdata01_properties_groupId": {
 			"type": "string",
 			"defaultValue": "blob"
+		},
+		"ln_jpdevfasbedb01_ModelDB_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "jpdevfasbedb01.database.windows.net"
+		},
+		"ln_jpdevfasbedb01_ModelDB_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "ModelDB"
+		},
+		"ln_jpdevfasbedb01_ModelDB_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "jeraadmin"
 		}
 	},
 	"variables": {
@@ -7309,6 +7325,28 @@
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_OcctoUnitGen')]",
 				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Stg_DB_ModelDB_OcctoUnitGen_fas_stg')]"
 			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/ln_jpdevfasbedb01_ModelDB')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureSqlDatabase",
+				"typeProperties": {
+					"server": "[parameters('ln_jpdevfasbedb01_ModelDB_properties_typeProperties_server')]",
+					"database": "[parameters('ln_jpdevfasbedb01_ModelDB_properties_typeProperties_database')]",
+					"encrypt": "mandatory",
+					"trustServerCertificate": true,
+					"authenticationType": "SQL",
+					"userName": "[parameters('ln_jpdevfasbedb01_ModelDB_properties_typeProperties_userName')]",
+					"password": {
+						"type": "SecureString",
+						"value": "[parameters('ln_jpdevfasbedb01_ModelDB_password')]"
+					}
+				}
+			},
+			"dependsOn": []
 		}
 	]
 }
