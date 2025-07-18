@@ -248,71 +248,6 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/pl_Fas-Be-Dev_Fas-Be-Stg_DB-DB')]",
-			"type": "Microsoft.DataFactory/factories/pipelines",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"activities": [
-					{
-						"name": "jpdevfasbedb01_jpstgfasbedb01_FcstAvailability",
-						"type": "Copy",
-						"dependsOn": [],
-						"policy": {
-							"timeout": "01:00:00",
-							"retry": 0,
-							"retryIntervalInSeconds": 30,
-							"secureOutput": false,
-							"secureInput": false
-						},
-						"userProperties": [],
-						"typeProperties": {
-							"source": {
-								"type": "SqlServerSource",
-								"queryTimeout": "02:00:00",
-								"partitionOption": "None"
-							},
-							"sink": {
-								"type": "AzureSqlSink",
-								"writeBehavior": "insert",
-								"sqlWriterUseTableLock": false,
-								"tableOption": "autoCreate",
-								"disableMetricsCollection": false
-							},
-							"enableStaging": false,
-							"translator": {
-								"type": "TabularTranslator",
-								"typeConversion": true,
-								"typeConversionSettings": {
-									"allowDataTruncation": true,
-									"treatBooleanAsNumber": false
-								}
-							}
-						},
-						"inputs": [
-							{
-								"referenceName": "ds_Fas_Stg_DB_ModelDB_ForwardForex",
-								"type": "DatasetReference",
-								"parameters": {}
-							}
-						],
-						"outputs": [
-							{
-								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_ForwardForex_fas_stg",
-								"type": "DatasetReference",
-								"parameters": {}
-							}
-						]
-					}
-				],
-				"concurrency": 1,
-				"policy": {
-					"elapsedTimeMetric": {}
-				},
-				"annotations": []
-			},
-			"dependsOn": []
-		},
-		{
 			"name": "[concat(parameters('factoryName'), '/pl_Fas-Be-Stg_Fas-Be-Stg_Blob-DB')]",
 			"type": "Microsoft.DataFactory/factories/pipelines",
 			"apiVersion": "2018-06-01",
@@ -332,71 +267,6 @@
 							"timeout": "0.12:00:00",
 							"sleep": 10
 						}
-					}
-				],
-				"policy": {
-					"elapsedTimeMetric": {}
-				},
-				"annotations": []
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/pl_Fas-Stg_Fas-Be-Dev_DB-DB')]",
-			"type": "Microsoft.DataFactory/factories/pipelines",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"description": "pl_jpstgpmsapdb01_jpstgfasbedb01_FcstAvailability",
-				"activities": [
-					{
-						"name": "FcstAvailability_FcstAvailability_fas_stg",
-						"type": "Copy",
-						"dependsOn": [],
-						"policy": {
-							"timeout": "0.12:00:00",
-							"retry": 0,
-							"retryIntervalInSeconds": 30,
-							"secureOutput": false,
-							"secureInput": false
-						},
-						"userProperties": [],
-						"typeProperties": {
-							"source": {
-								"type": "SqlServerSource",
-								"queryTimeout": "02:00:00",
-								"partitionOption": "None"
-							},
-							"sink": {
-								"type": "AzureSqlSink",
-								"writeBehavior": "insert",
-								"sqlWriterUseTableLock": false,
-								"tableOption": "autoCreate",
-								"disableMetricsCollection": false
-							},
-							"enableStaging": false,
-							"translator": {
-								"type": "TabularTranslator",
-								"typeConversion": true,
-								"typeConversionSettings": {
-									"allowDataTruncation": true,
-									"treatBooleanAsNumber": false
-								}
-							}
-						},
-						"inputs": [
-							{
-								"referenceName": "ds_Fas_Stg_DB_ModelDB_FcstAvailability",
-								"type": "DatasetReference",
-								"parameters": {}
-							}
-						],
-						"outputs": [
-							{
-								"referenceName": "dt_Fas_Be_Stg_DB_ModelDBv3_FcstAvailability_fas_be_dev",
-								"type": "DatasetReference",
-								"parameters": {}
-							}
-						]
 					}
 				],
 				"policy": {
@@ -464,7 +334,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_FcstAvailability_fas_stg",
+								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_FcstAvailability_fas_stg",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -522,7 +392,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_ActualSpotPrice_fas_stg",
+								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_ActualSpotPrice_fas_stg",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -572,7 +442,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_ActualValue_fas_stg",
+								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_ActualValue_fas_stg",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -629,7 +499,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_ActualValueHydroRefined_fas_stg",
+								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_ActualValueHydroRefined_fas_stg",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -686,7 +556,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_FcstDemand_fas_stg",
+								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_FcstDemand_fas_stg",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -743,7 +613,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_FcstInterConnection_fas_stg",
+								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_FcstInterConnection_fas_stg",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -800,7 +670,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_ForwardForex_fas_stg",
+								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_ForwardForex_fas_stg",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -857,7 +727,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_ForwardPrice_fas_stg",
+								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_ForwardPrice_fas_stg",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -914,7 +784,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_FwHistCommodity_fas_stg",
+								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_FwHistCommodity_fas_stg",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -971,7 +841,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_GenPlan_fas_stg",
+								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_GenPlan_fas_stg",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -1028,7 +898,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_HistAvailability_fas_stg",
+								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_HistAvailability_fas_stg",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -1085,7 +955,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_HistInterface_fas_stg",
+								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_HistInterface_fas_stg",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -1142,7 +1012,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_JepxAreaPrice_fas_stg",
+								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_JepxAreaPrice_fas_stg",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -1199,7 +1069,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_JepxSummary_fas_stg",
+								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_JepxSummary_fas_stg",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -1256,7 +1126,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_MasterGenV4_fas_stg",
+								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_MasterGenV4_fas_stg",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -1313,7 +1183,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_OcctoUnitGen_fas_stg",
+								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_OcctoUnitGen_fas_stg",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
