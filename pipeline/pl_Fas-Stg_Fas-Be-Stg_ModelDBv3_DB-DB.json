@@ -25,7 +25,10 @@
 						"type": "AzureSqlSink",
 						"writeBehavior": "upsert",
 						"upsertSettings": {
-							"useTempDB": true
+							"useTempDB": true,
+							"keys": [
+								"InsertedDate"
+							]
 						},
 						"sqlWriterUseTableLock": false,
 						"tableOption": "autoCreate",
