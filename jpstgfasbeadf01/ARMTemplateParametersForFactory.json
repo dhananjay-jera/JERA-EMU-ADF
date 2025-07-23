@@ -8,6 +8,12 @@
 		"JPSTGPMSAPDB01_password": {
 			"value": ""
 		},
+		"Snowflake1_password": {
+			"value": ""
+		},
+		"Snowflake2_password": {
+			"value": ""
+		},
 		"ln_JPSTGPMSAPDB01_password": {
 			"value": ""
 		},
@@ -34,6 +40,24 @@
 		},
 		"JPSTGPMSAPDB01_properties_typeProperties_userName": {
 			"value": "fasreadonly"
+		},
+		"Snowflake1_properties_typeProperties_database": {
+			"value": "ANA00003"
+		},
+		"Snowflake1_properties_typeProperties_role": {
+			"value": "ANA00003_PROD_ADMIN"
+		},
+		"Snowflake1_properties_typeProperties_host": {
+			"value": "jera-analysis.privatelink.snowflakecomputing.com"
+		},
+		"Snowflake2_properties_typeProperties_database": {
+			"value": "ANA00003"
+		},
+		"Snowflake2_properties_typeProperties_role": {
+			"value": "ANA00003_PROD_ADMIN"
+		},
+		"Snowflake2_properties_typeProperties_host": {
+			"value": "jera-analysis.privatelink.snowflakecomputing.com"
 		},
 		"ln_AzureBlobStorage1_properties_typeProperties_serviceEndpoint": {
 			"value": "https://fasbestgdata01.blob.core.windows.net/"
