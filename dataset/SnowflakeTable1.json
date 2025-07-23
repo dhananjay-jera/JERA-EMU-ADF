@@ -1,0 +1,47 @@
+{
+	"name": "SnowflakeTable1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Snowflake1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SnowflakeV2Table",
+		"schema": [
+			{
+				"name": "AREA_NAME",
+				"type": "VARCHAR"
+			},
+			{
+				"name": "TYPE",
+				"type": "VARCHAR"
+			},
+			{
+				"name": "DATE",
+				"type": "TIMESTAMP_NTZ"
+			},
+			{
+				"name": "DECAPACITY",
+				"type": "FLOAT",
+				"precision": 38,
+				"scale": 0
+			},
+			{
+				"name": "CAPACITY",
+				"type": "FLOAT",
+				"precision": 38,
+				"scale": 0
+			},
+			{
+				"name": "AVAILABILITY",
+				"type": "FLOAT",
+				"precision": 38,
+				"scale": 0
+			}
+		],
+		"typeProperties": {
+			"schema": "HJKS",
+			"table": "HJKSAVAILABILITY"
+		}
+	}
+}
