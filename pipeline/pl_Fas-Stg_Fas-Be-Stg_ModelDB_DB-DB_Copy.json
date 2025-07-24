@@ -905,7 +905,9 @@
 					"sink": {
 						"type": "AzureSqlSink",
 						"writeBehavior": "insert",
-						"sqlWriterUseTableLock": false
+						"sqlWriterUseTableLock": false,
+						"tableOption": "autoCreate",
+						"disableMetricsCollection": false
 					},
 					"enableStaging": false,
 					"translator": {
@@ -925,7 +927,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "dt_Fas_Be_Stg_DB_ModelDBv3_CommodityDef_fas_stg",
+						"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_CommodityDef_fas_stg",
 						"type": "DatasetReference"
 					}
 				]
