@@ -906,9 +906,7 @@
 						"upsertSettings": {
 							"useTempDB": true,
 							"keys": [
-								"UnitIdFW",
-								"",
-								""
+								"UnitIdFW"
 							]
 						},
 						"sqlWriterUseTableLock": false,
