@@ -7,22 +7,6 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "jpstgfasbeadf01"
 		},
-		"ln_JPSTGPMSAPDB01_password": {
-			"type": "secureString",
-			"metadata": "Secure string for 'password' of 'ln_JPSTGPMSAPDB01'"
-		},
-		"ln_JPSTGPMSAPDB01_properties_typeProperties_server": {
-			"type": "string",
-			"defaultValue": "JPSTGPMSAPDB01"
-		},
-		"ln_JPSTGPMSAPDB01_properties_typeProperties_database": {
-			"type": "string",
-			"defaultValue": "ModelDB"
-		},
-		"ln_JPSTGPMSAPDB01_properties_typeProperties_userName": {
-			"type": "string",
-			"defaultValue": "fasreadonly"
-		},
 		"ep_jpstgpmsapdb01_properties_privateLinkResourceId": {
 			"type": "string",
 			"defaultValue": "/subscriptions/40d0025b-b057-42a4-9ed8-f038512f9cfc/resourceGroups/FAS-Stg/providers/Microsoft.Network/privateLinkServices/jpstgfasilb01-pls"
@@ -50,32 +34,6 @@
 		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
 	},
 	"resources": [
-		{
-			"name": "[concat(parameters('factoryName'), '/ln_JPSTGPMSAPDB01')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "SqlServer",
-				"typeProperties": {
-					"server": "[parameters('ln_JPSTGPMSAPDB01_properties_typeProperties_server')]",
-					"database": "[parameters('ln_JPSTGPMSAPDB01_properties_typeProperties_database')]",
-					"encrypt": "mandatory",
-					"trustServerCertificate": true,
-					"authenticationType": "SQL",
-					"userName": "[parameters('ln_JPSTGPMSAPDB01_properties_typeProperties_userName')]",
-					"password": {
-						"type": "SecureString",
-						"value": "[parameters('ln_JPSTGPMSAPDB01_password')]"
-					}
-				},
-				"connectVia": {
-					"referenceName": "IR-jpstgpmsapdb01",
-					"type": "IntegrationRuntimeReference"
-				}
-			},
-			"dependsOn": []
-		},
 		{
 			"name": "[concat(parameters('factoryName'), '/default/ep_jpstgpmsapdb01')]",
 			"type": "Microsoft.DataFactory/factories/managedVirtualNetworks/managedPrivateEndpoints",
@@ -263,9 +221,7 @@
 					"table": "ActualSpotPrice"
 				}
 			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/ln_JPSTGPMSAPDB01')]"
-			]
+			"dependsOn": []
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_ModelDB_ActualValue')]",
@@ -312,9 +268,7 @@
 					"table": "ActualValue"
 				}
 			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/ln_JPSTGPMSAPDB01')]"
-			]
+			"dependsOn": []
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_ModelDB_ActualValueHydroRefined')]",
@@ -361,9 +315,7 @@
 					"table": "ActualValueHydroRefined"
 				}
 			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/ln_JPSTGPMSAPDB01')]"
-			]
+			"dependsOn": []
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_ModelDB_ArcHjksGenOutage')]",
@@ -410,9 +362,7 @@
 					"table": "ArcHjksGenOutage"
 				}
 			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/ln_JPSTGPMSAPDB01')]"
-			]
+			"dependsOn": []
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_ModelDB_BIOMASS')]",
@@ -459,9 +409,7 @@
 					"table": "BIOMASS"
 				}
 			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/ln_JPSTGPMSAPDB01')]"
-			]
+			"dependsOn": []
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_ModelDB_CommodityDef')]",
@@ -508,9 +456,7 @@
 					"table": "CommodityDef"
 				}
 			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/ln_JPSTGPMSAPDB01')]"
-			]
+			"dependsOn": []
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_ModelDB_Conversion')]",
@@ -557,9 +503,7 @@
 					"table": "Conversion"
 				}
 			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/ln_JPSTGPMSAPDB01')]"
-			]
+			"dependsOn": []
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_ModelDB_CurveDef')]",
@@ -606,9 +550,7 @@
 					"table": "CurveDef"
 				}
 			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/ln_JPSTGPMSAPDB01')]"
-			]
+			"dependsOn": []
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_ModelDB_CurveForwardPrices')]",
@@ -655,9 +597,7 @@
 					"table": "CurveForwardPrices"
 				}
 			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/ln_JPSTGPMSAPDB01')]"
-			]
+			"dependsOn": []
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_ModelDB_CurveSettlementPrices')]",
@@ -704,9 +644,7 @@
 					"table": "ActualPrice"
 				}
 			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/ln_JPSTGPMSAPDB01')]"
-			]
+			"dependsOn": []
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_ModelDB_FcstAvailability')]",
@@ -753,9 +691,7 @@
 					"table": "FcstAvailability"
 				}
 			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/ln_JPSTGPMSAPDB01')]"
-			]
+			"dependsOn": []
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_ModelDB_FcstBio')]",
@@ -802,9 +738,7 @@
 					"table": "FcstBio"
 				}
 			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/ln_JPSTGPMSAPDB01')]"
-			]
+			"dependsOn": []
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_ModelDB_FcstBio_new')]",
@@ -851,9 +785,7 @@
 					"table": "FcstBio_new"
 				}
 			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/ln_JPSTGPMSAPDB01')]"
-			]
+			"dependsOn": []
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_ModelDB_FcstDemand')]",
@@ -900,9 +832,54 @@
 					"table": "FcstDemand"
 				}
 			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/ln_JPSTGPMSAPDB01')]"
-			]
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_ModelDB_FcstDemandAdj')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "ln_JPSTGPMSAPDB01",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "SqlServerTable",
+				"schema": [
+					{
+						"name": "FiscalYear",
+						"type": "smallint",
+						"precision": 5
+					},
+					{
+						"name": "Date",
+						"type": "date"
+					},
+					{
+						"name": "UnitIdFW",
+						"type": "int",
+						"precision": 10
+					},
+					{
+						"name": "Availability",
+						"type": "float",
+						"precision": 15
+					},
+					{
+						"name": "AsOfDate",
+						"type": "date"
+					},
+					{
+						"name": "HjksCheck",
+						"type": "bit"
+					}
+				],
+				"typeProperties": {
+					"schema": "dbo",
+					"table": "FcstDemandAdj"
+				}
+			},
+			"dependsOn": []
 		}
 	]
 }

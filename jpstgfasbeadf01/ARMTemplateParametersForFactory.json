@@ -11,9 +11,6 @@
 		"Snowflake1_password": {
 			"value": ""
 		},
-		"Snowflake2_password": {
-			"value": ""
-		},
 		"ln_JPSTGPMSAPDB01_password": {
 			"value": ""
 		},
@@ -48,15 +45,6 @@
 			"value": "ANA00003_PROD_ADMIN"
 		},
 		"Snowflake1_properties_typeProperties_host": {
-			"value": "jera-analysis.privatelink.snowflakecomputing.com"
-		},
-		"Snowflake2_properties_typeProperties_database": {
-			"value": "ANA00003"
-		},
-		"Snowflake2_properties_typeProperties_role": {
-			"value": "ANA00003_PROD_ADMIN"
-		},
-		"Snowflake2_properties_typeProperties_host": {
 			"value": "jera-analysis.privatelink.snowflakecomputing.com"
 		},
 		"ln_AzureBlobStorage1_properties_typeProperties_serviceEndpoint": {

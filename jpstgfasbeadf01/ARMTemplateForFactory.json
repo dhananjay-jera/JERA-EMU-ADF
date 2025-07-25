@@ -15,10 +15,6 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'Snowflake1'"
 		},
-		"Snowflake2_password": {
-			"type": "secureString",
-			"metadata": "Secure string for 'password' of 'Snowflake2'"
-		},
 		"ln_JPSTGPMSAPDB01_password": {
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'ln_JPSTGPMSAPDB01'"
@@ -64,18 +60,6 @@
 			"defaultValue": "ANA00003_PROD_ADMIN"
 		},
 		"Snowflake1_properties_typeProperties_host": {
-			"type": "string",
-			"defaultValue": "jera-analysis.privatelink.snowflakecomputing.com"
-		},
-		"Snowflake2_properties_typeProperties_database": {
-			"type": "string",
-			"defaultValue": "ANA00003"
-		},
-		"Snowflake2_properties_typeProperties_role": {
-			"type": "string",
-			"defaultValue": "ANA00003_PROD_ADMIN"
-		},
-		"Snowflake2_properties_typeProperties_host": {
 			"type": "string",
 			"defaultValue": "jera-analysis.privatelink.snowflakecomputing.com"
 		},
@@ -9670,35 +9654,6 @@
 					}
 				},
 				"version": "1.1",
-				"connectVia": {
-					"referenceName": "IR-jpstgpmsapdb01",
-					"type": "IntegrationRuntimeReference"
-				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/integrationRuntimes/IR-jpstgpmsapdb01')]"
-			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/Snowflake2')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "SnowflakeV2",
-				"typeProperties": {
-					"authenticationType": "Basic",
-					"accountIdentifier": "JERA-ANALYSIS",
-					"user": "ANA00003PRODFAS_Stg",
-					"database": "[parameters('Snowflake2_properties_typeProperties_database')]",
-					"warehouse": "ANA00003_PROD_WH",
-					"role": "[parameters('Snowflake2_properties_typeProperties_role')]",
-					"host": "[parameters('Snowflake2_properties_typeProperties_host')]",
-					"password": {
-						"type": "SecureString",
-						"value": "[parameters('Snowflake2_password')]"
-					}
-				},
 				"connectVia": {
 					"referenceName": "IR-jpstgpmsapdb01",
 					"type": "IntegrationRuntimeReference"
