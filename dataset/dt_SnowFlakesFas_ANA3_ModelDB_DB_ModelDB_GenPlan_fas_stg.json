@@ -1,5 +1,5 @@
 {
-	"name": "SnowflakeTable1",
+	"name": "dt_SnowFlakesFas_ANA3_ModelDB_DB_ModelDB_GenPlan_fas_stg",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "Snowflake1",
@@ -40,8 +40,8 @@
 			}
 		],
 		"typeProperties": {
-			"schema": "HJKS",
-			"table": "HJKSAVAILABILITY"
+			"schema": "MODELDB",
+			"table": "GenPlan"
 		}
 	}
 }
