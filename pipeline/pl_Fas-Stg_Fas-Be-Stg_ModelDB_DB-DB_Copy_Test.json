@@ -40,13 +40,13 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "ds_Fas_Stg_DB_ModelDB_ActualValue",
+						"referenceName": "ds_Fas_Stg_DB_ModelDB_test",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_ActualValue_fas_stg",
+						"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_test_fas_stg",
 						"type": "DatasetReference"
 					}
 				]
