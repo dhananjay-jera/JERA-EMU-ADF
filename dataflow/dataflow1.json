@@ -6,7 +6,7 @@
 			"sources": [
 				{
 					"dataset": {
-						"referenceName": "ds_Fas_Stg_DB_ModelDB_test",
+						"referenceName": "ds_Fas_BE_Stg_DB_ModelDB_test",
 						"type": "DatasetReference"
 					},
 					"name": "source1"
@@ -16,12 +16,11 @@
 			"transformations": [],
 			"scriptLines": [
 				"source(output(",
-				"          FiscalYear as integer,",
 				"          Date as date,",
-				"          UnitIdFW as integer,",
-				"          Availability as double,",
-				"          AsOfDate as date,",
-				"          HjksCheck as boolean",
+				"          Time as timestamp,",
+				"          Data1 as string,",
+				"          Data2 as double,",
+				"          Data3 as integer",
 				"     ),",
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
