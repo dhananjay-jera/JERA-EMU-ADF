@@ -10,26 +10,10 @@
 						"type": "DatasetReference"
 					},
 					"name": "source1"
-				},
-				{
-					"dataset": {
-						"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_test_fas_stg",
-						"type": "DatasetReference"
-					},
-					"name": "source2"
 				}
 			],
 			"sinks": [],
-			"transformations": [
-				{
-					"name": "select1",
-					"description": "Select * from dbo.test"
-				},
-				{
-					"name": "select2",
-					"description": "Select * from dbo.test"
-				}
-			],
+			"transformations": [],
 			"scriptLines": [
 				"source(output(",
 				"          FiscalYear as integer,",
@@ -43,15 +27,7 @@
 				"     validateSchema: false,",
 				"     limit: 100,",
 				"     isolationLevel: 'READ_UNCOMMITTED',",
-				"     format: 'table') ~> source1",
-				"source(allowSchemaDrift: true,",
-				"     validateSchema: false,",
-				"     isolationLevel: 'READ_UNCOMMITTED',",
-				"     format: 'table') ~> source2",
-				"source1 select(skipDuplicateMapInputs: true,",
-				"     skipDuplicateMapOutputs: true) ~> select1",
-				"source2 select(skipDuplicateMapInputs: true,",
-				"     skipDuplicateMapOutputs: true) ~> select2"
+				"     format: 'table') ~> source1"
 			]
 		}
 	}
