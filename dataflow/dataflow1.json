@@ -10,10 +10,17 @@
 						"type": "DatasetReference"
 					},
 					"name": "source1"
+				},
+				{
+					"name": "source2"
 				}
 			],
 			"sinks": [],
-			"transformations": [],
+			"transformations": [
+				{
+					"name": "AddMD5"
+				}
+			],
 			"scriptLines": [
 				"source(output(",
 				"          Date as date,",
@@ -26,7 +33,10 @@
 				"     validateSchema: false,",
 				"     limit: 100,",
 				"     isolationLevel: 'READ_UNCOMMITTED',",
-				"     format: 'table') ~> source1"
+				"     format: 'table') ~> source1",
+				"source(allowSchemaDrift: true,",
+				"     validateSchema: false) ~> source2",
+				"source1 derive(md5_hash = md5(toString(Date) + toString(Time) + Data1 + toString(Data2) + toString(Data3))) ~> AddMD5"
 			]
 		}
 	}
