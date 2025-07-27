@@ -25,7 +25,7 @@
 					"name": "AddMD5"
 				},
 				{
-					"name": "derivedColumn2"
+					"name": "derivedColumn1"
 				}
 			],
 			"scriptLines": [
@@ -47,7 +47,7 @@
 				"     isolationLevel: 'READ_UNCOMMITTED',",
 				"     format: 'table') ~> source2",
 				"source1 derive(md5_hash = md5(toString(Date) + toString(Time) + Data1 + toString(Data2) + toString(Data3))) ~> AddMD5",
-				"source2 derive(md5_hash = md5(toString(Date) + toString(Time) + Data1 + toString(Data2) + toString(Data3))) ~> derivedColumn2"
+				"source2 derive(md5_hash = md5(toString(Date) + toString(Time) + Data1 + toString(Data2) + toString(Data3))) ~> derivedColumn1"
 			]
 		}
 	}
