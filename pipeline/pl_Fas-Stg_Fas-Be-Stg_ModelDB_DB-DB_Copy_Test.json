@@ -4,7 +4,7 @@
 		"description": "pl_jpstgpmsapdb01_jpstgfasbedb01_FcstAvailability",
 		"activities": [
 			{
-				"name": "ActualValue_ActualValue",
+				"name": "test_test",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
