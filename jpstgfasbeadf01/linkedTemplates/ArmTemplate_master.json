@@ -349,12 +349,6 @@
 					"JPSTGPMSAPDB01_password": {
 						"value": "[parameters('JPSTGPMSAPDB01_password')]"
 					},
-					"Snowflake1_password": {
-						"value": "[parameters('Snowflake1_password')]"
-					},
-					"ln_JPSTGPMSAPDB01_password": {
-						"value": "[parameters('ln_JPSTGPMSAPDB01_password')]"
-					},
 					"JPSTGPMSAPDB01_properties_typeProperties_server": {
 						"value": "[parameters('JPSTGPMSAPDB01_properties_typeProperties_server')]"
 					},
@@ -363,6 +357,32 @@
 					},
 					"JPSTGPMSAPDB01_properties_typeProperties_userName": {
 						"value": "[parameters('JPSTGPMSAPDB01_properties_typeProperties_userName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'jpstgfasbeadf01_ArmTemplate_4')]"
+			]
+		},
+		{
+			"name": "jpstgfasbeadf01_ArmTemplate_6",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_6.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"Snowflake1_password": {
+						"value": "[parameters('Snowflake1_password')]"
+					},
+					"ln_JPSTGPMSAPDB01_password": {
+						"value": "[parameters('ln_JPSTGPMSAPDB01_password')]"
 					},
 					"Snowflake1_properties_typeProperties_database": {
 						"value": "[parameters('Snowflake1_properties_typeProperties_database')]"
@@ -384,26 +404,6 @@
 					},
 					"ln_JPSTGPMSAPDB01_properties_typeProperties_userName": {
 						"value": "[parameters('ln_JPSTGPMSAPDB01_properties_typeProperties_userName')]"
-					}
-				}
-			},
-			"dependsOn": [
-				"[resourceId('Microsoft.Resources/deployments', 'jpstgfasbeadf01_ArmTemplate_4')]"
-			]
-		},
-		{
-			"name": "jpstgfasbeadf01_ArmTemplate_6",
-			"type": "Microsoft.Resources/deployments",
-			"apiVersion": "2024-03-01",
-			"properties": {
-				"mode": "incremental",
-				"templateLink": {
-					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_6.json', parameters('containerSasToken'))]",
-					"contentVersion": "1.0.0.0"
-				},
-				"parameters": {
-					"factoryName": {
-						"value": "[parameters('factoryName')]"
 					},
 					"ep_jpstgpmsapdb01_properties_privateLinkResourceId": {
 						"value": "[parameters('ep_jpstgpmsapdb01_properties_privateLinkResourceId')]"
