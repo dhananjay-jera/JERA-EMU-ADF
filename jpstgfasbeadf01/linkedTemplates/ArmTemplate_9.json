@@ -439,7 +439,7 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/Snow_ANA3_HistAvailability')]",
+			"name": "[concat(parameters('factoryName'), '/ds_Snow_ANA3_HistAvailability')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
