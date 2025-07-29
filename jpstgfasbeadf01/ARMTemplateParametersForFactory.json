@@ -29,6 +29,9 @@
 		"ln_jpstgfasbedb01_ModelDBv3_password": {
 			"value": ""
 		},
+		"ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite_password": {
+			"value": ""
+		},
 		"JPSTGPMSAPDB01_properties_typeProperties_server": {
 			"value": "jpstgpmsapdb01"
 		},
@@ -120,6 +123,15 @@
 		},
 		"pl_adf_fasbestgdata01_properties_groupId": {
 			"value": "blob"
+		},
+		"ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite_properties_typeProperties_server": {
+			"value": "JPSTGPMSAPDB01"
+		},
+		"ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite_properties_typeProperties_database": {
+			"value": "ModelDB_20250703"
+		},
+		"ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite_properties_typeProperties_userName": {
+			"value": "jeraadmin"
 		}
 	}
 }
