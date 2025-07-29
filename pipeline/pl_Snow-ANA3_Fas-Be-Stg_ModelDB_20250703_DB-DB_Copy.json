@@ -33,7 +33,52 @@
 							"fileExtension": ".txt"
 						}
 					},
-					"enableStaging": false
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "DATE",
+									"type": "DateTime"
+								},
+								"sink": {
+									"name": "DATE",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "UNITIDFW",
+									"type": "Int64"
+								},
+								"sink": {
+									"name": "UNITIDFW",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "AVAILABILITY",
+									"type": "Double"
+								},
+								"sink": {
+									"name": "AVAILABILITY",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "HJKSCHECK",
+									"type": "Boolean"
+								},
+								"sink": {
+									"name": "HJKSCHECK",
+									"type": "String"
+								}
+							}
+						]
+					}
 				},
 				"inputs": [
 					{
