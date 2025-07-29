@@ -37,7 +37,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "dt_SnowFlakesFas_ANA3_ModelDB_DB_ModelDB_GenPlan_fas_stg",
+						"referenceName": "ds_Snow_ANA3_HistAvailability",
 						"type": "DatasetReference"
 					}
 				],
