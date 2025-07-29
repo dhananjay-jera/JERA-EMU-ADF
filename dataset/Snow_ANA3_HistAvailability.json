@@ -1,5 +1,5 @@
 {
-	"name": "Snow_HistAvailability",
+	"name": "Snow_ANA3_HistAvailability",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "Snowflake1",
