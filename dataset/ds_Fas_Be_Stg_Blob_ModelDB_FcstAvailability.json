@@ -10,8 +10,8 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "FcstAvailability.csv",
-				"folderPath": "databases/sql_server/jpstgpmsapdb01/ModelDB",
+				"fileName": "HistAvaliablity",
+				"folderPath": "databases/snowflakes/ANA00003/HJKS",
 				"container": "rdz"
 			},
 			"columnDelimiter": ",",
