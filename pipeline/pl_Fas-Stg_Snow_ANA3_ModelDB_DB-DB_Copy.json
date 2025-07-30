@@ -31,7 +31,8 @@
 						"linkedServiceName": {
 							"referenceName": "ln_AzureBlobStorage1",
 							"type": "LinkedServiceReference"
-						}
+						},
+						"path": "rdz"
 					}
 				},
 				"inputs": [
