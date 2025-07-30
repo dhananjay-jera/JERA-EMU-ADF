@@ -1,0 +1,47 @@
+{
+	"name": "dt_snow_ANA3_ModelDB_ActualSpotPrice_fas_stg",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Snowflake1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SnowflakeV2Table",
+		"schema": [
+			{
+				"name": "INDICATORID",
+				"type": "NUMBER",
+				"precision": 38,
+				"scale": 0
+			},
+			{
+				"name": "PRICEINDEXID",
+				"type": "VARCHAR"
+			},
+			{
+				"name": "PRICEDATE",
+				"type": "DATE"
+			},
+			{
+				"name": "DELIVDATE",
+				"type": "DATE"
+			},
+			{
+				"name": "PRICEAMOUNT",
+				"type": "FLOAT"
+			},
+			{
+				"name": "EXCHRATEMMBTUAMOUNT",
+				"type": "FLOAT"
+			},
+			{
+				"name": "INSERTAT",
+				"type": "VARCHAR"
+			}
+		],
+		"typeProperties": {
+			"schema": "MODELDB",
+			"table": "ACTUAL_SPOT_PRICE"
+		}
+	}
+}
