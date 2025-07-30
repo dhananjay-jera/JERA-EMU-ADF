@@ -6,6 +6,10 @@
 		"typeProperties": {
 			"serviceEndpoint": "https://fasbestgdata01.blob.core.windows.net/",
 			"accountKind": "StorageV2"
+		},
+		"connectVia": {
+			"referenceName": "IR-jpstgpmsapdb01",
+			"type": "IntegrationRuntimeReference"
 		}
 	},
 	"type": "Microsoft.DataFactory/factories/linkedservices"
