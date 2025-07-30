@@ -1,54 +1,6 @@
 {
 	"name": "pl_Fas-Stg_Snow_ANA3_ModelDB_DB-DB_Copy",
 	"properties": {
-		"activities": [
-			{
-				"name": "Copy data1",
-				"type": "Copy",
-				"dependsOn": [],
-				"policy": {
-					"timeout": "0.12:00:00",
-					"retry": 0,
-					"retryIntervalInSeconds": 30,
-					"secureOutput": false,
-					"secureInput": false
-				},
-				"userProperties": [],
-				"typeProperties": {
-					"source": {
-						"type": "SqlServerSource",
-						"queryTimeout": "02:00:00",
-						"partitionOption": "None"
-					},
-					"sink": {
-						"type": "SnowflakeV2Sink",
-						"importSettings": {
-							"type": "SnowflakeImportCopyCommand"
-						}
-					},
-					"enableStaging": true,
-					"stagingSettings": {
-						"linkedServiceName": {
-							"referenceName": "ln_AzureBlobStorage1",
-							"type": "LinkedServiceReference"
-						},
-						"path": "rdz"
-					}
-				},
-				"inputs": [
-					{
-						"referenceName": "ds_Fas_Stg_DB_ModelDB_ActualSpotPrice",
-						"type": "DatasetReference"
-					}
-				],
-				"outputs": [
-					{
-						"referenceName": "dt_snow_ANA3_ModelDB_ActualSpotPrice_fas_stg",
-						"type": "DatasetReference"
-					}
-				]
-			}
-		],
 		"annotations": []
 	}
 }
