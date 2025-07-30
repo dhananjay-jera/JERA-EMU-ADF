@@ -25,7 +25,7 @@
 				"type": "AzureSqlTable",
 				"schema": [],
 				"typeProperties": {
-					"schema": "dbo.ModelDB",
+					"schema": "dbo",
 					"table": "JepxAreaPrice"
 				}
 			},
@@ -44,7 +44,7 @@
 				"type": "AzureSqlTable",
 				"schema": [],
 				"typeProperties": {
-					"schema": "dbo.ModelDB",
+					"schema": "dbo",
 					"table": "JepxSummary"
 				}
 			},
@@ -63,7 +63,7 @@
 				"type": "AzureSqlTable",
 				"schema": [],
 				"typeProperties": {
-					"schema": "dbo.ModelDB",
+					"schema": "dbo",
 					"table": "MasterGenV4"
 				}
 			},
@@ -82,7 +82,7 @@
 				"type": "AzureSqlTable",
 				"schema": [],
 				"typeProperties": {
-					"schema": "dbo.ModelDB",
+					"schema": "dbo",
 					"table": "OcctoUnitGen"
 				}
 			},
@@ -101,7 +101,7 @@
 				"type": "AzureSqlTable",
 				"schema": [],
 				"typeProperties": {
-					"schema": "dbo.ModelDB",
+					"schema": "dbo",
 					"table": "test"
 				}
 			},

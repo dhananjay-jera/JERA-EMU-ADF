@@ -283,7 +283,7 @@
 				"type": "AzureSqlTable",
 				"schema": [],
 				"typeProperties": {
-					"schema": "dbo.ModelDB",
+					"schema": "dbo",
 					"table": "ActualSpotPrice"
 				}
 			},
@@ -304,7 +304,7 @@
 				"type": "AzureSqlTable",
 				"schema": [],
 				"typeProperties": {
-					"schema": "dbo.ModelDB",
+					"schema": "dbo",
 					"table": "ActualValueHydroRefined"
 				}
 			},
@@ -325,7 +325,7 @@
 				"type": "AzureSqlTable",
 				"schema": [],
 				"typeProperties": {
-					"schema": "dbo.ModelDB",
+					"schema": "dbo",
 					"table": "ActualValue"
 				}
 			},
@@ -346,7 +346,7 @@
 				"type": "AzureSqlTable",
 				"schema": [],
 				"typeProperties": {
-					"schema": "dbo.ModelDB",
+					"schema": "dbo",
 					"table": "FcstAvailability"
 				}
 			},
@@ -367,7 +367,7 @@
 				"type": "AzureSqlTable",
 				"schema": [],
 				"typeProperties": {
-					"schema": "dbo.ModelDB",
+					"schema": "dbo",
 					"table": "FcstDemand"
 				}
 			},
@@ -388,7 +388,7 @@
 				"type": "AzureSqlTable",
 				"schema": [],
 				"typeProperties": {
-					"schema": "dbo.ModelDB",
+					"schema": "dbo",
 					"table": "FcstInterConnection"
 				}
 			},
@@ -409,7 +409,7 @@
 				"type": "AzureSqlTable",
 				"schema": [],
 				"typeProperties": {
-					"schema": "dbo.ModelDB",
+					"schema": "dbo",
 					"table": "ForwardForex"
 				}
 			},
@@ -430,7 +430,7 @@
 				"type": "AzureSqlTable",
 				"schema": [],
 				"typeProperties": {
-					"schema": "dbo.ModelDB",
+					"schema": "dbo",
 					"table": "ForwardPrice"
 				}
 			},
@@ -451,7 +451,7 @@
 				"type": "AzureSqlTable",
 				"schema": [],
 				"typeProperties": {
-					"schema": "dbo.ModelDB",
+					"schema": "dbo",
 					"table": "FwHistCommodity"
 				}
 			},
@@ -472,7 +472,7 @@
 				"type": "AzureSqlTable",
 				"schema": [],
 				"typeProperties": {
-					"schema": "dbo.ModelDB",
+					"schema": "dbo",
 					"table": "GenPlan"
 				}
 			},
@@ -493,7 +493,7 @@
 				"type": "AzureSqlTable",
 				"schema": [],
 				"typeProperties": {
-					"schema": "dbo.ModelDB",
+					"schema": "dbo",
 					"table": "HistAvailability"
 				}
 			},
@@ -514,7 +514,7 @@
 				"type": "AzureSqlTable",
 				"schema": [],
 				"typeProperties": {
-					"schema": "dbo.ModelDB",
+					"schema": "dbo",
 					"table": "HistInterface"
 				}
 			},
