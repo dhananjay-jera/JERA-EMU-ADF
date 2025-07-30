@@ -19,6 +19,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'ln_JPSTGPMSAPDB01'"
 		},
+		"ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite'"
+		},
 		"ln_jpdevfasbedb01_ModelDB_password": {
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'ln_jpdevfasbedb01_ModelDB'"
@@ -38,10 +42,6 @@
 		"ln_jpstgfasbedb01_ModelDBv3_password": {
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'ln_jpstgfasbedb01_ModelDBv3'"
-		},
-		"ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite_password": {
-			"type": "secureString",
-			"metadata": "Secure string for 'password' of 'ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite'"
 		},
 		"JPSTGPMSAPDB01_properties_typeProperties_server": {
 			"type": "string",
@@ -82,6 +82,18 @@
 		"ln_JPSTGPMSAPDB01_properties_typeProperties_userName": {
 			"type": "string",
 			"defaultValue": "fasreadonly"
+		},
+		"ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "JPSTGPMSAPDB01"
+		},
+		"ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "ModelDB_20250703"
+		},
+		"ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "jeraadmin"
 		},
 		"ln_jpdevfasbedb01_ModelDB_properties_typeProperties_server": {
 			"type": "string",
@@ -164,18 +176,6 @@
 		"pl_adf_fasbestgdata01_properties_groupId": {
 			"type": "string",
 			"defaultValue": "blob"
-		},
-		"ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite_properties_typeProperties_server": {
-			"type": "string",
-			"defaultValue": "JPSTGPMSAPDB01"
-		},
-		"ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite_properties_typeProperties_database": {
-			"type": "string",
-			"defaultValue": "ModelDB_20250703"
-		},
-		"ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite_properties_typeProperties_userName": {
-			"type": "string",
-			"defaultValue": "jeraadmin"
 		},
 		"containerUri": {
 			"type": "string",
@@ -424,6 +424,15 @@
 					"ln_JPSTGPMSAPDB01_properties_typeProperties_userName": {
 						"value": "[parameters('ln_JPSTGPMSAPDB01_properties_typeProperties_userName')]"
 					},
+					"ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite_properties_typeProperties_server": {
+						"value": "[parameters('ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite_properties_typeProperties_server')]"
+					},
+					"ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite_properties_typeProperties_database": {
+						"value": "[parameters('ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite_properties_typeProperties_database')]"
+					},
+					"ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite_properties_typeProperties_userName": {
+						"value": "[parameters('ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite_properties_typeProperties_userName')]"
+					},
 					"ep_jpstgpmsapdb01_properties_privateLinkResourceId": {
 						"value": "[parameters('ep_jpstgpmsapdb01_properties_privateLinkResourceId')]"
 					},
@@ -438,15 +447,6 @@
 					},
 					"pl_adf_fasbestgdata01_properties_groupId": {
 						"value": "[parameters('pl_adf_fasbestgdata01_properties_groupId')]"
-					},
-					"ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite_properties_typeProperties_server": {
-						"value": "[parameters('ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite_properties_typeProperties_server')]"
-					},
-					"ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite_properties_typeProperties_database": {
-						"value": "[parameters('ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite_properties_typeProperties_database')]"
-					},
-					"ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite_properties_typeProperties_userName": {
-						"value": "[parameters('ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite_properties_typeProperties_userName')]"
 					}
 				}
 			},
@@ -512,6 +512,26 @@
 			},
 			"dependsOn": [
 				"[resourceId('Microsoft.Resources/deployments', 'jpstgfasbeadf01_ArmTemplate_8')]"
+			]
+		},
+		{
+			"name": "jpstgfasbeadf01_ArmTemplate_10",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_10.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'jpstgfasbeadf01_ArmTemplate_9')]"
 			]
 		}
 	]
