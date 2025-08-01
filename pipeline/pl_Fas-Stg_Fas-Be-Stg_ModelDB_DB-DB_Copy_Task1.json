@@ -4,7 +4,7 @@
 		"description": "pl_jpstgpmsapdb01_jpstgfasbedb01_FcstAvailability",
 		"activities": [
 			{
-				"name": "test_test",
+				"name": "FcstPumpedWater_FcstPumpedWater",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -40,7 +40,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "ds_Fas_Stg_DB_ModelDB_test",
+						"referenceName": "ds_Fas_Stg_DB_ModelDB_FcstPumpedWater",
 						"type": "DatasetReference"
 					}
 				],
