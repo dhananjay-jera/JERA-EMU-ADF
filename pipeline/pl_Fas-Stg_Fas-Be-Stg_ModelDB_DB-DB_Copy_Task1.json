@@ -46,7 +46,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_test_fas_stg",
+						"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_FcstPumpedWater_fas_stg",
 						"type": "DatasetReference"
 					}
 				]
