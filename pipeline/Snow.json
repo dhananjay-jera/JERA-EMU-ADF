@@ -27,7 +27,14 @@
 						"sqlWriterUseTableLock": false,
 						"tableOption": "autoCreate"
 					},
-					"enableStaging": false
+					"enableStaging": true,
+					"stagingSettings": {
+						"linkedServiceName": {
+							"referenceName": "ln_AzureBlobStorage1",
+							"type": "LinkedServiceReference"
+						},
+						"path": "data"
+					}
 				},
 				"inputs": [
 					{
