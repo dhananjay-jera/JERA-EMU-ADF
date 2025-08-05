@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "HistAvaliablity.txt",
+				"fileName": "HistAvaliablity_Snow.txt",
 				"folderPath": "databases/snowflakes/ANA00003/HJKS",
 				"container": "rdz"
 			},
