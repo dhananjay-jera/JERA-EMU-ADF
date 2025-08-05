@@ -1,16 +1,16 @@
 {
 	"name": "ln_AzureBlobStorage1",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
 	"properties": {
 		"annotations": [],
 		"type": "AzureBlobStorage",
 		"typeProperties": {
-			"serviceEndpoint": "https://fasbestgdata01.blob.core.windows.net/",
-			"accountKind": "StorageV2"
+			"sasUri": "https://fasbestgdata01.blob.core.windows.net/",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJmNzcyYWI3ZC0wN2NjLTQ2OTctYTljZS00ZTM5NzM5N2NjZDQiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
 		},
 		"connectVia": {
 			"referenceName": "IR-jpstgpmsapdb01",
 			"type": "IntegrationRuntimeReference"
 		}
-	},
-	"type": "Microsoft.DataFactory/factories/linkedservices"
+	}
 }
