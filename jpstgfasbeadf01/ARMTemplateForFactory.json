@@ -208,10 +208,16 @@
 								}
 							},
 							"sink": {
-								"type": "SqlServerSink",
-								"writeBehavior": "insert",
-								"sqlWriterUseTableLock": false,
-								"tableOption": "autoCreate"
+								"type": "DelimitedTextSink",
+								"storeSettings": {
+									"type": "AzureBlobStorageWriteSettings",
+									"copyBehavior": "FlattenHierarchy"
+								},
+								"formatSettings": {
+									"type": "DelimitedTextWriteSettings",
+									"quoteAllText": true,
+									"fileExtension": ".txt"
+								}
 							},
 							"enableStaging": true,
 							"stagingSettings": {
@@ -231,7 +237,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_20250703_HistAvailability_snow",
+								"referenceName": "dt_Fas_Be_Stg_Blob_HistAvaliablity_Snow_ANA3",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -245,7 +251,7 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/ds_Snow_ANA3_HistAvailability')]",
-				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Stg_DB_ModelDB_20250703_HistAvailability_snow')]",
+				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Stg_Blob_HistAvaliablity_Snow_ANA3')]",
 				"[concat(variables('factoryId'), '/linkedServices/ln_AzureBlobStorage1')]"
 			]
 		},
@@ -8275,7 +8281,7 @@
 				"typeProperties": {
 					"location": {
 						"type": "AzureBlobStorageLocation",
-						"fileName": "HistAvaliablity.txt",
+						"fileName": "HistAvaliablity_Snow.txt",
 						"folderPath": "databases/snowflakes/ANA00003/HJKS",
 						"container": "rdz"
 					},
@@ -10834,6 +10840,78 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/managedVirtualNetworks/default')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/pipeline1')]",
+			"type": "Microsoft.DataFactory/factories/pipelines",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"activities": [
+					{
+						"name": "Snow1",
+						"type": "Copy",
+						"dependsOn": [],
+						"policy": {
+							"timeout": "0.12:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"source": {
+								"type": "SqlServerSource",
+								"queryTimeout": "02:00:00",
+								"partitionOption": "None"
+							},
+							"sink": {
+								"type": "DelimitedTextSink",
+								"storeSettings": {
+									"type": "AzureBlobStorageWriteSettings",
+									"copyBehavior": "FlattenHierarchy"
+								},
+								"formatSettings": {
+									"type": "DelimitedTextWriteSettings",
+									"quoteAllText": true,
+									"fileExtension": ".txt"
+								}
+							},
+							"enableStaging": false,
+							"translator": {
+								"type": "TabularTranslator",
+								"typeConversion": true,
+								"typeConversionSettings": {
+									"allowDataTruncation": true,
+									"treatBooleanAsNumber": false
+								}
+							}
+						},
+						"inputs": [
+							{
+								"referenceName": "ds_Fas_Stg_DB_ModelDB_ActualSpotPrice",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						],
+						"outputs": [
+							{
+								"referenceName": "dt_Fas_Be_Stg_Blob_HistAvaliablity_Snow_ANA3",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						]
+					}
+				],
+				"policy": {
+					"elapsedTimeMetric": {}
+				},
+				"annotations": []
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_ActualSpotPrice')]",
+				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Stg_Blob_HistAvaliablity_Snow_ANA3')]"
 			]
 		}
 	]
