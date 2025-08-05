@@ -8376,7 +8376,7 @@
 				],
 				"typeProperties": {
 					"schema": "dbo",
-					"table": "HistAvailability"
+					"table": "HistAvailability_Snow"
 				}
 			},
 			"dependsOn": [
