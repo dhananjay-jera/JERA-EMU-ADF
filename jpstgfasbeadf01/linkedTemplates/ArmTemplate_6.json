@@ -47,9 +47,9 @@
 			"type": "string",
 			"defaultValue": "jera-analysis.privatelink.snowflakecomputing.com"
 		},
-		"ln_AzureBlobStorage1_properties_typeProperties_serviceEndpoint": {
-			"type": "string",
-			"defaultValue": "https://fasbestgdata01.blob.core.windows.net/"
+		"ln_AzureBlobStorage1_sasUri": {
+			"type": "secureString",
+			"metadata": "Secure string for 'sasUri' of 'ln_AzureBlobStorage1'"
 		},
 		"ln_JPSTGPMSAPDB01_properties_typeProperties_server": {
 			"type": "string",
@@ -221,8 +221,7 @@
 				"annotations": [],
 				"type": "AzureBlobStorage",
 				"typeProperties": {
-					"serviceEndpoint": "[parameters('ln_AzureBlobStorage1_properties_typeProperties_serviceEndpoint')]",
-					"accountKind": "StorageV2"
+					"sasUri": "[parameters('ln_AzureBlobStorage1_sasUri')]"
 				},
 				"connectVia": {
 					"referenceName": "IR-jpstgpmsapdb01",

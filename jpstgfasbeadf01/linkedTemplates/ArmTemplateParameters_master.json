@@ -50,8 +50,8 @@
 		"Snowflake1_properties_typeProperties_host": {
 			"value": "jera-analysis.privatelink.snowflakecomputing.com"
 		},
-		"ln_AzureBlobStorage1_properties_typeProperties_serviceEndpoint": {
-			"value": "https://fasbestgdata01.blob.core.windows.net/"
+		"ln_AzureBlobStorage1_sasUri": {
+			"value": ""
 		},
 		"ln_JPSTGPMSAPDB01_properties_typeProperties_server": {
 			"value": "JPSTGPMSAPDB01"
