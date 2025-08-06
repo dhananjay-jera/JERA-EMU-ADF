@@ -212,7 +212,8 @@
 							"source": {
 								"type": "SnowflakeV2Source",
 								"exportSettings": {
-									"type": "SnowflakeExportCopyCommand"
+									"type": "SnowflakeExportCopyCommand",
+									"storageIntegration": "STR_INT_ANA00003_AZURE"
 								}
 							},
 							"sink": {
