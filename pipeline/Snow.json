@@ -31,7 +31,7 @@
 					"enableStaging": true,
 					"stagingSettings": {
 						"linkedServiceName": {
-							"referenceName": "fasbestgsnowflake",
+							"referenceName": "jphubmaterialtransferqa",
 							"type": "LinkedServiceReference"
 						},
 						"path": "temp"
