@@ -13,6 +13,53 @@
 	},
 	"resources": [
 		{
+			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_ModelDB_MasterGenV3')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "ln_JPSTGPMSAPDB01",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "SqlServerTable",
+				"schema": [
+					{
+						"name": "FiscalYear",
+						"type": "smallint",
+						"precision": 5
+					},
+					{
+						"name": "Date",
+						"type": "date"
+					},
+					{
+						"name": "UnitIdFW",
+						"type": "int",
+						"precision": 10
+					},
+					{
+						"name": "Availability",
+						"type": "float",
+						"precision": 15
+					},
+					{
+						"name": "AsOfDate",
+						"type": "date"
+					},
+					{
+						"name": "HjksCheck",
+						"type": "bit"
+					}
+				],
+				"typeProperties": {
+					"schema": "dbo",
+					"table": "MasterGenV3"
+				}
+			},
+			"dependsOn": []
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_ModelDB_MasterGenV4')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
@@ -872,56 +919,6 @@
 				"typeProperties": {
 					"schema": "MODELDB",
 					"table": "GenPlan"
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/dt_snow_ANA3_ModelDB_ActualSpotPrice_fas_stg')]",
-			"type": "Microsoft.DataFactory/factories/datasets",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"linkedServiceName": {
-					"referenceName": "Snowflake1",
-					"type": "LinkedServiceReference"
-				},
-				"annotations": [],
-				"type": "SnowflakeV2Table",
-				"schema": [
-					{
-						"name": "INDICATORID",
-						"type": "NUMBER",
-						"precision": 38,
-						"scale": 0
-					},
-					{
-						"name": "PRICEINDEXID",
-						"type": "VARCHAR"
-					},
-					{
-						"name": "PRICEDATE",
-						"type": "DATE"
-					},
-					{
-						"name": "DELIVDATE",
-						"type": "DATE"
-					},
-					{
-						"name": "PRICEAMOUNT",
-						"type": "FLOAT"
-					},
-					{
-						"name": "EXCHRATEMMBTUAMOUNT",
-						"type": "FLOAT"
-					},
-					{
-						"name": "INSERTAT",
-						"type": "VARCHAR"
-					}
-				],
-				"typeProperties": {
-					"schema": "MODELDB",
-					"table": "ACTUAL_SPOT_PRICE"
 				}
 			},
 			"dependsOn": []

@@ -43,6 +43,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'ln_jpstgfasbedb01_ModelDBv3'"
 		},
+		"jphubmaterialtransferqa_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'jphubmaterialtransferqa'"
+		},
 		"JPSTGPMSAPDB01_properties_typeProperties_server": {
 			"type": "string",
 			"defaultValue": "jpstgpmsapdb01"
@@ -66,6 +70,10 @@
 		"Snowflake1_properties_typeProperties_host": {
 			"type": "string",
 			"defaultValue": "jera-analysis.privatelink.snowflakecomputing.com"
+		},
+		"fasbestgsnowflake_sasUri": {
+			"type": "secureString",
+			"metadata": "Secure string for 'sasUri' of 'fasbestgsnowflake'"
 		},
 		"ln_AzureBlobStorage1_sasUri": {
 			"type": "secureString",
@@ -176,10 +184,6 @@
 		"pl_adf_fasbestgdata01_properties_groupId": {
 			"type": "string",
 			"defaultValue": "blob"
-		},
-		"fasbestgsnowflake_sasUri": {
-			"type": "secureString",
-			"metadata": "Secure string for 'sasUri' of 'fasbestgsnowflake'"
 		}
 	},
 	"variables": {
@@ -10686,6 +10690,26 @@
 			]
 		},
 		{
+			"name": "[concat(parameters('factoryName'), '/fasbestgsnowflake')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"description": "Its a staging storage for Snowflakes Data",
+				"annotations": [],
+				"type": "AzureBlobStorage",
+				"typeProperties": {
+					"sasUri": "[parameters('fasbestgsnowflake_sasUri')]"
+				},
+				"connectVia": {
+					"referenceName": "IR-jpstgpmsapdb01",
+					"type": "IntegrationRuntimeReference"
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/integrationRuntimes/IR-jpstgpmsapdb01')]"
+			]
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/ln_AzureBlobStorage1')]",
 			"type": "Microsoft.DataFactory/factories/linkedServices",
 			"apiVersion": "2018-06-01",
@@ -10919,15 +10943,15 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/fasbestgsnowflake')]",
+			"name": "[concat(parameters('factoryName'), '/jphubmaterialtransferqa')]",
 			"type": "Microsoft.DataFactory/factories/linkedServices",
 			"apiVersion": "2018-06-01",
 			"properties": {
-				"description": "Its a staging storage for Snowflakes Data",
+				"description": "jphubmaterialtransferqa",
 				"annotations": [],
 				"type": "AzureBlobStorage",
 				"typeProperties": {
-					"sasUri": "[parameters('fasbestgsnowflake_sasUri')]"
+					"connectionString": "[parameters('jphubmaterialtransferqa_connectionString')]"
 				},
 				"connectVia": {
 					"referenceName": "IR-jpstgpmsapdb01",

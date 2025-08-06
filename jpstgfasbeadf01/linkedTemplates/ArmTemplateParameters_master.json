@@ -32,6 +32,9 @@
 		"ln_jpstgfasbedb01_ModelDBv3_password": {
 			"value": ""
 		},
+		"jphubmaterialtransferqa_connectionString": {
+			"value": ""
+		},
 		"JPSTGPMSAPDB01_properties_typeProperties_server": {
 			"value": "jpstgpmsapdb01"
 		},
@@ -49,6 +52,9 @@
 		},
 		"Snowflake1_properties_typeProperties_host": {
 			"value": "jera-analysis.privatelink.snowflakecomputing.com"
+		},
+		"fasbestgsnowflake_sasUri": {
+			"value": ""
 		},
 		"ln_AzureBlobStorage1_sasUri": {
 			"value": ""
@@ -132,9 +138,6 @@
 		},
 		"pl_adf_fasbestgdata01_properties_groupId": {
 			"value": "blob"
-		},
-		"fasbestgsnowflake_sasUri": {
-			"value": ""
 		},
 		"containerUri": {
 			"value": ""
