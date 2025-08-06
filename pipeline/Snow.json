@@ -18,67 +18,22 @@
 					"source": {
 						"type": "SnowflakeV2Source",
 						"exportSettings": {
-							"type": "SnowflakeExportCopyCommand",
-							"storageIntegration": "STR_INT_ANA00003_AZURE"
+							"type": "SnowflakeExportCopyCommand"
 						}
 					},
 					"sink": {
 						"type": "SqlServerSink",
 						"writeBehavior": "insert",
-						"sqlWriterUseTableLock": false
+						"sqlWriterUseTableLock": false,
+						"tableOption": "autoCreate"
 					},
 					"enableStaging": true,
 					"stagingSettings": {
 						"linkedServiceName": {
-							"referenceName": "jphubmaterialtransferqa",
+							"referenceName": "fasbestgsnowflake",
 							"type": "LinkedServiceReference"
 						},
-						"path": "emu-test-container"
-					},
-					"translator": {
-						"type": "TabularTranslator",
-						"mappings": [
-							{
-								"source": {
-									"name": "DATE",
-									"type": "DateTime"
-								},
-								"sink": {
-									"name": "Date",
-									"type": "DateTime"
-								}
-							},
-							{
-								"source": {
-									"name": "UNITIDFW",
-									"type": "Int64"
-								},
-								"sink": {
-									"name": "UnitIdFW",
-									"type": "Int32"
-								}
-							},
-							{
-								"source": {
-									"name": "AVAILABILITY",
-									"type": "Double"
-								},
-								"sink": {
-									"name": "Availability",
-									"type": "Double"
-								}
-							},
-							{
-								"source": {
-									"name": "HJKSCHECK",
-									"type": "Boolean"
-								},
-								"sink": {
-									"name": "HjksCheck",
-									"type": "Boolean"
-								}
-							}
-						]
+						"path": "temp"
 					}
 				},
 				"inputs": [
@@ -89,7 +44,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_20250703_HistAvailability_fas_stg",
+						"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_20250703_HistAvailability_snow",
 						"type": "DatasetReference"
 					}
 				]
