@@ -34,14 +34,7 @@
 							"fileExtension": ".txt"
 						}
 					},
-					"enableStaging": true,
-					"stagingSettings": {
-						"linkedServiceName": {
-							"referenceName": "jphubmaterialtransferqa",
-							"type": "LinkedServiceReference"
-						},
-						"path": "emu-test-container"
-					}
+					"enableStaging": false
 				},
 				"inputs": [
 					{
