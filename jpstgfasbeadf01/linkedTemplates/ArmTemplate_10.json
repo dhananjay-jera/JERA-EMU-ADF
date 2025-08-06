@@ -113,6 +113,56 @@
 			"dependsOn": []
 		},
 		{
+			"name": "[concat(parameters('factoryName'), '/dt_snow_ANA3_ModelDB_ActualSpotPrice_SQL_fas_stg')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "Snowflake1",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "SnowflakeV2Table",
+				"schema": [
+					{
+						"name": "INDICATORID",
+						"type": "NUMBER",
+						"precision": 38,
+						"scale": 0
+					},
+					{
+						"name": "PRICEINDEXID",
+						"type": "VARCHAR"
+					},
+					{
+						"name": "PRICEDATE",
+						"type": "DATE"
+					},
+					{
+						"name": "DELIVDATE",
+						"type": "DATE"
+					},
+					{
+						"name": "PRICEAMOUNT",
+						"type": "FLOAT"
+					},
+					{
+						"name": "EXCHRATEMMBTUAMOUNT",
+						"type": "FLOAT"
+					},
+					{
+						"name": "INSERTAT",
+						"type": "VARCHAR"
+					}
+				],
+				"typeProperties": {
+					"schema": "MODELDB",
+					"table": "ACTUAL_SPOT_PRICE_SQL"
+				}
+			},
+			"dependsOn": []
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/Snow')]",
 			"type": "Microsoft.DataFactory/factories/pipelines",
 			"apiVersion": "2018-06-01",
