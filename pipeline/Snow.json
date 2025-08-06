@@ -36,10 +36,10 @@
 					"enableStaging": true,
 					"stagingSettings": {
 						"linkedServiceName": {
-							"referenceName": "fasbestgsnowflake",
+							"referenceName": "jphubmaterialtransferqa",
 							"type": "LinkedServiceReference"
 						},
-						"path": "temp"
+						"path": "emu-test-container"
 					}
 				},
 				"inputs": [
