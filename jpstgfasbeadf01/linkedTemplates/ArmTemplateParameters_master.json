@@ -133,6 +133,9 @@
 		"pl_adf_fasbestgdata01_properties_groupId": {
 			"value": "blob"
 		},
+		"fasbestgsnowflake_sasUri": {
+			"value": ""
+		},
 		"containerUri": {
 			"value": ""
 		},
