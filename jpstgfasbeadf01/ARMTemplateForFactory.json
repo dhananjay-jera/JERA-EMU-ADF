@@ -11037,6 +11037,148 @@
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/linkedServices/Snowflake1')]"
 			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/SNOW_ACTUAL_SPOT_PRICE')]",
+			"type": "Microsoft.DataFactory/factories/pipelines",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"activities": [
+					{
+						"name": "ACTUAL_SPOT_PRICE__ACTUAL_SPOT_PRICE_SQL",
+						"type": "Copy",
+						"dependsOn": [],
+						"policy": {
+							"timeout": "0.12:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"source": {
+								"type": "AzureSqlSource",
+								"queryTimeout": "02:00:00",
+								"partitionOption": "None"
+							},
+							"sink": {
+								"type": "SnowflakeV2Sink",
+								"importSettings": {
+									"type": "SnowflakeImportCopyCommand",
+									"storageIntegration": "STR_INT_ANA00003_AZURE"
+								}
+							},
+							"enableStaging": true,
+							"stagingSettings": {
+								"linkedServiceName": {
+									"referenceName": "jphubmaterialtransferqa",
+									"type": "LinkedServiceReference"
+								},
+								"path": "emu-test-container"
+							},
+							"translator": {
+								"type": "TabularTranslator",
+								"mappings": [
+									{
+										"source": {
+											"name": "IndicatorId",
+											"type": "Int64"
+										},
+										"sink": {
+											"name": "INDICATORID",
+											"type": "Int64"
+										}
+									},
+									{
+										"source": {
+											"name": "PriceIndexId",
+											"type": "String"
+										},
+										"sink": {
+											"name": "PRICEINDEXID",
+											"type": "String"
+										}
+									},
+									{
+										"source": {
+											"name": "PriceDate",
+											"type": "DateTime"
+										},
+										"sink": {
+											"name": "PRICEDATE",
+											"type": "DateTime"
+										}
+									},
+									{
+										"source": {
+											"name": "DelivDate",
+											"type": "DateTime"
+										},
+										"sink": {
+											"name": "DELIVDATE",
+											"type": "DateTime"
+										}
+									},
+									{
+										"source": {
+											"name": "PriceAmount",
+											"type": "Double"
+										},
+										"sink": {
+											"name": "PRICEAMOUNT",
+											"type": "Double"
+										}
+									},
+									{
+										"source": {
+											"name": "ExchRateMMBTUAmount",
+											"type": "Double"
+										},
+										"sink": {
+											"name": "EXCHRATEMMBTUAMOUNT",
+											"type": "Double"
+										}
+									},
+									{
+										"source": {
+											"name": "InsertAt",
+											"type": "String"
+										},
+										"sink": {
+											"name": "INSERTAT",
+											"type": "String"
+										}
+									}
+								]
+							}
+						},
+						"inputs": [
+							{
+								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_ActualSpotPrice_fas_stg",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						],
+						"outputs": [
+							{
+								"referenceName": "dt_snow_ANA3_ModelDB_ActualSpotPrice_SQL_fas_stg",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						]
+					}
+				],
+				"policy": {
+					"elapsedTimeMetric": {}
+				},
+				"annotations": []
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Dev_DB_ModelDB_ActualSpotPrice_fas_stg')]",
+				"[concat(variables('factoryId'), '/datasets/dt_snow_ANA3_ModelDB_ActualSpotPrice_SQL_fas_stg')]",
+				"[concat(variables('factoryId'), '/linkedServices/jphubmaterialtransferqa')]"
+			]
 		}
 	]
 }
