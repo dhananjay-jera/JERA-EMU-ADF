@@ -84,7 +84,8 @@
 							"source": {
 								"type": "SnowflakeV2Source",
 								"exportSettings": {
-									"type": "SnowflakeExportCopyCommand"
+									"type": "SnowflakeExportCopyCommand",
+									"storageIntegration": "STR_INT_ANA00003_AZURE"
 								}
 							},
 							"sink": {
@@ -102,10 +103,10 @@
 							"enableStaging": true,
 							"stagingSettings": {
 								"linkedServiceName": {
-									"referenceName": "fasbestgsnowflake",
+									"referenceName": "jphubmaterialtransferqa",
 									"type": "LinkedServiceReference"
 								},
-								"path": "temp"
+								"path": "emu-test-container"
 							}
 						},
 						"inputs": [
