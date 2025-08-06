@@ -113,7 +113,7 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/dt_snow_ANA3_ModelDB_ActualSpotPrice_SQL_fas_stg')]",
+			"name": "[concat(parameters('factoryName'), '/dt_snow_ANA3_TEST_ActualSpotPrice_SQL_fas_stg')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -4725,7 +4725,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_snow_ANA3_ModelDB_ActualSpotPrice_SQL_fas_stg",
+								"referenceName": "dt_snow_ANA3_TEST_ActualSpotPrice_SQL_fas_stg",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -4738,7 +4738,7 @@
 				"annotations": []
 			},
 			"dependsOn": [
-				"[concat(variables('factoryId'), '/datasets/dt_snow_ANA3_ModelDB_ActualSpotPrice_SQL_fas_stg')]"
+				"[concat(variables('factoryId'), '/datasets/dt_snow_ANA3_TEST_ActualSpotPrice_SQL_fas_stg')]"
 			]
 		}
 	]
