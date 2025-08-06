@@ -36,10 +36,10 @@
 					"enableStaging": true,
 					"stagingSettings": {
 						"linkedServiceName": {
-							"referenceName": "ln_AzureBlobStorage1",
+							"referenceName": "fasbestgsnowflake",
 							"type": "LinkedServiceReference"
 						},
-						"path": "data"
+						"path": "temp"
 					}
 				},
 				"inputs": [
