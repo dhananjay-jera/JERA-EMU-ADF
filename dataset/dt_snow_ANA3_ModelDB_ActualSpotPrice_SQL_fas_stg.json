@@ -40,7 +40,7 @@
 			}
 		],
 		"typeProperties": {
-			"schema": "MODELDB",
+			"schema": "TEST",
 			"table": "ACTUAL_SPOT_PRICE_SQL"
 		}
 	}
