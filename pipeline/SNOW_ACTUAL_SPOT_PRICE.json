@@ -119,7 +119,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "dt_snow_ANA3_ModelDB_ActualSpotPrice_SQL_fas_stg",
+						"referenceName": "dt_snow_ANA3_TEST_ActualSpotPrice_SQL_fas_stg",
 						"type": "DatasetReference"
 					}
 				]
