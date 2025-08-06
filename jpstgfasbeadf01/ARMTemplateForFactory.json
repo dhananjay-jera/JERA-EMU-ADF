@@ -15,6 +15,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'Snowflake1'"
 		},
+		"jphubmaterialtransferqa_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'jphubmaterialtransferqa'"
+		},
 		"ln_JPSTGPMSAPDB01_password": {
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'ln_JPSTGPMSAPDB01'"
@@ -42,10 +46,6 @@
 		"ln_jpstgfasbedb01_ModelDBv3_password": {
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'ln_jpstgfasbedb01_ModelDBv3'"
-		},
-		"jphubmaterialtransferqa_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'jphubmaterialtransferqa'"
 		},
 		"JPSTGPMSAPDB01_properties_typeProperties_server": {
 			"type": "string",
@@ -8379,6 +8379,36 @@
 			]
 		},
 		{
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_Blob_jphubmaterialtransferqa')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "jphubmaterialtransferqa",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "DelimitedText",
+				"typeProperties": {
+					"location": {
+						"type": "AzureBlobStorageLocation",
+						"fileName": "HistAvaliablity_Snow.txt",
+						"folderPath": "databases/snowflakes/ANA00003/HJKS",
+						"container": "rdz"
+					},
+					"columnDelimiter": ",",
+					"rowDelimiter": "\r",
+					"escapeChar": "\\",
+					"firstRowAsHeader": true,
+					"quoteChar": "\""
+				},
+				"schema": []
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/jphubmaterialtransferqa')]"
+			]
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDB_20250703_HistAvailability_fas_stg')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
@@ -10711,6 +10741,26 @@
 			]
 		},
 		{
+			"name": "[concat(parameters('factoryName'), '/jphubmaterialtransferqa')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"description": "jphubmaterialtransferqa",
+				"annotations": [],
+				"type": "AzureBlobStorage",
+				"typeProperties": {
+					"connectionString": "[parameters('jphubmaterialtransferqa_connectionString')]"
+				},
+				"connectVia": {
+					"referenceName": "IR-jpstgpmsapdb01",
+					"type": "IntegrationRuntimeReference"
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/integrationRuntimes/IR-jpstgpmsapdb01')]"
+			]
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/ln_AzureBlobStorage1')]",
 			"type": "Microsoft.DataFactory/factories/linkedServices",
 			"apiVersion": "2018-06-01",
@@ -10941,26 +10991,6 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/managedVirtualNetworks/default')]"
-			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/jphubmaterialtransferqa')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"description": "jphubmaterialtransferqa",
-				"annotations": [],
-				"type": "AzureBlobStorage",
-				"typeProperties": {
-					"connectionString": "[parameters('jphubmaterialtransferqa_connectionString')]"
-				},
-				"connectVia": {
-					"referenceName": "IR-jpstgpmsapdb01",
-					"type": "IntegrationRuntimeReference"
-				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/integrationRuntimes/IR-jpstgpmsapdb01')]"
 			]
 		}
 	]

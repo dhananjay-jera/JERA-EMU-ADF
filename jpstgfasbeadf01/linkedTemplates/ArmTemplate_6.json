@@ -15,6 +15,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'Snowflake1'"
 		},
+		"jphubmaterialtransferqa_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'jphubmaterialtransferqa'"
+		},
 		"ln_JPSTGPMSAPDB01_password": {
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'ln_JPSTGPMSAPDB01'"
@@ -22,10 +26,6 @@
 		"ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite_password": {
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite'"
-		},
-		"jphubmaterialtransferqa_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'jphubmaterialtransferqa'"
 		},
 		"JPSTGPMSAPDB01_properties_typeProperties_server": {
 			"type": "string",
@@ -240,6 +240,24 @@
 			"dependsOn": []
 		},
 		{
+			"name": "[concat(parameters('factoryName'), '/jphubmaterialtransferqa')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"description": "jphubmaterialtransferqa",
+				"annotations": [],
+				"type": "AzureBlobStorage",
+				"typeProperties": {
+					"connectionString": "[parameters('jphubmaterialtransferqa_connectionString')]"
+				},
+				"connectVia": {
+					"referenceName": "IR-jpstgpmsapdb01",
+					"type": "IntegrationRuntimeReference"
+				}
+			},
+			"dependsOn": []
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/ln_AzureBlobStorage1')]",
 			"type": "Microsoft.DataFactory/factories/linkedServices",
 			"apiVersion": "2018-06-01",
@@ -326,24 +344,6 @@
 			"properties": {
 				"privateLinkResourceId": "[parameters('pl_adf_fasbestgdata01_properties_privateLinkResourceId')]",
 				"groupId": "[parameters('pl_adf_fasbestgdata01_properties_groupId')]"
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/jphubmaterialtransferqa')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"description": "jphubmaterialtransferqa",
-				"annotations": [],
-				"type": "AzureBlobStorage",
-				"typeProperties": {
-					"connectionString": "[parameters('jphubmaterialtransferqa_connectionString')]"
-				},
-				"connectVia": {
-					"referenceName": "IR-jpstgpmsapdb01",
-					"type": "IntegrationRuntimeReference"
-				}
 			},
 			"dependsOn": []
 		},

@@ -15,6 +15,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'Snowflake1'"
 		},
+		"jphubmaterialtransferqa_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'jphubmaterialtransferqa'"
+		},
 		"ln_JPSTGPMSAPDB01_password": {
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'ln_JPSTGPMSAPDB01'"
@@ -42,10 +46,6 @@
 		"ln_jpstgfasbedb01_ModelDBv3_password": {
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'ln_jpstgfasbedb01_ModelDBv3'"
-		},
-		"jphubmaterialtransferqa_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'jphubmaterialtransferqa'"
 		},
 		"JPSTGPMSAPDB01_properties_typeProperties_server": {
 			"type": "string",
@@ -396,14 +396,14 @@
 					"Snowflake1_password": {
 						"value": "[parameters('Snowflake1_password')]"
 					},
+					"jphubmaterialtransferqa_connectionString": {
+						"value": "[parameters('jphubmaterialtransferqa_connectionString')]"
+					},
 					"ln_JPSTGPMSAPDB01_password": {
 						"value": "[parameters('ln_JPSTGPMSAPDB01_password')]"
 					},
 					"ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite_password": {
 						"value": "[parameters('ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite_password')]"
-					},
-					"jphubmaterialtransferqa_connectionString": {
-						"value": "[parameters('jphubmaterialtransferqa_connectionString')]"
 					},
 					"JPSTGPMSAPDB01_properties_typeProperties_server": {
 						"value": "[parameters('JPSTGPMSAPDB01_properties_typeProperties_server')]"

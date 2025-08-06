@@ -11,6 +11,9 @@
 		"Snowflake1_password": {
 			"value": ""
 		},
+		"jphubmaterialtransferqa_connectionString": {
+			"value": ""
+		},
 		"ln_JPSTGPMSAPDB01_password": {
 			"value": ""
 		},
@@ -30,9 +33,6 @@
 			"value": ""
 		},
 		"ln_jpstgfasbedb01_ModelDBv3_password": {
-			"value": ""
-		},
-		"jphubmaterialtransferqa_connectionString": {
 			"value": ""
 		},
 		"JPSTGPMSAPDB01_properties_typeProperties_server": {
