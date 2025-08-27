@@ -2,7 +2,7 @@
 	"name": "ds_Fas_Stg_DB_ModelDB_RefJpnInterface",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "ln_JPSTGPMSAPDB01",
+			"referenceName": "ln_JPSTGPMSAPDB01_ModelDB",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
