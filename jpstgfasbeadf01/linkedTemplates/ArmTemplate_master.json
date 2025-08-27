@@ -23,6 +23,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'ln_JPSTGPMSAPDB01'"
 		},
+		"ln_JPSTGPMSAPDB01_ModelDB_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'ln_JPSTGPMSAPDB01_ModelDB'"
+		},
 		"ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite_password": {
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite'"
@@ -46,10 +50,6 @@
 		"ln_jpstgfasbedb01_ModelDBv3_password": {
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'ln_jpstgfasbedb01_ModelDBv3'"
-		},
-		"ln_JPSTGPMSAPDB01_ModelDB_password": {
-			"type": "secureString",
-			"metadata": "Secure string for 'password' of 'ln_JPSTGPMSAPDB01_ModelDB'"
 		},
 		"JPSTGPMSAPDB01_properties_typeProperties_server": {
 			"type": "string",
@@ -92,6 +92,18 @@
 			"defaultValue": "ModelDB"
 		},
 		"ln_JPSTGPMSAPDB01_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "fasreadonly"
+		},
+		"ln_JPSTGPMSAPDB01_ModelDB_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "JPSTGPMSAPDB01"
+		},
+		"ln_JPSTGPMSAPDB01_ModelDB_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "ModelDB"
+		},
+		"ln_JPSTGPMSAPDB01_ModelDB_properties_typeProperties_userName": {
 			"type": "string",
 			"defaultValue": "fasreadonly"
 		},
@@ -188,18 +200,6 @@
 		"pl_adf_fasbestgdata01_properties_groupId": {
 			"type": "string",
 			"defaultValue": "blob"
-		},
-		"ln_JPSTGPMSAPDB01_ModelDB_properties_typeProperties_server": {
-			"type": "string",
-			"defaultValue": "JPSTGPMSAPDB01"
-		},
-		"ln_JPSTGPMSAPDB01_ModelDB_properties_typeProperties_database": {
-			"type": "string",
-			"defaultValue": "ModelDB"
-		},
-		"ln_JPSTGPMSAPDB01_ModelDB_properties_typeProperties_userName": {
-			"type": "string",
-			"defaultValue": "fasreadonly"
 		},
 		"containerUri": {
 			"type": "string",
@@ -418,11 +418,11 @@
 					"ln_JPSTGPMSAPDB01_password": {
 						"value": "[parameters('ln_JPSTGPMSAPDB01_password')]"
 					},
-					"ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite_password": {
-						"value": "[parameters('ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite_password')]"
-					},
 					"ln_JPSTGPMSAPDB01_ModelDB_password": {
 						"value": "[parameters('ln_JPSTGPMSAPDB01_ModelDB_password')]"
+					},
+					"ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite_password": {
+						"value": "[parameters('ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite_password')]"
 					},
 					"JPSTGPMSAPDB01_properties_typeProperties_server": {
 						"value": "[parameters('JPSTGPMSAPDB01_properties_typeProperties_server')]"
@@ -457,6 +457,15 @@
 					"ln_JPSTGPMSAPDB01_properties_typeProperties_userName": {
 						"value": "[parameters('ln_JPSTGPMSAPDB01_properties_typeProperties_userName')]"
 					},
+					"ln_JPSTGPMSAPDB01_ModelDB_properties_typeProperties_server": {
+						"value": "[parameters('ln_JPSTGPMSAPDB01_ModelDB_properties_typeProperties_server')]"
+					},
+					"ln_JPSTGPMSAPDB01_ModelDB_properties_typeProperties_database": {
+						"value": "[parameters('ln_JPSTGPMSAPDB01_ModelDB_properties_typeProperties_database')]"
+					},
+					"ln_JPSTGPMSAPDB01_ModelDB_properties_typeProperties_userName": {
+						"value": "[parameters('ln_JPSTGPMSAPDB01_ModelDB_properties_typeProperties_userName')]"
+					},
 					"ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite_properties_typeProperties_server": {
 						"value": "[parameters('ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite_properties_typeProperties_server')]"
 					},
@@ -480,15 +489,6 @@
 					},
 					"pl_adf_fasbestgdata01_properties_groupId": {
 						"value": "[parameters('pl_adf_fasbestgdata01_properties_groupId')]"
-					},
-					"ln_JPSTGPMSAPDB01_ModelDB_properties_typeProperties_server": {
-						"value": "[parameters('ln_JPSTGPMSAPDB01_ModelDB_properties_typeProperties_server')]"
-					},
-					"ln_JPSTGPMSAPDB01_ModelDB_properties_typeProperties_database": {
-						"value": "[parameters('ln_JPSTGPMSAPDB01_ModelDB_properties_typeProperties_database')]"
-					},
-					"ln_JPSTGPMSAPDB01_ModelDB_properties_typeProperties_userName": {
-						"value": "[parameters('ln_JPSTGPMSAPDB01_ModelDB_properties_typeProperties_userName')]"
 					}
 				}
 			},

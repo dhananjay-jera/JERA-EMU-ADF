@@ -17,6 +17,9 @@
 		"ln_JPSTGPMSAPDB01_password": {
 			"value": ""
 		},
+		"ln_JPSTGPMSAPDB01_ModelDB_password": {
+			"value": ""
+		},
 		"ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite_password": {
 			"value": ""
 		},
@@ -33,9 +36,6 @@
 			"value": ""
 		},
 		"ln_jpstgfasbedb01_ModelDBv3_password": {
-			"value": ""
-		},
-		"ln_JPSTGPMSAPDB01_ModelDB_password": {
 			"value": ""
 		},
 		"JPSTGPMSAPDB01_properties_typeProperties_server": {
@@ -69,6 +69,15 @@
 			"value": "ModelDB"
 		},
 		"ln_JPSTGPMSAPDB01_properties_typeProperties_userName": {
+			"value": "fasreadonly"
+		},
+		"ln_JPSTGPMSAPDB01_ModelDB_properties_typeProperties_server": {
+			"value": "JPSTGPMSAPDB01"
+		},
+		"ln_JPSTGPMSAPDB01_ModelDB_properties_typeProperties_database": {
+			"value": "ModelDB"
+		},
+		"ln_JPSTGPMSAPDB01_ModelDB_properties_typeProperties_userName": {
 			"value": "fasreadonly"
 		},
 		"ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite_properties_typeProperties_server": {
@@ -141,15 +150,6 @@
 		},
 		"pl_adf_fasbestgdata01_properties_groupId": {
 			"value": "blob"
-		},
-		"ln_JPSTGPMSAPDB01_ModelDB_properties_typeProperties_server": {
-			"value": "JPSTGPMSAPDB01"
-		},
-		"ln_JPSTGPMSAPDB01_ModelDB_properties_typeProperties_database": {
-			"value": "ModelDB"
-		},
-		"ln_JPSTGPMSAPDB01_ModelDB_properties_typeProperties_userName": {
-			"value": "fasreadonly"
 		},
 		"containerUri": {
 			"value": ""

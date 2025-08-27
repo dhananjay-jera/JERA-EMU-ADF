@@ -23,13 +23,13 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'ln_JPSTGPMSAPDB01'"
 		},
-		"ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite_password": {
-			"type": "secureString",
-			"metadata": "Secure string for 'password' of 'ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite'"
-		},
 		"ln_JPSTGPMSAPDB01_ModelDB_password": {
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'ln_JPSTGPMSAPDB01_ModelDB'"
+		},
+		"ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite'"
 		},
 		"JPSTGPMSAPDB01_properties_typeProperties_server": {
 			"type": "string",
@@ -75,6 +75,18 @@
 			"type": "string",
 			"defaultValue": "fasreadonly"
 		},
+		"ln_JPSTGPMSAPDB01_ModelDB_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "JPSTGPMSAPDB01"
+		},
+		"ln_JPSTGPMSAPDB01_ModelDB_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "ModelDB"
+		},
+		"ln_JPSTGPMSAPDB01_ModelDB_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "fasreadonly"
+		},
 		"ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite_properties_typeProperties_server": {
 			"type": "string",
 			"defaultValue": "JPSTGPMSAPDB01"
@@ -108,18 +120,6 @@
 		"pl_adf_fasbestgdata01_properties_groupId": {
 			"type": "string",
 			"defaultValue": "blob"
-		},
-		"ln_JPSTGPMSAPDB01_ModelDB_properties_typeProperties_server": {
-			"type": "string",
-			"defaultValue": "JPSTGPMSAPDB01"
-		},
-		"ln_JPSTGPMSAPDB01_ModelDB_properties_typeProperties_database": {
-			"type": "string",
-			"defaultValue": "ModelDB"
-		},
-		"ln_JPSTGPMSAPDB01_ModelDB_properties_typeProperties_userName": {
-			"type": "string",
-			"defaultValue": "fasreadonly"
 		}
 	},
 	"variables": {
@@ -317,6 +317,32 @@
 			"dependsOn": []
 		},
 		{
+			"name": "[concat(parameters('factoryName'), '/ln_JPSTGPMSAPDB01_ModelDB')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "SqlServer",
+				"typeProperties": {
+					"server": "[parameters('ln_JPSTGPMSAPDB01_ModelDB_properties_typeProperties_server')]",
+					"database": "[parameters('ln_JPSTGPMSAPDB01_ModelDB_properties_typeProperties_database')]",
+					"encrypt": "mandatory",
+					"trustServerCertificate": true,
+					"authenticationType": "SQL",
+					"userName": "[parameters('ln_JPSTGPMSAPDB01_ModelDB_properties_typeProperties_userName')]",
+					"password": {
+						"type": "SecureString",
+						"value": "[parameters('ln_JPSTGPMSAPDB01_ModelDB_password')]"
+					}
+				},
+				"connectVia": {
+					"referenceName": "IR-jpstgpmsapdb01",
+					"type": "IntegrationRuntimeReference"
+				}
+			},
+			"dependsOn": []
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite')]",
 			"type": "Microsoft.DataFactory/factories/linkedServices",
 			"apiVersion": "2018-06-01",
@@ -360,32 +386,6 @@
 			"properties": {
 				"privateLinkResourceId": "[parameters('pl_adf_fasbestgdata01_properties_privateLinkResourceId')]",
 				"groupId": "[parameters('pl_adf_fasbestgdata01_properties_groupId')]"
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/ln_JPSTGPMSAPDB01_ModelDB')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "SqlServer",
-				"typeProperties": {
-					"server": "[parameters('ln_JPSTGPMSAPDB01_ModelDB_properties_typeProperties_server')]",
-					"database": "[parameters('ln_JPSTGPMSAPDB01_ModelDB_properties_typeProperties_database')]",
-					"encrypt": "mandatory",
-					"trustServerCertificate": true,
-					"authenticationType": "SQL",
-					"userName": "[parameters('ln_JPSTGPMSAPDB01_ModelDB_properties_typeProperties_userName')]",
-					"password": {
-						"type": "SecureString",
-						"value": "[parameters('ln_JPSTGPMSAPDB01_ModelDB_password')]"
-					}
-				},
-				"connectVia": {
-					"referenceName": "IR-jpstgpmsapdb01",
-					"type": "IntegrationRuntimeReference"
-				}
 			},
 			"dependsOn": []
 		},

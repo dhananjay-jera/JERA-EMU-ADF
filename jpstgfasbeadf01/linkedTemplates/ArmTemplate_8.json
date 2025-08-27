@@ -18,7 +18,7 @@
 			"apiVersion": "2018-06-01",
 			"properties": {
 				"linkedServiceName": {
-					"referenceName": "ln_JPSTGPMSAPDB01",
+					"referenceName": "ln_JPSTGPMSAPDB01_ModelDB",
 					"type": "LinkedServiceReference"
 				},
 				"annotations": [],
@@ -65,7 +65,7 @@
 			"apiVersion": "2018-06-01",
 			"properties": {
 				"linkedServiceName": {
-					"referenceName": "ln_JPSTGPMSAPDB01",
+					"referenceName": "ln_JPSTGPMSAPDB01_ModelDB",
 					"type": "LinkedServiceReference"
 				},
 				"annotations": [],
@@ -112,7 +112,7 @@
 			"apiVersion": "2018-06-01",
 			"properties": {
 				"linkedServiceName": {
-					"referenceName": "ln_JPSTGPMSAPDB01",
+					"referenceName": "ln_JPSTGPMSAPDB01_ModelDB",
 					"type": "LinkedServiceReference"
 				},
 				"annotations": [],
@@ -159,7 +159,7 @@
 			"apiVersion": "2018-06-01",
 			"properties": {
 				"linkedServiceName": {
-					"referenceName": "ln_JPSTGPMSAPDB01",
+					"referenceName": "ln_JPSTGPMSAPDB01_ModelDB",
 					"type": "LinkedServiceReference"
 				},
 				"annotations": [],
@@ -206,7 +206,7 @@
 			"apiVersion": "2018-06-01",
 			"properties": {
 				"linkedServiceName": {
-					"referenceName": "ln_JPSTGPMSAPDB01",
+					"referenceName": "ln_JPSTGPMSAPDB01_ModelDB",
 					"type": "LinkedServiceReference"
 				},
 				"annotations": [],
@@ -253,7 +253,7 @@
 			"apiVersion": "2018-06-01",
 			"properties": {
 				"linkedServiceName": {
-					"referenceName": "ln_JPSTGPMSAPDB01",
+					"referenceName": "ln_JPSTGPMSAPDB01_ModelDB",
 					"type": "LinkedServiceReference"
 				},
 				"annotations": [],
@@ -300,7 +300,7 @@
 			"apiVersion": "2018-06-01",
 			"properties": {
 				"linkedServiceName": {
-					"referenceName": "ln_JPSTGPMSAPDB01",
+					"referenceName": "ln_JPSTGPMSAPDB01_ModelDB",
 					"type": "LinkedServiceReference"
 				},
 				"annotations": [],
@@ -347,7 +347,7 @@
 			"apiVersion": "2018-06-01",
 			"properties": {
 				"linkedServiceName": {
-					"referenceName": "ln_JPSTGPMSAPDB01",
+					"referenceName": "ln_JPSTGPMSAPDB01_ModelDB",
 					"type": "LinkedServiceReference"
 				},
 				"annotations": [],
@@ -394,7 +394,7 @@
 			"apiVersion": "2018-06-01",
 			"properties": {
 				"linkedServiceName": {
-					"referenceName": "ln_JPSTGPMSAPDB01",
+					"referenceName": "ln_JPSTGPMSAPDB01_ModelDB",
 					"type": "LinkedServiceReference"
 				},
 				"annotations": [],
@@ -441,7 +441,7 @@
 			"apiVersion": "2018-06-01",
 			"properties": {
 				"linkedServiceName": {
-					"referenceName": "ln_JPSTGPMSAPDB01",
+					"referenceName": "ln_JPSTGPMSAPDB01_ModelDB",
 					"type": "LinkedServiceReference"
 				},
 				"annotations": [],
@@ -488,7 +488,7 @@
 			"apiVersion": "2018-06-01",
 			"properties": {
 				"linkedServiceName": {
-					"referenceName": "ln_JPSTGPMSAPDB01",
+					"referenceName": "ln_JPSTGPMSAPDB01_ModelDB",
 					"type": "LinkedServiceReference"
 				},
 				"annotations": [],
@@ -535,7 +535,7 @@
 			"apiVersion": "2018-06-01",
 			"properties": {
 				"linkedServiceName": {
-					"referenceName": "ln_JPSTGPMSAPDB01",
+					"referenceName": "ln_JPSTGPMSAPDB01_ModelDB",
 					"type": "LinkedServiceReference"
 				},
 				"annotations": [],
@@ -582,7 +582,7 @@
 			"apiVersion": "2018-06-01",
 			"properties": {
 				"linkedServiceName": {
-					"referenceName": "ln_JPSTGPMSAPDB01",
+					"referenceName": "ln_JPSTGPMSAPDB01_ModelDB",
 					"type": "LinkedServiceReference"
 				},
 				"annotations": [],
@@ -629,7 +629,7 @@
 			"apiVersion": "2018-06-01",
 			"properties": {
 				"linkedServiceName": {
-					"referenceName": "ln_JPSTGPMSAPDB01",
+					"referenceName": "ln_JPSTGPMSAPDB01_ModelDB",
 					"type": "LinkedServiceReference"
 				},
 				"annotations": [],
@@ -676,7 +676,7 @@
 			"apiVersion": "2018-06-01",
 			"properties": {
 				"linkedServiceName": {
-					"referenceName": "ln_JPSTGPMSAPDB01",
+					"referenceName": "ln_JPSTGPMSAPDB01_ModelDB",
 					"type": "LinkedServiceReference"
 				},
 				"annotations": [],
@@ -723,7 +723,7 @@
 			"apiVersion": "2018-06-01",
 			"properties": {
 				"linkedServiceName": {
-					"referenceName": "ln_JPSTGPMSAPDB01",
+					"referenceName": "ln_JPSTGPMSAPDB01_ModelDB",
 					"type": "LinkedServiceReference"
 				},
 				"annotations": [],
@@ -770,7 +770,7 @@
 			"apiVersion": "2018-06-01",
 			"properties": {
 				"linkedServiceName": {
-					"referenceName": "ln_JPSTGPMSAPDB01",
+					"referenceName": "ln_JPSTGPMSAPDB01_ModelDB",
 					"type": "LinkedServiceReference"
 				},
 				"annotations": [],
@@ -817,7 +817,7 @@
 			"apiVersion": "2018-06-01",
 			"properties": {
 				"linkedServiceName": {
-					"referenceName": "ln_JPSTGPMSAPDB01",
+					"referenceName": "ln_JPSTGPMSAPDB01_ModelDB",
 					"type": "LinkedServiceReference"
 				},
 				"annotations": [],
@@ -864,7 +864,7 @@
 			"apiVersion": "2018-06-01",
 			"properties": {
 				"linkedServiceName": {
-					"referenceName": "ln_JPSTGPMSAPDB01",
+					"referenceName": "ln_JPSTGPMSAPDB01_ModelDB",
 					"type": "LinkedServiceReference"
 				},
 				"annotations": [],
@@ -911,7 +911,7 @@
 			"apiVersion": "2018-06-01",
 			"properties": {
 				"linkedServiceName": {
-					"referenceName": "ln_JPSTGPMSAPDB01",
+					"referenceName": "ln_JPSTGPMSAPDB01_ModelDB",
 					"type": "LinkedServiceReference"
 				},
 				"annotations": [],
