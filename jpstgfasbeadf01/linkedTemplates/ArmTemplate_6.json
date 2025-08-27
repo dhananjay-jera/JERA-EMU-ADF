@@ -27,6 +27,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite'"
 		},
+		"ln_JPSTGPMSAPDB01_ModelDB_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'ln_JPSTGPMSAPDB01_ModelDB'"
+		},
 		"JPSTGPMSAPDB01_properties_typeProperties_server": {
 			"type": "string",
 			"defaultValue": "jpstgpmsapdb01"
@@ -104,6 +108,18 @@
 		"pl_adf_fasbestgdata01_properties_groupId": {
 			"type": "string",
 			"defaultValue": "blob"
+		},
+		"ln_JPSTGPMSAPDB01_ModelDB_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "JPSTGPMSAPDB01"
+		},
+		"ln_JPSTGPMSAPDB01_ModelDB_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "ModelDB"
+		},
+		"ln_JPSTGPMSAPDB01_ModelDB_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "fasreadonly"
 		}
 	},
 	"variables": {
@@ -344,6 +360,32 @@
 			"properties": {
 				"privateLinkResourceId": "[parameters('pl_adf_fasbestgdata01_properties_privateLinkResourceId')]",
 				"groupId": "[parameters('pl_adf_fasbestgdata01_properties_groupId')]"
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/ln_JPSTGPMSAPDB01_ModelDB')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "SqlServer",
+				"typeProperties": {
+					"server": "[parameters('ln_JPSTGPMSAPDB01_ModelDB_properties_typeProperties_server')]",
+					"database": "[parameters('ln_JPSTGPMSAPDB01_ModelDB_properties_typeProperties_database')]",
+					"encrypt": "mandatory",
+					"trustServerCertificate": true,
+					"authenticationType": "SQL",
+					"userName": "[parameters('ln_JPSTGPMSAPDB01_ModelDB_properties_typeProperties_userName')]",
+					"password": {
+						"type": "SecureString",
+						"value": "[parameters('ln_JPSTGPMSAPDB01_ModelDB_password')]"
+					}
+				},
+				"connectVia": {
+					"referenceName": "IR-jpstgpmsapdb01",
+					"type": "IntegrationRuntimeReference"
+				}
 			},
 			"dependsOn": []
 		},
@@ -704,55 +746,6 @@
 				"typeProperties": {
 					"schema": "dbo",
 					"table": "BIOMASS"
-				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/ln_JPSTGPMSAPDB01')]"
-			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_ModelDB_CommodityDef')]",
-			"type": "Microsoft.DataFactory/factories/datasets",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"linkedServiceName": {
-					"referenceName": "ln_JPSTGPMSAPDB01",
-					"type": "LinkedServiceReference"
-				},
-				"annotations": [],
-				"type": "SqlServerTable",
-				"schema": [
-					{
-						"name": "FiscalYear",
-						"type": "smallint",
-						"precision": 5
-					},
-					{
-						"name": "Date",
-						"type": "date"
-					},
-					{
-						"name": "UnitIdFW",
-						"type": "int",
-						"precision": 10
-					},
-					{
-						"name": "Availability",
-						"type": "float",
-						"precision": 15
-					},
-					{
-						"name": "AsOfDate",
-						"type": "date"
-					},
-					{
-						"name": "HjksCheck",
-						"type": "bit"
-					}
-				],
-				"typeProperties": {
-					"schema": "dbo",
-					"table": "CommodityDef"
 				}
 			},
 			"dependsOn": [

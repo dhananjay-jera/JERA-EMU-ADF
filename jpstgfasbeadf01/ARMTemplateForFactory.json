@@ -47,6 +47,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'ln_jpstgfasbedb01_ModelDBv3'"
 		},
+		"ln_JPSTGPMSAPDB01_ModelDB_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'ln_JPSTGPMSAPDB01_ModelDB'"
+		},
 		"JPSTGPMSAPDB01_properties_typeProperties_server": {
 			"type": "string",
 			"defaultValue": "jpstgpmsapdb01"
@@ -184,6 +188,18 @@
 		"pl_adf_fasbestgdata01_properties_groupId": {
 			"type": "string",
 			"defaultValue": "blob"
+		},
+		"ln_JPSTGPMSAPDB01_ModelDB_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "JPSTGPMSAPDB01"
+		},
+		"ln_JPSTGPMSAPDB01_ModelDB_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "ModelDB"
+		},
+		"ln_JPSTGPMSAPDB01_ModelDB_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "fasreadonly"
 		}
 	},
 	"variables": {
@@ -11178,6 +11194,34 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/managedVirtualNetworks/default')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/ln_JPSTGPMSAPDB01_ModelDB')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "SqlServer",
+				"typeProperties": {
+					"server": "[parameters('ln_JPSTGPMSAPDB01_ModelDB_properties_typeProperties_server')]",
+					"database": "[parameters('ln_JPSTGPMSAPDB01_ModelDB_properties_typeProperties_database')]",
+					"encrypt": "mandatory",
+					"trustServerCertificate": true,
+					"authenticationType": "SQL",
+					"userName": "[parameters('ln_JPSTGPMSAPDB01_ModelDB_properties_typeProperties_userName')]",
+					"password": {
+						"type": "SecureString",
+						"value": "[parameters('ln_JPSTGPMSAPDB01_ModelDB_password')]"
+					}
+				},
+				"connectVia": {
+					"referenceName": "IR-jpstgpmsapdb01",
+					"type": "IntegrationRuntimeReference"
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/integrationRuntimes/IR-jpstgpmsapdb01')]"
 			]
 		}
 	]
