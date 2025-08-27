@@ -1,0 +1,40 @@
+{
+	"name": "ds_Fas_BE_Stg_DB_ModelDB_test_copy1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ln_jpstgfasbedb01_ModelDB_ReadOnly",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "Date",
+				"type": "date"
+			},
+			{
+				"name": "Time",
+				"type": "time",
+				"scale": 7
+			},
+			{
+				"name": "Data1",
+				"type": "text"
+			},
+			{
+				"name": "Data2",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "Data3",
+				"type": "int",
+				"precision": 10
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo.ModelDB",
+			"table": "test"
+		}
+	}
+}
