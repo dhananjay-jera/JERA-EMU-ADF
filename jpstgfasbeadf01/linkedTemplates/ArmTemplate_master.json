@@ -19,10 +19,6 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'jphubmaterialtransferqa'"
 		},
-		"ln_JPSTGPMSAPDB01_password": {
-			"type": "secureString",
-			"metadata": "Secure string for 'password' of 'ln_JPSTGPMSAPDB01'"
-		},
 		"ln_JPSTGPMSAPDB01_ModelDB_password": {
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'ln_JPSTGPMSAPDB01_ModelDB'"
@@ -82,18 +78,6 @@
 		"ln_AzureBlobStorage1_sasUri": {
 			"type": "secureString",
 			"metadata": "Secure string for 'sasUri' of 'ln_AzureBlobStorage1'"
-		},
-		"ln_JPSTGPMSAPDB01_properties_typeProperties_server": {
-			"type": "string",
-			"defaultValue": "JPSTGPMSAPDB01"
-		},
-		"ln_JPSTGPMSAPDB01_properties_typeProperties_database": {
-			"type": "string",
-			"defaultValue": "ModelDB"
-		},
-		"ln_JPSTGPMSAPDB01_properties_typeProperties_userName": {
-			"type": "string",
-			"defaultValue": "fasreadonly"
 		},
 		"ln_JPSTGPMSAPDB01_ModelDB_properties_typeProperties_server": {
 			"type": "string",
@@ -415,9 +399,6 @@
 					"jphubmaterialtransferqa_connectionString": {
 						"value": "[parameters('jphubmaterialtransferqa_connectionString')]"
 					},
-					"ln_JPSTGPMSAPDB01_password": {
-						"value": "[parameters('ln_JPSTGPMSAPDB01_password')]"
-					},
 					"ln_JPSTGPMSAPDB01_ModelDB_password": {
 						"value": "[parameters('ln_JPSTGPMSAPDB01_ModelDB_password')]"
 					},
@@ -447,15 +428,6 @@
 					},
 					"ln_AzureBlobStorage1_sasUri": {
 						"value": "[parameters('ln_AzureBlobStorage1_sasUri')]"
-					},
-					"ln_JPSTGPMSAPDB01_properties_typeProperties_server": {
-						"value": "[parameters('ln_JPSTGPMSAPDB01_properties_typeProperties_server')]"
-					},
-					"ln_JPSTGPMSAPDB01_properties_typeProperties_database": {
-						"value": "[parameters('ln_JPSTGPMSAPDB01_properties_typeProperties_database')]"
-					},
-					"ln_JPSTGPMSAPDB01_properties_typeProperties_userName": {
-						"value": "[parameters('ln_JPSTGPMSAPDB01_properties_typeProperties_userName')]"
 					},
 					"ln_JPSTGPMSAPDB01_ModelDB_properties_typeProperties_server": {
 						"value": "[parameters('ln_JPSTGPMSAPDB01_ModelDB_properties_typeProperties_server')]"

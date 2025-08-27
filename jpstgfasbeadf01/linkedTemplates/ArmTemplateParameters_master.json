@@ -14,9 +14,6 @@
 		"jphubmaterialtransferqa_connectionString": {
 			"value": ""
 		},
-		"ln_JPSTGPMSAPDB01_password": {
-			"value": ""
-		},
 		"ln_JPSTGPMSAPDB01_ModelDB_password": {
 			"value": ""
 		},
@@ -61,15 +58,6 @@
 		},
 		"ln_AzureBlobStorage1_sasUri": {
 			"value": ""
-		},
-		"ln_JPSTGPMSAPDB01_properties_typeProperties_server": {
-			"value": "JPSTGPMSAPDB01"
-		},
-		"ln_JPSTGPMSAPDB01_properties_typeProperties_database": {
-			"value": "ModelDB"
-		},
-		"ln_JPSTGPMSAPDB01_properties_typeProperties_userName": {
-			"value": "fasreadonly"
 		},
 		"ln_JPSTGPMSAPDB01_ModelDB_properties_typeProperties_server": {
 			"value": "JPSTGPMSAPDB01"
