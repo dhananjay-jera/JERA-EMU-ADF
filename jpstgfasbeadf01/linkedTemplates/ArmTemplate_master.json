@@ -7,10 +7,6 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "jpstgfasbeadf01"
 		},
-		"JPSTGPMSAPDB01_password": {
-			"type": "secureString",
-			"metadata": "Secure string for 'password' of 'JPSTGPMSAPDB01'"
-		},
 		"Snowflake1_password": {
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'Snowflake1'"
@@ -46,18 +42,6 @@
 		"ln_jpstgfasbedb01_ModelDBv3_password": {
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'ln_jpstgfasbedb01_ModelDBv3'"
-		},
-		"JPSTGPMSAPDB01_properties_typeProperties_server": {
-			"type": "string",
-			"defaultValue": "jpstgpmsapdb01"
-		},
-		"JPSTGPMSAPDB01_properties_typeProperties_database": {
-			"type": "string",
-			"defaultValue": "ModelDB"
-		},
-		"JPSTGPMSAPDB01_properties_typeProperties_userName": {
-			"type": "string",
-			"defaultValue": "fasreadonly"
 		},
 		"Snowflake1_properties_typeProperties_database": {
 			"type": "string",
@@ -390,9 +374,6 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
-					"JPSTGPMSAPDB01_password": {
-						"value": "[parameters('JPSTGPMSAPDB01_password')]"
-					},
 					"Snowflake1_password": {
 						"value": "[parameters('Snowflake1_password')]"
 					},
@@ -404,15 +385,6 @@
 					},
 					"ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite_password": {
 						"value": "[parameters('ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite_password')]"
-					},
-					"JPSTGPMSAPDB01_properties_typeProperties_server": {
-						"value": "[parameters('JPSTGPMSAPDB01_properties_typeProperties_server')]"
-					},
-					"JPSTGPMSAPDB01_properties_typeProperties_database": {
-						"value": "[parameters('JPSTGPMSAPDB01_properties_typeProperties_database')]"
-					},
-					"JPSTGPMSAPDB01_properties_typeProperties_userName": {
-						"value": "[parameters('JPSTGPMSAPDB01_properties_typeProperties_userName')]"
 					},
 					"Snowflake1_properties_typeProperties_database": {
 						"value": "[parameters('Snowflake1_properties_typeProperties_database')]"
