@@ -1,0 +1,17 @@
+{
+	"name": "fasbestgsnowflake",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"description": "Its a staging storage for Snowflakes Data",
+		"annotations": [],
+		"type": "AzureBlobStorage",
+		"typeProperties": {
+			"sasUri": "https://fasbestgsnowflake.blob.core.windows.net/",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI4OWQyOGU5OC1lNDE4LTQwODgtYWI5MC1mOTYyNWUyOWUzNDAiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "IR-jpstgpmsapdb01",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}

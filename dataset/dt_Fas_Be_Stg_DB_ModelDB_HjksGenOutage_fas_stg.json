@@ -1,0 +1,17 @@
+{
+	"name": "dt_Fas_Be_Stg_DB_ModelDB_HjksGenOutage_fas_stg",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ln_jpstgfasbedb01_ModelDB",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "HjksGenOutage"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,21 @@
+{
+	"name": "ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"server": "JPSTGPMSAPDB01",
+			"database": "ModelDB_20250703",
+			"encrypt": "mandatory",
+			"trustServerCertificate": true,
+			"authenticationType": "SQL",
+			"userName": "jeraadmin",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI0YTNhYTNmOC1kYjJmLTQ3YzgtYWNhNy1jZGRjZDkxYWIwYTIiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "IR-jpstgpmsapdb01",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}

@@ -1,0 +1,17 @@
+{
+	"name": "dt_Fas_Be_Stg_DB_ModelDB_HistInterface_fas_stg",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ln_jpstgfasbedb01_ModelDB",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "HistInterface"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

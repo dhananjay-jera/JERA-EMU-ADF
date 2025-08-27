@@ -1,0 +1,10 @@
+{
+	"name": "IR-jpstgpmsapdb01",
+	"properties": {
+		"type": "SelfHosted",
+		"description": "jpstgpmsapdb01",
+		"typeProperties": {
+			"selfContainedInteractiveAuthoringEnabled": true
+		}
+	}
+}

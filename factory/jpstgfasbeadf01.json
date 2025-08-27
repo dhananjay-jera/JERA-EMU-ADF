@@ -1,0 +1,9 @@
+{
+	"name": "jpstgfasbeadf01",
+	"location": "japaneast",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "c69d9ce1-2e5c-48f9-b0db-6d6610aab082",
+		"tenantId": "2840389b-0f81-496f-b742-ac794a5da61e"
+	}
+}

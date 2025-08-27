@@ -1,0 +1,21 @@
+{
+	"name": "ln_JPSTGPMSAPDB01",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"server": "JPSTGPMSAPDB01",
+			"database": "ModelDB",
+			"encrypt": "mandatory",
+			"trustServerCertificate": true,
+			"authenticationType": "SQL",
+			"userName": "fasreadonly",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiIxOTg3ZDY5ZS1kY2QzLTRjMDUtYWQyZC0zYzJhZjU2NWNmMDMiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "IR-jpstgpmsapdb01",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}

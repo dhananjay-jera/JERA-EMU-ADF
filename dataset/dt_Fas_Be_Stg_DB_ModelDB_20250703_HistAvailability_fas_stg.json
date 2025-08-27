@@ -1,0 +1,42 @@
+{
+	"name": "dt_Fas_Be_Stg_DB_ModelDB_20250703_HistAvailability_fas_stg",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "Date",
+				"type": "date"
+			},
+			{
+				"name": "UnitIdFW",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Availability",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "HjksCheck",
+				"type": "bit"
+			},
+			{
+				"name": "InsertAtFas",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "HistAvailability"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
