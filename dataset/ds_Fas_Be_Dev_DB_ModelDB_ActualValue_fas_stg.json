@@ -1,0 +1,64 @@
+{
+	"name": "ds_Fas_Be_Dev_DB_ModelDB_ActualValue_fas_stg",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ln_jpdevfasbedb01_ModelDB",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "StartDatetime",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "EndDatetime",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "AreaId",
+				"type": "tinyint",
+				"precision": 3
+			},
+			{
+				"name": "Type",
+				"type": "nvarchar"
+			},
+			{
+				"name": "TypeEn",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ActlValue",
+				"type": "decimal",
+				"precision": 10,
+				"scale": 3
+			},
+			{
+				"name": "Unit",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CreateAt",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "InsertAtFas",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "RowMD5Hash",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "ActualValue"
+		}
+	}
+}
