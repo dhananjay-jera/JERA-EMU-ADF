@@ -380,12 +380,6 @@
 					"jphubmaterialtransferqa_connectionString": {
 						"value": "[parameters('jphubmaterialtransferqa_connectionString')]"
 					},
-					"ln_JPSTGPMSAPDB01_ModelDB_password": {
-						"value": "[parameters('ln_JPSTGPMSAPDB01_ModelDB_password')]"
-					},
-					"ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite_password": {
-						"value": "[parameters('ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite_password')]"
-					},
 					"Snowflake1_properties_typeProperties_database": {
 						"value": "[parameters('Snowflake1_properties_typeProperties_database')]"
 					},
@@ -397,6 +391,32 @@
 					},
 					"fasbestgsnowflake_sasUri": {
 						"value": "[parameters('fasbestgsnowflake_sasUri')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'jpstgfasbeadf01_ArmTemplate_5')]"
+			]
+		},
+		{
+			"name": "jpstgfasbeadf01_ArmTemplate_7",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_7.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"ln_JPSTGPMSAPDB01_ModelDB_password": {
+						"value": "[parameters('ln_JPSTGPMSAPDB01_ModelDB_password')]"
+					},
+					"ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite_password": {
+						"value": "[parameters('ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite_password')]"
 					},
 					"ln_AzureBlobStorage1_sasUri": {
 						"value": "[parameters('ln_AzureBlobStorage1_sasUri')]"
@@ -433,26 +453,6 @@
 					},
 					"pl_adf_fasbestgdata01_properties_groupId": {
 						"value": "[parameters('pl_adf_fasbestgdata01_properties_groupId')]"
-					}
-				}
-			},
-			"dependsOn": [
-				"[resourceId('Microsoft.Resources/deployments', 'jpstgfasbeadf01_ArmTemplate_5')]"
-			]
-		},
-		{
-			"name": "jpstgfasbeadf01_ArmTemplate_7",
-			"type": "Microsoft.Resources/deployments",
-			"apiVersion": "2024-03-01",
-			"properties": {
-				"mode": "incremental",
-				"templateLink": {
-					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_7.json', parameters('containerSasToken'))]",
-					"contentVersion": "1.0.0.0"
-				},
-				"parameters": {
-					"factoryName": {
-						"value": "[parameters('factoryName')]"
 					}
 				}
 			},

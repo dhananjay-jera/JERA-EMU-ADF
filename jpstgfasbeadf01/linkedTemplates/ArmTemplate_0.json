@@ -424,6 +424,27 @@
 			]
 		},
 		{
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Dev_DB_ModelDB_FcstBio')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "ln_jpdevfasbedb01_ModelDB",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "AzureSqlTable",
+				"schema": [],
+				"typeProperties": {
+					"schema": "dbo.ModelDB",
+					"table": "FcstBio"
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/ln_jpdevfasbedb01_ModelDB')]"
+			]
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Dev_DB_ModelDB_FcstDemand')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
@@ -438,6 +459,27 @@
 				"typeProperties": {
 					"schema": "dbo",
 					"table": "FcstDemand"
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/ln_jpdevfasbedb01_ModelDB')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Dev_DB_ModelDB_FcstGeo')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "ln_jpdevfasbedb01_ModelDB",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "AzureSqlTable",
+				"schema": [],
+				"typeProperties": {
+					"schema": "dbo.ModelDB",
+					"table": "FcstGeo"
 				}
 			},
 			"dependsOn": [
@@ -526,48 +568,6 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/linkedServices/ln_jpdevfasbedb01_ModelDBv3')]"
-			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Dev_DB_ModelDB_FwHistCommodity')]",
-			"type": "Microsoft.DataFactory/factories/datasets",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"linkedServiceName": {
-					"referenceName": "ln_jpdevfasbedb01_ModelDB",
-					"type": "LinkedServiceReference"
-				},
-				"annotations": [],
-				"type": "AzureSqlTable",
-				"schema": [],
-				"typeProperties": {
-					"schema": "dbo",
-					"table": "FwHistCommodity"
-				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/ln_jpdevfasbedb01_ModelDB')]"
-			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Dev_DB_ModelDB_GenPlan')]",
-			"type": "Microsoft.DataFactory/factories/datasets",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"linkedServiceName": {
-					"referenceName": "ln_jpdevfasbedb01_ModelDB",
-					"type": "LinkedServiceReference"
-				},
-				"annotations": [],
-				"type": "AzureSqlTable",
-				"schema": [],
-				"typeProperties": {
-					"schema": "dbo",
-					"table": "GenPlan"
-				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/ln_jpdevfasbedb01_ModelDB')]"
 			]
 		}
 	]

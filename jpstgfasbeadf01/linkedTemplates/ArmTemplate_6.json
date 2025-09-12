@@ -15,14 +15,6 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'jphubmaterialtransferqa'"
 		},
-		"ln_JPSTGPMSAPDB01_ModelDB_password": {
-			"type": "secureString",
-			"metadata": "Secure string for 'password' of 'ln_JPSTGPMSAPDB01_ModelDB'"
-		},
-		"ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite_password": {
-			"type": "secureString",
-			"metadata": "Secure string for 'password' of 'ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite'"
-		},
 		"Snowflake1_properties_typeProperties_database": {
 			"type": "string",
 			"defaultValue": "ANA00003"
@@ -38,62 +30,107 @@
 		"fasbestgsnowflake_sasUri": {
 			"type": "secureString",
 			"metadata": "Secure string for 'sasUri' of 'fasbestgsnowflake'"
-		},
-		"ln_AzureBlobStorage1_sasUri": {
-			"type": "secureString",
-			"metadata": "Secure string for 'sasUri' of 'ln_AzureBlobStorage1'"
-		},
-		"ln_JPSTGPMSAPDB01_ModelDB_properties_typeProperties_server": {
-			"type": "string",
-			"defaultValue": "JPSTGPMSAPDB01"
-		},
-		"ln_JPSTGPMSAPDB01_ModelDB_properties_typeProperties_database": {
-			"type": "string",
-			"defaultValue": "ModelDB"
-		},
-		"ln_JPSTGPMSAPDB01_ModelDB_properties_typeProperties_userName": {
-			"type": "string",
-			"defaultValue": "fasreadonly"
-		},
-		"ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite_properties_typeProperties_server": {
-			"type": "string",
-			"defaultValue": "JPSTGPMSAPDB01"
-		},
-		"ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite_properties_typeProperties_database": {
-			"type": "string",
-			"defaultValue": "ModelDB_20250703"
-		},
-		"ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite_properties_typeProperties_userName": {
-			"type": "string",
-			"defaultValue": "jeraadmin"
-		},
-		"ep_jpstgpmsapdb01_properties_privateLinkResourceId": {
-			"type": "string",
-			"defaultValue": "/subscriptions/40d0025b-b057-42a4-9ed8-f038512f9cfc/resourceGroups/FAS-Stg/providers/Microsoft.Network/privateLinkServices/jpstgfasilb01-pls"
-		},
-		"ep_jpstgpmsapdb01_properties_groupId": {
-			"type": "string",
-			"defaultValue": ""
-		},
-		"ep_jpstgpmsapdb01_properties_fqdns": {
-			"type": "array",
-			"defaultValue": [
-				"jpstgpmsapdb01.jera.co.jp"
-			]
-		},
-		"pl_adf_fasbestgdata01_properties_privateLinkResourceId": {
-			"type": "string",
-			"defaultValue": "/subscriptions/40d0025b-b057-42a4-9ed8-f038512f9cfc/resourceGroups/FAS-BE-Stg/providers/Microsoft.Storage/storageAccounts/fasbestgdata01"
-		},
-		"pl_adf_fasbestgdata01_properties_groupId": {
-			"type": "string",
-			"defaultValue": "blob"
 		}
 	},
 	"variables": {
 		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
 	},
 	"resources": [
+		{
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDBv3_JepxAreaPrice_fas_stg')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "ln_jpstgfasbedb01_ModelDBv3",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "AzureSqlTable",
+				"schema": [],
+				"typeProperties": {
+					"schema": "dbo.ModelDBv3",
+					"table": "JepxAreaPrice_fas_stg"
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDBv3_JepxSummary_fas_stg')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "ln_jpstgfasbedb01_ModelDBv3",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "AzureSqlTable",
+				"schema": [],
+				"typeProperties": {
+					"schema": "dbo.ModelDBv3",
+					"table": "JepxSummary_fas_stg"
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDBv3_JeraHistGeneration_fas_stg')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "ln_jpstgfasbedb01_ModelDBv3",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "AzureSqlTable",
+				"schema": [],
+				"typeProperties": {
+					"schema": "dbo.ModelDBv3",
+					"table": "JeraHistGeneration_fas_stg"
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDBv3_LTDCalendar_fas_stg')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "ln_jpstgfasbedb01_ModelDBv3",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "AzureSqlTable",
+				"schema": [],
+				"typeProperties": {
+					"schema": "dbo.ModelDBv3",
+					"table": "LTDCalendar_fas_stg"
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDBv3_MasterGenV3_fas_stg')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "ln_jpstgfasbedb01_ModelDBv3",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "AzureSqlTable",
+				"schema": [],
+				"typeProperties": {
+					"schema": "dbo.ModelDBv3",
+					"table": "MasterGenV3_fas_stg"
+				}
+			},
+			"dependsOn": []
+		},
 		{
 			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDBv3_MasterGenV4_fas_stg')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
@@ -383,96 +420,6 @@
 					"referenceName": "IR-jpstgpmsapdb01",
 					"type": "IntegrationRuntimeReference"
 				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/ln_AzureBlobStorage1')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "AzureBlobStorage",
-				"typeProperties": {
-					"sasUri": "[parameters('ln_AzureBlobStorage1_sasUri')]"
-				},
-				"connectVia": {
-					"referenceName": "IR-jpstgpmsapdb01",
-					"type": "IntegrationRuntimeReference"
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/ln_JPSTGPMSAPDB01_ModelDB')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "SqlServer",
-				"typeProperties": {
-					"server": "[parameters('ln_JPSTGPMSAPDB01_ModelDB_properties_typeProperties_server')]",
-					"database": "[parameters('ln_JPSTGPMSAPDB01_ModelDB_properties_typeProperties_database')]",
-					"encrypt": "mandatory",
-					"trustServerCertificate": true,
-					"authenticationType": "SQL",
-					"userName": "[parameters('ln_JPSTGPMSAPDB01_ModelDB_properties_typeProperties_userName')]",
-					"password": {
-						"type": "SecureString",
-						"value": "[parameters('ln_JPSTGPMSAPDB01_ModelDB_password')]"
-					}
-				},
-				"connectVia": {
-					"referenceName": "IR-jpstgpmsapdb01",
-					"type": "IntegrationRuntimeReference"
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "SqlServer",
-				"typeProperties": {
-					"server": "[parameters('ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite_properties_typeProperties_server')]",
-					"database": "[parameters('ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite_properties_typeProperties_database')]",
-					"encrypt": "mandatory",
-					"trustServerCertificate": true,
-					"authenticationType": "SQL",
-					"userName": "[parameters('ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite_properties_typeProperties_userName')]",
-					"password": {
-						"type": "SecureString",
-						"value": "[parameters('ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite_password')]"
-					}
-				},
-				"connectVia": {
-					"referenceName": "IR-jpstgpmsapdb01",
-					"type": "IntegrationRuntimeReference"
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/default/ep_jpstgpmsapdb01')]",
-			"type": "Microsoft.DataFactory/factories/managedVirtualNetworks/managedPrivateEndpoints",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"privateLinkResourceId": "[parameters('ep_jpstgpmsapdb01_properties_privateLinkResourceId')]",
-				"groupId": "[parameters('ep_jpstgpmsapdb01_properties_groupId')]",
-				"fqdns": "[parameters('ep_jpstgpmsapdb01_properties_fqdns')]"
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/default/pl_adf_fasbestgdata01')]",
-			"type": "Microsoft.DataFactory/factories/managedVirtualNetworks/managedPrivateEndpoints",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"privateLinkResourceId": "[parameters('pl_adf_fasbestgdata01_properties_privateLinkResourceId')]",
-				"groupId": "[parameters('pl_adf_fasbestgdata01_properties_groupId')]"
 			},
 			"dependsOn": []
 		}
