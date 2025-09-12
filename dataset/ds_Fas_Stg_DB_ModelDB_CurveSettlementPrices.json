@@ -40,5 +40,6 @@
 			"schema": "dbo",
 			"table": "CurveSettlementPrices"
 		}
-	}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
 }

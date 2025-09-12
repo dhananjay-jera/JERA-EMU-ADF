@@ -12,5 +12,6 @@
 			"schema": "dbo.ModelDBv3",
 			"table": "HistAvailability"
 		}
-	}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
 }

@@ -43,5 +43,6 @@
 			"schema": "MODELDB",
 			"table": "ACTUAL_SPOT_PRICE"
 		}
-	}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
 }

@@ -12,5 +12,6 @@
 			"schema": "dbo",
 			"table": "ActualValueHydroRefined"
 		}
-	}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
 }

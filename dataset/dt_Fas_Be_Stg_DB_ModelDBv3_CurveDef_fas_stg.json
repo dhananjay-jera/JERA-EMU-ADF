@@ -12,5 +12,6 @@
 			"schema": "dbo.ModelDBv3",
 			"table": "CurveDef_fas_stg"
 		}
-	}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
 }

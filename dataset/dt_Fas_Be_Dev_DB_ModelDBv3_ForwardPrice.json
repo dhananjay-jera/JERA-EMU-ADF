@@ -12,5 +12,6 @@
 			"schema": "dbo.ModelDBv3",
 			"table": "ForwardPrice"
 		}
-	}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
 }

@@ -12,5 +12,6 @@
 			"schema": "dbo.ModelDBv3",
 			"table": "test_jay1_fas_stg"
 		}
-	}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
 }

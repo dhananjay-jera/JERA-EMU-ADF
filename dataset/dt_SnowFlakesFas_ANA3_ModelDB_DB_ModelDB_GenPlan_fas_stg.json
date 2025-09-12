@@ -43,5 +43,6 @@
 			"schema": "MODELDB",
 			"table": "GenPlan"
 		}
-	}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
 }

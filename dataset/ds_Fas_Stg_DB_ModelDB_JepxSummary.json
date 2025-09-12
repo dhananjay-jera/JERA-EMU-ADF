@@ -40,5 +40,6 @@
 			"schema": "dbo",
 			"table": "JepxSummary"
 		}
-	}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
 }

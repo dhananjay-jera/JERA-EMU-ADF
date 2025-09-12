@@ -40,5 +40,6 @@
 			"schema": "dbo",
 			"table": "FcstPV_new"
 		}
-	}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
 }

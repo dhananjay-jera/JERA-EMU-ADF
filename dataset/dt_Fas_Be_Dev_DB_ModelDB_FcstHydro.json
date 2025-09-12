@@ -12,5 +12,6 @@
 			"schema": "dbo.ModelDB",
 			"table": "FcstHydro"
 		}
-	}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
 }

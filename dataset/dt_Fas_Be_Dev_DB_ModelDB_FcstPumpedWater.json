@@ -12,5 +12,6 @@
 			"schema": "dbo.ModelDB",
 			"table": "FcstPumpedWater"
 		}
-	}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
 }

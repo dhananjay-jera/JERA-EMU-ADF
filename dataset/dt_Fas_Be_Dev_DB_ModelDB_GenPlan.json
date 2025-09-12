@@ -12,5 +12,6 @@
 			"schema": "dbo",
 			"table": "GenPlan"
 		}
-	}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
 }

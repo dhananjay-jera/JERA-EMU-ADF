@@ -36,5 +36,6 @@
 			"schema": "dbo.ModelDB",
 			"table": "test"
 		}
-	}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
 }
