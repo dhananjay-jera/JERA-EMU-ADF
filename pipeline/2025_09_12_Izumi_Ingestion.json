@@ -320,7 +320,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_FwHistCommodity",
+						"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_FwFsctCommodity",
 						"type": "DatasetReference"
 					}
 				]
@@ -383,7 +383,14 @@
 			{
 				"name": "BE-STG-ForwardPrice",
 				"type": "Copy",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "BE-STG-ForwardForex",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"policy": {
 					"timeout": "0.12:00:00",
 					"retry": 0,
