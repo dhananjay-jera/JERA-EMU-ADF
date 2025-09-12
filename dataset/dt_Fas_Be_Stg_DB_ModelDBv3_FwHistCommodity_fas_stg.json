@@ -10,7 +10,7 @@
 		"schema": [],
 		"typeProperties": {
 			"schema": "dbo.ModelDBv3",
-			"table": "FwHistCommodity_fas_stg"
+			"table": "FwHistCommodity"
 		}
 	}
 }
