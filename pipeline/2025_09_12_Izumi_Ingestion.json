@@ -106,7 +106,7 @@
 				]
 			},
 			{
-				"name": "BE-DEV-FwFsctCommodity",
+				"name": "BE-DEV-FwFcstCommodity",
 				"type": "Copy",
 				"dependsOn": [
 					{
@@ -149,7 +149,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "ds_Fas_Stg_DB_ModelDB_FwFsctCommodity",
+						"referenceName": "ds_Fas_Stg_DB_ModelDB_FwFcstCommodity",
 						"type": "DatasetReference"
 					}
 				],
@@ -165,7 +165,7 @@
 				"type": "Copy",
 				"dependsOn": [
 					{
-						"activity": "BE-DEV-FwFsctCommodity",
+						"activity": "BE-DEV-FwFcstCommodity",
 						"dependencyConditions": [
 							"Succeeded"
 						]
