@@ -1,5 +1,5 @@
 {
-	"name": "dt_Fas_Be_Stg_DB_ModelDBv3_ForwardForex_fas_stg",
+	"name": "dt_Fas_Be_Stg_DB_ModelDBv3_ForwardForex",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ln_jpstgfasbedb01_ModelDBv3",
