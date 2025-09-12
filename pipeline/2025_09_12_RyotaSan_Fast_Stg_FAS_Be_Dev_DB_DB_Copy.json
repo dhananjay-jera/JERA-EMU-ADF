@@ -6,14 +6,7 @@
 			{
 				"name": "FcstAvailability_FcstAvailability",
 				"type": "Copy",
-				"dependsOn": [
-					{
-						"activity": "ActualValueHydroRefined_ActualValueHydroRefined",
-						"dependencyConditions": [
-							"Succeeded"
-						]
-					}
-				],
+				"dependsOn": [],
 				"policy": {
 					"timeout": "0.00:12:00",
 					"retry": 0,
@@ -151,13 +144,13 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "ds_Fas_Stg_DB_ModelDB_ActualValue",
+						"referenceName": "ds_Fas_Stg_DB_ModelDB_FcstBio",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_ActualValue_fas_stg",
+						"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_FcstBio_fas_stg",
 						"type": "DatasetReference"
 					}
 				]
@@ -220,14 +213,7 @@
 			{
 				"name": "FcstDemand_FcstDemand",
 				"type": "Copy",
-				"dependsOn": [
-					{
-						"activity": "FcstAvailability_FcstAvailability",
-						"dependencyConditions": [
-							"Succeeded"
-						]
-					}
-				],
+				"dependsOn": [],
 				"policy": {
 					"timeout": "0.12:00:00",
 					"retry": 0,
