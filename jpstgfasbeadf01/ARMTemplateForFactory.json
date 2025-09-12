@@ -43,6 +43,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'ln_jpstgfasbedb01_ModelDBv3'"
 		},
+		"ln_jpstgpmsadb01__password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'ln_jpstgpmsadb01_'"
+		},
 		"Snowflake1_properties_typeProperties_database": {
 			"type": "string",
 			"defaultValue": "ANA00003"
@@ -147,6 +151,18 @@
 			"type": "string",
 			"defaultValue": "jeraadmin"
 		},
+		"ln_jpstgpmsadb01__properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "jpstgpmsadb01"
+		},
+		"ln_jpstgpmsadb01__properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "ModelDB"
+		},
+		"ln_jpstgpmsadb01__properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "jeraadmin"
+		},
 		"ep_jpstgpmsapdb01_properties_privateLinkResourceId": {
 			"type": "string",
 			"defaultValue": "/subscriptions/40d0025b-b057-42a4-9ed8-f038512f9cfc/resourceGroups/FAS-Stg/providers/Microsoft.Network/privateLinkServices/jpstgfasilb01-pls"
@@ -168,6 +184,12 @@
 		"pl_adf_fasbestgdata01_properties_groupId": {
 			"type": "string",
 			"defaultValue": "blob"
+		},
+		"pl_adf_fasbestgdata01_properties_fqdns": {
+			"type": "array",
+			"defaultValue": [
+				"fasbestgdata01.blob.core.windows.net"
+			]
 		}
 	},
 	"variables": {
@@ -288,7 +310,7 @@
 						]
 					},
 					{
-						"name": "BE-DEV-FwFsctCommodity",
+						"name": "BE-DEV-FwFcstCommodity",
 						"type": "Copy",
 						"dependsOn": [
 							{
@@ -331,14 +353,14 @@
 						},
 						"inputs": [
 							{
-								"referenceName": "ds_Fas_Stg_DB_ModelDB_FwFsctCommodity",
+								"referenceName": "ds_Fas_Stg_DB_ModelDB_FwFcstCommodity",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Dev_DB_ModelDBv3_FwFsctCommodity",
+								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_FwFcstCommodity",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -349,7 +371,7 @@
 						"type": "Copy",
 						"dependsOn": [
 							{
-								"activity": "BE-DEV-FwFsctCommodity",
+								"activity": "BE-DEV-FwFcstCommodity",
 								"dependencyConditions": [
 									"Succeeded"
 								]
@@ -459,7 +481,7 @@
 						]
 					},
 					{
-						"name": "BE-STG-FwFsctCommodity",
+						"name": "BE-STG-FwFcstCommodity",
 						"type": "Copy",
 						"dependsOn": [
 							{
@@ -502,14 +524,14 @@
 						},
 						"inputs": [
 							{
-								"referenceName": "ds_Fas_Stg_DB_ModelDB_FwFsctCommodity",
+								"referenceName": "ds_Fas_Stg_DB_ModelDB_FwFcstCommodity",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_FwFsctCommodity",
+								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_FwFcstCommodity",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -520,7 +542,7 @@
 						"type": "Copy",
 						"dependsOn": [
 							{
-								"activity": "BE-STG-FwFsctCommodity",
+								"activity": "BE-STG-FwFcstCommodity",
 								"dependencyConditions": [
 									"Succeeded"
 								]
@@ -633,19 +655,20 @@
 				"policy": {
 					"elapsedTimeMetric": {}
 				},
-				"annotations": []
+				"annotations": [],
+				"lastPublishTime": "2025-09-12T08:17:46Z"
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_FwHistCommodity')]",
 				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Dev_DB_ModelDBv3_FwHistCommodity')]",
 				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Stg_DB_ModelDB_FwHistCommodity')]",
-				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_FwFsctCommodity')]",
-				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Dev_DB_ModelDBv3_FwFsctCommodity')]",
+				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_FwFcstCommodity')]",
+				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Dev_DB_ModelDB_FwFcstCommodity')]",
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_ForwardForex')]",
 				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Dev_DB_ModelDBv3_ForwardForex')]",
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_ForwardPrice')]",
 				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Dev_DB_ModelDBv3_ForwardPrice')]",
-				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Stg_DB_ModelDB_FwFsctCommodity')]",
+				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Stg_DB_ModelDB_FwFcstCommodity')]",
 				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Stg_DB_ModelDB_ForwardForex')]",
 				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Stg_DB_ModelDB_ForwardPrice')]"
 			]
@@ -1224,7 +1247,8 @@
 				"policy": {
 					"elapsedTimeMetric": {}
 				},
-				"annotations": []
+				"annotations": [],
+				"lastPublishTime": "2025-09-12T08:17:46Z"
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_FcstAvailability')]",
@@ -1823,7 +1847,8 @@
 				"policy": {
 					"elapsedTimeMetric": {}
 				},
-				"annotations": []
+				"annotations": [],
+				"lastPublishTime": "2025-09-12T08:17:46Z"
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_FcstAvailability')]",
@@ -1982,7 +2007,8 @@
 				"policy": {
 					"elapsedTimeMetric": {}
 				},
-				"annotations": []
+				"annotations": [],
+				"lastPublishTime": "2025-09-12T08:17:46Z"
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_ActualSpotPrice')]",
@@ -2050,7 +2076,8 @@
 				"policy": {
 					"elapsedTimeMetric": {}
 				},
-				"annotations": []
+				"annotations": [],
+				"lastPublishTime": "2025-09-12T08:17:46Z"
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/ds_Snow_ANA3_HistAvailability')]",
@@ -2123,7 +2150,8 @@
 				"policy": {
 					"elapsedTimeMetric": {}
 				},
-				"annotations": []
+				"annotations": [],
+				"lastPublishTime": "2025-09-12T08:17:46Z"
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_FcstAvailability')]",
@@ -3047,7 +3075,8 @@
 				"policy": {
 					"elapsedTimeMetric": {}
 				},
-				"annotations": []
+				"annotations": [],
+				"lastPublishTime": "2025-09-12T08:17:46Z"
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_FcstAvailability')]",
@@ -3259,7 +3288,8 @@
 				"policy": {
 					"elapsedTimeMetric": {}
 				},
-				"annotations": []
+				"annotations": [],
+				"lastPublishTime": "2025-09-12T08:17:46Z"
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_FcstAvailability')]",
@@ -4246,7 +4276,8 @@
 				"policy": {
 					"elapsedTimeMetric": {}
 				},
-				"annotations": []
+				"annotations": [],
+				"lastPublishTime": "2025-09-12T08:17:46Z"
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_FcstAvailability')]",
@@ -4456,7 +4487,8 @@
 				"policy": {
 					"elapsedTimeMetric": {}
 				},
-				"annotations": []
+				"annotations": [],
+				"lastPublishTime": "2025-09-12T08:17:46Z"
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_FcstAvailability')]",
@@ -4699,7 +4731,8 @@
 				"policy": {
 					"elapsedTimeMetric": {}
 				},
-				"annotations": []
+				"annotations": [],
+				"lastPublishTime": "2025-09-12T08:17:46Z"
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_FcstPumpedWater')]",
@@ -4773,7 +4806,8 @@
 				"policy": {
 					"elapsedTimeMetric": {}
 				},
-				"annotations": []
+				"annotations": [],
+				"lastPublishTime": "2025-09-12T08:17:46Z"
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_test')]",
@@ -4848,7 +4882,8 @@
 				"policy": {
 					"elapsedTimeMetric": {}
 				},
-				"annotations": []
+				"annotations": [],
+				"lastPublishTime": "2025-09-12T08:17:46Z"
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_GenPlan')]",
@@ -4924,7 +4959,8 @@
 				"policy": {
 					"elapsedTimeMetric": {}
 				},
-				"annotations": []
+				"annotations": [],
+				"lastPublishTime": "2025-09-12T08:17:46Z"
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_GenPlan')]",
@@ -8376,6 +8412,48 @@
 			]
 		},
 		{
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Dev_DB_ModelDB_FcstHydro')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "ln_jpdevfasbedb01_ModelDB",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "AzureSqlTable",
+				"schema": [],
+				"typeProperties": {
+					"schema": "dbo.ModelDB",
+					"table": "FcstHydro"
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/ln_jpdevfasbedb01_ModelDB')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Dev_DB_ModelDB_FcstHydroRefined')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "ln_jpdevfasbedb01_ModelDB",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "AzureSqlTable",
+				"schema": [],
+				"typeProperties": {
+					"schema": "dbo.ModelDB",
+					"table": "FcstHydroRefined"
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/ln_jpdevfasbedb01_ModelDB')]"
+			]
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Dev_DB_ModelDB_FcstInterConnection')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
@@ -8390,6 +8468,69 @@
 				"typeProperties": {
 					"schema": "dbo",
 					"table": "FcstInterConnection"
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/ln_jpdevfasbedb01_ModelDB')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Dev_DB_ModelDB_FcstPV')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "ln_jpdevfasbedb01_ModelDB",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "AzureSqlTable",
+				"schema": [],
+				"typeProperties": {
+					"schema": "dbo.ModelDB",
+					"table": "FcstPV"
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/ln_jpdevfasbedb01_ModelDB')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Dev_DB_ModelDB_FcstPumpedWater')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "ln_jpdevfasbedb01_ModelDB",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "AzureSqlTable",
+				"schema": [],
+				"typeProperties": {
+					"schema": "dbo.ModelDB",
+					"table": "FcstPumpedWater"
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/ln_jpdevfasbedb01_ModelDB')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Dev_DB_ModelDB_FcstWind')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "ln_jpdevfasbedb01_ModelDB",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "AzureSqlTable",
+				"schema": [],
+				"typeProperties": {
+					"schema": "dbo.ModelDB",
+					"table": "FcstWind"
 				}
 			},
 			"dependsOn": [
@@ -8432,6 +8573,27 @@
 				"typeProperties": {
 					"schema": "dbo",
 					"table": "ForwardPrice"
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/ln_jpdevfasbedb01_ModelDB')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Dev_DB_ModelDB_FwFcstCommodity')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "ln_jpdevfasbedb01_ModelDB",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "AzureSqlTable",
+				"schema": [],
+				"typeProperties": {
+					"schema": "dbo.ModelDBv3",
+					"table": "FwFcstCommodity"
 				}
 			},
 			"dependsOn": [
@@ -11482,6 +11644,29 @@
 			"dependsOn": []
 		},
 		{
+			"name": "[concat(parameters('factoryName'), '/ln_jpstgpmsadb01_')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"description": "Link to jpstgpmsadb01 server ",
+				"annotations": [],
+				"type": "SqlServer",
+				"typeProperties": {
+					"server": "[parameters('ln_jpstgpmsadb01__properties_typeProperties_server')]",
+					"database": "[parameters('ln_jpstgpmsadb01__properties_typeProperties_database')]",
+					"encrypt": "mandatory",
+					"trustServerCertificate": false,
+					"authenticationType": "SQL",
+					"userName": "[parameters('ln_jpstgpmsadb01__properties_typeProperties_userName')]",
+					"password": {
+						"type": "SecureString",
+						"value": "[parameters('ln_jpstgpmsadb01__password')]"
+					}
+				}
+			},
+			"dependsOn": []
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/IR-jpstgpmsapdb01')]",
 			"type": "Microsoft.DataFactory/factories/integrationRuntimes",
 			"apiVersion": "2018-06-01",
@@ -11520,115 +11705,11 @@
 			"apiVersion": "2018-06-01",
 			"properties": {
 				"privateLinkResourceId": "[parameters('pl_adf_fasbestgdata01_properties_privateLinkResourceId')]",
-				"groupId": "[parameters('pl_adf_fasbestgdata01_properties_groupId')]"
+				"groupId": "[parameters('pl_adf_fasbestgdata01_properties_groupId')]",
+				"fqdns": "[parameters('pl_adf_fasbestgdata01_properties_fqdns')]"
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/managedVirtualNetworks/default')]"
-			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Dev_DB_ModelDB_FcstHydro')]",
-			"type": "Microsoft.DataFactory/factories/datasets",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"linkedServiceName": {
-					"referenceName": "ln_jpdevfasbedb01_ModelDB",
-					"type": "LinkedServiceReference"
-				},
-				"annotations": [],
-				"type": "AzureSqlTable",
-				"schema": [],
-				"typeProperties": {
-					"schema": "dbo.ModelDB",
-					"table": "FcstHydro"
-				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/ln_jpdevfasbedb01_ModelDB')]"
-			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Dev_DB_ModelDB_FcstPumpedWater')]",
-			"type": "Microsoft.DataFactory/factories/datasets",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"linkedServiceName": {
-					"referenceName": "ln_jpdevfasbedb01_ModelDB",
-					"type": "LinkedServiceReference"
-				},
-				"annotations": [],
-				"type": "AzureSqlTable",
-				"schema": [],
-				"typeProperties": {
-					"schema": "dbo.ModelDB",
-					"table": "FcstPumpedWater"
-				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/ln_jpdevfasbedb01_ModelDB')]"
-			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Dev_DB_ModelDB_FcstPV')]",
-			"type": "Microsoft.DataFactory/factories/datasets",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"linkedServiceName": {
-					"referenceName": "ln_jpdevfasbedb01_ModelDB",
-					"type": "LinkedServiceReference"
-				},
-				"annotations": [],
-				"type": "AzureSqlTable",
-				"schema": [],
-				"typeProperties": {
-					"schema": "dbo.ModelDB",
-					"table": "FcstPV"
-				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/ln_jpdevfasbedb01_ModelDB')]"
-			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Dev_DB_ModelDB_FcstWind')]",
-			"type": "Microsoft.DataFactory/factories/datasets",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"linkedServiceName": {
-					"referenceName": "ln_jpdevfasbedb01_ModelDB",
-					"type": "LinkedServiceReference"
-				},
-				"annotations": [],
-				"type": "AzureSqlTable",
-				"schema": [],
-				"typeProperties": {
-					"schema": "dbo.ModelDB",
-					"table": "FcstWind"
-				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/ln_jpdevfasbedb01_ModelDB')]"
-			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Dev_DB_ModelDB_FcstHydroRefined')]",
-			"type": "Microsoft.DataFactory/factories/datasets",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"linkedServiceName": {
-					"referenceName": "ln_jpdevfasbedb01_ModelDB",
-					"type": "LinkedServiceReference"
-				},
-				"annotations": [],
-				"type": "AzureSqlTable",
-				"schema": [],
-				"typeProperties": {
-					"schema": "dbo.ModelDB",
-					"table": "FcstHydroRefined"
-				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/ln_jpdevfasbedb01_ModelDB')]"
 			]
 		}
 	]

@@ -43,6 +43,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'ln_jpstgfasbedb01_ModelDBv3'"
 		},
+		"ln_jpstgpmsadb01__password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'ln_jpstgpmsadb01_'"
+		},
 		"Snowflake1_properties_typeProperties_database": {
 			"type": "string",
 			"defaultValue": "ANA00003"
@@ -147,6 +151,18 @@
 			"type": "string",
 			"defaultValue": "jeraadmin"
 		},
+		"ln_jpstgpmsadb01__properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "jpstgpmsadb01"
+		},
+		"ln_jpstgpmsadb01__properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "ModelDB"
+		},
+		"ln_jpstgpmsadb01__properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "jeraadmin"
+		},
 		"ep_jpstgpmsapdb01_properties_privateLinkResourceId": {
 			"type": "string",
 			"defaultValue": "/subscriptions/40d0025b-b057-42a4-9ed8-f038512f9cfc/resourceGroups/FAS-Stg/providers/Microsoft.Network/privateLinkServices/jpstgfasilb01-pls"
@@ -168,6 +184,12 @@
 		"pl_adf_fasbestgdata01_properties_groupId": {
 			"type": "string",
 			"defaultValue": "blob"
+		},
+		"pl_adf_fasbestgdata01_properties_fqdns": {
+			"type": "array",
+			"defaultValue": [
+				"fasbestgdata01.blob.core.windows.net"
+			]
 		},
 		"containerUri": {
 			"type": "string",
@@ -210,6 +232,9 @@
 					},
 					"ln_jpstgfasbedb01_ModelDBv3_password": {
 						"value": "[parameters('ln_jpstgfasbedb01_ModelDBv3_password')]"
+					},
+					"ln_jpstgpmsadb01__password": {
+						"value": "[parameters('ln_jpstgpmsadb01__password')]"
 					},
 					"ln_jpdevfasbedb01_ModelDB_properties_typeProperties_server": {
 						"value": "[parameters('ln_jpdevfasbedb01_ModelDB_properties_typeProperties_server')]"
@@ -255,6 +280,15 @@
 					},
 					"ln_jpstgfasbedb01_ModelDBv3_properties_typeProperties_userName": {
 						"value": "[parameters('ln_jpstgfasbedb01_ModelDBv3_properties_typeProperties_userName')]"
+					},
+					"ln_jpstgpmsadb01__properties_typeProperties_server": {
+						"value": "[parameters('ln_jpstgpmsadb01__properties_typeProperties_server')]"
+					},
+					"ln_jpstgpmsadb01__properties_typeProperties_database": {
+						"value": "[parameters('ln_jpstgpmsadb01__properties_typeProperties_database')]"
+					},
+					"ln_jpstgpmsadb01__properties_typeProperties_userName": {
+						"value": "[parameters('ln_jpstgpmsadb01__properties_typeProperties_userName')]"
 					}
 				}
 			},
@@ -373,24 +407,6 @@
 				"parameters": {
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
-					},
-					"Snowflake1_password": {
-						"value": "[parameters('Snowflake1_password')]"
-					},
-					"jphubmaterialtransferqa_connectionString": {
-						"value": "[parameters('jphubmaterialtransferqa_connectionString')]"
-					},
-					"Snowflake1_properties_typeProperties_database": {
-						"value": "[parameters('Snowflake1_properties_typeProperties_database')]"
-					},
-					"Snowflake1_properties_typeProperties_role": {
-						"value": "[parameters('Snowflake1_properties_typeProperties_role')]"
-					},
-					"Snowflake1_properties_typeProperties_host": {
-						"value": "[parameters('Snowflake1_properties_typeProperties_host')]"
-					},
-					"fasbestgsnowflake_sasUri": {
-						"value": "[parameters('fasbestgsnowflake_sasUri')]"
 					}
 				}
 			},
@@ -412,11 +428,29 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
+					"Snowflake1_password": {
+						"value": "[parameters('Snowflake1_password')]"
+					},
+					"jphubmaterialtransferqa_connectionString": {
+						"value": "[parameters('jphubmaterialtransferqa_connectionString')]"
+					},
 					"ln_JPSTGPMSAPDB01_ModelDB_password": {
 						"value": "[parameters('ln_JPSTGPMSAPDB01_ModelDB_password')]"
 					},
 					"ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite_password": {
 						"value": "[parameters('ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite_password')]"
+					},
+					"Snowflake1_properties_typeProperties_database": {
+						"value": "[parameters('Snowflake1_properties_typeProperties_database')]"
+					},
+					"Snowflake1_properties_typeProperties_role": {
+						"value": "[parameters('Snowflake1_properties_typeProperties_role')]"
+					},
+					"Snowflake1_properties_typeProperties_host": {
+						"value": "[parameters('Snowflake1_properties_typeProperties_host')]"
+					},
+					"fasbestgsnowflake_sasUri": {
+						"value": "[parameters('fasbestgsnowflake_sasUri')]"
 					},
 					"ln_AzureBlobStorage1_sasUri": {
 						"value": "[parameters('ln_AzureBlobStorage1_sasUri')]"
@@ -453,6 +487,9 @@
 					},
 					"pl_adf_fasbestgdata01_properties_groupId": {
 						"value": "[parameters('pl_adf_fasbestgdata01_properties_groupId')]"
+					},
+					"pl_adf_fasbestgdata01_properties_fqdns": {
+						"value": "[parameters('pl_adf_fasbestgdata01_properties_fqdns')]"
 					}
 				}
 			},
