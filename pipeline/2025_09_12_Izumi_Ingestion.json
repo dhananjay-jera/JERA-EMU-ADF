@@ -271,7 +271,7 @@
 				]
 			},
 			{
-				"name": "BE-STG-FwFsctCommodity",
+				"name": "BE-STG-FwFcstCommodity",
 				"type": "Copy",
 				"dependsOn": [
 					{
@@ -314,13 +314,13 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "ds_Fas_Stg_DB_ModelDB_FwFsctCommodity",
+						"referenceName": "ds_Fas_Stg_DB_ModelDB_FwFcstCommodity",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_FwFsctCommodity",
+						"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_FwFcstCommodity",
 						"type": "DatasetReference"
 					}
 				]
@@ -330,7 +330,7 @@
 				"type": "Copy",
 				"dependsOn": [
 					{
-						"activity": "BE-STG-FwFsctCommodity",
+						"activity": "BE-STG-FwFcstCommodity",
 						"dependencyConditions": [
 							"Succeeded"
 						]
