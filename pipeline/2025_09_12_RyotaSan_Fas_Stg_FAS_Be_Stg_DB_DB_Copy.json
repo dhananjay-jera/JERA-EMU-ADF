@@ -494,7 +494,14 @@
 			{
 				"name": "FcstHydroRefined_FcstHydroRefined",
 				"type": "Copy",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "FcstWind_FcstWind",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"policy": {
 					"timeout": "0.12:00:00",
 					"retry": 0,
