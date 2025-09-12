@@ -559,7 +559,7 @@
 				"type": "AzureSqlTable",
 				"schema": [],
 				"typeProperties": {
-					"schema": "dbo.ModelDB",
+					"schema": "dbo",
 					"table": "FcstHydroRefined"
 				}
 			},

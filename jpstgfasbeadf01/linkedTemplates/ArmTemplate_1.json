@@ -25,7 +25,7 @@
 				"type": "AzureSqlTable",
 				"schema": [],
 				"typeProperties": {
-					"schema": "dbo.ModelDB",
+					"schema": "dbo",
 					"table": "FcstPV"
 				}
 			},
@@ -44,7 +44,7 @@
 				"type": "AzureSqlTable",
 				"schema": [],
 				"typeProperties": {
-					"schema": "dbo.ModelDB",
+					"schema": "dbo",
 					"table": "FcstPumpedWater"
 				}
 			},
@@ -63,7 +63,7 @@
 				"type": "AzureSqlTable",
 				"schema": [],
 				"typeProperties": {
-					"schema": "dbo.ModelDB",
+					"schema": "dbo",
 					"table": "FcstWind"
 				}
 			},
