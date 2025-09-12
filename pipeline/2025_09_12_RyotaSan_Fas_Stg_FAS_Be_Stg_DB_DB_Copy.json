@@ -384,7 +384,14 @@
 			{
 				"name": "FcstPV_FcstPV",
 				"type": "Copy",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "FcstPumpedWater_FcstPumpedWater",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"policy": {
 					"timeout": "0.12:00:00",
 					"retry": 0,
@@ -400,9 +407,11 @@
 						"partitionOption": "None"
 					},
 					"sink": {
-						"type": "SqlServerSink",
+						"type": "AzureSqlSink",
 						"writeBehavior": "insert",
-						"sqlWriterUseTableLock": false
+						"sqlWriterUseTableLock": false,
+						"tableOption": "autoCreate",
+						"disableMetricsCollection": false
 					},
 					"enableStaging": false,
 					"translator": {
@@ -422,7 +431,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "ds_Fas_Stg_DB_ModelDB_FcstPV_new",
+						"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_FcstPV",
 						"type": "DatasetReference"
 					}
 				]
