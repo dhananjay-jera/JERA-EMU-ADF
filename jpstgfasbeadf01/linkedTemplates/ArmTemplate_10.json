@@ -1562,7 +1562,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_FcstInterConnection_fas_stg",
+								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_FcstInterConnection",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -1676,7 +1676,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_ForwardPrice_fas_stg",
+								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_ForwardPrice",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -1790,7 +1790,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_GenPlan_fas_stg",
+								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_GenPlan",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -1847,7 +1847,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_HistAvailability_fas_stg",
+								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_HistAvailability",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -1904,7 +1904,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_HistInterface_fas_stg",
+								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_HistInterface",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -1961,7 +1961,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_JepxAreaPrice_fas_stg",
+								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_JepxAreaPrice",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -2018,7 +2018,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_JepxSummary_fas_stg",
+								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_JepxSummary",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -2075,7 +2075,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_MasterGenV4_fas_stg",
+								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_MasterGenV4",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -2132,7 +2132,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_OcctoUnitGen_fas_stg",
+								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_OcctoUnitGen",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -2311,7 +2311,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_HistAvailability_fas_stg",
+								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_HistAvailability",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -2645,7 +2645,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_FcstInterConnection_fas_stg",
+								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_FcstInterConnection",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -2775,7 +2775,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_ForwardPrice_fas_stg",
+								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_ForwardPrice",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -2904,7 +2904,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_GenPlan_fas_stg",
+								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_GenPlan",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -2968,7 +2968,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_HistAvailability_fas_stg",
+								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_HistAvailability",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -3033,7 +3033,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_HistInterface_fas_stg",
+								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_HistInterface",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -3098,7 +3098,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_JepxAreaPrice_fas_stg",
+								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_JepxAreaPrice",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -3163,7 +3163,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_JepxSummary_fas_stg",
+								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_JepxSummary",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -3226,7 +3226,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_MasterGenV4_fas_stg",
+								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_MasterGenV4",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -3291,7 +3291,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_OcctoUnitGen_fas_stg",
+								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_OcctoUnitGen",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -4839,7 +4839,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_FcstBio_fas_stg",
+								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_FcstBio",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
