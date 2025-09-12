@@ -10886,7 +10886,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/2025_09_12_RyotaSan_Fas_Stg_FAS_Be_Stg_DB_DB_Copy_copy1')]",
+			"name": "[concat(parameters('factoryName'), '/2025_09_12_RyotaSan_Fas_Stg_FAS_Be_Dev_DB_DB_Copy')]",
 			"type": "Microsoft.DataFactory/factories/pipelines",
 			"apiVersion": "2018-06-01",
 			"properties": {
