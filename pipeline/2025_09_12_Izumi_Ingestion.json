@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "FwHistCommodity",
+				"name": "Dev_FwHistCommodity",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
