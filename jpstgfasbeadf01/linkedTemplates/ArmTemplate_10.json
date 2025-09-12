@@ -821,7 +821,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_FwHistCommodity",
+								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_FwFsctCommodity",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -935,7 +935,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_ForwardPrice_fas_stg",
+								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_ForwardPrice",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -3756,7 +3756,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_ForwardPrice_fas_stg",
+								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_ForwardPrice",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
