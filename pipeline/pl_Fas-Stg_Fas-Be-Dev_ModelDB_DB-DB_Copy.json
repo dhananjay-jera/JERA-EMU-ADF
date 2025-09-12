@@ -487,7 +487,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_FwHistCommodity_fas_stg",
+						"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_FwHistCommodity",
 						"type": "DatasetReference"
 					}
 				]
