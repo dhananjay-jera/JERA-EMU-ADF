@@ -203,7 +203,7 @@
 			"properties": {
 				"activities": [
 					{
-						"name": "BE-Dev_FwHistCommodity",
+						"name": "BE-STG_FwHistCommodity",
 						"type": "Copy",
 						"dependsOn": [],
 						"policy": {
@@ -246,235 +246,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Dev_DB_ModelDBv3_FwHistCommodity",
-								"type": "DatasetReference",
-								"parameters": {}
-							}
-						]
-					},
-					{
-						"name": "BE-STG_FwHistCommodity",
-						"type": "Copy",
-						"dependsOn": [
-							{
-								"activity": "BE-DEV-ForwardPrice",
-								"dependencyConditions": [
-									"Succeeded"
-								]
-							}
-						],
-						"policy": {
-							"timeout": "0.12:00:00",
-							"retry": 0,
-							"retryIntervalInSeconds": 30,
-							"secureOutput": false,
-							"secureInput": false
-						},
-						"userProperties": [],
-						"typeProperties": {
-							"source": {
-								"type": "SqlServerSource",
-								"queryTimeout": "02:00:00",
-								"partitionOption": "None"
-							},
-							"sink": {
-								"type": "AzureSqlSink",
-								"writeBehavior": "insert",
-								"sqlWriterUseTableLock": false,
-								"tableOption": "autoCreate",
-								"disableMetricsCollection": false
-							},
-							"enableStaging": false,
-							"translator": {
-								"type": "TabularTranslator",
-								"typeConversion": true,
-								"typeConversionSettings": {
-									"allowDataTruncation": true,
-									"treatBooleanAsNumber": false
-								}
-							}
-						},
-						"inputs": [
-							{
-								"referenceName": "ds_Fas_Stg_DB_ModelDB_FwHistCommodity",
-								"type": "DatasetReference",
-								"parameters": {}
-							}
-						],
-						"outputs": [
-							{
 								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_FwHistCommodity",
-								"type": "DatasetReference",
-								"parameters": {}
-							}
-						]
-					},
-					{
-						"name": "BE-DEV-FwFcstCommodity",
-						"type": "Copy",
-						"dependsOn": [
-							{
-								"activity": "BE-Dev_FwHistCommodity",
-								"dependencyConditions": [
-									"Succeeded"
-								]
-							}
-						],
-						"policy": {
-							"timeout": "0.12:00:00",
-							"retry": 0,
-							"retryIntervalInSeconds": 30,
-							"secureOutput": false,
-							"secureInput": false
-						},
-						"userProperties": [],
-						"typeProperties": {
-							"source": {
-								"type": "SqlServerSource",
-								"queryTimeout": "02:00:00",
-								"partitionOption": "None"
-							},
-							"sink": {
-								"type": "AzureSqlSink",
-								"writeBehavior": "insert",
-								"sqlWriterUseTableLock": false,
-								"tableOption": "autoCreate",
-								"disableMetricsCollection": false
-							},
-							"enableStaging": false,
-							"translator": {
-								"type": "TabularTranslator",
-								"typeConversion": true,
-								"typeConversionSettings": {
-									"allowDataTruncation": true,
-									"treatBooleanAsNumber": false
-								}
-							}
-						},
-						"inputs": [
-							{
-								"referenceName": "ds_Fas_Stg_DB_ModelDB_FwFcstCommodity",
-								"type": "DatasetReference",
-								"parameters": {}
-							}
-						],
-						"outputs": [
-							{
-								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_FwFcstCommodity",
-								"type": "DatasetReference",
-								"parameters": {}
-							}
-						]
-					},
-					{
-						"name": "BE-DEV-ForwardForex",
-						"type": "Copy",
-						"dependsOn": [
-							{
-								"activity": "BE-DEV-FwFcstCommodity",
-								"dependencyConditions": [
-									"Succeeded"
-								]
-							}
-						],
-						"policy": {
-							"timeout": "0.12:00:00",
-							"retry": 0,
-							"retryIntervalInSeconds": 30,
-							"secureOutput": false,
-							"secureInput": false
-						},
-						"userProperties": [],
-						"typeProperties": {
-							"source": {
-								"type": "SqlServerSource",
-								"queryTimeout": "02:00:00",
-								"partitionOption": "None"
-							},
-							"sink": {
-								"type": "AzureSqlSink",
-								"writeBehavior": "insert",
-								"sqlWriterUseTableLock": false,
-								"tableOption": "autoCreate",
-								"disableMetricsCollection": false
-							},
-							"enableStaging": false,
-							"translator": {
-								"type": "TabularTranslator",
-								"typeConversion": true,
-								"typeConversionSettings": {
-									"allowDataTruncation": true,
-									"treatBooleanAsNumber": false
-								}
-							}
-						},
-						"inputs": [
-							{
-								"referenceName": "ds_Fas_Stg_DB_ModelDB_ForwardForex",
-								"type": "DatasetReference",
-								"parameters": {}
-							}
-						],
-						"outputs": [
-							{
-								"referenceName": "dt_Fas_Be_Dev_DB_ModelDBv3_ForwardForex",
-								"type": "DatasetReference",
-								"parameters": {}
-							}
-						]
-					},
-					{
-						"name": "BE-DEV-ForwardPrice",
-						"type": "Copy",
-						"dependsOn": [
-							{
-								"activity": "BE-DEV-ForwardForex",
-								"dependencyConditions": [
-									"Succeeded"
-								]
-							}
-						],
-						"policy": {
-							"timeout": "0.12:00:00",
-							"retry": 0,
-							"retryIntervalInSeconds": 30,
-							"secureOutput": false,
-							"secureInput": false
-						},
-						"userProperties": [],
-						"typeProperties": {
-							"source": {
-								"type": "SqlServerSource",
-								"queryTimeout": "02:00:00",
-								"partitionOption": "None"
-							},
-							"sink": {
-								"type": "AzureSqlSink",
-								"writeBehavior": "insert",
-								"sqlWriterUseTableLock": false,
-								"tableOption": "autoCreate",
-								"disableMetricsCollection": false
-							},
-							"enableStaging": false,
-							"translator": {
-								"type": "TabularTranslator",
-								"typeConversion": true,
-								"typeConversionSettings": {
-									"allowDataTruncation": true,
-									"treatBooleanAsNumber": false
-								}
-							}
-						},
-						"inputs": [
-							{
-								"referenceName": "ds_Fas_Stg_DB_ModelDB_ForwardPrice",
-								"type": "DatasetReference",
-								"parameters": {}
-							}
-						],
-						"outputs": [
-							{
-								"referenceName": "dt_Fas_Be_Dev_DB_ModelDBv3_ForwardPrice",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -660,16 +432,12 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_FwHistCommodity')]",
-				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Dev_DB_ModelDBv3_FwHistCommodity')]",
 				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Stg_DB_ModelDB_FwHistCommodity')]",
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_FwFcstCommodity')]",
-				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Dev_DB_ModelDB_FwFcstCommodity')]",
-				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_ForwardForex')]",
-				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Dev_DB_ModelDBv3_ForwardForex')]",
-				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_ForwardPrice')]",
-				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Dev_DB_ModelDBv3_ForwardPrice')]",
 				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Stg_DB_ModelDB_FwFcstCommodity')]",
+				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_ForwardForex')]",
 				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Stg_DB_ModelDB_ForwardForex')]",
+				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_ForwardPrice')]",
 				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Stg_DB_ModelDB_ForwardPrice')]"
 			]
 		},
@@ -11769,63 +11537,6 @@
 						]
 					},
 					{
-						"name": "BE-STG_FwHistCommodity",
-						"type": "Copy",
-						"dependsOn": [
-							{
-								"activity": "BE-DEV-ForwardPrice",
-								"dependencyConditions": [
-									"Succeeded"
-								]
-							}
-						],
-						"policy": {
-							"timeout": "0.12:00:00",
-							"retry": 0,
-							"retryIntervalInSeconds": 30,
-							"secureOutput": false,
-							"secureInput": false
-						},
-						"userProperties": [],
-						"typeProperties": {
-							"source": {
-								"type": "SqlServerSource",
-								"queryTimeout": "02:00:00",
-								"partitionOption": "None"
-							},
-							"sink": {
-								"type": "AzureSqlSink",
-								"writeBehavior": "insert",
-								"sqlWriterUseTableLock": false,
-								"tableOption": "autoCreate",
-								"disableMetricsCollection": false
-							},
-							"enableStaging": false,
-							"translator": {
-								"type": "TabularTranslator",
-								"typeConversion": true,
-								"typeConversionSettings": {
-									"allowDataTruncation": true,
-									"treatBooleanAsNumber": false
-								}
-							}
-						},
-						"inputs": [
-							{
-								"referenceName": "ds_Fas_Stg_DB_ModelDB_FwHistCommodity",
-								"type": "DatasetReference",
-								"parameters": {}
-							}
-						],
-						"outputs": [
-							{
-								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_FwHistCommodity",
-								"type": "DatasetReference",
-								"parameters": {}
-							}
-						]
-					},
-					{
 						"name": "BE-DEV-FwFcstCommodity",
 						"type": "Copy",
 						"dependsOn": [
@@ -11995,177 +11706,6 @@
 								"parameters": {}
 							}
 						]
-					},
-					{
-						"name": "BE-STG-FwFcstCommodity",
-						"type": "Copy",
-						"dependsOn": [
-							{
-								"activity": "BE-STG_FwHistCommodity",
-								"dependencyConditions": [
-									"Succeeded"
-								]
-							}
-						],
-						"policy": {
-							"timeout": "0.12:00:00",
-							"retry": 0,
-							"retryIntervalInSeconds": 30,
-							"secureOutput": false,
-							"secureInput": false
-						},
-						"userProperties": [],
-						"typeProperties": {
-							"source": {
-								"type": "SqlServerSource",
-								"queryTimeout": "02:00:00",
-								"partitionOption": "None"
-							},
-							"sink": {
-								"type": "AzureSqlSink",
-								"writeBehavior": "insert",
-								"sqlWriterUseTableLock": false,
-								"tableOption": "autoCreate",
-								"disableMetricsCollection": false
-							},
-							"enableStaging": false,
-							"translator": {
-								"type": "TabularTranslator",
-								"typeConversion": true,
-								"typeConversionSettings": {
-									"allowDataTruncation": true,
-									"treatBooleanAsNumber": false
-								}
-							}
-						},
-						"inputs": [
-							{
-								"referenceName": "ds_Fas_Stg_DB_ModelDB_FwFcstCommodity",
-								"type": "DatasetReference",
-								"parameters": {}
-							}
-						],
-						"outputs": [
-							{
-								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_FwFcstCommodity",
-								"type": "DatasetReference",
-								"parameters": {}
-							}
-						]
-					},
-					{
-						"name": "BE-STG-ForwardForex",
-						"type": "Copy",
-						"dependsOn": [
-							{
-								"activity": "BE-STG-FwFcstCommodity",
-								"dependencyConditions": [
-									"Succeeded"
-								]
-							}
-						],
-						"policy": {
-							"timeout": "0.12:00:00",
-							"retry": 0,
-							"retryIntervalInSeconds": 30,
-							"secureOutput": false,
-							"secureInput": false
-						},
-						"userProperties": [],
-						"typeProperties": {
-							"source": {
-								"type": "SqlServerSource",
-								"queryTimeout": "02:00:00",
-								"partitionOption": "None"
-							},
-							"sink": {
-								"type": "AzureSqlSink",
-								"writeBehavior": "insert",
-								"sqlWriterUseTableLock": false,
-								"tableOption": "autoCreate",
-								"disableMetricsCollection": false
-							},
-							"enableStaging": false,
-							"translator": {
-								"type": "TabularTranslator",
-								"typeConversion": true,
-								"typeConversionSettings": {
-									"allowDataTruncation": true,
-									"treatBooleanAsNumber": false
-								}
-							}
-						},
-						"inputs": [
-							{
-								"referenceName": "ds_Fas_Stg_DB_ModelDB_ForwardForex",
-								"type": "DatasetReference",
-								"parameters": {}
-							}
-						],
-						"outputs": [
-							{
-								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_ForwardForex",
-								"type": "DatasetReference",
-								"parameters": {}
-							}
-						]
-					},
-					{
-						"name": "BE-STG-ForwardPrice",
-						"type": "Copy",
-						"dependsOn": [
-							{
-								"activity": "BE-STG-ForwardForex",
-								"dependencyConditions": [
-									"Succeeded"
-								]
-							}
-						],
-						"policy": {
-							"timeout": "0.12:00:00",
-							"retry": 0,
-							"retryIntervalInSeconds": 30,
-							"secureOutput": false,
-							"secureInput": false
-						},
-						"userProperties": [],
-						"typeProperties": {
-							"source": {
-								"type": "SqlServerSource",
-								"queryTimeout": "02:00:00",
-								"partitionOption": "None"
-							},
-							"sink": {
-								"type": "AzureSqlSink",
-								"writeBehavior": "insert",
-								"sqlWriterUseTableLock": false,
-								"tableOption": "autoCreate",
-								"disableMetricsCollection": false
-							},
-							"enableStaging": false,
-							"translator": {
-								"type": "TabularTranslator",
-								"typeConversion": true,
-								"typeConversionSettings": {
-									"allowDataTruncation": true,
-									"treatBooleanAsNumber": false
-								}
-							}
-						},
-						"inputs": [
-							{
-								"referenceName": "ds_Fas_Stg_DB_ModelDB_ForwardPrice",
-								"type": "DatasetReference",
-								"parameters": {}
-							}
-						],
-						"outputs": [
-							{
-								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_ForwardPrice",
-								"type": "DatasetReference",
-								"parameters": {}
-							}
-						]
 					}
 				],
 				"policy": {
@@ -12177,16 +11717,12 @@
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_FwHistCommodity')]",
 				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Dev_DB_ModelDBv3_FwHistCommodity')]",
-				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Stg_DB_ModelDB_FwHistCommodity')]",
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_FwFcstCommodity')]",
 				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Dev_DB_ModelDB_FwFcstCommodity')]",
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_ForwardForex')]",
 				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Dev_DB_ModelDBv3_ForwardForex')]",
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_ForwardPrice')]",
-				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Dev_DB_ModelDBv3_ForwardPrice')]",
-				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Stg_DB_ModelDB_FwFcstCommodity')]",
-				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Stg_DB_ModelDB_ForwardForex')]",
-				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Stg_DB_ModelDB_ForwardPrice')]"
+				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Dev_DB_ModelDBv3_ForwardPrice')]"
 			]
 		}
 	]
