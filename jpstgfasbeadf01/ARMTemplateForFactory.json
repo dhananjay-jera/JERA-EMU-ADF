@@ -461,7 +461,14 @@
 					{
 						"name": "BE-STG-FwFsctCommodity",
 						"type": "Copy",
-						"dependsOn": [],
+						"dependsOn": [
+							{
+								"activity": "BE-STG_FwHistCommodity",
+								"dependencyConditions": [
+									"Succeeded"
+								]
+							}
+						],
 						"policy": {
 							"timeout": "0.12:00:00",
 							"retry": 0,
@@ -502,7 +509,57 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_FwFsctCommodity",
+								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_FwHistCommodity",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						]
+					},
+					{
+						"name": "BE-STG-ForwardForex",
+						"type": "Copy",
+						"dependsOn": [],
+						"policy": {
+							"timeout": "0.12:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"source": {
+								"type": "SqlServerSource",
+								"queryTimeout": "02:00:00",
+								"partitionOption": "None"
+							},
+							"sink": {
+								"type": "AzureSqlSink",
+								"writeBehavior": "insert",
+								"sqlWriterUseTableLock": false,
+								"tableOption": "autoCreate",
+								"disableMetricsCollection": false
+							},
+							"enableStaging": false,
+							"translator": {
+								"type": "TabularTranslator",
+								"typeConversion": true,
+								"typeConversionSettings": {
+									"allowDataTruncation": true,
+									"treatBooleanAsNumber": false
+								}
+							}
+						},
+						"inputs": [
+							{
+								"referenceName": "ds_Fas_Stg_DB_ModelDB_ForwardForex",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						],
+						"outputs": [
+							{
+								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_ForwardForex",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -524,7 +581,7 @@
 				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Dev_DB_ModelDBv3_ForwardForex')]",
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_ForwardPrice')]",
 				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Dev_DB_ModelDBv3_ForwardPrice')]",
-				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Dev_DB_ModelDB_FwFsctCommodity')]"
+				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Stg_DB_ModelDB_ForwardForex')]"
 			]
 		},
 		{
@@ -1203,7 +1260,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_ForwardForex_fas_stg",
+								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_ForwardForex",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -1742,7 +1799,7 @@
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_FcstInterConnection')]",
 				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Dev_DB_ModelDB_FcstInterConnection_fas_stg')]",
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_ForwardForex')]",
-				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Dev_DB_ModelDB_ForwardForex_fas_stg')]",
+				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Dev_DB_ModelDB_ForwardForex')]",
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_ForwardPrice')]",
 				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Dev_DB_ModelDB_ForwardPrice_fas_stg')]",
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_FwHistCommodity')]",
@@ -2334,7 +2391,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_ForwardForex_fas_stg",
+								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_ForwardForex",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -2939,7 +2996,7 @@
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_FcstInterConnection')]",
 				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Dev_DB_ModelDB_FcstInterConnection_fas_stg')]",
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_ForwardForex')]",
-				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Dev_DB_ModelDB_ForwardForex_fas_stg')]",
+				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Dev_DB_ModelDB_ForwardForex')]",
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_ForwardPrice')]",
 				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Dev_DB_ModelDB_ForwardPrice_fas_stg')]",
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_FwHistCommodity')]",
@@ -3354,7 +3411,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_ForwardForex_fas_stg",
+								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_ForwardForex",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -4862,7 +4919,7 @@
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_FcstInterConnection')]",
 				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Stg_DB_ModelDB_FcstInterConnection_fas_stg')]",
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_ForwardForex')]",
-				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Stg_DB_ModelDB_ForwardForex_fas_stg')]",
+				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Stg_DB_ModelDB_ForwardForex')]",
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_ForwardPrice')]",
 				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Stg_DB_ModelDB_ForwardPrice_fas_stg')]",
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_FwHistCommodity')]",
@@ -8942,7 +8999,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Dev_DB_ModelDB_ForwardForex_fas_stg')]",
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Dev_DB_ModelDB_ForwardForex')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -9744,7 +9801,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDB_ForwardForex_fas_stg')]",
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDB_ForwardForex')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -10815,7 +10872,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDBv3_ForwardForex_fas_stg')]",
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDBv3_ForwardForex')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
