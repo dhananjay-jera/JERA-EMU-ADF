@@ -3642,7 +3642,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_FcstInterConnection_fas_stg",
+								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_FcstInterConnection",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -3870,7 +3870,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_GenPlan_fas_stg",
+								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_GenPlan",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -3927,7 +3927,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_HistAvailability_fas_stg",
+								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_HistAvailability",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -3984,7 +3984,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_HistInterface_fas_stg",
+								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_HistInterface",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -4041,7 +4041,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_JepxAreaPrice_fas_stg",
+								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_JepxAreaPrice",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -4098,7 +4098,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_JepxSummary_fas_stg",
+								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_JepxSummary",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -4155,7 +4155,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_MasterGenV4_fas_stg",
+								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_MasterGenV4",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -4212,7 +4212,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_OcctoUnitGen_fas_stg",
+								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_OcctoUnitGen",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -4383,7 +4383,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_FcstLoad_fas_stg",
+								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_FcstLoad",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -4440,7 +4440,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_FcstRenewable_fas_stg",
+								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_FcstRenewable",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -4497,7 +4497,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_RefJpnArea_fas_stg",
+								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_RefJpnArea",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -4554,7 +4554,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_HjksGenOutage_fas_stg",
+								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_HjksGenOutage",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -4611,7 +4611,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_HjksMapping_fas_stg",
+								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_HjksMapping",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -4668,7 +4668,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_FuelPriceFormula_fas_stg",
+								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_FuelPriceFormula",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -4725,7 +4725,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_FcstHydro_fas_stg",
+								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_FcstHydro",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -4896,7 +4896,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_PumpedStorage_fas_stg",
+								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_PumpedStorage",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -4953,7 +4953,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_RefJpnInterface_fas_stg",
+								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_RefJpnInterface",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -5010,7 +5010,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_GroupConstraint_fas_stg",
+								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_GroupConstraint",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -5067,7 +5067,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_UnitsInGroupConstraint_fas_stg",
+								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_UnitsInGroupConstraint",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -5124,7 +5124,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_HistInterfacePlan_fas_stg",
+								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_HistInterfacePlan",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -5181,7 +5181,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_JeraHistGeneration_fas_stg",
+								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_JeraHistGeneration",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -5360,7 +5360,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_HistAvailability_fas_stg",
+								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_HistAvailability",
 								"type": "DatasetReference",
 								"parameters": {}
 							}

@@ -13,7 +13,7 @@
 	},
 	"resources": [
 		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDB_JepxSummary_fas_stg')]",
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDB_JepxSummary')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -32,7 +32,7 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDB_JeraHistGeneration_fas_stg')]",
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDB_JeraHistGeneration')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -51,7 +51,7 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDB_MasterGenV4_fas_stg')]",
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDB_MasterGenV4')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -70,7 +70,7 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDB_OcctoMapping_fas_stg')]",
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDB_OcctoMapping')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -89,7 +89,7 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDB_OcctoUnitGen_fas_stg')]",
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDB_OcctoUnitGen')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -108,7 +108,7 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDB_PumpedStorage_fas_stg')]",
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDB_PumpedStorage')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -127,7 +127,7 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDB_RefJpnArea_fas_stg')]",
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDB_RefJpnArea')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -146,7 +146,7 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDB_RefJpnInterface_fas_stg')]",
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDB_RefJpnInterface')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -165,7 +165,7 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDB_RenewableCapacity_fas_stg')]",
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDB_RenewableCapacity')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -184,7 +184,7 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDB_UnitsInGroupConstraint_fas_stg')]",
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDB_UnitsInGroupConstraint')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -203,7 +203,7 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDB_test_fas_stg')]",
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDB_test')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {

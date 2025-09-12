@@ -63,7 +63,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_FcstPumpedWater_fas_stg",
+								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_FcstPumpedWater",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -120,7 +120,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_FwFcstCommodity_fas_stg",
+								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_FwFcstCommodity",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -177,7 +177,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_OcctoMapping_fas_stg",
+								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_OcctoMapping",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -234,7 +234,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_RenewableCapacity_fas_stg",
+								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_RenewableCapacity",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -299,7 +299,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_test_fas_stg",
+								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_test",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -371,7 +371,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_GenPlan_fas_stg",
+								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_GenPlan",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -444,7 +444,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_GenPlan_fas_stg",
+								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_GenPlan",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
