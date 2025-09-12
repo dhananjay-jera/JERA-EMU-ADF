@@ -1,5 +1,5 @@
 {
-	"name": "dt_Fas_Be_Stg_DB_ModelDB_20250703_HistAvailability_fas_stg",
+	"name": "dt_Fas_Be_Stg_DB_ModelDB_20250703_HistAvailability",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite",
