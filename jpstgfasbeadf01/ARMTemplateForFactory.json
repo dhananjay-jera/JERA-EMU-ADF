@@ -8360,7 +8360,7 @@
 				"type": "AzureSqlTable",
 				"schema": [],
 				"typeProperties": {
-					"schema": "dbo.ModelDBv3",
+					"schema": "dbo",
 					"table": "FwFcstCommodity"
 				}
 			},
@@ -8591,7 +8591,7 @@
 				"type": "AzureSqlTable",
 				"schema": [],
 				"typeProperties": {
-					"schema": "dbo.ModelDBv3",
+					"schema": "dbo",
 					"table": "ForwardForex"
 				}
 			},
@@ -8612,7 +8612,7 @@
 				"type": "AzureSqlTable",
 				"schema": [],
 				"typeProperties": {
-					"schema": "dbo.ModelDBv3",
+					"schema": "dbo",
 					"table": "ForwardPrice"
 				}
 			},
@@ -8654,7 +8654,7 @@
 				"type": "AzureSqlTable",
 				"schema": [],
 				"typeProperties": {
-					"schema": "dbo.ModelDBv3",
+					"schema": "dbo",
 					"table": "FwHistCommodity"
 				}
 			},
