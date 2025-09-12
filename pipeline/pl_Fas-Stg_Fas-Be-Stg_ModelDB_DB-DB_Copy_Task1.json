@@ -46,7 +46,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_FcstPumpedWater_fas_stg",
+						"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_FcstPumpedWater",
 						"type": "DatasetReference"
 					}
 				]
@@ -101,7 +101,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_FwFcstCommodity_fas_stg",
+						"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_FwFcstCommodity",
 						"type": "DatasetReference"
 					}
 				]
@@ -156,7 +156,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_OcctoMapping_fas_stg",
+						"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_OcctoMapping",
 						"type": "DatasetReference"
 					}
 				]
@@ -211,7 +211,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_RenewableCapacity_fas_stg",
+						"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_RenewableCapacity",
 						"type": "DatasetReference"
 					}
 				]

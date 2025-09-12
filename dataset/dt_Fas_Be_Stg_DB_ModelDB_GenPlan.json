@@ -1,5 +1,5 @@
 {
-	"name": "dt_Fas_Be_Stg_DB_ModelDB_GenPlan_fas_stg",
+	"name": "dt_Fas_Be_Stg_DB_ModelDB_GenPlan",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ln_jpstgfasbedb01_ModelDB",
