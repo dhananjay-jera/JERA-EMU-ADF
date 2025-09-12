@@ -249,7 +249,7 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDB_20250703_HistAvailability_fas_stg')]",
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDB_20250703_HistAvailability')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -1283,7 +1283,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_FcstAvailability_fas_stg",
+								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_FcstAvailability",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -1341,7 +1341,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_ActualSpotPrice_fas_stg",
+								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_ActualSpotPrice",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -1391,7 +1391,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_ActualValue_fas_stg",
+								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_ActualValue",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -1448,7 +1448,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_ActualValueHydroRefined_fas_stg",
+								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_ActualValueHydroRefined",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -1505,7 +1505,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_FcstDemand_fas_stg",
+								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_FcstDemand",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -2204,7 +2204,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_FcstAvailability_fas_stg",
+								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_FcstAvailability",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -2254,7 +2254,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_ActualValue_fas_stg",
+								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_ActualValue",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -2391,7 +2391,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_FcstAvailability_fas_stg",
+								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_FcstAvailability",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -2450,7 +2450,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_ActualSpotPrice_fas_stg",
+								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_ActualSpotPrice",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -2515,7 +2515,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_ActualValueHydroRefined_fas_stg",
+								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_ActualValueHydroRefined",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -2580,7 +2580,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_FcstDemand_fas_stg",
+								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_FcstDemand",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -3363,7 +3363,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_FcstAvailability_fas_stg",
+								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_FcstAvailability",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -3421,7 +3421,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_ActualSpotPrice_fas_stg",
+								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_ActualSpotPrice",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -3528,7 +3528,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_ActualValueHydroRefined_fas_stg",
+								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_ActualValueHydroRefined",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -3585,7 +3585,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_FcstDemand_fas_stg",
+								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_FcstDemand",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -4269,7 +4269,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_CommodityDef_fas_stg",
+								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_CommodityDef",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -4326,7 +4326,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_Conversion_fas_stg",
+								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_Conversion",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -4782,7 +4782,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_FcstGeo_fas_stg",
+								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_FcstGeo",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -5253,7 +5253,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_FcstAvailability_fas_stg",
+								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_FcstAvailability",
 								"type": "DatasetReference",
 								"parameters": {}
 							}

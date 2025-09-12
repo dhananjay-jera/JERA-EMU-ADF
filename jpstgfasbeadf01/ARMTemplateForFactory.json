@@ -990,7 +990,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_FcstAvailability_fas_stg",
+								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_FcstAvailability",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -1048,7 +1048,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_ActualSpotPrice_fas_stg",
+								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_ActualSpotPrice",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -1098,7 +1098,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_ActualValue_fas_stg",
+								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_ActualValue",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -1155,7 +1155,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_ActualValueHydroRefined_fas_stg",
+								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_ActualValueHydroRefined",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -1212,7 +1212,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_FcstDemand_fas_stg",
+								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_FcstDemand",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -1853,15 +1853,15 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_FcstAvailability')]",
-				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Dev_DB_ModelDB_FcstAvailability_fas_stg')]",
+				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Dev_DB_ModelDB_FcstAvailability')]",
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_ActualSpotPrice')]",
-				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Dev_DB_ModelDB_ActualSpotPrice_fas_stg')]",
+				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Dev_DB_ModelDB_ActualSpotPrice')]",
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_ActualValue')]",
-				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Dev_DB_ModelDB_ActualValue_fas_stg')]",
+				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Dev_DB_ModelDB_ActualValue')]",
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_ActualValueHydroRefined')]",
-				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Dev_DB_ModelDB_ActualValueHydroRefined_fas_stg')]",
+				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Dev_DB_ModelDB_ActualValueHydroRefined')]",
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_FcstDemand')]",
-				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Dev_DB_ModelDB_FcstDemand_fas_stg')]",
+				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Dev_DB_ModelDB_FcstDemand')]",
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_FcstInterConnection')]",
 				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Dev_DB_ModelDB_FcstInterConnection')]",
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_ForwardForex')]",
@@ -1944,7 +1944,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_FcstAvailability_fas_stg",
+								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_FcstAvailability",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -1994,7 +1994,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_ActualValue_fas_stg",
+								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_ActualValue",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -2065,9 +2065,9 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_FcstAvailability')]",
-				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Dev_DB_ModelDB_FcstAvailability_fas_stg')]",
+				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Dev_DB_ModelDB_FcstAvailability')]",
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_ActualValue')]",
-				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Dev_DB_ModelDB_ActualValue_fas_stg')]",
+				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Dev_DB_ModelDB_ActualValue')]",
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_HistAvailability')]",
 				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Dev_DB_ModelDB_HistAvailability')]"
 			]
@@ -2138,7 +2138,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_FcstAvailability_fas_stg",
+								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_FcstAvailability",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -2197,7 +2197,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_ActualSpotPrice_fas_stg",
+								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_ActualSpotPrice",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -2262,7 +2262,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_ActualValueHydroRefined_fas_stg",
+								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_ActualValueHydroRefined",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -2327,7 +2327,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_FcstDemand_fas_stg",
+								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_FcstDemand",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -3052,13 +3052,13 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_FcstAvailability')]",
-				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Dev_DB_ModelDB_FcstAvailability_fas_stg')]",
+				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Dev_DB_ModelDB_FcstAvailability')]",
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_ActualSpotPrice')]",
-				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Dev_DB_ModelDB_ActualSpotPrice_fas_stg')]",
+				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Dev_DB_ModelDB_ActualSpotPrice')]",
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_ActualValueHydroRefined')]",
-				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Dev_DB_ModelDB_ActualValueHydroRefined_fas_stg')]",
+				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Dev_DB_ModelDB_ActualValueHydroRefined')]",
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_FcstDemand')]",
-				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Dev_DB_ModelDB_FcstDemand_fas_stg')]",
+				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Dev_DB_ModelDB_FcstDemand')]",
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_FcstInterConnection')]",
 				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Dev_DB_ModelDB_FcstInterConnection')]",
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_ForwardForex')]",
@@ -3141,7 +3141,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_FcstAvailability_fas_stg",
+								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_FcstAvailability",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -3199,7 +3199,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_ActualSpotPrice_fas_stg",
+								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_ActualSpotPrice",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -3306,7 +3306,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_ActualValueHydroRefined_fas_stg",
+								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_ActualValueHydroRefined",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -3363,7 +3363,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_FcstDemand_fas_stg",
+								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_FcstDemand",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -4047,7 +4047,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_CommodityDef_fas_stg",
+								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_CommodityDef",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -4104,7 +4104,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_Conversion_fas_stg",
+								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_Conversion",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -4560,7 +4560,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_FcstGeo_fas_stg",
+								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_FcstGeo",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -4973,15 +4973,15 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_FcstAvailability')]",
-				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Stg_DB_ModelDB_FcstAvailability_fas_stg')]",
+				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Stg_DB_ModelDB_FcstAvailability')]",
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_ActualSpotPrice')]",
-				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Stg_DB_ModelDB_ActualSpotPrice_fas_stg')]",
+				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Stg_DB_ModelDB_ActualSpotPrice')]",
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_ActualValue')]",
 				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Stg_DB_ModelDB_ActualValue_fas_stg')]",
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_ActualValueHydroRefined')]",
-				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Stg_DB_ModelDB_ActualValueHydroRefined_fas_stg')]",
+				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Stg_DB_ModelDB_ActualValueHydroRefined')]",
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_FcstDemand')]",
-				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Stg_DB_ModelDB_FcstDemand_fas_stg')]",
+				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Stg_DB_ModelDB_FcstDemand')]",
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_FcstInterConnection')]",
 				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Stg_DB_ModelDB_FcstInterConnection_fas_stg')]",
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_ForwardForex')]",
@@ -5005,9 +5005,9 @@
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_OcctoUnitGen')]",
 				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Stg_DB_ModelDB_OcctoUnitGen_fas_stg')]",
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_CommodityDef')]",
-				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Stg_DB_ModelDB_CommodityDef_fas_stg')]",
+				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Stg_DB_ModelDB_CommodityDef')]",
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_Conversion')]",
-				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Stg_DB_ModelDB_Conversion_fas_stg')]",
+				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Stg_DB_ModelDB_Conversion')]",
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_FcstLoad')]",
 				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Stg_DB_ModelDB_FcstLoad_fas_stg')]",
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_FcstRenewable')]",
@@ -5023,7 +5023,7 @@
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_FcstHydro')]",
 				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Stg_DB_ModelDB_FcstHydro_fas_stg')]",
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_FcstGeo')]",
-				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Stg_DB_ModelDB_FcstGeo_fas_stg')]",
+				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Stg_DB_ModelDB_FcstGeo')]",
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_FcstBio')]",
 				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Stg_DB_ModelDB_FcstBio')]",
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_PumpedStorage')]",
@@ -5098,7 +5098,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_FcstAvailability_fas_stg",
+								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_FcstAvailability",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -5219,7 +5219,7 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_FcstAvailability')]",
-				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Stg_DB_ModelDB_FcstAvailability_fas_stg')]",
+				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Stg_DB_ModelDB_FcstAvailability')]",
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_ActualValue')]",
 				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Stg_DB_ModelDB_ActualValue_fas_stg')]",
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_HistAvailability')]",
@@ -8939,7 +8939,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Dev_DB_ModelDB_ActualSpotPrice_fas_stg')]",
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Dev_DB_ModelDB_ActualSpotPrice')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -8960,7 +8960,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Dev_DB_ModelDB_ActualValueHydroRefined_fas_stg')]",
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Dev_DB_ModelDB_ActualValueHydroRefined')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -8981,7 +8981,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Dev_DB_ModelDB_ActualValue_fas_stg')]",
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Dev_DB_ModelDB_ActualValue')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -9002,7 +9002,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Dev_DB_ModelDB_FcstAvailability_fas_stg')]",
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Dev_DB_ModelDB_FcstAvailability')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -9023,7 +9023,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Dev_DB_ModelDB_FcstDemand_fas_stg')]",
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Dev_DB_ModelDB_FcstDemand')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -9401,7 +9401,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Dev_DB_ModelDBv3_HistAvailability_fas_stg')]",
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Dev_DB_ModelDBv3_HistAvailability')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -9481,7 +9481,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDB_20250703_HistAvailability_fas_stg')]",
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDB_20250703_HistAvailability')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -9573,7 +9573,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDB_ActualSpotPrice_fas_stg')]",
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDB_ActualSpotPrice')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -9594,7 +9594,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDB_ActualValueHydroRefined_fas_stg')]",
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDB_ActualValueHydroRefined')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -9636,7 +9636,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDB_CommodityDef_fas_stg')]",
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDB_CommodityDef')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -9657,7 +9657,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDB_Conversion_fas_stg')]",
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDB_Conversion')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -9678,7 +9678,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDB_FcstAvailability_fas_stg')]",
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDB_FcstAvailability')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -9720,7 +9720,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDB_FcstDemand_fas_stg')]",
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDB_FcstDemand')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -9741,7 +9741,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDB_FcstGeo_fas_stg')]",
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDB_FcstGeo')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -12182,7 +12182,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_FcstAvailability_fas_stg",
+								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_FcstAvailability",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -12240,7 +12240,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_ActualSpotPrice_fas_stg",
+								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_ActualSpotPrice",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -12347,7 +12347,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_ActualValueHydroRefined_fas_stg",
+								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_ActualValueHydroRefined",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -12397,7 +12397,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_FcstDemand_fas_stg",
+								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_FcstDemand",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -13038,15 +13038,15 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_FcstAvailability')]",
-				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Dev_DB_ModelDB_FcstAvailability_fas_stg')]",
+				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Dev_DB_ModelDB_FcstAvailability')]",
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_ActualSpotPrice')]",
-				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Dev_DB_ModelDB_ActualSpotPrice_fas_stg')]",
+				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Dev_DB_ModelDB_ActualSpotPrice')]",
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_FcstBio')]",
 				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Stg_DB_ModelDB_FcstBio')]",
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_ActualValueHydroRefined')]",
-				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Dev_DB_ModelDB_ActualValueHydroRefined_fas_stg')]",
+				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Dev_DB_ModelDB_ActualValueHydroRefined')]",
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_FcstDemand')]",
-				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Dev_DB_ModelDB_FcstDemand_fas_stg')]",
+				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Dev_DB_ModelDB_FcstDemand')]",
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_FcstInterConnection')]",
 				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Dev_DB_ModelDB_FcstInterConnection')]",
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_ForwardForex')]",
