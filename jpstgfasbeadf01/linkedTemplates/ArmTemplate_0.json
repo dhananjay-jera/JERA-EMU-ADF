@@ -475,7 +475,7 @@
 				"type": "AzureSqlTable",
 				"schema": [],
 				"typeProperties": {
-					"schema": "dbo.ModelDB",
+					"schema": "dbo",
 					"table": "FcstBio"
 				}
 			},
@@ -517,7 +517,7 @@
 				"type": "AzureSqlTable",
 				"schema": [],
 				"typeProperties": {
-					"schema": "dbo.ModelDB",
+					"schema": "dbo",
 					"table": "FcstGeo"
 				}
 			},
@@ -538,7 +538,7 @@
 				"type": "AzureSqlTable",
 				"schema": [],
 				"typeProperties": {
-					"schema": "dbo.ModelDB",
+					"schema": "dbo",
 					"table": "FcstHydro"
 				}
 			},
