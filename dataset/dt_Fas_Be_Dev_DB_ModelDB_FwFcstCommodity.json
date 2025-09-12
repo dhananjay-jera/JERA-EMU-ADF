@@ -9,7 +9,7 @@
 		"type": "AzureSqlTable",
 		"schema": [],
 		"typeProperties": {
-			"schema": "dbo.ModelDBv3",
+			"schema": "dbo",
 			"table": "FwFcstCommodity"
 		}
 	},
