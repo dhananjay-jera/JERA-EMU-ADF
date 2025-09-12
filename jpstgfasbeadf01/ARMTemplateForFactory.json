@@ -385,13 +385,13 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/pipeline1')]",
+			"name": "[concat(parameters('factoryName'), '/2025_09_12_Izumi_Ingestion')]",
 			"type": "Microsoft.DataFactory/factories/pipelines",
 			"apiVersion": "2018-06-01",
 			"properties": {
 				"activities": [
 					{
-						"name": "Snow1",
+						"name": "FwHistCommodity",
 						"type": "Copy",
 						"dependsOn": [],
 						"policy": {
@@ -409,16 +409,9 @@
 								"partitionOption": "None"
 							},
 							"sink": {
-								"type": "DelimitedTextSink",
-								"storeSettings": {
-									"type": "AzureBlobStorageWriteSettings",
-									"copyBehavior": "FlattenHierarchy"
-								},
-								"formatSettings": {
-									"type": "DelimitedTextWriteSettings",
-									"quoteAllText": true,
-									"fileExtension": ".txt"
-								}
+								"type": "AzureSqlSink",
+								"writeBehavior": "insert",
+								"sqlWriterUseTableLock": false
 							},
 							"enableStaging": false,
 							"translator": {
@@ -432,14 +425,14 @@
 						},
 						"inputs": [
 							{
-								"referenceName": "ds_Fas_Stg_DB_ModelDB_ActualSpotPrice",
+								"referenceName": "ds_Fas_Stg_DB_ModelDB_FwHistCommodity",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Stg_Blob_HistAvaliablity_Snow_ANA3",
+								"referenceName": "dt_Fas_Be_Dev_DB_ModelDBv3_FwHistCommodity",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -452,8 +445,8 @@
 				"annotations": []
 			},
 			"dependsOn": [
-				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_ActualSpotPrice')]",
-				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Stg_Blob_HistAvaliablity_Snow_ANA3')]"
+				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_FwHistCommodity')]",
+				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Dev_DB_ModelDBv3_FwHistCommodity')]"
 			]
 		},
 		{
@@ -1036,7 +1029,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_FwHistCommodity_fas_stg",
+								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_FwHistCommodity",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -1465,7 +1458,7 @@
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_ForwardPrice')]",
 				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Dev_DB_ModelDB_ForwardPrice_fas_stg')]",
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_FwHistCommodity')]",
-				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Dev_DB_ModelDB_FwHistCommodity_fas_stg')]",
+				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Dev_DB_ModelDB_FwHistCommodity')]",
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_GenPlan')]",
 				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Dev_DB_ModelDB_GenPlan_fas_stg')]",
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_HistAvailability')]",
@@ -2182,7 +2175,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_FwHistCommodity_fas_stg",
+								"referenceName": "dt_Fas_Be_Dev_DB_ModelDB_FwHistCommodity",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -2662,7 +2655,7 @@
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_ForwardPrice')]",
 				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Dev_DB_ModelDB_ForwardPrice_fas_stg')]",
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_FwHistCommodity')]",
-				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Dev_DB_ModelDB_FwHistCommodity_fas_stg')]",
+				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Dev_DB_ModelDB_FwHistCommodity')]",
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_GenPlan')]",
 				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Dev_DB_ModelDB_GenPlan_fas_stg')]",
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_HistAvailability')]",
@@ -3187,7 +3180,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_FwHistCommodity_fas_stg",
+								"referenceName": "dt_Fas_Be_Stg_DB_ModelDB_FwHistCommodity",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -4585,7 +4578,7 @@
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_ForwardPrice')]",
 				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Stg_DB_ModelDB_ForwardPrice_fas_stg')]",
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_FwHistCommodity')]",
-				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Stg_DB_ModelDB_FwHistCommodity_fas_stg')]",
+				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Stg_DB_ModelDB_FwHistCommodity')]",
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_GenPlan')]",
 				"[concat(variables('factoryId'), '/datasets/dt_Fas_Be_Stg_DB_ModelDB_GenPlan_fas_stg')]",
 				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_HistAvailability')]",
@@ -8654,7 +8647,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Dev_DB_ModelDB_FwHistCommodity_fas_stg')]",
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Dev_DB_ModelDB_FwHistCommodity')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -9372,7 +9365,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDB_FwHistCommodity_fas_stg')]",
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDB_FwHistCommodity')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -10422,7 +10415,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDBv3_FwHistCommodity_fas_stg')]",
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDBv3_FwHistCommodity')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -10435,7 +10428,7 @@
 				"schema": [],
 				"typeProperties": {
 					"schema": "dbo.ModelDBv3",
-					"table": "FwHistCommodity_fas_stg"
+					"table": "FwHistCommodity"
 				}
 			},
 			"dependsOn": [
@@ -11511,7 +11504,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Dev_DB_ModelDBv3_FwHistCommodity_fas_stg')]",
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Dev_DB_ModelDBv3_FwHistCommodity')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
