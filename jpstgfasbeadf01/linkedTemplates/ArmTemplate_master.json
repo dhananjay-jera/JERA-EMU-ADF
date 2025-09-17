@@ -407,6 +407,18 @@
 				"parameters": {
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
+					},
+					"Snowflake1_password": {
+						"value": "[parameters('Snowflake1_password')]"
+					},
+					"Snowflake1_properties_typeProperties_database": {
+						"value": "[parameters('Snowflake1_properties_typeProperties_database')]"
+					},
+					"Snowflake1_properties_typeProperties_role": {
+						"value": "[parameters('Snowflake1_properties_typeProperties_role')]"
+					},
+					"Snowflake1_properties_typeProperties_host": {
+						"value": "[parameters('Snowflake1_properties_typeProperties_host')]"
 					}
 				}
 			},
@@ -428,9 +440,6 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
-					"Snowflake1_password": {
-						"value": "[parameters('Snowflake1_password')]"
-					},
 					"jphubmaterialtransferqa_connectionString": {
 						"value": "[parameters('jphubmaterialtransferqa_connectionString')]"
 					},
@@ -439,15 +448,6 @@
 					},
 					"ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite_password": {
 						"value": "[parameters('ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite_password')]"
-					},
-					"Snowflake1_properties_typeProperties_database": {
-						"value": "[parameters('Snowflake1_properties_typeProperties_database')]"
-					},
-					"Snowflake1_properties_typeProperties_role": {
-						"value": "[parameters('Snowflake1_properties_typeProperties_role')]"
-					},
-					"Snowflake1_properties_typeProperties_host": {
-						"value": "[parameters('Snowflake1_properties_typeProperties_host')]"
 					},
 					"fasbestgsnowflake_sasUri": {
 						"value": "[parameters('fasbestgsnowflake_sasUri')]"
@@ -575,6 +575,26 @@
 			},
 			"dependsOn": [
 				"[resourceId('Microsoft.Resources/deployments', 'jpstgfasbeadf01_ArmTemplate_10')]"
+			]
+		},
+		{
+			"name": "jpstgfasbeadf01_ArmTemplate_12",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_12.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'jpstgfasbeadf01_ArmTemplate_11')]"
 			]
 		}
 	]
