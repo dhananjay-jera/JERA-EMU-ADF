@@ -1,0 +1,24 @@
+{
+	"name": "SN_ANA3_SYSTEM_MONITOR",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"description": "Connecting to Snowflakes ANA00003 database, Schema is SYSTEM_MONITOR",
+		"annotations": [],
+		"type": "SnowflakeV2",
+		"typeProperties": {
+			"authenticationType": "Basic",
+			"accountIdentifier": "JERA_ANALSYS",
+			"user": "ANA00003PRODFAS_Stg",
+			"database": "ANA00003",
+			"warehouse": "ANA00003_PROD_WH",
+			"role": "ANA00003_PROD_ADMIN",
+			"host": "jera-analysis.privatelink.snowflakecomputing.com",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI1MTk0NjQ5YS04NDI0LTQ5NTMtOTBhZC1mZTgwYmQ0NGRlNTEiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"version": "1.1",
+		"connectVia": {
+			"referenceName": "IR-jpstgpmsapdb01",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
