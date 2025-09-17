@@ -3544,11 +3544,11 @@
 			"properties": {
 				"activities": [
 					{
-						"name": "BE-Dev_FwHistCommodity",
+						"name": "FwHistCommodity_FwHistCommodity",
 						"type": "Copy",
 						"dependsOn": [
 							{
-								"activity": "BE-DEV-FwFcstCommodity",
+								"activity": "FwFcstCommodity_FwFcstCommodity",
 								"dependencyConditions": [
 									"Succeeded"
 								]
@@ -3601,11 +3601,11 @@
 						]
 					},
 					{
-						"name": "BE-DEV-FwFcstCommodity",
+						"name": "FwFcstCommodity_FwFcstCommodity",
 						"type": "Copy",
 						"dependsOn": [
 							{
-								"activity": "BE-DEV-ForwardPrice",
+								"activity": "ForwardPrice_ForwardPrice",
 								"dependencyConditions": [
 									"Succeeded"
 								]
@@ -3658,7 +3658,7 @@
 						]
 					},
 					{
-						"name": "BE-DEV-ForwardForex",
+						"name": "ForwardForex_ForwardForex",
 						"type": "Copy",
 						"dependsOn": [
 							{
@@ -3715,11 +3715,11 @@
 						]
 					},
 					{
-						"name": "BE-DEV-ForwardPrice",
+						"name": "ForwardPrice_ForwardPrice",
 						"type": "Copy",
 						"dependsOn": [
 							{
-								"activity": "BE-DEV-ForwardForex",
+								"activity": "ForwardForex_ForwardForex",
 								"dependencyConditions": [
 									"Succeeded"
 								]
@@ -4209,7 +4209,7 @@
 						"type": "Copy",
 						"dependsOn": [
 							{
-								"activity": "BE-Dev_FwHistCommodity",
+								"activity": "FwHistCommodity_FwHistCommodity",
 								"dependencyConditions": [
 									"Succeeded"
 								]
