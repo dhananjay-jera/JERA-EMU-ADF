@@ -1,0 +1,17 @@
+{
+	"name": "dt_Fas_Be_Dev_DB_ModelDBv3_OcctoUnitGen",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ln_jpdevfasbedb01_ModelDBv3",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "OcctoUnitGen"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
