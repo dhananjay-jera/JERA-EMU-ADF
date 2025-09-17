@@ -1,0 +1,48 @@
+{
+	"name": "ds_snow_ANA3_SystemMonitor",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Snowflake1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SnowflakeV2Table",
+		"schema": [
+			{
+				"name": "INDICATORID",
+				"type": "NUMBER",
+				"precision": 38,
+				"scale": 0
+			},
+			{
+				"name": "PRICEINDEXID",
+				"type": "VARCHAR"
+			},
+			{
+				"name": "PRICEDATE",
+				"type": "DATE"
+			},
+			{
+				"name": "DELIVDATE",
+				"type": "DATE"
+			},
+			{
+				"name": "PRICEAMOUNT",
+				"type": "FLOAT"
+			},
+			{
+				"name": "EXCHRATEMMBTUAMOUNT",
+				"type": "FLOAT"
+			},
+			{
+				"name": "INSERTAT",
+				"type": "VARCHAR"
+			}
+		],
+		"typeProperties": {
+			"schema": "TEST",
+			"table": "ACTUAL_SPOT_PRICE_SQL"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
