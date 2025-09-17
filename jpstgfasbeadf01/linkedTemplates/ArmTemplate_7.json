@@ -7,29 +7,9 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "jpstgfasbeadf01"
 		},
-		"ln_JPSTGPMSAPDB01_ModelDB_password": {
-			"type": "secureString",
-			"metadata": "Secure string for 'password' of 'ln_JPSTGPMSAPDB01_ModelDB'"
-		},
 		"ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite_password": {
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite'"
-		},
-		"ln_AzureBlobStorage1_sasUri": {
-			"type": "secureString",
-			"metadata": "Secure string for 'sasUri' of 'ln_AzureBlobStorage1'"
-		},
-		"ln_JPSTGPMSAPDB01_ModelDB_properties_typeProperties_server": {
-			"type": "string",
-			"defaultValue": "JPSTGPMSAPDB01"
-		},
-		"ln_JPSTGPMSAPDB01_ModelDB_properties_typeProperties_database": {
-			"type": "string",
-			"defaultValue": "ModelDB"
-		},
-		"ln_JPSTGPMSAPDB01_ModelDB_properties_typeProperties_userName": {
-			"type": "string",
-			"defaultValue": "fasreadonly"
 		},
 		"ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite_properties_typeProperties_server": {
 			"type": "string",
@@ -76,49 +56,6 @@
 		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
 	},
 	"resources": [
-		{
-			"name": "[concat(parameters('factoryName'), '/ln_AzureBlobStorage1')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "AzureBlobStorage",
-				"typeProperties": {
-					"sasUri": "[parameters('ln_AzureBlobStorage1_sasUri')]"
-				},
-				"connectVia": {
-					"referenceName": "IR-jpstgpmsapdb01",
-					"type": "IntegrationRuntimeReference"
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/ln_JPSTGPMSAPDB01_ModelDB')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "SqlServer",
-				"typeProperties": {
-					"server": "[parameters('ln_JPSTGPMSAPDB01_ModelDB_properties_typeProperties_server')]",
-					"database": "[parameters('ln_JPSTGPMSAPDB01_ModelDB_properties_typeProperties_database')]",
-					"encrypt": "mandatory",
-					"trustServerCertificate": true,
-					"authenticationType": "SQL",
-					"userName": "[parameters('ln_JPSTGPMSAPDB01_ModelDB_properties_typeProperties_userName')]",
-					"password": {
-						"type": "SecureString",
-						"value": "[parameters('ln_JPSTGPMSAPDB01_ModelDB_password')]"
-					}
-				},
-				"connectVia": {
-					"referenceName": "IR-jpstgpmsapdb01",
-					"type": "IntegrationRuntimeReference"
-				}
-			},
-			"dependsOn": []
-		},
 		{
 			"name": "[concat(parameters('factoryName'), '/ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite')]",
 			"type": "Microsoft.DataFactory/factories/linkedServices",
@@ -301,6 +238,25 @@
 			"dependsOn": []
 		},
 		{
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Dev_DB_ModelDBv3_OcctoUnitGen')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "ln_jpdevfasbedb01_ModelDBv3",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "AzureSqlTable",
+				"schema": [],
+				"typeProperties": {
+					"schema": "dbo",
+					"table": "OcctoUnitGen"
+				}
+			},
+			"dependsOn": []
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/ds_Fas_Be_Stg_Blob_ModelDB_FcstAvailability')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
@@ -350,9 +306,7 @@
 					}
 				]
 			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/ln_AzureBlobStorage1')]"
-			]
+			"dependsOn": []
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_ModelDB_ActualSpotPrice')]",
@@ -399,9 +353,7 @@
 					"table": "ActualSpotPrice"
 				}
 			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/ln_JPSTGPMSAPDB01_ModelDB')]"
-			]
+			"dependsOn": []
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_ModelDB_ActualValue')]",
@@ -448,9 +400,7 @@
 					"table": "ActualValue"
 				}
 			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/ln_JPSTGPMSAPDB01_ModelDB')]"
-			]
+			"dependsOn": []
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_ModelDB_ActualValueHydroRefined')]",
@@ -497,9 +447,7 @@
 					"table": "ActualValueHydroRefined"
 				}
 			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/ln_JPSTGPMSAPDB01_ModelDB')]"
-			]
+			"dependsOn": []
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_ModelDB_ArcHjksGenOutage')]",
@@ -546,9 +494,7 @@
 					"table": "ArcHjksGenOutage"
 				}
 			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/ln_JPSTGPMSAPDB01_ModelDB')]"
-			]
+			"dependsOn": []
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_ModelDB_BIOMASS')]",
@@ -595,9 +541,7 @@
 					"table": "BIOMASS"
 				}
 			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/ln_JPSTGPMSAPDB01_ModelDB')]"
-			]
+			"dependsOn": []
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_ModelDB_CommodityDef')]",
@@ -644,9 +588,7 @@
 					"table": "CommodityDef"
 				}
 			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/ln_JPSTGPMSAPDB01_ModelDB')]"
-			]
+			"dependsOn": []
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_ModelDB_Conversion')]",
@@ -693,9 +635,54 @@
 					"table": "Conversion"
 				}
 			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/ln_JPSTGPMSAPDB01_ModelDB')]"
-			]
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_ModelDB_CurveDef')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "ln_JPSTGPMSAPDB01_ModelDB",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "SqlServerTable",
+				"schema": [
+					{
+						"name": "FiscalYear",
+						"type": "smallint",
+						"precision": 5
+					},
+					{
+						"name": "Date",
+						"type": "date"
+					},
+					{
+						"name": "UnitIdFW",
+						"type": "int",
+						"precision": 10
+					},
+					{
+						"name": "Availability",
+						"type": "float",
+						"precision": 15
+					},
+					{
+						"name": "AsOfDate",
+						"type": "date"
+					},
+					{
+						"name": "HjksCheck",
+						"type": "bit"
+					}
+				],
+				"typeProperties": {
+					"schema": "dbo",
+					"table": "CurveDef"
+				}
+			},
+			"dependsOn": []
 		}
 	]
 }

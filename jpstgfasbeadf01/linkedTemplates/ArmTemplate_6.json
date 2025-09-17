@@ -15,6 +15,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'jphubmaterialtransferqa'"
 		},
+		"ln_JPSTGPMSAPDB01_ModelDB_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'ln_JPSTGPMSAPDB01_ModelDB'"
+		},
 		"Snowflake1_properties_typeProperties_database": {
 			"type": "string",
 			"defaultValue": "ANA00003"
@@ -30,6 +34,22 @@
 		"fasbestgsnowflake_sasUri": {
 			"type": "secureString",
 			"metadata": "Secure string for 'sasUri' of 'fasbestgsnowflake'"
+		},
+		"ln_AzureBlobStorage1_sasUri": {
+			"type": "secureString",
+			"metadata": "Secure string for 'sasUri' of 'ln_AzureBlobStorage1'"
+		},
+		"ln_JPSTGPMSAPDB01_ModelDB_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "JPSTGPMSAPDB01"
+		},
+		"ln_JPSTGPMSAPDB01_ModelDB_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "ModelDB"
+		},
+		"ln_JPSTGPMSAPDB01_ModelDB_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "fasreadonly"
 		}
 	},
 	"variables": {
@@ -208,44 +228,6 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDBv3_OcctoUnitGenFw_fas_stg')]",
-			"type": "Microsoft.DataFactory/factories/datasets",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"linkedServiceName": {
-					"referenceName": "ln_jpstgfasbedb01_ModelDBv3",
-					"type": "LinkedServiceReference"
-				},
-				"annotations": [],
-				"type": "AzureSqlTable",
-				"schema": [],
-				"typeProperties": {
-					"schema": "dbo.ModelDBv3",
-					"table": "OcctoUnitGenFw_fas_stg"
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDBv3_OcctoUnitGen_fas_stg')]",
-			"type": "Microsoft.DataFactory/factories/datasets",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"linkedServiceName": {
-					"referenceName": "ln_jpstgfasbedb01_ModelDBv3",
-					"type": "LinkedServiceReference"
-				},
-				"annotations": [],
-				"type": "AzureSqlTable",
-				"schema": [],
-				"typeProperties": {
-					"schema": "dbo.ModelDBv3",
-					"table": "OcctoUnitGen_fas_stg"
-				}
-			},
-			"dependsOn": []
-		},
-		{
 			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDBv3_PumpedStorage_fas_stg')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
@@ -415,6 +397,49 @@
 				"type": "AzureBlobStorage",
 				"typeProperties": {
 					"connectionString": "[parameters('jphubmaterialtransferqa_connectionString')]"
+				},
+				"connectVia": {
+					"referenceName": "IR-jpstgpmsapdb01",
+					"type": "IntegrationRuntimeReference"
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/ln_AzureBlobStorage1')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureBlobStorage",
+				"typeProperties": {
+					"sasUri": "[parameters('ln_AzureBlobStorage1_sasUri')]"
+				},
+				"connectVia": {
+					"referenceName": "IR-jpstgpmsapdb01",
+					"type": "IntegrationRuntimeReference"
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/ln_JPSTGPMSAPDB01_ModelDB')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "SqlServer",
+				"typeProperties": {
+					"server": "[parameters('ln_JPSTGPMSAPDB01_ModelDB_properties_typeProperties_server')]",
+					"database": "[parameters('ln_JPSTGPMSAPDB01_ModelDB_properties_typeProperties_database')]",
+					"encrypt": "mandatory",
+					"trustServerCertificate": true,
+					"authenticationType": "SQL",
+					"userName": "[parameters('ln_JPSTGPMSAPDB01_ModelDB_properties_typeProperties_userName')]",
+					"password": {
+						"type": "SecureString",
+						"value": "[parameters('ln_JPSTGPMSAPDB01_ModelDB_password')]"
+					}
 				},
 				"connectVia": {
 					"referenceName": "IR-jpstgpmsapdb01",

@@ -414,6 +414,9 @@
 					"jphubmaterialtransferqa_connectionString": {
 						"value": "[parameters('jphubmaterialtransferqa_connectionString')]"
 					},
+					"ln_JPSTGPMSAPDB01_ModelDB_password": {
+						"value": "[parameters('ln_JPSTGPMSAPDB01_ModelDB_password')]"
+					},
 					"Snowflake1_properties_typeProperties_database": {
 						"value": "[parameters('Snowflake1_properties_typeProperties_database')]"
 					},
@@ -425,6 +428,18 @@
 					},
 					"fasbestgsnowflake_sasUri": {
 						"value": "[parameters('fasbestgsnowflake_sasUri')]"
+					},
+					"ln_AzureBlobStorage1_sasUri": {
+						"value": "[parameters('ln_AzureBlobStorage1_sasUri')]"
+					},
+					"ln_JPSTGPMSAPDB01_ModelDB_properties_typeProperties_server": {
+						"value": "[parameters('ln_JPSTGPMSAPDB01_ModelDB_properties_typeProperties_server')]"
+					},
+					"ln_JPSTGPMSAPDB01_ModelDB_properties_typeProperties_database": {
+						"value": "[parameters('ln_JPSTGPMSAPDB01_ModelDB_properties_typeProperties_database')]"
+					},
+					"ln_JPSTGPMSAPDB01_ModelDB_properties_typeProperties_userName": {
+						"value": "[parameters('ln_JPSTGPMSAPDB01_ModelDB_properties_typeProperties_userName')]"
 					}
 				}
 			},
@@ -446,23 +461,8 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
-					"ln_JPSTGPMSAPDB01_ModelDB_password": {
-						"value": "[parameters('ln_JPSTGPMSAPDB01_ModelDB_password')]"
-					},
 					"ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite_password": {
 						"value": "[parameters('ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite_password')]"
-					},
-					"ln_AzureBlobStorage1_sasUri": {
-						"value": "[parameters('ln_AzureBlobStorage1_sasUri')]"
-					},
-					"ln_JPSTGPMSAPDB01_ModelDB_properties_typeProperties_server": {
-						"value": "[parameters('ln_JPSTGPMSAPDB01_ModelDB_properties_typeProperties_server')]"
-					},
-					"ln_JPSTGPMSAPDB01_ModelDB_properties_typeProperties_database": {
-						"value": "[parameters('ln_JPSTGPMSAPDB01_ModelDB_properties_typeProperties_database')]"
-					},
-					"ln_JPSTGPMSAPDB01_ModelDB_properties_typeProperties_userName": {
-						"value": "[parameters('ln_JPSTGPMSAPDB01_ModelDB_properties_typeProperties_userName')]"
 					},
 					"ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite_properties_typeProperties_server": {
 						"value": "[parameters('ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite_properties_typeProperties_server')]"
