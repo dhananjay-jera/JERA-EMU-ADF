@@ -35,6 +35,9 @@
 		"ln_jpstgpmsadb01__password": {
 			"value": ""
 		},
+		"SN_ANA3_SYSTEM_MONITOR_password": {
+			"value": ""
+		},
 		"Snowflake1_properties_typeProperties_database": {
 			"value": "ANA00003"
 		},
@@ -143,6 +146,15 @@
 			"value": [
 				"fasbestgdata01.blob.core.windows.net"
 			]
+		},
+		"SN_ANA3_SYSTEM_MONITOR_properties_typeProperties_database": {
+			"value": "ANA00003"
+		},
+		"SN_ANA3_SYSTEM_MONITOR_properties_typeProperties_role": {
+			"value": "ANA00003_PROD_ADMIN"
+		},
+		"SN_ANA3_SYSTEM_MONITOR_properties_typeProperties_host": {
+			"value": "jera-analysis.privatelink.snowflakecomputing.com"
 		}
 	}
 }

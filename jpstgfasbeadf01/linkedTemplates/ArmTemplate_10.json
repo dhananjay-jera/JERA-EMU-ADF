@@ -13,6 +13,53 @@
 	},
 	"resources": [
 		{
+			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_ModelDB_MasterGenV3')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "ln_JPSTGPMSAPDB01_ModelDB",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "SqlServerTable",
+				"schema": [
+					{
+						"name": "FiscalYear",
+						"type": "smallint",
+						"precision": 5
+					},
+					{
+						"name": "Date",
+						"type": "date"
+					},
+					{
+						"name": "UnitIdFW",
+						"type": "int",
+						"precision": 10
+					},
+					{
+						"name": "Availability",
+						"type": "float",
+						"precision": 15
+					},
+					{
+						"name": "AsOfDate",
+						"type": "date"
+					},
+					{
+						"name": "HjksCheck",
+						"type": "bit"
+					}
+				],
+				"typeProperties": {
+					"schema": "dbo",
+					"table": "MasterGenV3"
+				}
+			},
+			"dependsOn": []
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/ds_Fas_Stg_DB_ModelDB_MasterGenV4')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
@@ -849,56 +896,6 @@
 				"typeProperties": {
 					"schema": "dbo",
 					"table": "HistAvailability_Snow"
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/dt_SnowFlakesFas_ANA3_ModelDB_DB_ModelDB_GenPlan_fas_stg')]",
-			"type": "Microsoft.DataFactory/factories/datasets",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"linkedServiceName": {
-					"referenceName": "Snowflake1",
-					"type": "LinkedServiceReference"
-				},
-				"annotations": [],
-				"type": "SnowflakeV2Table",
-				"schema": [
-					{
-						"name": "AREA_NAME",
-						"type": "VARCHAR"
-					},
-					{
-						"name": "TYPE",
-						"type": "VARCHAR"
-					},
-					{
-						"name": "DATE",
-						"type": "TIMESTAMP_NTZ"
-					},
-					{
-						"name": "DECAPACITY",
-						"type": "FLOAT",
-						"precision": 38,
-						"scale": 0
-					},
-					{
-						"name": "CAPACITY",
-						"type": "FLOAT",
-						"precision": 38,
-						"scale": 0
-					},
-					{
-						"name": "AVAILABILITY",
-						"type": "FLOAT",
-						"precision": 38,
-						"scale": 0
-					}
-				],
-				"typeProperties": {
-					"schema": "MODELDB",
-					"table": "GenPlan"
 				}
 			},
 			"dependsOn": []
