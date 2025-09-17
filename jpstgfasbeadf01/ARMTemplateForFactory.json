@@ -3596,14 +3596,7 @@
 					{
 						"name": "BE-DEV-FwFcstCommodity",
 						"type": "Copy",
-						"dependsOn": [
-							{
-								"activity": "BE-Dev_FwHistCommodity",
-								"dependencyConditions": [
-									"Succeeded"
-								]
-							}
-						],
+						"dependsOn": [],
 						"policy": {
 							"timeout": "0.12:00:00",
 							"retry": 0,
@@ -3653,14 +3646,7 @@
 					{
 						"name": "BE-DEV-ForwardForex",
 						"type": "Copy",
-						"dependsOn": [
-							{
-								"activity": "BE-DEV-FwFcstCommodity",
-								"dependencyConditions": [
-									"Succeeded"
-								]
-							}
-						],
+						"dependsOn": [],
 						"policy": {
 							"timeout": "0.12:00:00",
 							"retry": 0,
@@ -3710,14 +3696,7 @@
 					{
 						"name": "BE-DEV-ForwardPrice",
 						"type": "Copy",
-						"dependsOn": [
-							{
-								"activity": "BE-DEV-ForwardForex",
-								"dependencyConditions": [
-									"Succeeded"
-								]
-							}
-						],
+						"dependsOn": [],
 						"policy": {
 							"timeout": "0.12:00:00",
 							"retry": 0,
@@ -3767,14 +3746,7 @@
 					{
 						"name": "ActualValue_ActualValue",
 						"type": "Copy",
-						"dependsOn": [
-							{
-								"activity": "BE-DEV-ForwardPrice",
-								"dependencyConditions": [
-									"Succeeded"
-								]
-							}
-						],
+						"dependsOn": [],
 						"policy": {
 							"timeout": "0.12:00:00",
 							"retry": 0,
