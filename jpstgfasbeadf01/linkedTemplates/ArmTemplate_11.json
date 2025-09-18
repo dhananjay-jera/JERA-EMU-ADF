@@ -483,7 +483,8 @@
 								"parameters": {}
 							},
 							"fieldList": [
-								"columnCount"
+								"columnCount",
+								"structure"
 							]
 						}
 					}
