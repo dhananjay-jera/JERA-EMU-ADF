@@ -445,14 +445,16 @@
 						"typeProperties": {
 							"source": {
 								"type": "SqlServerSource",
+								"sqlReaderQuery": "select * from [dbo].[FcstBio]\nwhere AreaId = 2",
 								"queryTimeout": "02:00:00",
 								"partitionOption": "None"
 							},
 							"dataset": {
-								"referenceName": "ds_Fas_Stg_DB_ModelDB_ActualValue",
+								"referenceName": "ds_Fas_Stg_DB_ModelDB_FcstBio",
 								"type": "DatasetReference",
 								"parameters": {}
-							}
+							},
+							"firstRowOnly": true
 						}
 					}
 				],
@@ -462,7 +464,7 @@
 				"annotations": []
 			},
 			"dependsOn": [
-				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_ActualValue')]"
+				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_FcstBio')]"
 			]
 		},
 		{
