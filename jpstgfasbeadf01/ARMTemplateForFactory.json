@@ -449,7 +449,7 @@
 								"partitionOption": "None"
 							},
 							"dataset": {
-								"referenceName": "ds_Fas_Stg_DB_ModelDB_FcstPV",
+								"referenceName": "ds_Fas_Stg_DB_ModelDB_ActualValue",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -462,7 +462,7 @@
 				"annotations": []
 			},
 			"dependsOn": [
-				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_FcstPV')]"
+				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_ActualValue')]"
 			]
 		},
 		{
