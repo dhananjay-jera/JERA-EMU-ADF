@@ -25,7 +25,7 @@
 						"referenceName": "ds_Fas_Stg_DB_ModelDB_FcstBio",
 						"type": "DatasetReference"
 					},
-					"firstRowOnly": true
+					"firstRowOnly": false
 				}
 			}
 		],
