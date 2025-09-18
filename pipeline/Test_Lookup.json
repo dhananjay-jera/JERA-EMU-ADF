@@ -20,7 +20,8 @@
 						"type": "DatasetReference"
 					},
 					"fieldList": [
-						"columnCount"
+						"columnCount",
+						"structure"
 					]
 				}
 			}
