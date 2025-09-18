@@ -265,5 +265,6 @@
 			"schema": "SYSTEM_MONITOR",
 			"table": "JPPRJPHAPP03_MONITOR"
 		}
-	}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
 }
