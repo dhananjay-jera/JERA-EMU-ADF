@@ -21,9 +21,10 @@
 						"partitionOption": "None"
 					},
 					"dataset": {
-						"referenceName": "ds_Fas_Stg_DB_ModelDB_ActualValue",
+						"referenceName": "ds_Fas_Stg_DB_ModelDB_FcstBio",
 						"type": "DatasetReference"
-					}
+					},
+					"firstRowOnly": false
 				}
 			}
 		],
