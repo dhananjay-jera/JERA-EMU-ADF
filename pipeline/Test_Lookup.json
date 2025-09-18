@@ -19,7 +19,9 @@
 						"referenceName": "ds_Fas_Stg_DB_ModelDB_ActualValue",
 						"type": "DatasetReference"
 					},
-					"fieldList": []
+					"fieldList": [
+						"columnCount"
+					]
 				}
 			}
 		],
