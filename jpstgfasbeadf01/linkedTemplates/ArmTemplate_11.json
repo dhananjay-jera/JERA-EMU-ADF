@@ -484,7 +484,8 @@
 							},
 							"fieldList": [
 								"columnCount",
-								"structure"
+								"structure",
+								"exists"
 							]
 						}
 					}
