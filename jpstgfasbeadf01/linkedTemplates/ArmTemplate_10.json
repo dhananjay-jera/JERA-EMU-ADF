@@ -758,6 +758,328 @@
 			"dependsOn": []
 		},
 		{
+			"name": "[concat(parameters('factoryName'), '/ds_snow_ANA3_SystemMonitor')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "Snowflake1",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "SnowflakeV2Table",
+				"schema": [
+					{
+						"name": "INDICATORID",
+						"type": "NUMBER",
+						"precision": 38,
+						"scale": 0
+					},
+					{
+						"name": "PRICEINDEXID",
+						"type": "VARCHAR"
+					},
+					{
+						"name": "PRICEDATE",
+						"type": "DATE"
+					},
+					{
+						"name": "DELIVDATE",
+						"type": "DATE"
+					},
+					{
+						"name": "PRICEAMOUNT",
+						"type": "FLOAT"
+					},
+					{
+						"name": "EXCHRATEMMBTUAMOUNT",
+						"type": "FLOAT"
+					},
+					{
+						"name": "INSERTAT",
+						"type": "VARCHAR"
+					}
+				],
+				"typeProperties": {
+					"schema": "TEST",
+					"table": "ACTUAL_SPOT_PRICE_SQL"
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/ds_snow_System_Monitor_JPPRJPHAPP03_MONITOR')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "SN_ANA3_SYSTEM_MONITOR",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "SnowflakeV2Table",
+				"schema": [
+					{
+						"name": "DATE",
+						"type": "DATE"
+					},
+					{
+						"name": "TIME",
+						"type": "VARCHAR"
+					},
+					{
+						"name": "CPU_USAGE_PERCENT",
+						"type": "FLOAT",
+						"precision": 38,
+						"scale": 0
+					},
+					{
+						"name": "MEMORY_USED_MB",
+						"type": "FLOAT",
+						"precision": 38,
+						"scale": 0
+					},
+					{
+						"name": "MEMORY_TOTAL_MB",
+						"type": "FLOAT",
+						"precision": 38,
+						"scale": 0
+					},
+					{
+						"name": "MEMORY_USAGE_PERCENT",
+						"type": "FLOAT",
+						"precision": 38,
+						"scale": 0
+					},
+					{
+						"name": "DISK_USED_GB",
+						"type": "FLOAT",
+						"precision": 38,
+						"scale": 0
+					},
+					{
+						"name": "DISK_TOTAL_GB",
+						"type": "FLOAT",
+						"precision": 38,
+						"scale": 0
+					},
+					{
+						"name": "DISK_USAGE_PERCENT",
+						"type": "FLOAT",
+						"precision": 38,
+						"scale": 0
+					},
+					{
+						"name": "DISK_READ_MBPS",
+						"type": "FLOAT",
+						"precision": 38,
+						"scale": 0
+					},
+					{
+						"name": "DISK_WRITE_MBPS",
+						"type": "FLOAT",
+						"precision": 38,
+						"scale": 0
+					},
+					{
+						"name": "NET_SENT_MB",
+						"type": "FLOAT",
+						"precision": 38,
+						"scale": 0
+					},
+					{
+						"name": "NET_RECV_MB",
+						"type": "FLOAT",
+						"precision": 38,
+						"scale": 0
+					},
+					{
+						"name": "CPU_CORE_0_PERCENT",
+						"type": "FLOAT",
+						"precision": 38,
+						"scale": 0
+					},
+					{
+						"name": "CPU_CORE_1_PERCENT",
+						"type": "FLOAT",
+						"precision": 38,
+						"scale": 0
+					},
+					{
+						"name": "CPU_CORE_2_PERCENT",
+						"type": "FLOAT",
+						"precision": 38,
+						"scale": 0
+					},
+					{
+						"name": "CPU_CORE_3_PERCENT",
+						"type": "FLOAT",
+						"precision": 38,
+						"scale": 0
+					},
+					{
+						"name": "CPU_CORE_4_PERCENT",
+						"type": "FLOAT",
+						"precision": 38,
+						"scale": 0
+					},
+					{
+						"name": "CPU_CORE_5_PERCENT",
+						"type": "FLOAT",
+						"precision": 38,
+						"scale": 0
+					},
+					{
+						"name": "CPU_CORE_6_PERCENT",
+						"type": "FLOAT",
+						"precision": 38,
+						"scale": 0
+					},
+					{
+						"name": "CPU_CORE_7_PERCENT",
+						"type": "FLOAT",
+						"precision": 38,
+						"scale": 0
+					},
+					{
+						"name": "CPU_CORE_8_PERCENT",
+						"type": "FLOAT",
+						"precision": 38,
+						"scale": 0
+					},
+					{
+						"name": "CPU_CORE_9_PERCENT",
+						"type": "FLOAT",
+						"precision": 38,
+						"scale": 0
+					},
+					{
+						"name": "CPU_CORE_10_PERCENT",
+						"type": "FLOAT",
+						"precision": 38,
+						"scale": 0
+					},
+					{
+						"name": "CPU_CORE_11_PERCENT",
+						"type": "FLOAT",
+						"precision": 38,
+						"scale": 0
+					},
+					{
+						"name": "CPU_CORE_12_PERCENT",
+						"type": "FLOAT",
+						"precision": 38,
+						"scale": 0
+					},
+					{
+						"name": "CPU_CORE_13_PERCENT",
+						"type": "FLOAT",
+						"precision": 38,
+						"scale": 0
+					},
+					{
+						"name": "CPU_CORE_14_PERCENT",
+						"type": "FLOAT",
+						"precision": 38,
+						"scale": 0
+					},
+					{
+						"name": "CPU_CORE_15_PERCENT",
+						"type": "FLOAT",
+						"precision": 38,
+						"scale": 0
+					},
+					{
+						"name": "CPU_CORE_16_PERCENT",
+						"type": "FLOAT",
+						"precision": 38,
+						"scale": 0
+					},
+					{
+						"name": "CPU_CORE_17_PERCENT",
+						"type": "FLOAT",
+						"precision": 38,
+						"scale": 0
+					},
+					{
+						"name": "CPU_CORE_18_PERCENT",
+						"type": "FLOAT",
+						"precision": 38,
+						"scale": 0
+					},
+					{
+						"name": "CPU_CORE_19_PERCENT",
+						"type": "FLOAT",
+						"precision": 38,
+						"scale": 0
+					},
+					{
+						"name": "CPU_CORE_20_PERCENT",
+						"type": "FLOAT",
+						"precision": 38,
+						"scale": 0
+					},
+					{
+						"name": "CPU_CORE_21_PERCENT",
+						"type": "FLOAT",
+						"precision": 38,
+						"scale": 0
+					},
+					{
+						"name": "CPU_CORE_22_PERCENT",
+						"type": "FLOAT",
+						"precision": 38,
+						"scale": 0
+					},
+					{
+						"name": "CPU_CORE_23_PERCENT",
+						"type": "FLOAT",
+						"precision": 38,
+						"scale": 0
+					},
+					{
+						"name": "GPU_UTILIZATION_PERCENT",
+						"type": "FLOAT",
+						"precision": 38,
+						"scale": 0
+					},
+					{
+						"name": "GPU_MEMORY_USED_MB",
+						"type": "FLOAT",
+						"precision": 38,
+						"scale": 0
+					},
+					{
+						"name": "GPU_MEMORY_TOTAL_MB",
+						"type": "FLOAT",
+						"precision": 38,
+						"scale": 0
+					},
+					{
+						"name": "GPU_USER",
+						"type": "VARCHAR"
+					},
+					{
+						"name": "DATA01_USAGE_PERCENT",
+						"type": "NUMBER",
+						"precision": 5,
+						"scale": 2
+					},
+					{
+						"name": "HDL_USAGE_PERCENT",
+						"type": "NUMBER",
+						"precision": 5,
+						"scale": 2
+					}
+				],
+				"typeProperties": {
+					"schema": "SYSTEM_MONITOR",
+					"table": "JPPRJPHAPP03_MONITOR"
+				}
+			},
+			"dependsOn": []
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_Blob_HistAvaliablity_Snow_ANA3')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
@@ -809,94 +1131,6 @@
 					"quoteChar": "\""
 				},
 				"schema": []
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDB_20250703_HistAvailability')]",
-			"type": "Microsoft.DataFactory/factories/datasets",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"linkedServiceName": {
-					"referenceName": "ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite",
-					"type": "LinkedServiceReference"
-				},
-				"annotations": [],
-				"type": "SqlServerTable",
-				"schema": [
-					{
-						"name": "Date",
-						"type": "date"
-					},
-					{
-						"name": "UnitIdFW",
-						"type": "int",
-						"precision": 10
-					},
-					{
-						"name": "Availability",
-						"type": "float",
-						"precision": 15
-					},
-					{
-						"name": "HjksCheck",
-						"type": "bit"
-					},
-					{
-						"name": "InsertAtFas",
-						"type": "datetime",
-						"precision": 23,
-						"scale": 3
-					}
-				],
-				"typeProperties": {
-					"schema": "dbo",
-					"table": "HistAvailability"
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDB_20250703_HistAvailability_snow')]",
-			"type": "Microsoft.DataFactory/factories/datasets",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"linkedServiceName": {
-					"referenceName": "ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite",
-					"type": "LinkedServiceReference"
-				},
-				"annotations": [],
-				"type": "SqlServerTable",
-				"schema": [
-					{
-						"name": "Date",
-						"type": "date"
-					},
-					{
-						"name": "UnitIdFW",
-						"type": "int",
-						"precision": 10
-					},
-					{
-						"name": "Availability",
-						"type": "float",
-						"precision": 15
-					},
-					{
-						"name": "HjksCheck",
-						"type": "bit"
-					},
-					{
-						"name": "InsertAtFas",
-						"type": "datetime",
-						"precision": 23,
-						"scale": 3
-					}
-				],
-				"typeProperties": {
-					"schema": "dbo",
-					"table": "HistAvailability_Snow"
-				}
 			},
 			"dependsOn": []
 		}

@@ -7,6 +7,10 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "jpstgfasbeadf01"
 		},
+		"SN_ANA3_SYSTEM_MONITOR_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'SN_ANA3_SYSTEM_MONITOR'"
+		},
 		"Snowflake1_password": {
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'Snowflake1'"
@@ -23,9 +27,17 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite'"
 		},
-		"SN_ANA3_SYSTEM_MONITOR_password": {
-			"type": "secureString",
-			"metadata": "Secure string for 'password' of 'SN_ANA3_SYSTEM_MONITOR'"
+		"SN_ANA3_SYSTEM_MONITOR_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "ANA00003"
+		},
+		"SN_ANA3_SYSTEM_MONITOR_properties_typeProperties_role": {
+			"type": "string",
+			"defaultValue": "ANA00003_PROD_ADMIN"
+		},
+		"SN_ANA3_SYSTEM_MONITOR_properties_typeProperties_host": {
+			"type": "string",
+			"defaultValue": "jera-analysis.privatelink.snowflakecomputing.com"
 		},
 		"Snowflake1_properties_typeProperties_database": {
 			"type": "string",
@@ -98,18 +110,6 @@
 			"defaultValue": [
 				"fasbestgdata01.blob.core.windows.net"
 			]
-		},
-		"SN_ANA3_SYSTEM_MONITOR_properties_typeProperties_database": {
-			"type": "string",
-			"defaultValue": "ANA00003"
-		},
-		"SN_ANA3_SYSTEM_MONITOR_properties_typeProperties_role": {
-			"type": "string",
-			"defaultValue": "ANA00003_PROD_ADMIN"
-		},
-		"SN_ANA3_SYSTEM_MONITOR_properties_typeProperties_host": {
-			"type": "string",
-			"defaultValue": "jera-analysis.privatelink.snowflakecomputing.com"
 		}
 	},
 	"variables": {
@@ -150,6 +150,35 @@
 				"typeProperties": {
 					"schema": "dbo.ModelDBv3",
 					"table": "test_jay1_fas_stg"
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/SN_ANA3_SYSTEM_MONITOR')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"description": "Connecting to Snowflakes ANA00003 database, Schema is SYSTEM_MONITOR",
+				"annotations": [],
+				"type": "SnowflakeV2",
+				"typeProperties": {
+					"authenticationType": "Basic",
+					"accountIdentifier": "JERA_ANALSYS",
+					"user": "ANA00003PRODFAS_Stg",
+					"database": "[parameters('SN_ANA3_SYSTEM_MONITOR_properties_typeProperties_database')]",
+					"warehouse": "ANA00003_PROD_WH",
+					"role": "[parameters('SN_ANA3_SYSTEM_MONITOR_properties_typeProperties_role')]",
+					"host": "[parameters('SN_ANA3_SYSTEM_MONITOR_properties_typeProperties_host')]",
+					"password": {
+						"type": "SecureString",
+						"value": "[parameters('SN_ANA3_SYSTEM_MONITOR_password')]"
+					}
+				},
+				"version": "1.1",
+				"connectVia": {
+					"referenceName": "IR-jpstgpmsapdb01",
+					"type": "IntegrationRuntimeReference"
 				}
 			},
 			"dependsOn": []
@@ -306,35 +335,6 @@
 				"privateLinkResourceId": "[parameters('pl_adf_fasbestgdata01_properties_privateLinkResourceId')]",
 				"groupId": "[parameters('pl_adf_fasbestgdata01_properties_groupId')]",
 				"fqdns": "[parameters('pl_adf_fasbestgdata01_properties_fqdns')]"
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/SN_ANA3_SYSTEM_MONITOR')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"description": "Connecting to Snowflakes ANA00003 database, Schema is SYSTEM_MONITOR",
-				"annotations": [],
-				"type": "SnowflakeV2",
-				"typeProperties": {
-					"authenticationType": "Basic",
-					"accountIdentifier": "JERA_ANALSYS",
-					"user": "ANA00003PRODFAS_Stg",
-					"database": "[parameters('SN_ANA3_SYSTEM_MONITOR_properties_typeProperties_database')]",
-					"warehouse": "ANA00003_PROD_WH",
-					"role": "[parameters('SN_ANA3_SYSTEM_MONITOR_properties_typeProperties_role')]",
-					"host": "[parameters('SN_ANA3_SYSTEM_MONITOR_properties_typeProperties_host')]",
-					"password": {
-						"type": "SecureString",
-						"value": "[parameters('SN_ANA3_SYSTEM_MONITOR_password')]"
-					}
-				},
-				"version": "1.1",
-				"connectVia": {
-					"referenceName": "IR-jpstgpmsapdb01",
-					"type": "IntegrationRuntimeReference"
-				}
 			},
 			"dependsOn": []
 		},

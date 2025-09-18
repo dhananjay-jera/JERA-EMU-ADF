@@ -7,6 +7,10 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "jpstgfasbeadf01"
 		},
+		"SN_ANA3_SYSTEM_MONITOR_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'SN_ANA3_SYSTEM_MONITOR'"
+		},
 		"Snowflake1_password": {
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'Snowflake1'"
@@ -47,9 +51,17 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'ln_jpstgpmsadb01_'"
 		},
-		"SN_ANA3_SYSTEM_MONITOR_password": {
-			"type": "secureString",
-			"metadata": "Secure string for 'password' of 'SN_ANA3_SYSTEM_MONITOR'"
+		"SN_ANA3_SYSTEM_MONITOR_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "ANA00003"
+		},
+		"SN_ANA3_SYSTEM_MONITOR_properties_typeProperties_role": {
+			"type": "string",
+			"defaultValue": "ANA00003_PROD_ADMIN"
+		},
+		"SN_ANA3_SYSTEM_MONITOR_properties_typeProperties_host": {
+			"type": "string",
+			"defaultValue": "jera-analysis.privatelink.snowflakecomputing.com"
 		},
 		"Snowflake1_properties_typeProperties_database": {
 			"type": "string",
@@ -194,18 +206,6 @@
 			"defaultValue": [
 				"fasbestgdata01.blob.core.windows.net"
 			]
-		},
-		"SN_ANA3_SYSTEM_MONITOR_properties_typeProperties_database": {
-			"type": "string",
-			"defaultValue": "ANA00003"
-		},
-		"SN_ANA3_SYSTEM_MONITOR_properties_typeProperties_role": {
-			"type": "string",
-			"defaultValue": "ANA00003_PROD_ADMIN"
-		},
-		"SN_ANA3_SYSTEM_MONITOR_properties_typeProperties_host": {
-			"type": "string",
-			"defaultValue": "jera-analysis.privatelink.snowflakecomputing.com"
 		},
 		"containerUri": {
 			"type": "string",
@@ -444,6 +444,9 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
+					"SN_ANA3_SYSTEM_MONITOR_password": {
+						"value": "[parameters('SN_ANA3_SYSTEM_MONITOR_password')]"
+					},
 					"Snowflake1_password": {
 						"value": "[parameters('Snowflake1_password')]"
 					},
@@ -456,8 +459,14 @@
 					"ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite_password": {
 						"value": "[parameters('ln_JPSTGPMSAPDB01_ModelDB_20250703_ReadWrite_password')]"
 					},
-					"SN_ANA3_SYSTEM_MONITOR_password": {
-						"value": "[parameters('SN_ANA3_SYSTEM_MONITOR_password')]"
+					"SN_ANA3_SYSTEM_MONITOR_properties_typeProperties_database": {
+						"value": "[parameters('SN_ANA3_SYSTEM_MONITOR_properties_typeProperties_database')]"
+					},
+					"SN_ANA3_SYSTEM_MONITOR_properties_typeProperties_role": {
+						"value": "[parameters('SN_ANA3_SYSTEM_MONITOR_properties_typeProperties_role')]"
+					},
+					"SN_ANA3_SYSTEM_MONITOR_properties_typeProperties_host": {
+						"value": "[parameters('SN_ANA3_SYSTEM_MONITOR_properties_typeProperties_host')]"
 					},
 					"Snowflake1_properties_typeProperties_database": {
 						"value": "[parameters('Snowflake1_properties_typeProperties_database')]"
@@ -509,15 +518,6 @@
 					},
 					"pl_adf_fasbestgdata01_properties_fqdns": {
 						"value": "[parameters('pl_adf_fasbestgdata01_properties_fqdns')]"
-					},
-					"SN_ANA3_SYSTEM_MONITOR_properties_typeProperties_database": {
-						"value": "[parameters('SN_ANA3_SYSTEM_MONITOR_properties_typeProperties_database')]"
-					},
-					"SN_ANA3_SYSTEM_MONITOR_properties_typeProperties_role": {
-						"value": "[parameters('SN_ANA3_SYSTEM_MONITOR_properties_typeProperties_role')]"
-					},
-					"SN_ANA3_SYSTEM_MONITOR_properties_typeProperties_host": {
-						"value": "[parameters('SN_ANA3_SYSTEM_MONITOR_properties_typeProperties_host')]"
 					}
 				}
 			},
