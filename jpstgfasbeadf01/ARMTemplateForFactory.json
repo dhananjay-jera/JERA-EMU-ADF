@@ -444,7 +444,7 @@
 						"userProperties": [],
 						"typeProperties": {
 							"dataset": {
-								"referenceName": "ds_Fas_Stg_DB_ModelDB_ActualValue",
+								"referenceName": "ds_Fas_Be_Dev_DB_ModelDB_ActualValue",
 								"type": "DatasetReference",
 								"parameters": {}
 							},
@@ -462,7 +462,7 @@
 				"annotations": []
 			},
 			"dependsOn": [
-				"[concat(variables('factoryId'), '/datasets/ds_Fas_Stg_DB_ModelDB_ActualValue')]"
+				"[concat(variables('factoryId'), '/datasets/ds_Fas_Be_Dev_DB_ModelDB_ActualValue')]"
 			]
 		},
 		{
