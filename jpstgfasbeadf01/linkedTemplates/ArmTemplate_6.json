@@ -6,6 +6,22 @@
 			"type": "string",
 			"metadata": "Data Factory name",
 			"defaultValue": "jpstgfasbeadf01"
+		},
+		"SN_ANA3_SYSTEM_MONITOR_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'SN_ANA3_SYSTEM_MONITOR'"
+		},
+		"SN_ANA3_SYSTEM_MONITOR_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "ANA00003"
+		},
+		"SN_ANA3_SYSTEM_MONITOR_properties_typeProperties_role": {
+			"type": "string",
+			"defaultValue": "ANA00003_PROD_ADMIN"
+		},
+		"SN_ANA3_SYSTEM_MONITOR_properties_typeProperties_host": {
+			"type": "string",
+			"defaultValue": "jera-analysis.privatelink.snowflakecomputing.com"
 		}
 	},
 	"variables": {
@@ -13,7 +29,7 @@
 	},
 	"resources": [
 		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDBv3_HistInterfacePlan_fas_stg')]",
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDBv3_HistInterConnection_fas_stg')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -26,45 +42,7 @@
 				"schema": [],
 				"typeProperties": {
 					"schema": "dbo.ModelDBv3",
-					"table": "HistInterfacePlan_fas_stg"
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDBv3_HistInterface_fas_stg')]",
-			"type": "Microsoft.DataFactory/factories/datasets",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"linkedServiceName": {
-					"referenceName": "ln_jpstgfasbedb01_ModelDBv3",
-					"type": "LinkedServiceReference"
-				},
-				"annotations": [],
-				"type": "AzureSqlTable",
-				"schema": [],
-				"typeProperties": {
-					"schema": "dbo.ModelDBv3",
-					"table": "ActualSpotPrice_fas_stg"
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDBv3_HistInterface_old_fas_stg')]",
-			"type": "Microsoft.DataFactory/factories/datasets",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"linkedServiceName": {
-					"referenceName": "ln_jpstgfasbedb01_ModelDBv3",
-					"type": "LinkedServiceReference"
-				},
-				"annotations": [],
-				"type": "AzureSqlTable",
-				"schema": [],
-				"typeProperties": {
-					"schema": "dbo.ModelDBv3",
-					"table": "HistInterface_old_fas_stg"
+					"table": "HistInterface_fas_stg"
 				}
 			},
 			"dependsOn": []
@@ -141,25 +119,6 @@
 				"typeProperties": {
 					"schema": "dbo.ModelDBv3",
 					"table": "HjksMapping_fas_stg"
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDBv3_JepxAreaPrice_fas_stg')]",
-			"type": "Microsoft.DataFactory/factories/datasets",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"linkedServiceName": {
-					"referenceName": "ln_jpstgfasbedb01_ModelDBv3",
-					"type": "LinkedServiceReference"
-				},
-				"annotations": [],
-				"type": "AzureSqlTable",
-				"schema": [],
-				"typeProperties": {
-					"schema": "dbo.ModelDBv3",
-					"table": "JepxAreaPrice_fas_stg"
 				}
 			},
 			"dependsOn": []
@@ -388,6 +347,73 @@
 				"typeProperties": {
 					"schema": "dbo.ModelDBv3",
 					"table": "RenewableCapacity_fas_stg"
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDBv3_UnitsInGroupConstraint_fas_stg')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "ln_jpstgfasbedb01_ModelDBv3",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "AzureSqlTable",
+				"schema": [],
+				"typeProperties": {
+					"schema": "dbo.ModelDBv3",
+					"table": "UnitsInGroupConstraint_fas_stg"
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/dt_Fas_Be_Stg_DB_ModelDBv3_test_jay1_fas_stg')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "ln_jpstgfasbedb01_ModelDBv3",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "AzureSqlTable",
+				"schema": [],
+				"typeProperties": {
+					"schema": "dbo.ModelDBv3",
+					"table": "test_jay1_fas_stg"
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/SN_ANA3_SYSTEM_MONITOR')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"description": "Connecting to Snowflakes ANA00003 database, Schema is SYSTEM_MONITOR",
+				"annotations": [],
+				"type": "SnowflakeV2",
+				"typeProperties": {
+					"authenticationType": "Basic",
+					"accountIdentifier": "JERA_ANALSYS",
+					"user": "ANA00003PRODFAS_Stg",
+					"database": "[parameters('SN_ANA3_SYSTEM_MONITOR_properties_typeProperties_database')]",
+					"warehouse": "ANA00003_PROD_WH",
+					"role": "[parameters('SN_ANA3_SYSTEM_MONITOR_properties_typeProperties_role')]",
+					"host": "[parameters('SN_ANA3_SYSTEM_MONITOR_properties_typeProperties_host')]",
+					"password": {
+						"type": "SecureString",
+						"value": "[parameters('SN_ANA3_SYSTEM_MONITOR_password')]"
+					}
+				},
+				"version": "1.1",
+				"connectVia": {
+					"referenceName": "IR-jpstgpmsapdb01",
+					"type": "IntegrationRuntimeReference"
 				}
 			},
 			"dependsOn": []
